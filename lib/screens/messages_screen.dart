@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:medh/screens/appointment_screen.dart';
 
 import 'chat_screen.dart';
 
@@ -168,7 +169,7 @@ class MessagesScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ChatScreen(),
+                            builder: (context) => AppointmentScreen(),
                           ));
                     },
                     leading: CircleAvatar(
