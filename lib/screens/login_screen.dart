@@ -16,6 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'El_Messiri'),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
@@ -74,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Padding(
                 padding: EdgeInsets.all(20),
-                child: Image.asset("images/doctors.png"),
+                child: Image.asset("assets/images/doctors.png"),
               ),
               SizedBox(height: 10),
               Padding(

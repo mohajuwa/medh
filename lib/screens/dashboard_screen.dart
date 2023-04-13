@@ -68,7 +68,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
-                        "Upcoming",
+                        "نتائج الإستعلام",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
@@ -92,7 +92,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
-                        "Complated",
+                        "مكتملة",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
@@ -116,7 +116,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
-                        "Canceled",
+                        "ملغية",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,

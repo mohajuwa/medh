@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class AppointmentScreen extends StatelessWidget {
+class FuserAppointmentScreen extends StatelessWidget {
   List imgs = [
     "doctor1.jpg",
     "doctor2.jpg",
@@ -55,7 +55,8 @@ class AppointmentScreen extends StatelessWidget {
                       children: [
                         CircleAvatar(
                           radius: 35,
-                          backgroundImage: AssetImage("images/doctor1.jpg"),
+                          backgroundImage:
+                              AssetImage("assets/images/doctor1.jpg"),
                         ),
                         SizedBox(height: 15),
                         Text(
@@ -215,8 +216,8 @@ class AppointmentScreen extends StatelessWidget {
                                 ListTile(
                                   leading: CircleAvatar(
                                     radius: 25,
-                                    backgroundImage:
-                                        AssetImage("images/${imgs[index]}"),
+                                    backgroundImage: AssetImage(
+                                        "assets/images/${imgs[index]}"),
                                   ),
                                   title: Text("إسم الدواء ",
                                       style: TextStyle(
@@ -331,7 +332,7 @@ class AppointmentScreen extends StatelessWidget {
                 onTap: () {},
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.symmetric(vertical: 18),
+                  padding: EdgeInsets.symmetric(vertical: 12),
                   decoration: BoxDecoration(
                     color: clr,
                     borderRadius: BorderRadius.circular(10),

@@ -19,7 +19,7 @@ class ChatScreen extends StatelessWidget {
             child: Row(children: [
               CircleAvatar(
                 radius: 25,
-                backgroundImage: AssetImage("images/doctor1.jpg"),
+                backgroundImage: AssetImage("assets/images/doctor1.jpg"),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 10),

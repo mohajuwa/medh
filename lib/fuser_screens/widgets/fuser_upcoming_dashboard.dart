@@ -11,7 +11,7 @@ class UpcomingDashboard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(
-            "About Doctor",
+            "العميل",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
@@ -37,15 +37,15 @@ class UpcomingDashboard extends StatelessWidget {
                 children: [
                   ListTile(
                     title: Text(
-                      "إسم الصيدلية",
+                      "إسم الدواء",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text("عنوانها"),
+                    subtitle: Text("وصفة"),
                     trailing: CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("images/doctor1.jpg"),
+                      backgroundImage: AssetImage("assets/images/icon.png"),
                     ),
                   ),
                   Padding(
@@ -97,7 +97,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "Confirmed",
+                            "متصل",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -121,7 +121,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Cancel",
+                              "لا",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -142,7 +142,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Reschedule",
+                              "متوفر",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -161,7 +161,7 @@ class UpcomingDashboard extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Text(
-            "About Doctor",
+            "العميل",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
@@ -187,15 +187,15 @@ class UpcomingDashboard extends StatelessWidget {
                 children: [
                   ListTile(
                     title: Text(
-                      "إسم الصيدلية",
+                      "إسم الدواء",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text("عنوانها"),
+                    subtitle: Text("وصفة"),
                     trailing: CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("images/doctor1.jpg"),
+                      backgroundImage: AssetImage("assets/images/icon.png"),
                     ),
                   ),
                   Padding(
@@ -247,7 +247,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "Confirmed",
+                            "متصل",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -271,7 +271,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Cancel",
+                              "لا",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -292,7 +292,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Reschedule",
+                              "متوفر",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -309,9 +309,9 @@ class UpcomingDashboard extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Text(
-            "About Doctor",
+            "العميل",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
@@ -337,15 +337,15 @@ class UpcomingDashboard extends StatelessWidget {
                 children: [
                   ListTile(
                     title: Text(
-                      "إسم الصيدلية",
+                      "إسم الدواء",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text("عنوانها"),
+                    subtitle: Text("وصفة"),
                     trailing: CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("images/doctor1.jpg"),
+                      backgroundImage: AssetImage("assets/images/icon.png"),
                     ),
                   ),
                   Padding(
@@ -397,7 +397,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           Text(
-                            "Confirmed",
+                            "متصل",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -421,7 +421,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Cancel",
+                              "لا",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -442,7 +442,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Reschedule",
+                              "متوفر",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,

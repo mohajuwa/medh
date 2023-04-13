@@ -6,12 +6,12 @@ import 'fuser_chat_screen.dart';
 
 class FuserMessagesScreen extends StatelessWidget {
   List imgs = [
-    "doctor1.jpg",
-    "doctor2.jpg",
-    "doctor3.jpg",
-    "doctor4.jpg",
-    "doctor1.jpg",
-    "doctor2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
   ];
 
   @override
@@ -24,7 +24,7 @@ class FuserMessagesScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              "Messages",
+              "الأدوية",
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class FuserMessagesScreen extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 15),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: "Search",
+                          hintText: "بحث",
                           border: InputBorder.none,
                         ),
                       ),
@@ -74,7 +74,7 @@ class FuserMessagesScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              " Active Now",
+              " الأكثر طلباً",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -114,7 +114,7 @@ class FuserMessagesScreen extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              "images/${imgs[index]}",
+                              "assets/images/${imgs[index]}",
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -146,9 +146,10 @@ class FuserMessagesScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              "Recent Chat",
+              " الأدوية المضافة مسبقاً ",
               style: TextStyle(
                 fontSize: 20,
+                color: Colors.black45,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -173,18 +174,18 @@ class FuserMessagesScreen extends StatelessWidget {
                     leading: CircleAvatar(
                       radius: 30,
                       backgroundImage: AssetImage(
-                        "images/${imgs[index]}",
+                        "assets/images/${imgs[index]}",
                       ),
                     ),
                     title: Text(
-                      "إسم الصيدلية",
+                      "إسم الدواء",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     subtitle: Text(
-                      "Hello, Doctor are u there?",
+                      "وصف الدواء يتم كتابته هنا",
                       maxLines: 16,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
@@ -193,7 +194,7 @@ class FuserMessagesScreen extends StatelessWidget {
                       ),
                     ),
                     trailing: Text(
-                      "12:30",
+                      "12:30  : ساعة او تاريخ الإضافة",
                       style: TextStyle(
                         fontSize: 15,
                         color: Colors.black54,

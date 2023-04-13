@@ -6,12 +6,12 @@ import 'chat_screen.dart';
 
 class MessagesScreen extends StatelessWidget {
   List imgs = [
-    "doctor1.jpg",
-    "doctor2.jpg",
-    "doctor3.jpg",
-    "doctor4.jpg",
-    "doctor1.jpg",
-    "doctor2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
   ];
 
   @override
@@ -24,7 +24,7 @@ class MessagesScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              "Messages",
+              "الأدوية",
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class MessagesScreen extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 15),
                       child: TextFormField(
                         decoration: InputDecoration(
-                          hintText: "Search",
+                          hintText: "إستعلام",
                           border: InputBorder.none,
                         ),
                       ),
@@ -74,7 +74,7 @@ class MessagesScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              " Active Now",
+              " تم طلبه مؤخراً",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -114,7 +114,7 @@ class MessagesScreen extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              "images/${imgs[index]}",
+                              "assets/images/${imgs[index]}",
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -131,7 +131,7 @@ class MessagesScreen extends StatelessWidget {
                         ),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.green,
+                            color: Colors.amberAccent.shade100,
                             shape: BoxShape.circle,
                           ),
                         ),
@@ -146,9 +146,10 @@ class MessagesScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              "Recent Chat",
+              "نتيجة الإستعلام ",
               style: TextStyle(
                 fontSize: 20,
+                color: Colors.black45,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -173,18 +174,18 @@ class MessagesScreen extends StatelessWidget {
                     leading: CircleAvatar(
                       radius: 30,
                       backgroundImage: AssetImage(
-                        "images/${imgs[index]}",
+                        "assets/images/${imgs[index]}",
                       ),
                     ),
                     title: Text(
-                      "إسم الصيدلية",
+                      "إسم الدواء",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     subtitle: Text(
-                      "Hello, Doctor are u there?",
+                      "وصف الدواء يتم كتابته هنا",
                       maxLines: 16,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
@@ -193,9 +194,9 @@ class MessagesScreen extends StatelessWidget {
                       ),
                     ),
                     trailing: Text(
-                      "12:30",
+                      "موقع الصيدلية : بالقرب مني",
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 12,
                         color: Colors.black54,
                       ),
                     ),

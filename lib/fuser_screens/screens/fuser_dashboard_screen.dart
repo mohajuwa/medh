@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../widgets/fuser_reports.dart';
 import '../widgets/fuser_upcoming_dashboard.dart';
 
 class FuserDashboardScreen extends StatefulWidget {
@@ -20,7 +21,7 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
     // Upcoming Widget
     UpcomingDashboard(),
     // Complated Widget
-    Container(),
+    FuserReports(),
     // Canceled Widget
     Container(),
   ];
@@ -68,7 +69,7 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
-                        "Upcoming",
+                        "نتائج الإستعلام",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
@@ -92,7 +93,7 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
-                        "Complated",
+                        "تقارير",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
@@ -102,30 +103,30 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                       ),
                     ),
                   ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        _buttonIndex = 2;
-                      });
-                    },
-                    child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 25),
-                      decoration: BoxDecoration(
-                        color: _buttonIndex == 2 ? clr1 : Colors.transparent,
-                        borderRadius: BorderRadius.circular(19),
-                      ),
-                      child: Text(
-                        "Canceled",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color:
-                              _buttonIndex == 2 ? Colors.white : Colors.black38,
-                        ),
-                      ),
-                    ),
-                  ),
+                  // InkWell(
+                  //   onTap: () {
+                  //     setState(() {
+                  //       _buttonIndex = 2;
+                  //     });
+                  //   },
+                  //   child: Container(
+                  //     padding:
+                  //         EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+                  //     decoration: BoxDecoration(
+                  //       color: _buttonIndex == 2 ? clr1 : Colors.transparent,
+                  //       borderRadius: BorderRadius.circular(19),
+                  //     ),
+                  //     child: Text(
+                  //       "ملغية",
+                  //       style: TextStyle(
+                  //         fontSize: 16,
+                  //         fontWeight: FontWeight.w500,
+                  //         color:
+                  //             _buttonIndex == 2 ? Colors.white : Colors.black38,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),

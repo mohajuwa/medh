@@ -30,6 +30,7 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'El_Messiri'),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
@@ -59,8 +60,8 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
                   label: "الرئيسية",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.chat_bubble_text_fill),
-                  label: "طلبات",
+                  icon: Icon(CupertinoIcons.add_circled_solid),
+                  label: "الأدوية",
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.dashboard_customize),

@@ -16,9 +16,9 @@ class _CarouselPageState extends State<CarouselPage> {
           width: double.infinity,
           child: Carousel(
             images: [
-              AssetImage("images/doctor1.jpg"),
-              AssetImage("images/doctor2.jpg"),
-              AssetImage("images/doctor3.jpg"),
+              AssetImage("assets/images/doctor1.jpg"),
+              AssetImage("assets/images/doctor2.jpg"),
+              AssetImage("assets/images/doctor3.jpg"),
             ],
             dotSize: 15,
             dotIncreaseSize: 1,

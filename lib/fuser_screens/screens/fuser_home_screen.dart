@@ -5,7 +5,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:medh/pages/home_page.dart';
 import 'package:medh/fuser_screens/screens/fuser_welcom_screen.dart';
+import 'package:medh/screens/dashboard_screen.dart';
 
+import '../widgets/fuser_navbar_roots.dart';
 import 'fuser_appointment_screen.dart';
 
 class FuserHomeScreen extends StatelessWidget {
@@ -25,6 +27,7 @@ class FuserHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'El_Messiri'),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
@@ -36,17 +39,55 @@ class FuserHomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      "مرحباً",
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w500,
+                    Padding(
+                      padding: EdgeInsets.only(right: 5, top: 5),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomePage(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                spreadRadius: 4,
+                              )
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(3),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.home_filled,
+                                    color: Color(0xFF7165D6),
+                                    size: 30,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                     CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("images/doctor1.jpg"),
-                    )
+                      backgroundImage: AssetImage("assets/images/icon1.png"),
+                    ),
                   ],
                 ),
               ),
@@ -97,7 +138,7 @@ class FuserHomeScreen extends StatelessWidget {
                           Text(
                             "جديد",
                             style: TextStyle(
-                              color: Colors.white54,
+                              color: Colors.blue.shade100,
                             ),
                           )
                         ],
@@ -109,7 +150,7 @@ class FuserHomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomePage(),
+                          builder: (context) => FuserNavBarRoots(),
                         ),
                       );
                     },
@@ -143,7 +184,7 @@ class FuserHomeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 30),
                           Text(
-                            "قائمة الأدوية",
+                            "تقارير",
                             style: TextStyle(
                               fontSize: 18,
                               // color: Colors.black,
@@ -152,7 +193,7 @@ class FuserHomeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 5),
                           Text(
-                            "مضافة مسبقاً",
+                            "ما تم طلبه بكثرة ",
                             style: TextStyle(
                               color: Colors.black54,
                             ),
@@ -235,7 +276,7 @@ class FuserHomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => AppointmentScreen(),
+                          builder: (context) => FuserAppointmentScreen(),
                         ),
                       );
                     },
@@ -259,7 +300,7 @@ class FuserHomeScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: 35,
                             backgroundImage:
-                                AssetImage("images/${imgs[index]}"),
+                                AssetImage("assets/images/${imgs[index]}"),
                           ),
                           Text(
                             "إسم الصيدلية",

@@ -18,6 +18,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'El_Messiri'),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
@@ -67,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                         child: Image.asset(
-                          "lib/fuser_screens/icons/icon1.png",
+                          "assets/images/icon1.png",
                           height: 30,
                         ),
                       ),
@@ -103,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(12),
                               child: Image.asset(
-                                'lib/fuser_screens/stickers/stic1.png',
+                                'assets/stickers/stic1.png',
                                 height: 150,
                               ),
                             ),
@@ -197,7 +198,7 @@ class _HomePageState extends State<HomePage> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(12),
                               child: Image.asset(
-                                'lib/fuser_screens/icons/icon.png',
+                                'assets/images/icon.png',
                                 height: 150,
                               ),
                             ),

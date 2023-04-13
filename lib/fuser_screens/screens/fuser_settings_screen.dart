@@ -23,7 +23,7 @@ class FuserSettingsScreen extends StatelessWidget {
             ListTile(
               leading: CircleAvatar(
                 radius: 30,
-                backgroundImage: AssetImage("images/doctor1.jpg"),
+                backgroundImage: AssetImage("assets/images/doctor1.jpg"),
               ),
               title: Text(
                 "إسم الصيدلية",

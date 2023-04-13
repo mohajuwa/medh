@@ -25,6 +25,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'El_Messiri'),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
@@ -36,17 +37,55 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      "مرحباً",
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w500,
+                    Padding(
+                      padding: EdgeInsets.only(right: 5, top: 5),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomePage(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 6,
+                                spreadRadius: 4,
+                              )
+                            ],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(3),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.home_filled,
+                                    color: Color(0xFF7165D6),
+                                    size: 30,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                     CircleAvatar(
                       radius: 25,
-                      backgroundImage: AssetImage("images/doctor1.jpg"),
-                    )
+                      backgroundImage: AssetImage("assets/images/icon1.png"),
+                    ),
                   ],
                 ),
               ),
@@ -57,9 +96,9 @@ class HomeScreen extends StatelessWidget {
                   width: double.infinity,
                   child: Carousel(
                     images: [
-                      AssetImage("images/doctor1.jpg"),
-                      AssetImage("images/doctor2.jpg"),
-                      AssetImage("images/doctor3.jpg"),
+                      AssetImage("assets/images/doctor1.jpg"),
+                      AssetImage("assets/images/doctor2.jpg"),
+                      AssetImage("assets/images/doctor3.jpg"),
                     ],
                     dotSize: 15,
                     dotIncreaseSize: 1,
@@ -172,7 +211,7 @@ class HomeScreen extends StatelessWidget {
                           CircleAvatar(
                             radius: 35,
                             backgroundImage:
-                                AssetImage("images/${imgs[index]}"),
+                                AssetImage("assets/images/${imgs[index]}"),
                           ),
                           Text(
                             "إسم الصيدلية",
