@@ -5,10 +5,12 @@ import 'package:flutter/cupertino.dart';
 
 class AppointmentScreen extends StatelessWidget {
   List imgs = [
-    "doctor1.jpg",
-    "doctor2.jpg",
-    "doctor3.jpg",
-    "doctor4.jpg",
+    "icon.png",
+    "icon.png",
+    "icon.png",
+    "icon.png",
+    "icon.png",
+    "icon.png",
   ];
   final clr = Color(0xFF7165D6);
   final clr2 = Color(0xFFF0EEFA);
@@ -56,11 +58,11 @@ class AppointmentScreen extends StatelessWidget {
                         CircleAvatar(
                           radius: 35,
                           backgroundImage:
-                              AssetImage("assets/images/doctor1.jpg"),
+                              AssetImage("assets/images/icon1.png"),
                         ),
                         SizedBox(height: 15),
                         Text(
-                          "إسم الصيدلية",
+                          "إسم الدواء",
                           style: TextStyle(
                             fontSize: 23,
                             fontWeight: FontWeight.w500,
@@ -69,7 +71,7 @@ class AppointmentScreen extends StatelessWidget {
                         ),
                         SizedBox(height: 5),
                         Text(
-                          "للتواصل",
+                          "المورد",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -132,7 +134,7 @@ class AppointmentScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Text(
-                    "معلومات الصدلية",
+                    "معلومات الدواء",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
@@ -140,7 +142,7 @@ class AppointmentScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 5),
                   Text(
-                    "يتم كتابة كل ما يتعلق بالدكتور هنا في هذه الخانه",
+                    "يتم كتابة كل ما يتعلق بالدواء هنا في هذه الخانه",
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.black54,
@@ -262,7 +264,7 @@ class AppointmentScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "الموقع",
+                    "موقع بالقرب منك وفر هذا الدواء من قبل",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
@@ -319,7 +321,7 @@ class AppointmentScreen extends StatelessWidget {
                       color: Colors.black54,
                     ),
                   ),
-                  Text("\$100",
+                  Text("\$غير محدد",
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black12,
@@ -338,7 +340,7 @@ class AppointmentScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                      child: Text("طلب : شراء",
+                      child: Text("طلب : إستعلام",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
