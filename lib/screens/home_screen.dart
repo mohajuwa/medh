@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:medh/pages/home_page.dart';
 import 'package:medh/screens/welcom_screen.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'appointm2_screen.dart';
 import 'appointment_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -187,7 +188,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => AppointmentScreen(),
+                          builder: (context) => Appointment2Screen(),
                         ),
                       );
                     },

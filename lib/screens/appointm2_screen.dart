@@ -3,14 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class FuserAppointmentScreen extends StatelessWidget {
+class Appointment2Screen extends StatelessWidget {
   List imgs = [
-    "icon.png",
-    "icon.png",
-    "icon.png",
-    "icon.png",
-    "icon.png",
-    "icon.png",
+    "doctor1.jpg",
+    "doctor2.jpg",
+    "doctor3.jpg",
+    "doctor4.jpg",
   ];
   final clr = Color(0xFF7165D6);
   final clr2 = Color(0xFFF0EEFA);
@@ -19,7 +17,7 @@ class FuserAppointmentScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: clr,
       body: SingleChildScrollView(
-        child: ListBody(
+        child: Column(
           children: [
             SizedBox(height: 50),
             Padding(
@@ -58,11 +56,11 @@ class FuserAppointmentScreen extends StatelessWidget {
                         CircleAvatar(
                           radius: 35,
                           backgroundImage:
-                              AssetImage("assets/images/icon1.png"),
+                              AssetImage("assets/images/doctor1.jpg"),
                         ),
                         SizedBox(height: 15),
                         Text(
-                          "إسم الدواء",
+                          "إسم الصيدلية",
                           style: TextStyle(
                             fontSize: 23,
                             fontWeight: FontWeight.w500,
@@ -71,7 +69,7 @@ class FuserAppointmentScreen extends StatelessWidget {
                         ),
                         SizedBox(height: 5),
                         Text(
-                          "المورد",
+                          "للتواصل",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -134,7 +132,7 @@ class FuserAppointmentScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Text(
-                    "معلومات الدواء",
+                    "معلومات الصيدلية",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
@@ -142,7 +140,7 @@ class FuserAppointmentScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 5),
                   Text(
-                    "يتم كتابة كل ما يتعلق بالدواء هنا في هذه الخانه",
+                    "يتم كتابة كل ما يتعلق بالدكتور هنا في هذه الخانه",
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.black54,
@@ -263,6 +261,34 @@ class FuserAppointmentScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10),
+                  Text(
+                    "الموقع",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  ListTile(
+                    leading: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: clr2,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.location_on,
+                        color: clr,
+                        size: 30,
+                      ),
+                    ),
+                    title: Text(
+                      "إسم الصدلية",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(" موقع الصيدلية ، يظهر هنا "),
+                  ),
                 ],
               ),
             )
@@ -293,7 +319,7 @@ class FuserAppointmentScreen extends StatelessWidget {
                       color: Colors.black54,
                     ),
                   ),
-                  Text("\$غير محدد",
+                  Text("\$100",
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black12,
@@ -312,7 +338,7 @@ class FuserAppointmentScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                      child: Text("تعديل",
+                      child: Text("طلب : شراء",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,

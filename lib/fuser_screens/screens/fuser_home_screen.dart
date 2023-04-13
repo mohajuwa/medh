@@ -18,10 +18,12 @@ class FuserHomeScreen extends StatelessWidget {
     "الين",
   ];
   List imgs = [
-    "doctor1.jpg",
-    "doctor2.jpg",
-    "doctor3.jpg",
-    "doctor4.jpg",
+    "icon.png",
+    "icon.png",
+    "icon.png",
+    "icon.png",
+    "icon.png",
+    "icon.png",
   ];
   final clr = Color(0xFF7165D6);
   @override
@@ -255,7 +257,7 @@ class FuserHomeScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 15),
                 child: Text(
-                  "صيدليات توفر غالباً",
+                  " متوفر",
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w500,
@@ -303,7 +305,7 @@ class FuserHomeScreen extends StatelessWidget {
                                 AssetImage("assets/images/${imgs[index]}"),
                           ),
                           Text(
-                            "إسم الصيدلية",
+                            "إسم الدواء",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
@@ -311,7 +313,7 @@ class FuserHomeScreen extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "عنوانها",
+                            "تمت إضافته",
                             style: TextStyle(
                               color: Colors.black45,
                             ),

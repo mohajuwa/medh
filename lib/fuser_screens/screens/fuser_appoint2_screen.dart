@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class FuserAppointmentScreen extends StatelessWidget {
+class FuserAppointme2ntScreen extends StatelessWidget {
   List imgs = [
     "icon.png",
     "icon.png",
