@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-import 'chat_screen.dart';
+import 'fuser_chat_screen.dart';
 
-class MessagesScreen extends StatelessWidget {
+class FuserMessagesScreen extends StatelessWidget {
   List imgs = [
     "doctor1.jpg",
     "doctor2.jpg",

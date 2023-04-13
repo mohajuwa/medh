@@ -4,16 +4,16 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:medh/pages/home_page.dart';
-import 'package:medh/screens/welcom_screen.dart';
-import 'package:carousel_pro/carousel_pro.dart';
-import 'appointment_screen.dart';
+import 'package:medh/fuser_screens/screens/fuser_welcom_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+import 'fuser_appointment_screen.dart';
+
+class FuserHomeScreen extends StatelessWidget {
   List symptoms = [
-    "الظهار",
-    "السبل",
-    "المركزي",
-    "الدائري",
+    "مضاف مؤخراً",
+    "الأقدم",
+    "الأكثر طلباً",
+    "الين",
   ];
   List imgs = [
     "doctor1.jpg",
@@ -51,36 +51,123 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 25),
-              Center(
-                child: Container(
-                  height: 150,
-                  width: double.infinity,
-                  child: Carousel(
-                    images: [
-                      AssetImage("images/doctor1.jpg"),
-                      AssetImage("images/doctor2.jpg"),
-                      AssetImage("images/doctor3.jpg"),
-                    ],
-                    dotSize: 15,
-                    dotIncreaseSize: 1,
-                    dotSpacing: 30,
-                    dotColor: Colors.white,
-                    dotBgColor: Colors.deepPurple.withOpacity(0.5),
-                    indicatorBgPadding: 10,
-                    boxFit: BoxFit.contain,
-                    borderRadius: true,
-                    radius: Radius.circular(30),
-                    overlayShadow: true,
-                    overlayShadowColors: Colors.grey,
-                    overlayShadowSize: 0.5,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: clr,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black12,
+                            blurRadius: 6,
+                            spreadRadius: 4,
+                          )
+                        ],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              Icons.add,
+                              color: clr,
+                              size: 35,
+                            ),
+                          ),
+                          SizedBox(height: 30),
+                          Text(
+                            "إضافة دواء",
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "جديد",
+                            style: TextStyle(
+                              color: Colors.white54,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
-                ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomePage(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black12,
+                            blurRadius: 6,
+                            spreadRadius: 4,
+                          )
+                        ],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFF0EEFA),
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              Icons.home_filled,
+                              color: clr,
+                              size: 35,
+                            ),
+                          ),
+                          SizedBox(height: 30),
+                          Text(
+                            "قائمة الأدوية",
+                            style: TextStyle(
+                              fontSize: 18,
+                              // color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "مضافة مسبقاً",
+                            style: TextStyle(
+                              color: Colors.black54,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: 25),
               Padding(
                 padding: EdgeInsets.only(left: 15),
                 child: Text(
-                  "فلترة عرض الصيدليات حسب المنطقة",
+                  "فلترة الأدوية حسب ",
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w500,

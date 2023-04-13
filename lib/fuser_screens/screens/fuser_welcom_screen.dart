@@ -1,12 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'signup_screen.dart';
+import 'package:medh/fuser_screens/screens/fuser_signup_screen.dart';
+import 'package:medh/screens/signup_screen.dart';
 
-import 'login_screen.dart';
-import '../widgets/navbar_roots.dart';
+import 'fuser_login_screen.dart';
+import '../widgets/fuser_navbar_roots.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class FuserWelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -24,7 +25,7 @@ class WelcomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => NavBarRoots(),
+                      builder: (context) => FuserNavBarRoots(),
                     ),
                   );
                 },
@@ -75,10 +76,11 @@ class WelcomeScreen extends StatelessWidget {
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => LoginScreen(),
-                          ));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FuserLoginScreen(),
+                        ),
+                      );
                     },
                     child: Padding(
                       padding:
@@ -102,7 +104,7 @@ class WelcomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SignUpScreen(),
+                          builder: (context) => FuserSignUpScreen(),
                         ),
                       );
                     },

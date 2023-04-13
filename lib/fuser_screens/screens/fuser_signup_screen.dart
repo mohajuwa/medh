@@ -1,17 +1,18 @@
+// ignore_for_file: unnecessary_import
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:medh/screens/signup_screen.dart';
 
-import '../pages/home_page.dart';
+import '../../pages/home_page.dart';
+import 'fuser_login_screen.dart';
 
-class LoginScreen extends StatefulWidget {
+class FuserSignUpScreen extends StatefulWidget {
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<FuserSignUpScreen> createState() => _FuserSignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
   bool passTooggle = true;
   @override
   Widget build(BuildContext context) {
@@ -72,31 +73,53 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
+              SizedBox(height: 10),
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Image.asset("images/doctors.png"),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               Padding(
-                padding: EdgeInsets.all(12),
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
+                    labelText: "الإسم الكامل",
                     border: OutlineInputBorder(),
-                    label: Text("إدخل إسم المستخدم"),
                     prefixIcon: Icon(Icons.person),
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(12),
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: "البريد  ",
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.email),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: " رقم الجوال",
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.phone),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   obscureText: passTooggle ? true : false,
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      label: Text("إدخل كلمة السر "),
-                      prefixIcon: Icon(Icons.lock),
-                      suffixIcon: InkWell(
+                    labelText: "الإسم الكامل",
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.lock),
+                    suffixIcon: InkWell(
                         onTap: () {
+                          //
                           if (passTooggle == true) {
                             passTooggle = false;
                           } else {
@@ -106,11 +129,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         child: passTooggle
                             ? Icon(CupertinoIcons.eye_slash_fill)
-                            : Icon(CupertinoIcons.eye_fill),
-                      )),
+                            : Icon(CupertinoIcons.eye_fill)),
+                  ),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: SizedBox(
@@ -131,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                         child: Center(
                           child: Text(
-                            "تسجيل الدخول",
+                            "إنشاء حساب",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 25,
@@ -144,12 +167,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "ليس لديك حساب؟",
+                    " لديك حساب؟",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
@@ -157,25 +179,23 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SignUpScreen(),
-                          ));
-                    },
-                    child: Text(
-                      "إنشاء حساب",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF7165D6),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 12),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FuserLoginScreen(),
+                            ));
+                      },
+                      child: Text(
+                        " تسجيل الدخول",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF7165D6),
+                        ),
+                      ))
                 ],
-              ),
+              )
             ],
           ),
         ),

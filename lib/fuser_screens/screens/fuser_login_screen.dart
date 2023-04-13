@@ -2,16 +2,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:medh/screens/signup_screen.dart';
 
-import '../pages/home_page.dart';
+import '../../pages/home_page.dart';
+import '../../screens/home_screen.dart';
+import '../widgets/fuser_navbar_roots.dart';
+import 'fuser_home_screen.dart';
+import 'fuser_signup_screen.dart';
 
-class LoginScreen extends StatefulWidget {
+class FuserLoginScreen extends StatefulWidget {
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<FuserLoginScreen> createState() => _FuserLoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _FuserLoginScreenState extends State<FuserLoginScreen> {
   bool passTooggle = true;
   @override
   Widget build(BuildContext context) {
@@ -26,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 5),
+                    padding: EdgeInsets.only(right: 20),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -120,11 +123,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //       builder: (context) => LoginScreen(),
-                        //     ));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FuserNavBarRoots(),
+                          ),
+                        );
                       },
                       child: Padding(
                         padding:
@@ -161,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SignUpScreen(),
+                            builder: (context) => FuserSignUpScreen(),
                           ));
                     },
                     child: Text(

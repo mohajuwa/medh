@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/char_sample.dart';
+import '../widgets/fuser_chat_sample.dart';
 
 class ChatScreen extends StatelessWidget {
   ChatScreen({super.key});
@@ -63,7 +63,7 @@ class ChatScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: 8,
         padding: EdgeInsets.only(top: 20, left: 15, bottom: 80),
-        itemBuilder: (context, index) => ChatSample(),
+        itemBuilder: (context, index) => FuserChatSample(),
       ),
       bottomSheet: Container(
         height: 65,

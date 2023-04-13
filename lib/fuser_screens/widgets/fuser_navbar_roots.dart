@@ -2,28 +2,29 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:medh/screens/messages_screen.dart';
-import '../screens/dashboard_screen.dart';
-import '../screens/home_screen.dart';
-import '../screens/settings_screen.dart';
 
-class NavBarRoots extends StatefulWidget {
+import '../screens/fuser_dashboard_screen.dart';
+import '../screens/fuser_home_screen.dart';
+import '../screens/fuser_messages_screen.dart';
+import '../screens/fuser_settings_screen.dart';
+
+class FuserNavBarRoots extends StatefulWidget {
   @override
-  State<NavBarRoots> createState() => _NavBarRootsState();
+  State<FuserNavBarRoots> createState() => _FuserNavBarRootsState();
 }
 
-class _NavBarRootsState extends State<NavBarRoots> {
+class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
   int _selectedIndex = 0;
   final _screens = [
     // Home Screen يا نقيب
-    HomeScreen(),
+    FuserHomeScreen(),
     // Messages Screen
-    MessagesScreen(),
+    FuserMessagesScreen(),
     // Schedule Screen
-    DashboardScreen(),
+    FuserDashboardScreen(),
     // Settings Screen
 
-    SettingsScreen(),
+    FuserSettingsScreen(),
   ];
 
   @override
