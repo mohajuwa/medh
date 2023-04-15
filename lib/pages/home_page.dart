@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                                 color: Color(0xFF58329B),
                                 borderRadius: BorderRadius.circular(20),
                               ),
-                              child: GestureDetector(
+                              child: InkWell(
                                 onTap: () {
                                   Navigator.push(
                                     context,
@@ -240,7 +240,7 @@ class _HomePageState extends State<HomePage> {
                                 color: Color(0xFF58329B),
                                 borderRadius: BorderRadius.circular(20),
                               ),
-                              child: GestureDetector(
+                              child: InkWell(
                                 onTap: () {
                                   Navigator.push(
                                     context,

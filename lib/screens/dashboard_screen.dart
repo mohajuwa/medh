@@ -2,7 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:medh/screens/appointm2_screen.dart';
 
+import '../widgets/best_price_dashboard.dart';
+import '../widgets/neares_km_dashboard.dart';
 import '../widgets/upcoming_dashboard.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -20,9 +23,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
     // Upcoming Widget
     UpcomingDashboard(),
     // Complated Widget
-    Container(),
+    BestPriceSample(),
     // Canceled Widget
-    Container(),
+    NearestKmDashboard(),
   ];
 
   @override
@@ -92,7 +95,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
-                        "مكتملة",
+                        " افضل سعر",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
@@ -116,7 +119,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
-                        "ملغية",
+                        "اقرب رد",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,

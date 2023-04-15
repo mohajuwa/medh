@@ -14,6 +14,13 @@ class MessagesScreen extends StatelessWidget {
     "doc2.jpg",
     "doc2.jpg",
   ];
+  List symptoms = [
+    "الكل",
+    "الظهار",
+    "السبل",
+    "المركزي",
+    "الدائري",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +32,7 @@ class MessagesScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              "الأدوية",
+              "الإستعلام عن الأدوية",
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
@@ -75,7 +82,7 @@ class MessagesScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              " تم طلبه مؤخراً",
+              "فلترة البحث حسب المنطقة",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -84,64 +91,38 @@ class MessagesScreen extends StatelessWidget {
           ),
           SizedBox(height: 10),
           SizedBox(
-            height: 90,
+            height: 70,
             child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 6,
-              shrinkWrap: true,
-              itemBuilder: (context, index) {
-                return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 12),
-                  width: 65,
-                  height: 65,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        spreadRadius: 2,
-                        blurRadius: 10,
-                      ),
-                    ],
-                  ),
-                  child: Stack(
-                    textDirection: TextDirection.rtl,
-                    children: [
-                      Center(
-                        child: Container(
-                          height: 65,
-                          width: 65,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(30),
-                            child: Image.asset(
-                              "assets/images/${imgs[index]}",
-                              fit: BoxFit.cover,
-                            ),
-                          ),
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: symptoms.length,
+                itemBuilder: (context, index) {
+                  return Container(
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 25),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFF4F6FA),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 4,
+                          spreadRadius: 2,
+                        )
+                      ],
+                    ),
+                    child: Center(
+                      child: Text(
+                        symptoms[index],
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black54,
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(4),
-                        padding: EdgeInsets.all(3),
-                        height: 20,
-                        width: 20,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.amberAccent.shade100,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                );
-              },
-            ),
+                    ),
+                  );
+                }),
           ),
           SizedBox(height: 20),
           Padding(

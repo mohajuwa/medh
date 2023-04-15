@@ -17,7 +17,7 @@ class Appointment2Screen extends StatelessWidget {
     return Scaffold(
       backgroundColor: clr,
       body: SingleChildScrollView(
-        child: Column(
+        child: ListBody(
           children: [
             SizedBox(height: 50),
             Padding(
@@ -56,11 +56,11 @@ class Appointment2Screen extends StatelessWidget {
                         CircleAvatar(
                           radius: 35,
                           backgroundImage:
-                              AssetImage("assets/images/doctor1.jpg"),
+                              AssetImage("assets/images/icon1.png"),
                         ),
                         SizedBox(height: 15),
                         Text(
-                          "إسم الصيدلية",
+                          "إسم الدواء",
                           style: TextStyle(
                             fontSize: 23,
                             fontWeight: FontWeight.w500,
@@ -69,7 +69,7 @@ class Appointment2Screen extends StatelessWidget {
                         ),
                         SizedBox(height: 5),
                         Text(
-                          "للتواصل",
+                          "المورد",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -132,7 +132,7 @@ class Appointment2Screen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Text(
-                    "معلومات الصيدلية",
+                    "معلومات الدواء",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
@@ -140,7 +140,7 @@ class Appointment2Screen extends StatelessWidget {
                   ),
                   SizedBox(height: 5),
                   Text(
-                    "يتم كتابة كل ما يتعلق بالدكتور هنا في هذه الخانه",
+                    "يتم كتابة كل ما يتعلق بالدواء هنا في هذه الخانه",
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.black54,
@@ -262,7 +262,7 @@ class Appointment2Screen extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "الموقع",
+                    "موقع بالقرب منك وفر هذا الدواء من قبل",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
@@ -319,7 +319,7 @@ class Appointment2Screen extends StatelessWidget {
                       color: Colors.black54,
                     ),
                   ),
-                  Text("\$100",
+                  Text("\$غير محدد",
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black12,
@@ -338,7 +338,7 @@ class Appointment2Screen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                      child: Text("طلب : شراء",
+                      child: Text("طلب : إستعلام",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
