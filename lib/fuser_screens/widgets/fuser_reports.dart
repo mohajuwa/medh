@@ -43,7 +43,7 @@ class _FuserReportsState extends State<FuserReports> {
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InkWell(
                     onTap: () {

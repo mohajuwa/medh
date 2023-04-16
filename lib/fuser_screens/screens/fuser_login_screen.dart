@@ -30,7 +30,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
               Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 20),
+                    padding: EdgeInsets.only(right: 20, top: 5),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -41,7 +41,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                         );
                       },
                       child: Container(
-                        padding: EdgeInsets.all(5),
+                        padding: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
@@ -57,7 +57,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(3),
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
@@ -65,7 +65,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                                 child: Icon(
                                   Icons.home_filled,
                                   color: Color(0xFF7165D6),
-                                  size: 25,
+                                  size: 30,
                                 ),
                               ),
                             ),

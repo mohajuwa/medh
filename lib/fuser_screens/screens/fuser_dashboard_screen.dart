@@ -53,7 +53,7 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InkWell(
                     onTap: () {
@@ -69,7 +69,7 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
-                        "نتائج الإستعلام",
+                        "الطلبات",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,

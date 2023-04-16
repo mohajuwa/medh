@@ -21,77 +21,98 @@ class MessagesScreen extends StatelessWidget {
     "المركزي",
     "الدائري",
   ];
-
+  bool shadowColor = false;
+  double? scrolledUnderElevation;
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 40),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              "الإستعلام عن الأدوية",
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          SizedBox(height: 30),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 10,
-                    spreadRadius: 2,
+    return Scaffold(
+      appBar: AppBar(
+        title: Padding(
+          padding: EdgeInsets.symmetric(vertical: 20),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 0, top: 5, left: 160),
+                child: Text(
+                  'الإستعلام عن الأدوية',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22,
                   ),
-                ],
+                ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 300,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 15),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          hintText: "إستعلام",
-                          border: InputBorder.none,
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 10,
+                      spreadRadius: 2,
+                    ),
+                  ],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 300,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 5),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: "إستعلام",
+                            border: InputBorder.none,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Icon(
-                    Icons.search,
-                    color: Color(0xFF7165D6),
-                  )
-                ],
+                    Icon(
+                      Icons.search,
+                      color: Color(0xFF7165D6),
+                    ),
+                    Icon(
+                      Icons.photo_camera,
+                      color: Color(0xFF7165D6),
+                    ),
+                  ],
+                ),
               ),
+            ],
+          ),
+        ),
+        toolbarHeight: 100,
+        scrolledUnderElevation: scrolledUnderElevation,
+        shadowColor: shadowColor ? Theme.of(context).colorScheme.shadow : null,
+        backgroundColor: Colors.white,
+      ),
+      body: ListView(
+        children: [
+          SizedBox(height: 3),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 2.0),
+            child: Divider(
+              thickness: 1,
+              height: 2.0,
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               "فلترة البحث حسب المنطقة",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 5),
           SizedBox(
-            height: 70,
+            height: 50,
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
@@ -124,16 +145,23 @@ class MessagesScreen extends StatelessWidget {
                   );
                 }),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               "نتيجة الإستعلام ",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 18,
                 color: Colors.black45,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 2.0),
+            child: Divider(
+              thickness: 1,
+              height: 2.0,
             ),
           ),
           SizedBox(height: 10),

@@ -322,14 +322,13 @@ class FuserHomeScreen extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
-                                Icons.star,
-                                color: Colors.amber,
+                              Text(
+                                "الكمية :  37",
+                                style: TextStyle(
+                                  color: clr,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                              Text("4.5",
-                                  style: TextStyle(
-                                    color: Colors.black45,
-                                  ))
                             ],
                           )
                         ],

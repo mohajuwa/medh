@@ -28,7 +28,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
               Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 5),
+                    padding: EdgeInsets.only(right: 20, top: 5),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -39,7 +39,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                         );
                       },
                       child: Container(
-                        padding: EdgeInsets.all(5),
+                        padding: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
@@ -55,7 +55,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(3),
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
@@ -63,7 +63,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                                 child: Icon(
                                   Icons.home_filled,
                                   color: Color(0xFF7165D6),
-                                  size: 25,
+                                  size: 30,
                                 ),
                               ),
                             ),
@@ -115,7 +115,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                 child: TextField(
                   obscureText: passTooggle ? true : false,
                   decoration: InputDecoration(
-                    labelText: "الإسم الكامل",
+                    labelText: "كلمة المرور",
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.lock),
                     suffixIcon: InkWell(
@@ -144,11 +144,11 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //       builder: (context) => LoginScreen(),
-                        //     ));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FuserLoginScreen(),
+                            ));
                       },
                       child: Padding(
                         padding:

@@ -32,7 +32,7 @@ class FuserSettingsScreen extends StatelessWidget {
                   fontSize: 25,
                 ),
               ),
-              subtitle: Text("Profile"),
+              subtitle: Text("الحساب"),
             ),
             Divider(height: 50),
             ListTile(
@@ -50,7 +50,7 @@ class FuserSettingsScreen extends StatelessWidget {
                 ),
               ),
               title: Text(
-                "Profile",
+                "الحساب",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 20,
@@ -74,7 +74,7 @@ class FuserSettingsScreen extends StatelessWidget {
                 ),
               ),
               title: Text(
-                "Notifications",
+                "إشعارات",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 20,
@@ -98,7 +98,7 @@ class FuserSettingsScreen extends StatelessWidget {
                 ),
               ),
               title: Text(
-                "Privacy",
+                "الخصوصية",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 20,
@@ -122,7 +122,7 @@ class FuserSettingsScreen extends StatelessWidget {
                 ),
               ),
               title: Text(
-                "General",
+                "عام",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 20,
@@ -146,7 +146,7 @@ class FuserSettingsScreen extends StatelessWidget {
                 ),
               ),
               title: Text(
-                "About Us",
+                "عن التطبيق",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 20,
@@ -170,7 +170,7 @@ class FuserSettingsScreen extends StatelessWidget {
                 ),
               ),
               title: Text(
-                "Log Out",
+                "تسجيل خروج",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 20,
