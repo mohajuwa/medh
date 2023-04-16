@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:medh/screens/signup_screen.dart';
 
 import '../pages/home_page.dart';
+import '../widgets/navbar_roots.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -12,6 +13,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  bool shadowColor = false;
+  double? scrolledUnderElevation;
+  final clr = Color(0xFF7165D6);
   bool passTooggle = true;
   @override
   Widget build(BuildContext context) {
@@ -21,13 +25,19 @@ class _LoginScreenState extends State<LoginScreen> {
       home: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          backgroundColor: Colors.white,
-          body: ListView(
-            children: [
-              Row(
+          appBar: AppBar(
+            toolbarHeight: 60,
+            scrolledUnderElevation: scrolledUnderElevation,
+            shadowColor:
+                shadowColor ? Theme.of(context).colorScheme.shadow : clr,
+            backgroundColor: Colors.white,
+            title: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 5),
+                    padding: EdgeInsets.only(right: 0, top: 2),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -38,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         );
                       },
                       child: Container(
-                        padding: EdgeInsets.all(5),
+                        padding: EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
@@ -54,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(3),
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
@@ -62,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 child: Icon(
                                   Icons.home_filled,
                                   color: Color(0xFF7165D6),
-                                  size: 25,
+                                  size: 30,
                                 ),
                               ),
                             ),
@@ -71,11 +81,45 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
+                  Container(
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 6,
+                          spreadRadius: 4,
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(3),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                          ),
+                          child: CircleAvatar(
+                            radius: 15,
+                            backgroundImage:
+                                AssetImage("assets/images/icon1.png"),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
+            ),
+          ),
+          body: ListView(
+            children: [
               Padding(
                 padding: EdgeInsets.all(20),
-                child: Image.asset("assets/images/doctors.png"),
+                child: Image.asset("assets/stickers/stic1.png"),
               ),
               SizedBox(height: 10),
               Padding(
@@ -121,11 +165,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //       builder: (context) => LoginScreen(),
-                        //     ));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NavBarRoots(),
+                          ),
+                        );
                       },
                       child: Padding(
                         padding:

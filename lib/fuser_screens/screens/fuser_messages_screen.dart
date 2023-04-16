@@ -14,63 +14,79 @@ class FuserMessagesScreen extends StatelessWidget {
     "doc2.jpg",
     "doc2.jpg",
   ];
+  final clr = Color(0xFF7165D6);
+  bool shadowColor = false;
+  double? scrolledUnderElevation;
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 40),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              "الأدوية",
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          SizedBox(height: 30),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 10,
-                    spreadRadius: 2,
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 100,
+        scrolledUnderElevation: scrolledUnderElevation,
+        shadowColor: shadowColor ? Theme.of(context).colorScheme.shadow : clr,
+        backgroundColor: Colors.white,
+        title: Padding(
+          padding: EdgeInsets.symmetric(vertical: 20),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 0, top: 5, left: 160),
+                child: Text(
+                  'الإستعلام عن الأدوية',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22,
                   ),
-                ],
+                ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 300,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 15),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                          hintText: "بحث",
-                          border: InputBorder.none,
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 10,
+                      spreadRadius: 2,
+                    ),
+                  ],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 300,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 5),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: "إستعلام",
+                            border: InputBorder.none,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Icon(
-                    Icons.search,
-                    color: Color(0xFF7165D6),
-                  )
-                ],
+                    Icon(
+                      Icons.search,
+                      color: Color(0xFF7165D6),
+                    ),
+                    Icon(
+                      Icons.photo_camera,
+                      color: Color(0xFF7165D6),
+                    ),
+                  ],
+                ),
               ),
-            ),
+            ],
           ),
+        ),
+      ),
+      body: ListView(
+        children: [
+          SizedBox(height: 3),
           SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -132,7 +148,7 @@ class FuserMessagesScreen extends StatelessWidget {
                         ),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.green,
+                            color: Colors.amber.shade200,
                             shape: BoxShape.circle,
                           ),
                         ),
@@ -141,18 +157,6 @@ class FuserMessagesScreen extends StatelessWidget {
                   ),
                 );
               },
-            ),
-          ),
-          SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              " الأدوية المضافة مسبقاً ",
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.black45,
-                fontWeight: FontWeight.bold,
-              ),
             ),
           ),
           SizedBox(height: 10),

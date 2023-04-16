@@ -24,7 +24,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(height: 10),
               Padding(
                 padding: EdgeInsets.all(20),
-                child: Image.asset("assets/images/doctors.png"),
+                child: Image.asset("assets/stickers/stic1.png"),
               ),
               SizedBox(height: 15),
               Padding(

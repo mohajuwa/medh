@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:medh/pages/home_page.dart';
+
+import 'login_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
@@ -36,7 +39,14 @@ class SettingsScreen extends StatelessWidget {
             ),
             Divider(height: 50),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginScreen(),
+                  ),
+                );
+              },
               leading: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -156,7 +166,14 @@ class SettingsScreen extends StatelessWidget {
             ),
             Divider(height: 40),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                );
+              },
               leading: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(

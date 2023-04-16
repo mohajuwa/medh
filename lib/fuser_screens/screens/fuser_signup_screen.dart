@@ -13,6 +13,9 @@ class FuserSignUpScreen extends StatefulWidget {
 }
 
 class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
+  bool shadowColor = false;
+  double? scrolledUnderElevation;
+  final clr = Color(0xFF7165D6);
   bool passTooggle = true;
   @override
   Widget build(BuildContext context) {
@@ -22,13 +25,19 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
       home: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          backgroundColor: Colors.white,
-          body: ListView(
-            children: [
-              Row(
+          appBar: AppBar(
+            toolbarHeight: 60,
+            scrolledUnderElevation: scrolledUnderElevation,
+            shadowColor:
+                shadowColor ? Theme.of(context).colorScheme.shadow : clr,
+            backgroundColor: Colors.white,
+            title: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 20, top: 5),
+                    padding: EdgeInsets.only(right: 0, top: 2),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -72,12 +81,46 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                       ),
                     ),
                   ),
+                  Container(
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 6,
+                          spreadRadius: 4,
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(3),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                          ),
+                          child: CircleAvatar(
+                            radius: 15,
+                            backgroundImage:
+                                AssetImage("assets/images/icon1.png"),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
+            ),
+          ),
+          body: ListView(
+            children: [
               SizedBox(height: 10),
               Padding(
                 padding: EdgeInsets.all(20),
-                child: Image.asset("assets/images/doctors.png"),
+                child: Image.asset("assets/stickers/stic1.png"),
               ),
               SizedBox(height: 15),
               Padding(

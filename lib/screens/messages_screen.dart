@@ -21,12 +21,18 @@ class MessagesScreen extends StatelessWidget {
     "المركزي",
     "الدائري",
   ];
+  final clr = Color(0xFF7165D6);
   bool shadowColor = false;
   double? scrolledUnderElevation;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 100,
+        scrolledUnderElevation: scrolledUnderElevation,
+        shadowColor: shadowColor ? Theme.of(context).colorScheme.shadow : clr,
+        backgroundColor: Colors.white,
         title: Padding(
           padding: EdgeInsets.symmetric(vertical: 20),
           child: Column(
@@ -84,10 +90,6 @@ class MessagesScreen extends StatelessWidget {
             ],
           ),
         ),
-        toolbarHeight: 100,
-        scrolledUnderElevation: scrolledUnderElevation,
-        shadowColor: shadowColor ? Theme.of(context).colorScheme.shadow : null,
-        backgroundColor: Colors.white,
       ),
       body: ListView(
         children: [
@@ -126,9 +128,9 @@ class MessagesScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black12,
+                          color: clr,
                           blurRadius: 4,
-                          spreadRadius: 2,
+                          spreadRadius: 1,
                         )
                       ],
                     ),

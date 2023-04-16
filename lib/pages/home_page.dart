@@ -15,6 +15,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final clr = Color(0xFF7165D6);
+  bool shadowColor = false;
+  double? scrolledUnderElevation;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,58 +27,72 @@ class _HomePageState extends State<HomePage> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           backgroundColor: Colors.white,
+          appBar: AppBar(
+            toolbarHeight: 65,
+            scrolledUnderElevation: scrolledUnderElevation,
+            shadowColor:
+                shadowColor ? Theme.of(context).colorScheme.shadow : clr,
+            backgroundColor: Colors.white,
+            title: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  // name
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(top: 8),
+                        child: Text(
+                          'الباحث الدوائي',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 8),
+                      Text(
+                        '  شفت!؟',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 24,
+                        ),
+                      )
+                    ],
+                  ),
+
+                  // profile pic
+                  Container(
+                    padding: EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 6,
+                          spreadRadius: 4,
+                        )
+                      ],
+                    ),
+                    child: CircleAvatar(
+                      radius: 15,
+                      backgroundImage: AssetImage("assets/images/icon1.png"),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
           body: SafeArea(
             child: Column(
               children: [
                 //app bar777777777777777777777777
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      // name
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            'الباحث الدوائي',
-                            style: TextStyle(fontSize: 18),
-                          ),
-                          SizedBox(height: 8),
-                          Text(
-                            '  شفت!؟',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                            ),
-                          )
-                        ],
-                      ),
-
-                      // profile pic
-                      Container(
-                        padding: EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 4,
-                            )
-                          ],
-                        ),
-                        child: Image.asset(
-                          "assets/images/icon1.png",
-                          height: 30,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 80),
+                SizedBox(height: 100),
 
                 // card -> How do u feel
                 Padding(

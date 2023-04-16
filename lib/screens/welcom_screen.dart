@@ -40,7 +40,7 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 30),
             Padding(
               padding: EdgeInsets.all(20),
-              child: Image.asset("assets/images/doctors.png"),
+              child: Image.asset("assets/stickers/stic1.png"),
             ),
             SizedBox(height: 50),
             Center(

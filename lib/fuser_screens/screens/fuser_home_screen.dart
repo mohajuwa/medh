@@ -25,6 +25,8 @@ class FuserHomeScreen extends StatelessWidget {
     "icon.png",
     "icon.png",
   ];
+  bool shadowColor = false;
+  double? scrolledUnderElevation;
   final clr = Color(0xFF7165D6);
   @override
   Widget build(BuildContext context) {
@@ -34,65 +36,72 @@ class FuserHomeScreen extends StatelessWidget {
       home: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          body: ListView(
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 5, top: 5),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => HomePage(),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          padding: EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 6,
-                                spreadRadius: 4,
-                              )
-                            ],
+          appBar: AppBar(
+            toolbarHeight: 60,
+            scrolledUnderElevation: scrolledUnderElevation,
+            shadowColor:
+                shadowColor ? Theme.of(context).colorScheme.shadow : clr,
+            backgroundColor: Colors.white,
+            title: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 0, top: 2),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomePage(),
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                padding: EdgeInsets.all(3),
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Center(
-                                  child: Icon(
-                                    Icons.home_filled,
-                                    color: Color(0xFF7165D6),
-                                    size: 30,
-                                  ),
+                        );
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 6,
+                              spreadRadius: 4,
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(3),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  Icons.home_filled,
+                                  color: Color(0xFF7165D6),
+                                  size: 30,
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                    CircleAvatar(
-                      radius: 25,
-                      backgroundImage: AssetImage("assets/images/icon1.png"),
-                    ),
-                  ],
-                ),
+                  ),
+                  CircleAvatar(
+                    radius: 25,
+                    backgroundImage: AssetImage("assets/images/icon1.png"),
+                  ),
+                ],
               ),
+            ),
+          ),
+          body: ListView(
+            children: [
               SizedBox(height: 25),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

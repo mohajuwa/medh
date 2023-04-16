@@ -63,8 +63,8 @@ class _NavBarRootsState extends State<NavBarRoots> {
                   label: "إستعلام",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.dashboard_customize),
-                  label: "لوحة التحكم",
+                  icon: Icon(Icons.notification_add_outlined),
+                  label: "لوحة الإشعارت",
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.settings),

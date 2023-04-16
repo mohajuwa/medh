@@ -39,9 +39,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Text(
-                "لوحة التحكم",
+                "لوحة الإشعارات",
                 style: TextStyle(
-                  fontSize: 32,
+                  fontSize: 28,
                   fontWeight: FontWeight.w500,
                 ),
               ),
