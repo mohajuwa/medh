@@ -66,23 +66,40 @@ class _HomePageState extends State<HomePage> {
                   ),
 
                   // profile pic
-                  Container(
-                    padding: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 6,
-                          spreadRadius: 4,
-                        )
-                      ],
-                    ),
-                    child: CircleAvatar(
-                      radius: 15,
-                      backgroundImage: AssetImage("assets/images/icon1.png"),
-                    ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 6,
+                              spreadRadius: 4,
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(3),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: CircleAvatar(
+                                radius: 15,
+                                backgroundImage:
+                                    AssetImage("assets/images/icon1.png"),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -168,7 +185,8 @@ class _HomePageState extends State<HomePage> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => FuserLoginScreen(),
+                                      builder: (context) =>
+                                          FuserWelcomeScreen(),
                                     ),
                                   );
                                 },

@@ -37,15 +37,15 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 80),
             Padding(
               padding: EdgeInsets.all(20),
-              child: Image.asset("assets/stickers/stic1.png"),
+              child: Image.asset("assets/images/lined heart.png"),
             ),
             SizedBox(height: 50),
             Center(
               child: Text(
-                "صيدلانيون",
+                "مستعلم عن دواء",
                 style: TextStyle(
                   color: Color(0xFF7165D5),
                   fontSize: 35,
@@ -57,10 +57,10 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 10),
             Center(
               child: Text(
-                "ومستعلمون عن الأدوية",
+                "الباحث الدوائي خيارك الأمثل للإستعلام عن الأدوية المعدومة",
                 style: TextStyle(
                   color: Colors.black54,
-                  fontSize: 18,
+                  fontSize: 16,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -84,7 +84,7 @@ class WelcomeScreen extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       child: Text(
-                        "Log in",
+                        "الدخول",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 22,
@@ -110,7 +110,7 @@ class WelcomeScreen extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       child: Text(
-                        "Sign up",
+                        "التسجيل",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 22,

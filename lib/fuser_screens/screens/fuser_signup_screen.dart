@@ -120,9 +120,16 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
               SizedBox(height: 10),
               Padding(
                 padding: EdgeInsets.all(20),
-                child: Image.asset("assets/stickers/stic1.png"),
+                child: Image.asset(
+                  "assets/stickers/stic1.png",
+                  height: 250,
+                ),
               ),
-              SizedBox(height: 15),
+              Divider(
+                thickness: 2.9,
+                height: 2.0,
+              ),
+              SizedBox(height: 5),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(

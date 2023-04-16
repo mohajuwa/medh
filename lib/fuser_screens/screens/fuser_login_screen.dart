@@ -119,9 +119,17 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
           ),
           body: ListView(
             children: [
+              SizedBox(height: 10),
               Padding(
                 padding: EdgeInsets.all(20),
-                child: Image.asset("assets/stickers/stic1.png"),
+                child: Image.asset(
+                  "assets/stickers/stic1.png",
+                  height: 250,
+                ),
+              ),
+              Divider(
+                thickness: 2.9,
+                height: 2.0,
               ),
               SizedBox(height: 10),
               Padding(

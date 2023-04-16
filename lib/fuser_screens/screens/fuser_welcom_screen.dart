@@ -86,7 +86,7 @@ class FuserWelcomeScreen extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       child: Text(
-                        "Log in",
+                        "الدخول",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 22,
@@ -112,7 +112,7 @@ class FuserWelcomeScreen extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       child: Text(
-                        "Sign up",
+                        "التسجيل",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 22,

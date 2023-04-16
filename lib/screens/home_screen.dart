@@ -17,10 +17,10 @@ class HomeScreen extends StatelessWidget {
     "الدائري",
   ];
   List imgs = [
-    "doctor1.jpg",
-    "doctor2.jpg",
-    "doctor3.jpg",
-    "doctor4.jpg",
+    "icon1.png",
+    "icon1.png",
+    "icon1.png",
+    "icon1.png",
   ];
   bool shadowColor = false;
   double? scrolledUnderElevation;
@@ -125,29 +125,29 @@ class HomeScreen extends StatelessWidget {
           ),
           body: ListView(
             children: [
-              SizedBox(height: 50),
+              SizedBox(height: 8),
               Center(
                 child: Container(
-                  height: 150,
+                  height: 250,
                   width: double.infinity,
                   child: Carousel(
                     images: [
-                      AssetImage("assets/images/doctor1.jpg"),
-                      AssetImage("assets/images/doctor2.jpg"),
-                      AssetImage("assets/images/doctor3.jpg"),
+                      AssetImage("assets/stickers/stic_18-30.png"),
+                      AssetImage("assets/stickers/stic4.png"),
+                      AssetImage("assets/stickers/stic_f-50-80.png"),
                     ],
                     dotSize: 15,
                     dotIncreaseSize: 1,
                     dotSpacing: 30,
                     dotColor: Colors.white,
                     dotBgColor: Colors.deepPurple.withOpacity(0.5),
-                    indicatorBgPadding: 10,
-                    boxFit: BoxFit.contain,
+                    indicatorBgPadding: 6,
+                    boxFit: BoxFit.fitHeight,
                     borderRadius: true,
-                    radius: Radius.circular(30),
+                    radius: Radius.circular(40),
                     overlayShadow: true,
                     overlayShadowColors: Colors.grey,
-                    overlayShadowSize: 0.5,
+                    overlayShadowSize: 0.2,
                   ),
                 ),
               ),

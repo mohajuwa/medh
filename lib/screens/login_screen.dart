@@ -117,9 +117,29 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           body: ListView(
             children: [
-              Padding(
-                padding: EdgeInsets.all(20),
-                child: Image.asset("assets/stickers/stic1.png"),
+              Column(
+                children: [
+                  Row(
+                    children: [
+                      Image.asset(
+                        "assets/stickers/stic3.png",
+                        height: 200,
+                      ),
+                      Row(
+                        children: [
+                          Image.asset(
+                            "assets/stickers/stic4.png",
+                            height: 200,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Divider(
+                thickness: 2.9,
+                height: 2.0,
               ),
               SizedBox(height: 10),
               Padding(

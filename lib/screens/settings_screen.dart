@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:medh/pages/home_page.dart';
+import 'package:medh/screens/welcom_screen.dart';
 
 import 'login_screen.dart';
 
@@ -43,7 +44,7 @@ class SettingsScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
+                    builder: (context) => WelcomeScreen(),
                   ),
                 );
               },
