@@ -1,4 +1,4 @@
-# ModWir - (1)
+# ModWir - Group 3 Graduation Project in Ibb City - Yemen
 
 Medical app UI Design Flutter .
 
@@ -12,22 +12,9 @@ Medical app UI Design Flutter .
       step 1:
               git clone https://github.com/mohajuwa/medh2.git
       step 2:
-              Create a new flutter app in your editor
+              pub get
       step 3: 
-              Copy Folders : (1- lib , 2- images)
-      step 4:
-              final step is that you Copy Felds on pubspec.yaml 
+              change the version of flutter in your file(pupspec.yaml)
               
-    Dependencies:
-      dependencies:
-          flutter:
-          sdk: flutter
-          cupertino_icons: ^1.0.2
-          custom_clippers: ^2.0.0
-
-  
-    Assets:
-      assets:
-      - images/ 
 
 # Done
