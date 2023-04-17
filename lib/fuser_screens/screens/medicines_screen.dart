@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'fuser_appoint2_screen.dart';
+import 'medicine_detils_screen.dart';
 import 'fuser_chat_screen.dart';
 
 class FuserMessagesScreen extends StatelessWidget {
