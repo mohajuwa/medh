@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../widgets/fuser_navbar_roots.dart';
-import 'edit_medcine.dart';
+import 'edit_home_medcine.dart';
+import 'edit_medicine2.dart';
 
-class MedicineDitlesScreen extends StatelessWidget {
+class FuserMedicineDitlesScreen extends StatelessWidget {
   List imgs = [
     "icon.png",
     "icon.png",

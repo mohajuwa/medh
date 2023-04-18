@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:medh/screens/messages_screen.dart';
+import 'package:medh/screens/search_screen.dart';
 import '../screens/dashboard_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/settings_screen.dart';

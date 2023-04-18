@@ -3,10 +3,11 @@
 
 import 'package:flutter/material.dart';
 
-import 'medicine_detils_screen.dart';
+import 'medicine_detils2_screen.dart';
+import 'medicine_detils_home_screen.dart';
 import 'fuser_chat_screen.dart';
 
-class FuserMessagesScreen extends StatelessWidget {
+class FuserMedicineScreen extends StatelessWidget {
   List imgs = [
     "doc2.jpg",
     "doc2.jpg",
@@ -174,7 +175,7 @@ class FuserMessagesScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => MedicineDitlesScreen(),
+                            builder: (context) => FuserMedicineDitles2Screen(),
                           ));
                     },
                     leading: CircleAvatar(

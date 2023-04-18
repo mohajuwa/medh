@@ -20,7 +20,7 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
     // Home Screen يا نقيب
     FuserHomeScreen(),
     // Messages Screen
-    FuserMessagesScreen(),
+    FuserMedicineScreen(),
     // Schedule Screen
     FuserDashboardScreen(),
     // Settings Screen

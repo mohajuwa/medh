@@ -1,22 +1,21 @@
-// صفحة إضافة دواء للصيدلي
+// صفحة تعديل دواء للصيدلي
 // ignore_for_file: unnecessary_import
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:medh/fuser_screens/screens/fuser_home_screen.dart';
 
 import '../../pages/home_page.dart';
-import '../small_screens/add_medicine_done.dart';
+import '../small_screens/edit_home_medicine_done.dart';
 import '../widgets/fuser_navbar_roots.dart';
-import 'fuser_login_screen.dart';
+import 'fuser_home_screen.dart';
 
-class AddMedcineScreen extends StatefulWidget {
+class FuserEditMedcineScreen extends StatefulWidget {
   @override
-  State<AddMedcineScreen> createState() => _AddMedcineScreenState();
+  State<FuserEditMedcineScreen> createState() => _FuserEditMedcineScreenState();
 }
 
-class _AddMedcineScreenState extends State<AddMedcineScreen> {
+class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
   bool shadowColor = false;
   double? scrolledUnderElevation;
   final clr = Color(0xFF58329B);
@@ -197,7 +196,7 @@ class _AddMedcineScreenState extends State<AddMedcineScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => FuserAddMedicineDone(),
+                            builder: (context) => FuserEditMedicineDone(),
                           ),
                         );
                       },
@@ -206,7 +205,7 @@ class _AddMedcineScreenState extends State<AddMedcineScreen> {
                             EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                         child: Center(
                           child: Text(
-                            "إضافة",
+                            "تعديل",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 25,

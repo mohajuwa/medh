@@ -8,7 +8,8 @@ import 'package:medh/pages/home_page.dart';
 
 import '../widgets/fuser_navbar_roots.dart';
 
-import 'medicine_detils_screen.dart';
+import 'medicine_detils2_screen.dart';
+import 'medicine_detils_home_screen.dart';
 
 class FuserHomeScreen extends StatelessWidget {
   List symptoms = [
@@ -296,7 +297,7 @@ class FuserHomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MedicineDitlesScreen(),
+                          builder: (context) => FuserMedicineDitlesScreen(),
                         ),
                       );
                     },

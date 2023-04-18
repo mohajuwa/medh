@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../widgets/fuser_chat_sample.dart';
 
-class ChatScreen extends StatelessWidget {
-  ChatScreen({super.key});
+class FuserChatScreen extends StatelessWidget {
+  FuserChatScreen({super.key});
   final clr = Color(0xFF58329B);
 
   @override

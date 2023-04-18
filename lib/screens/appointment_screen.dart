@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:medh/screens/home_screen.dart';
+import 'package:medh/widgets/navbar_roots.dart';
 
 class AppointmentScreen extends StatelessWidget {
   List imgs = [
@@ -338,7 +340,13 @@ class AppointmentScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 15),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NavBarRoots(),
+                        ));
+                  },
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.symmetric(vertical: 12),

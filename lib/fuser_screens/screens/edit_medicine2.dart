@@ -6,16 +6,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../pages/home_page.dart';
-import '../small_screens/edit_medicine_done.dart';
+import '../small_screens/edit2_medicine_done.dart';
+import '../small_screens/edit_home_medicine_done.dart';
 import '../widgets/fuser_navbar_roots.dart';
 import 'fuser_home_screen.dart';
 
-class FuserEditMedcineScreen extends StatefulWidget {
+class FuserEdit2MedcineScreen extends StatefulWidget {
   @override
-  State<FuserEditMedcineScreen> createState() => _FuserEditMedcineScreenState();
+  State<FuserEdit2MedcineScreen> createState() =>
+      _FuserEdit2MedcineScreenState();
 }
 
-class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
+class _FuserEdit2MedcineScreenState extends State<FuserEdit2MedcineScreen> {
   bool shadowColor = false;
   double? scrolledUnderElevation;
   final clr = Color(0xFF58329B);
@@ -196,7 +198,7 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => FuserNavBarRoots(),
+                            builder: (context) => FuserEdit2MedicineDone(),
                           ),
                         );
                       },
