@@ -1,3 +1,4 @@
+// صفحة تسجيل الدخول للصيدلي
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class FuserLoginScreen extends StatefulWidget {
 class _FuserLoginScreenState extends State<FuserLoginScreen> {
   bool shadowColor = false;
   double? scrolledUnderElevation;
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
   bool passTooggle = true;
   @override
   Widget build(BuildContext context) {
@@ -73,7 +74,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                               child: Center(
                                 child: Icon(
                                   Icons.home_filled,
-                                  color: Color(0xFF7165D6),
+                                  color: Color(0xFF58329B),
                                   size: 30,
                                 ),
                               ),
@@ -171,7 +172,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                 child: SizedBox(
                   width: double.infinity,
                   child: Material(
-                    color: Color(0xFF7165D5),
+                    color: Color(0xFF58329B),
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
@@ -225,7 +226,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF7165D6),
+                        color: Color(0xFF58329B),
                       ),
                     ),
                   ),

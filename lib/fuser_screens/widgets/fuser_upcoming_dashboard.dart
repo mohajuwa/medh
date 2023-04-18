@@ -1,3 +1,7 @@
+// صفحة الطلبات للصيدلي
+//  مضافه الى صفحة لوحة التحكم تحديداً زر الطلبات في القائمة
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class UpcomingDashboard extends StatelessWidget {
@@ -137,7 +141,7 @@ class UpcomingDashboard extends StatelessWidget {
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFF7165D6),
+                            color: Color(0xFF58329B),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(
@@ -287,7 +291,7 @@ class UpcomingDashboard extends StatelessWidget {
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFF7165D6),
+                            color: Color(0xFF58329B),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(
@@ -437,7 +441,7 @@ class UpcomingDashboard extends StatelessWidget {
                           width: 150,
                           padding: EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFF7165D6),
+                            color: Color(0xFF58329B),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(

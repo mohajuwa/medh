@@ -4,7 +4,7 @@ import '../widgets/fuser_chat_sample.dart';
 
 class ChatScreen extends StatelessWidget {
   ChatScreen({super.key});
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
 
   @override
   Widget build(BuildContext context) {

@@ -31,7 +31,7 @@ class WelcomeScreen extends StatelessWidget {
                 child: const Text(
                   "تخطي",
                   style: TextStyle(
-                    color: Color(0xFF7165D5),
+                    color: Color(0xFF58329B),
                     fontSize: 20,
                   ),
                 ),
@@ -47,7 +47,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Text(
                 "مستعلم عن دواء",
                 style: TextStyle(
-                  color: Color(0xFF7165D5),
+                  color: Color(0xFF58329B),
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
                   wordSpacing: 2,
@@ -70,7 +70,7 @@ class WelcomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Material(
-                  color: Color(0xFF7165D5),
+                  color: Color(0xFF58329B),
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {
@@ -95,7 +95,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 Material(
-                  color: Color(0xFF7165D5),
+                  color: Color(0xFF58329B),
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {

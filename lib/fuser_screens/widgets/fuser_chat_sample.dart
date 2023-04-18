@@ -1,3 +1,4 @@
+// صفحة الدردشة للصيدلي
 // ignore_for_file: prefer_const_constructors
 
 import 'package:custom_clippers/custom_clippers.dart';
@@ -7,7 +8,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
 
 class FuserChatSample extends StatelessWidget {
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
   final clr1 = Color(0xFFE1E1E2);
 
   @override

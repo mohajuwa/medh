@@ -1,9 +1,14 @@
+// صفحة التقارير للصيدلي
+//  مضافه الى صفحة لوحة التحكم تحديداً زر التقارير في القائمة
+
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../widgets/fuser_upcoming_dashboard.dart';
+import 'fuser_mreports.dart';
+import 'fuser_yreports.dart';
 
 class FuserReports extends StatefulWidget {
   @override
@@ -14,16 +19,14 @@ class _FuserReportsState extends State<FuserReports> {
   int _buttonIndex = 0;
 
   final clr = Color(0xFFF4F6FA);
-  final clr1 = Color(0xFF7165D6);
+  final clr1 = Color(0xFF58329B);
 
   final _dashboardWidgets = [
-    // Report month
-    Container(),
-    // Upcoming Widget
-    //UpcomingDashboard(),
-    // Complated Widget
-    Container(),
-    // // Canceled Widget
+    // عرض التقرير الشهري
+    MonthelyReports(),
+
+    // عرض التقرير السنوي
+    YearlyReports(),
   ];
 
   @override

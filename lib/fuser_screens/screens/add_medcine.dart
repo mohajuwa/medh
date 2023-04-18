@@ -1,4 +1,4 @@
-// صفحة التسجيل للصيدلي
+// صفحة إضافة دواء للصيدلي
 // ignore_for_file: unnecessary_import
 // ignore_for_file: prefer_const_constructors
 
@@ -6,14 +6,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../pages/home_page.dart';
+import '../small_screens/add_medicine_done.dart';
+import '../widgets/fuser_navbar_roots.dart';
 import 'fuser_login_screen.dart';
 
-class FuserSignUpScreen extends StatefulWidget {
+class AddMedcineScreen extends StatefulWidget {
   @override
-  State<FuserSignUpScreen> createState() => _FuserSignUpScreenState();
+  State<AddMedcineScreen> createState() => _AddMedcineScreenState();
 }
 
-class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
+class _AddMedcineScreenState extends State<AddMedcineScreen> {
   bool shadowColor = false;
   double? scrolledUnderElevation;
   final clr = Color(0xFF58329B);
@@ -122,8 +124,8 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
               Padding(
                 padding: EdgeInsets.all(20),
                 child: Image.asset(
-                  "assets/stickers/stic1.png",
-                  height: 250,
+                  "assets/images/icon1.png",
+                  height: 100,
                 ),
               ),
               Divider(
@@ -135,9 +137,9 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "الإسم الكامل",
+                    labelText: "إسم الدواء",
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: Icon(Icons.medical_information),
                   ),
                 ),
               ),
@@ -145,9 +147,9 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "البريد  ",
+                    labelText: "وصفة",
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.email),
+                    prefixIcon: Icon(Icons.info),
                   ),
                 ),
               ),
@@ -155,33 +157,29 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: " رقم الجوال",
+                    labelText: "الكمية",
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.phone),
+                    prefixIcon: Icon(Icons.numbers),
                   ),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
-                  obscureText: passTooggle ? true : false,
                   decoration: InputDecoration(
-                    labelText: "كلمة المرور",
+                    labelText: "الكمية",
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.lock),
-                    suffixIcon: InkWell(
-                        onTap: () {
-                          //
-                          if (passTooggle == true) {
-                            passTooggle = false;
-                          } else {
-                            passTooggle = true;
-                          }
-                          setState(() {});
-                        },
-                        child: passTooggle
-                            ? Icon(CupertinoIcons.eye_slash_fill)
-                            : Icon(CupertinoIcons.eye_fill)),
+                    prefixIcon: Icon(Icons.numbers),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: "الكمية",
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.numbers),
                   ),
                 ),
               ),
@@ -196,17 +194,18 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => FuserLoginScreen(),
-                            ));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FuserAddMedicineDone(),
+                          ),
+                        );
                       },
                       child: Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                         child: Center(
                           child: Text(
-                            "إنشاء حساب",
+                            "إضافة",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 25,
@@ -219,35 +218,6 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                   ),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    " لديك حساب؟",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black54,
-                    ),
-                  ),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => FuserLoginScreen(),
-                            ));
-                      },
-                      child: Text(
-                        " تسجيل الدخول",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF58329B),
-                        ),
-                      ))
-                ],
-              )
             ],
           ),
         ),

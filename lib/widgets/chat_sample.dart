@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
 
 class ChatSample extends StatelessWidget {
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
   final clr1 = Color(0xFFE1E1E2);
 
   @override

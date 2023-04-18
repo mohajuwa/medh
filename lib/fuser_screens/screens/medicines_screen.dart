@@ -1,3 +1,4 @@
+// صفحة الأدوية
 // ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class FuserMessagesScreen extends StatelessWidget {
     "doc2.jpg",
     "doc2.jpg",
   ];
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
   bool shadowColor = false;
   double? scrolledUnderElevation;
 
@@ -71,11 +72,11 @@ class FuserMessagesScreen extends StatelessWidget {
                     ),
                     Icon(
                       Icons.search,
-                      color: Color(0xFF7165D6),
+                      color: Color(0xFF58329B),
                     ),
                     Icon(
                       Icons.photo_camera,
-                      color: Color(0xFF7165D6),
+                      color: Color(0xFF58329B),
                     ),
                   ],
                 ),
@@ -173,7 +174,7 @@ class FuserMessagesScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => FuserAppointme2ntScreen(),
+                            builder: (context) => MedicineDitlesScreen(),
                           ));
                     },
                     leading: CircleAvatar(

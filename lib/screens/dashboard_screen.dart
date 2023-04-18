@@ -17,7 +17,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   int _buttonIndex = 0;
 
   final clr = Color(0xFFF4F6FA);
-  final clr1 = Color(0xFF7165D6);
+  final clr1 = Color(0xFF58329B);
 
   final _dashboardWidgets = [
     // Upcoming Widget

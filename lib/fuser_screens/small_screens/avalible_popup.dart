@@ -14,7 +14,7 @@
 //     "doc2.jpg",
 //     "doc2.jpg",
 //   ];
-//   final clr = Color(0xFF7165D6);
+//   final clr = Color(0xFF58329B);
 //   bool shadowColor = false;
 //   double? scrolledUnderElevation;
 //   @override
@@ -67,7 +67,7 @@
 //                   ),
 //                   Icon(
 //                     Icons.search,
-//                     color: Color(0xFF7165D6),
+//                     color: Color(0xFF58329B),
 //                   )
 //                 ],
 //               ),

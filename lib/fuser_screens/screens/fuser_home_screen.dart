@@ -1,23 +1,25 @@
-// ignore_for_file: prefer_const_constructors
+// الصفحة الرئيسية للصيدلي
+// ignore_for_file: prefer_const_constructors, unused_import
 
 import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:medh/fuser_screens/screens/add_medcine.dart';
 import 'package:medh/pages/home_page.dart';
-import 'package:medh/fuser_screens/screens/fuser_welcom_screen.dart';
-import 'package:medh/screens/dashboard_screen.dart';
 
 import '../widgets/fuser_navbar_roots.dart';
-import 'fuser_appointment_screen.dart';
+
+import 'medicine_detils_screen.dart';
 
 class FuserHomeScreen extends StatelessWidget {
   List symptoms = [
+    // فلترة الأدوية حسب
     "مضاف مؤخراً",
     "الأقدم",
     "الأكثر طلباً",
     "الين",
   ];
   List imgs = [
+    // صور للأدوية في الصفحة الرئيسية
     "icon.png",
     "icon.png",
     "icon.png",
@@ -27,7 +29,7 @@ class FuserHomeScreen extends StatelessWidget {
   ];
   bool shadowColor = false;
   double? scrolledUnderElevation;
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -82,7 +84,7 @@ class FuserHomeScreen extends StatelessWidget {
                               child: Center(
                                 child: Icon(
                                   Icons.home_filled,
-                                  color: Color(0xFF7165D6),
+                                  color: Color(0xFF58329B),
                                   size: 30,
                                 ),
                               ),
@@ -107,7 +109,14 @@ class FuserHomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AddMedcineScreen(),
+                        ),
+                      );
+                    },
                     child: Container(
                       padding: EdgeInsets.all(20),
                       decoration: BoxDecoration(
@@ -287,7 +296,7 @@ class FuserHomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FuserAppointmentScreen(),
+                          builder: (context) => MedicineDitlesScreen(),
                         ),
                       );
                     },

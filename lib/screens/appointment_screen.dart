@@ -12,7 +12,7 @@ class AppointmentScreen extends StatelessWidget {
     "icon.png",
     "icon.png",
   ];
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
   final clr2 = Color(0xFFF0EEFA);
   @override
   Widget build(BuildContext context) {

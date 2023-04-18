@@ -5,6 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:medh/fuser_screens/screens/fuser_chat_screen.dart';
 import 'package:medh/widgets/chat_sample.dart';
 
+import 'custom_add.dart';
+
 class Appointment2Screen extends StatelessWidget {
   List imgs = [
     "icon.png",
@@ -12,7 +14,7 @@ class Appointment2Screen extends StatelessWidget {
     "icon.png",
     "icon.png",
   ];
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
   final clr2 = Color(0xFFF0EEFA);
   @override
   Widget build(BuildContext context) {
@@ -346,7 +348,7 @@ class Appointment2Screen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ChatScreen(),
+                          builder: (context) => CustomAddScreen(),
                         ),
                       );
                     },

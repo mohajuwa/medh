@@ -1,7 +1,9 @@
+// صفحة الإعدادات للصيدلي
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:medh/pages/home_page.dart';
 
 class FuserSettingsScreen extends StatelessWidget {
   @override
@@ -156,7 +158,14 @@ class FuserSettingsScreen extends StatelessWidget {
             ),
             Divider(height: 40),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                );
+              },
               leading: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(

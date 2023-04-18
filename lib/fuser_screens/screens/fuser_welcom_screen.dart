@@ -1,3 +1,4 @@
+// صفحة الترحيب بالمستخدم الصيدللي    : تقريباً ملغية
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class FuserWelcomeScreen extends StatelessWidget {
                 child: const Text(
                   "تخطي",
                   style: TextStyle(
-                    color: Color(0xFF7165D5),
+                    color: Color(0xFF58329B),
                     fontSize: 20,
                   ),
                 ),
@@ -48,7 +49,7 @@ class FuserWelcomeScreen extends StatelessWidget {
               child: Text(
                 "صيدلانيون",
                 style: TextStyle(
-                  color: Color(0xFF7165D5),
+                  color: Color(0xFF58329B),
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
                   wordSpacing: 2,
@@ -71,7 +72,7 @@ class FuserWelcomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Material(
-                  color: Color(0xFF7165D5),
+                  color: Color(0xFF58329B),
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {
@@ -97,7 +98,7 @@ class FuserWelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 Material(
-                  color: Color(0xFF7165D5),
+                  color: Color(0xFF58329B),
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {

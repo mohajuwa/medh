@@ -1,9 +1,13 @@
+// صفحة تفاصيل الأدوية
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class FuserAppointme2ntScreen extends StatelessWidget {
+import '../widgets/fuser_navbar_roots.dart';
+import 'edit_medcine.dart';
+
+class MedicineDitlesScreen extends StatelessWidget {
   List imgs = [
     "icon.png",
     "icon.png",
@@ -12,7 +16,7 @@ class FuserAppointme2ntScreen extends StatelessWidget {
     "icon.png",
     "icon.png",
   ];
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
   final clr2 = Color(0xFFF0EEFA);
   @override
   Widget build(BuildContext context) {
@@ -303,7 +307,18 @@ class FuserAppointme2ntScreen extends StatelessWidget {
               ),
               SizedBox(height: 15),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FuserEditMedcineScreen(),
+                      ));
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //       builder: (context) => EditMedcineScreen(),
+                  //     ));
+                },
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.symmetric(vertical: 12),

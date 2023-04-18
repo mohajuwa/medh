@@ -1,3 +1,4 @@
+// القائمة الثابتة لكل الصفحات للمستخدم العادي
 // ignore_for_file: prefer_const_constructors, unused_field, prefer_final_fields
 
 import 'package:flutter/material.dart';
@@ -41,7 +42,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
             child: BottomNavigationBar(
               backgroundColor: Colors.white,
               type: BottomNavigationBarType.fixed,
-              selectedItemColor: Color(0xFF7165D6),
+              selectedItemColor: Color(0xFF58329B),
               unselectedItemColor: Colors.black26,
               selectedLabelStyle: TextStyle(
                 fontWeight: FontWeight.bold,

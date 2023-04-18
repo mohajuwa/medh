@@ -21,7 +21,7 @@ class MessagesScreen extends StatelessWidget {
     "المركزي",
     "الدائري",
   ];
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
   bool shadowColor = false;
   double? scrolledUnderElevation;
 
@@ -78,11 +78,11 @@ class MessagesScreen extends StatelessWidget {
                     ),
                     Icon(
                       Icons.search,
-                      color: Color(0xFF7165D6),
+                      color: Color(0xFF58329B),
                     ),
                     Icon(
                       Icons.photo_camera,
-                      color: Color(0xFF7165D6),
+                      color: Color(0xFF58329B),
                     ),
                   ],
                 ),

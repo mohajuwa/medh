@@ -1,3 +1,4 @@
+// القائمة الثابتة لكل الصفحات للصيدلي
 // ignore_for_file: prefer_const_constructors, unused_field, prefer_final_fields
 
 import 'package:flutter/material.dart';
@@ -5,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 
 import '../screens/fuser_dashboard_screen.dart';
 import '../screens/fuser_home_screen.dart';
-import '../screens/fuser_messages_screen.dart';
+import '../screens/medicines_screen.dart';
 import '../screens/fuser_settings_screen.dart';
 
 class FuserNavBarRoots extends StatefulWidget {
@@ -42,7 +43,7 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
             child: BottomNavigationBar(
               backgroundColor: Colors.white,
               type: BottomNavigationBarType.fixed,
-              selectedItemColor: Color(0xFF7165D6),
+              selectedItemColor: Color(0xFF58329B),
               unselectedItemColor: Colors.black26,
               selectedLabelStyle: TextStyle(
                 fontWeight: FontWeight.bold,

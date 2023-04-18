@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
   ];
   bool shadowColor = false;
   double? scrolledUnderElevation;
-  final clr = Color(0xFF7165D6);
+  final clr = Color(0xFF58329B);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                               child: Center(
                                 child: Icon(
                                   Icons.home_filled,
-                                  color: Color(0xFF7165D6),
+                                  color: Color(0xFF58329B),
                                   size: 30,
                                 ),
                               ),
