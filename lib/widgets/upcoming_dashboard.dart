@@ -6,11 +6,11 @@ class UpcomingDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             " ردود على حسب اسرع رد ",
             style: TextStyle(
               fontSize: 24,
@@ -18,23 +18,23 @@ class UpcomingDashboard extends StatelessWidget {
               fontFamily: "Amiri_Quran",
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             "صيدلية",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 5),
+            padding: const EdgeInsets.symmetric(vertical: 5),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
-                  color: Colors.black12,
+                  color: Color(0x1F000000),
                   blurRadius: 4,
                   spreadRadius: 2,
                 )
@@ -44,7 +44,7 @@ class UpcomingDashboard extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "إسم الدواء",
                       style: TextStyle(
@@ -65,11 +65,11 @@ class UpcomingDashboard extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "سعر الدواء",
                         style: TextStyle(
-                          color: Colors.black54,
+                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.bold,
                         ),
@@ -84,11 +84,11 @@ class UpcomingDashboard extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "المسافة",
                         style: TextStyle(
-                          color: Colors.black54,
+                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.bold,
                         ),
@@ -101,7 +101,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ))
                     ],
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: Divider(
                       thickness: 1,
@@ -112,54 +112,54 @@ class UpcomingDashboard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Icon(
                             Icons.calendar_month,
-                            color: Colors.black54,
+                            color: Color(0x89000000),
                           ),
                           SizedBox(width: 5),
                           Text(
                             "12/01/2023",
                             style: TextStyle(
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           ),
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           Icon(
                             Icons.access_time_filled,
-                            color: Colors.black54,
+                            color: Color(0x89000000),
                           ),
                           SizedBox(width: 5),
                           Text(
                             "02:58 AM",
-                            style: TextStyle(color: Colors.black54),
+                            style: TextStyle(color: Color(0x89000000)),
                           )
                         ],
                       ),
                       Row(
                         children: [
                           Container(
-                            padding: EdgeInsets.all(5),
-                            decoration: BoxDecoration(
+                            padding: const EdgeInsets.all(5),
+                            decoration: const BoxDecoration(
                               color: Colors.green,
                               shape: BoxShape.circle,
                             ),
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "متصل",
                             style: TextStyle(
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           )
                         ],
                       ),
                     ],
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -167,12 +167,12 @@ class UpcomingDashboard extends StatelessWidget {
                         onTap: () {},
                         child: Container(
                           width: 150,
-                          padding: EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFFF4F6FA),
+                            color: const Color(0xFFF4F6FA),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "إلغاء",
                               style: TextStyle(
@@ -188,12 +188,12 @@ class UpcomingDashboard extends StatelessWidget {
                         onTap: () {},
                         child: Container(
                           width: 150,
-                          padding: EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFF58329B),
+                            color: const Color(0xFF58329B),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "طلب",
                               style: TextStyle(
@@ -207,27 +207,27 @@ class UpcomingDashboard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                 ],
               ),
             ),
           ),
-          Text(
+          const Text(
             "صيدلية",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 5),
+            padding: const EdgeInsets.symmetric(vertical: 5),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
-                  color: Colors.black12,
+                  color: Color(0x1F000000),
                   blurRadius: 4,
                   spreadRadius: 2,
                 )
@@ -237,7 +237,7 @@ class UpcomingDashboard extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "إسم الدواء",
                       style: TextStyle(
@@ -258,11 +258,11 @@ class UpcomingDashboard extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "سعر الدواء",
                         style: TextStyle(
-                          color: Colors.black54,
+                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.bold,
                         ),
@@ -277,11 +277,11 @@ class UpcomingDashboard extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "المسافة",
                         style: TextStyle(
-                          color: Colors.black54,
+                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.bold,
                         ),
@@ -294,7 +294,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ))
                     ],
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: Divider(
                       thickness: 1,
@@ -305,54 +305,54 @@ class UpcomingDashboard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Icon(
                             Icons.calendar_month,
-                            color: Colors.black54,
+                            color: Color(0x89000000),
                           ),
                           SizedBox(width: 5),
                           Text(
                             "12/01/2023",
                             style: TextStyle(
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           ),
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           Icon(
                             Icons.access_time_filled,
-                            color: Colors.black54,
+                            color: Color(0x89000000),
                           ),
                           SizedBox(width: 5),
                           Text(
                             "02:58 AM",
-                            style: TextStyle(color: Colors.black54),
+                            style: TextStyle(color: Color(0x89000000)),
                           )
                         ],
                       ),
                       Row(
                         children: [
                           Container(
-                            padding: EdgeInsets.all(5),
-                            decoration: BoxDecoration(
+                            padding: const EdgeInsets.all(5),
+                            decoration: const BoxDecoration(
                               color: Colors.green,
                               shape: BoxShape.circle,
                             ),
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "متصل",
                             style: TextStyle(
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           )
                         ],
                       ),
                     ],
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -360,12 +360,12 @@ class UpcomingDashboard extends StatelessWidget {
                         onTap: () {},
                         child: Container(
                           width: 150,
-                          padding: EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFFF4F6FA),
+                            color: const Color(0xFFF4F6FA),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "إلغاء",
                               style: TextStyle(
@@ -381,12 +381,12 @@ class UpcomingDashboard extends StatelessWidget {
                         onTap: () {},
                         child: Container(
                           width: 150,
-                          padding: EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFF58329B),
+                            color: const Color(0xFF58329B),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "طلب",
                               style: TextStyle(
@@ -400,28 +400,28 @@ class UpcomingDashboard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                 ],
               ),
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             "صيدلية",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 5),
+            padding: const EdgeInsets.symmetric(vertical: 5),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
-                  color: Colors.black12,
+                  color: Color(0x1F000000),
                   blurRadius: 4,
                   spreadRadius: 2,
                 )
@@ -431,7 +431,7 @@ class UpcomingDashboard extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "إسم الدواء",
                       style: TextStyle(
@@ -452,11 +452,11 @@ class UpcomingDashboard extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "سعر الدواء",
                         style: TextStyle(
-                          color: Colors.black54,
+                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.bold,
                         ),
@@ -471,11 +471,11 @@ class UpcomingDashboard extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "المسافة",
                         style: TextStyle(
-                          color: Colors.black54,
+                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.bold,
                         ),
@@ -488,7 +488,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ))
                     ],
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: Divider(
                       thickness: 1,
@@ -499,54 +499,54 @@ class UpcomingDashboard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Icon(
                             Icons.calendar_month,
-                            color: Colors.black54,
+                            color: Color(0x89000000),
                           ),
                           SizedBox(width: 5),
                           Text(
                             "12/01/2023",
                             style: TextStyle(
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           ),
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           Icon(
                             Icons.access_time_filled,
-                            color: Colors.black54,
+                            color: Color(0x89000000),
                           ),
                           SizedBox(width: 5),
                           Text(
                             "02:58 AM",
-                            style: TextStyle(color: Colors.black54),
+                            style: TextStyle(color: Color(0x89000000)),
                           )
                         ],
                       ),
                       Row(
                         children: [
                           Container(
-                            padding: EdgeInsets.all(5),
-                            decoration: BoxDecoration(
+                            padding: const EdgeInsets.all(5),
+                            decoration: const BoxDecoration(
                               color: Colors.green,
                               shape: BoxShape.circle,
                             ),
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "متصل",
                             style: TextStyle(
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           )
                         ],
                       ),
                     ],
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -554,12 +554,12 @@ class UpcomingDashboard extends StatelessWidget {
                         onTap: () {},
                         child: Container(
                           width: 150,
-                          padding: EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFFF4F6FA),
+                            color: const Color(0xFFF4F6FA),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "إلغاء",
                               style: TextStyle(
@@ -575,12 +575,12 @@ class UpcomingDashboard extends StatelessWidget {
                         onTap: () {},
                         child: Container(
                           width: 150,
-                          padding: EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFF58329B),
+                            color: const Color(0xFF58329B),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "طلب",
                               style: TextStyle(
@@ -594,28 +594,28 @@ class UpcomingDashboard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                 ],
               ),
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             "صيدلية",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 5),
+            padding: const EdgeInsets.symmetric(vertical: 5),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
-                  color: Colors.black12,
+                  color: Color(0x1F000000),
                   blurRadius: 4,
                   spreadRadius: 2,
                 )
@@ -625,7 +625,7 @@ class UpcomingDashboard extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
-                  ListTile(
+                  const ListTile(
                     title: Text(
                       "إسم الدواء",
                       style: TextStyle(
@@ -646,11 +646,11 @@ class UpcomingDashboard extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "سعر الدواء",
                         style: TextStyle(
-                          color: Colors.black54,
+                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.bold,
                         ),
@@ -665,11 +665,11 @@ class UpcomingDashboard extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                    children: const [
                       Text(
                         "المسافة",
                         style: TextStyle(
-                          color: Colors.black54,
+                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.bold,
                         ),
@@ -682,7 +682,7 @@ class UpcomingDashboard extends StatelessWidget {
                           ))
                     ],
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: Divider(
                       thickness: 1,
@@ -693,54 +693,54 @@ class UpcomingDashboard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Icon(
                             Icons.calendar_month,
-                            color: Colors.black54,
+                            color: Color(0x89000000),
                           ),
                           SizedBox(width: 5),
                           Text(
                             "12/01/2023",
                             style: TextStyle(
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           ),
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           Icon(
                             Icons.access_time_filled,
-                            color: Colors.black54,
+                            color: Color(0x89000000),
                           ),
                           SizedBox(width: 5),
                           Text(
                             "02:58 AM",
-                            style: TextStyle(color: Colors.black54),
+                            style: TextStyle(color: Color(0x89000000)),
                           )
                         ],
                       ),
                       Row(
                         children: [
                           Container(
-                            padding: EdgeInsets.all(5),
-                            decoration: BoxDecoration(
+                            padding: const EdgeInsets.all(5),
+                            decoration: const BoxDecoration(
                               color: Colors.green,
                               shape: BoxShape.circle,
                             ),
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "متصل",
                             style: TextStyle(
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           )
                         ],
                       ),
                     ],
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -748,12 +748,12 @@ class UpcomingDashboard extends StatelessWidget {
                         onTap: () {},
                         child: Container(
                           width: 150,
-                          padding: EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFFF4F6FA),
+                            color: const Color(0xFFF4F6FA),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "إلغاء",
                               style: TextStyle(
@@ -769,12 +769,12 @@ class UpcomingDashboard extends StatelessWidget {
                         onTap: () {},
                         child: Container(
                           width: 150,
-                          padding: EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: Color(0xFF58329B),
+                            color: const Color(0xFF58329B),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "طلب",
                               style: TextStyle(
@@ -788,12 +788,12 @@ class UpcomingDashboard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                 ],
               ),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
         ],
       ),
     );

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
 class CarouselPage extends StatefulWidget {
+  const CarouselPage({super.key});
+
   @override
   State<CarouselPage> createState() => _CarouselPageState();
 }
@@ -11,11 +13,11 @@ class _CarouselPageState extends State<CarouselPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
+        child: SizedBox(
           height: 300,
           width: double.infinity,
           child: Carousel(
-            images: [
+            images: const [
               AssetImage("assets/images/doctor1.jpg"),
               AssetImage("assets/images/doctor2.jpg"),
               AssetImage("assets/images/doctor3.jpg"),
@@ -28,7 +30,7 @@ class _CarouselPageState extends State<CarouselPage> {
             indicatorBgPadding: 10,
             boxFit: BoxFit.cover,
             borderRadius: true,
-            radius: Radius.circular(30),
+            radius: const Radius.circular(30),
             overlayShadow: true,
             overlayShadowColors: Colors.grey,
             overlayShadowSize: 0.5,

@@ -1,14 +1,13 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:medh/screens/appointm2_screen.dart';
 
 import '../widgets/best_price_dashboard.dart';
 import '../widgets/neares_km_dashboard.dart';
 import '../widgets/upcoming_dashboard.dart';
 
 class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
+
   @override
   State<DashboardScreen> createState() => _DashboardScreenState();
 }
@@ -16,27 +15,27 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen> {
   int _buttonIndex = 0;
 
-  final clr = Color(0xFFF4F6FA);
-  final clr1 = Color(0xFF58329B);
+  final clr = const Color(0xFFF4F6FA);
+  final clr1 = const Color(0xFF58329B);
 
   final _dashboardWidgets = [
     // Upcoming Widget
-    UpcomingDashboard(),
+    const UpcomingDashboard(),
     // Complated Widget
-    BestPriceSample(),
+    const BestPriceSample(),
     // Canceled Widget
-    NearestKmDashboard(),
+    const NearestKmDashboard(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.only(top: 40),
+        padding: const EdgeInsets.only(top: 40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Text(
                 "لوحة الإشعارات",
@@ -46,10 +45,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Container(
-              padding: EdgeInsets.all(5),
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.all(5),
+              margin: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
                 color: clr,
                 borderRadius: BorderRadius.circular(10),
@@ -64,8 +63,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       });
                     },
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 12, horizontal: 20),
                       decoration: BoxDecoration(
                         color: _buttonIndex == 0 ? clr1 : Colors.transparent,
                         borderRadius: BorderRadius.circular(19),
@@ -88,8 +87,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       });
                     },
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 12, horizontal: 25),
                       decoration: BoxDecoration(
                         color: _buttonIndex == 1 ? clr1 : Colors.transparent,
                         borderRadius: BorderRadius.circular(19),
@@ -112,8 +111,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       });
                     },
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 12, horizontal: 25),
                       decoration: BoxDecoration(
                         color: _buttonIndex == 2 ? clr1 : Colors.transparent,
                         borderRadius: BorderRadius.circular(19),
@@ -132,7 +131,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             _dashboardWidgets[_buttonIndex],
           ],
         ),

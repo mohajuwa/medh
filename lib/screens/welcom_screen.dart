@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'signup_screen.dart';
 
@@ -7,16 +5,18 @@ import 'login_screen.dart';
 import '../widgets/navbar_roots.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Material(
       child: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: ListView(
           children: [
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
@@ -24,7 +24,7 @@ class WelcomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => NavBarRoots(),
+                      builder: (context) => const NavBarRoots(),
                     ),
                   );
                 },
@@ -37,13 +37,13 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 80),
+            const SizedBox(height: 80),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Image.asset("assets/images/lined heart.png"),
             ),
-            SizedBox(height: 50),
-            Center(
+            const SizedBox(height: 50),
+            const Center(
               child: Text(
                 "مستعلم عن دواء",
                 style: TextStyle(
@@ -54,23 +54,23 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Center(
+            const SizedBox(height: 10),
+            const Center(
               child: Text(
                 "الباحث الدوائي خيارك الأمثل للإستعلام عن الأدوية المعدومة",
                 style: TextStyle(
-                  color: Colors.black54,
+                  color: Color(0x89000000),
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                 ),
               ),
             ),
-            SizedBox(height: 60),
+            const SizedBox(height: 60),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Material(
-                  color: Color(0xFF58329B),
+                  color: const Color(0xFF58329B),
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {
@@ -80,7 +80,7 @@ class WelcomeScreen extends StatelessWidget {
                             builder: (context) => LoginScreen(),
                           ));
                     },
-                    child: Padding(
+                    child: const Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       child: Text(
@@ -95,7 +95,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 Material(
-                  color: Color(0xFF58329B),
+                  color: const Color(0xFF58329B),
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {
@@ -106,7 +106,7 @@ class WelcomeScreen extends StatelessWidget {
                         ),
                       );
                     },
-                    child: Padding(
+                    child: const Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       child: Text(

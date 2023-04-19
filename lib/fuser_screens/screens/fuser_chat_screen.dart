@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import '../widgets/fuser_chat_sample.dart';
 
 class FuserChatScreen extends StatelessWidget {
-  FuserChatScreen({super.key});
-  final clr = Color(0xFF58329B);
+  const FuserChatScreen({super.key});
+  final clr = const Color(0xFF58329B);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70),
+        preferredSize: const Size.fromHeight(70),
         child: AppBar(
           backgroundColor: clr,
           leadingWidth: 30,
           title: Padding(
             padding: const EdgeInsets.only(top: 5),
-            child: Row(children: [
+            child: Row(children: const [
               CircleAvatar(
                 radius: 25,
                 backgroundImage: AssetImage("assets/images/doctor1.jpg"),
@@ -32,7 +32,7 @@ class FuserChatScreen extends StatelessWidget {
               )
             ]),
           ),
-          actions: [
+          actions: const [
             Padding(
               padding: EdgeInsets.only(top: 8, right: 20),
               child: Icon(
@@ -62,27 +62,27 @@ class FuserChatScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemCount: 8,
-        padding: EdgeInsets.only(top: 20, left: 15, bottom: 80),
-        itemBuilder: (context, index) => FuserChatSample(),
+        padding: const EdgeInsets.only(top: 20, left: 15, bottom: 80),
+        itemBuilder: (context, index) => const FuserChatSample(),
       ),
       bottomSheet: Container(
         height: 65,
-        decoration: BoxDecoration(color: Colors.white, boxShadow: [
+        decoration: const BoxDecoration(color: Colors.white, boxShadow: [
           BoxShadow(
-            color: Colors.black12,
+            color: Color(0x1F000000),
             spreadRadius: 2,
             blurRadius: 10,
           )
         ]),
         child: Row(children: [
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 8),
             child: Icon(
               Icons.add,
               size: 30,
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 5),
             child: Icon(
               Icons.emoji_emotions_outlined,
@@ -91,21 +91,21 @@ class FuserChatScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 10),
+            padding: const EdgeInsets.only(left: 10),
             child: Container(
               alignment: Alignment.centerRight,
               width: MediaQuery.of(context).size.width / 1.6,
               child: TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: "أكتب أي شي",
                   border: InputBorder.none,
                 ),
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Padding(
-            padding: EdgeInsets.only(right: 10),
+            padding: const EdgeInsets.only(right: 10),
             child: Icon(
               Icons.send,
               size: 30,

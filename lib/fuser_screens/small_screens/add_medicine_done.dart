@@ -7,6 +7,6 @@ class FuserAddMedicineDone extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FuserNavBarRoots();
+    return const FuserNavBarRoots();
   }
 }

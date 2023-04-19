@@ -1,30 +1,33 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
-
 import 'package:flutter/material.dart';
 import 'package:medh/screens/appointment_screen.dart';
 
-import 'chat_screen.dart';
+class MessagesScreen extends StatefulWidget {
+  const MessagesScreen({super.key});
 
-class MessagesScreen extends StatelessWidget {
-  List imgs = [
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-  ];
-  List symptoms = [
-    "الكل",
-    "الظهار",
-    "السبل",
-    "المركزي",
-    "الدائري",
-  ];
-  final clr = Color(0xFF58329B);
-  bool shadowColor = false;
-  double? scrolledUnderElevation;
+  @override
+  State<MessagesScreen> createState() => _MessagesScreenState();
+}
 
+List imgs = [
+  "doc2.jpg",
+  "doc2.jpg",
+  "doc2.jpg",
+  "doc2.jpg",
+  "doc2.jpg",
+  "doc2.jpg",
+];
+List symptoms = [
+  "الكل",
+  "الظهار",
+  "السبل",
+  "المركزي",
+  "الدائري",
+];
+const clr = Color(0xFF58329B);
+bool shadowColor = false;
+double? scrolledUnderElevation;
+
+class _MessagesScreenState extends State<MessagesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,11 +37,11 @@ class MessagesScreen extends StatelessWidget {
         shadowColor: shadowColor ? Theme.of(context).colorScheme.shadow : clr,
         backgroundColor: Colors.white,
         title: Padding(
-          padding: EdgeInsets.symmetric(vertical: 20),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(right: 0, top: 5, left: 160),
+              const Padding(
+                padding: EdgeInsets.only(right: 0, top: 5, left: 160),
                 child: Text(
                   'الإستعلام عن الأدوية',
                   style: TextStyle(
@@ -49,13 +52,13 @@ class MessagesScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
-                      color: Colors.black12,
+                      color: Color(0x1F000000),
                       blurRadius: 10,
                       spreadRadius: 2,
                     ),
@@ -67,20 +70,20 @@ class MessagesScreen extends StatelessWidget {
                     Container(
                       width: 300,
                       child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 5),
+                        padding: const EdgeInsets.symmetric(horizontal: 5),
                         child: TextFormField(
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: "إستعلام",
                             border: InputBorder.none,
                           ),
                         ),
                       ),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.search,
                       color: Color(0xFF58329B),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.photo_camera,
                       color: Color(0xFF58329B),
                     ),
@@ -93,17 +96,17 @@ class MessagesScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          SizedBox(height: 3),
-          Padding(
+          const SizedBox(height: 3),
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 2.0),
             child: Divider(
               thickness: 1,
               height: 2.0,
             ),
           ),
-          SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+          const SizedBox(height: 10),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               "فلترة البحث حسب المنطقة",
               style: TextStyle(
@@ -112,7 +115,7 @@ class MessagesScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           SizedBox(
             height: 50,
             child: ListView.builder(
@@ -121,12 +124,13 @@ class MessagesScreen extends StatelessWidget {
                 itemCount: symptoms.length,
                 itemBuilder: (context, index) {
                   return Container(
-                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                    padding: EdgeInsets.symmetric(horizontal: 25),
+                    margin: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
                     decoration: BoxDecoration(
-                      color: Color(0xFFF4F6FA),
+                      color: const Color(0xFFF4F6FA),
                       borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: clr,
                           blurRadius: 4,
@@ -137,19 +141,19 @@ class MessagesScreen extends StatelessWidget {
                     child: Center(
                       child: Text(
                         symptoms[index],
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color: Colors.black54,
+                          color: Color(0x89000000),
                         ),
                       ),
                     ),
                   );
                 }),
           ),
-          SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+          const SizedBox(height: 10),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               "نتيجة الإستعلام ",
               style: TextStyle(
@@ -159,16 +163,16 @@ class MessagesScreen extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 2.0),
             child: Divider(
               thickness: 1,
               height: 2.0,
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           ListView.builder(
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: 6,
               shrinkWrap: true,
               itemBuilder: (context, index) {
@@ -189,27 +193,27 @@ class MessagesScreen extends StatelessWidget {
                         "assets/images/${imgs[index]}",
                       ),
                     ),
-                    title: Text(
+                    title: const Text(
                       "إسم الدواء",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text(
+                    subtitle: const Text(
                       "وصف الدواء يتم كتابته هنا",
                       maxLines: 16,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.black54,
+                        color: Color(0x89000000),
                       ),
                     ),
-                    trailing: Text(
+                    trailing: const Text(
                       "موقع الصيدلية : بالقرب مني",
                       style: TextStyle(
                         fontSize: 12,
-                        color: Colors.black54,
+                        color: Color(0x89000000),
                       ),
                     ),
                   ),

@@ -1,36 +1,41 @@
 // الصفحة الرئيسية للصيدلي
-// ignore_for_file: prefer_const_constructors, unused_import
 
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:medh/fuser_screens/screens/add_medcine.dart';
 import 'package:medh/pages/home_page.dart';
 
 import '../widgets/fuser_navbar_roots.dart';
 
-import 'medicine_detils2_screen.dart';
 import 'medicine_detils_home_screen.dart';
 
-class FuserHomeScreen extends StatelessWidget {
-  List symptoms = [
-    // فلترة الأدوية حسب
-    "مضاف مؤخراً",
-    "الأقدم",
-    "الأكثر طلباً",
-    "الين",
-  ];
-  List imgs = [
-    // صور للأدوية في الصفحة الرئيسية
-    "icon.png",
-    "icon.png",
-    "icon.png",
-    "icon.png",
-    "icon.png",
-    "icon.png",
-  ];
-  bool shadowColor = false;
-  double? scrolledUnderElevation;
-  final clr = Color(0xFF58329B);
+class FuserHomeScreen extends StatefulWidget {
+  const FuserHomeScreen({super.key});
+
+  @override
+  State<FuserHomeScreen> createState() => _FuserHomeScreenState();
+}
+
+List symptoms = [
+  // فلترة الأدوية حسب
+  "مضاف مؤخراً",
+  "الأقدم",
+  "الأكثر طلباً",
+  "الين",
+];
+List imgs = [
+  // صور للأدوية في الصفحة الرئيسية
+  "icon.png",
+  "icon.png",
+  "icon.png",
+  "icon.png",
+  "icon.png",
+  "icon.png",
+];
+bool shadowColor = false;
+double? scrolledUnderElevation;
+const clr = Color(0xFF58329B);
+
+class _FuserHomeScreenState extends State<FuserHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -46,29 +51,29 @@ class FuserHomeScreen extends StatelessWidget {
                 shadowColor ? Theme.of(context).colorScheme.shadow : clr,
             backgroundColor: Colors.white,
             title: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 0, top: 2),
+                    padding: const EdgeInsets.only(right: 0, top: 2),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomePage(),
+                            builder: (context) => const HomePage(),
                           ),
                         );
                       },
                       child: Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
-                              color: Colors.black12,
+                              color: Color(0x1F000000),
                               blurRadius: 6,
                               spreadRadius: 4,
                             )
@@ -78,11 +83,11 @@ class FuserHomeScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(3),
-                              decoration: BoxDecoration(
+                              padding: const EdgeInsets.all(3),
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Icon(
                                   Icons.home_filled,
                                   color: Color(0xFF58329B),
@@ -95,7 +100,7 @@ class FuserHomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 25,
                     backgroundImage: AssetImage("assets/images/icon1.png"),
                   ),
@@ -105,7 +110,7 @@ class FuserHomeScreen extends StatelessWidget {
           ),
           body: ListView(
             children: [
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -119,13 +124,13 @@ class FuserHomeScreen extends StatelessWidget {
                       );
                     },
                     child: Container(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: clr,
                         borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
-                            color: Colors.black12,
+                            color: Color(0x1F000000),
                             blurRadius: 6,
                             spreadRadius: 4,
                           )
@@ -135,19 +140,19 @@ class FuserHomeScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
+                            padding: const EdgeInsets.all(8),
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               shape: BoxShape.circle,
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.add,
                               color: clr,
                               size: 35,
                             ),
                           ),
-                          SizedBox(height: 30),
-                          Text(
+                          const SizedBox(height: 30),
+                          const Text(
                             "إضافة دواء",
                             style: TextStyle(
                               fontSize: 18,
@@ -155,7 +160,7 @@ class FuserHomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          SizedBox(height: 5),
+                          const SizedBox(height: 5),
                           Text(
                             "جديد",
                             style: TextStyle(
@@ -171,18 +176,18 @@ class FuserHomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FuserNavBarRoots(),
+                          builder: (context) => const FuserNavBarRoots(),
                         ),
                       );
                     },
                     child: Container(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
-                            color: Colors.black12,
+                            color: Color(0x1F000000),
                             blurRadius: 6,
                             spreadRadius: 4,
                           )
@@ -192,19 +197,19 @@ class FuserHomeScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            padding: EdgeInsets.all(8),
-                            decoration: BoxDecoration(
+                            padding: const EdgeInsets.all(8),
+                            decoration: const BoxDecoration(
                               color: Color(0xFFF0EEFA),
                               shape: BoxShape.circle,
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.home_filled,
                               color: clr,
                               size: 35,
                             ),
                           ),
-                          SizedBox(height: 30),
-                          Text(
+                          const SizedBox(height: 30),
+                          const Text(
                             "تقارير",
                             style: TextStyle(
                               fontSize: 18,
@@ -212,11 +217,11 @@ class FuserHomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          SizedBox(height: 5),
-                          Text(
+                          const SizedBox(height: 5),
+                          const Text(
                             "ما تم طلبه بكثرة ",
                             style: TextStyle(
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           )
                         ],
@@ -225,15 +230,15 @@ class FuserHomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 25),
-              Padding(
+              const SizedBox(height: 25),
+              const Padding(
                 padding: EdgeInsets.only(left: 15),
                 child: Text(
                   "فلترة الأدوية حسب ",
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w500,
-                    color: Colors.black54,
+                    color: Color(0x89000000),
                   ),
                 ),
               ),
@@ -245,15 +250,15 @@ class FuserHomeScreen extends StatelessWidget {
                     itemCount: symptoms.length,
                     itemBuilder: (context, index) {
                       return Container(
-                        margin:
-                            EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                        padding: EdgeInsets.symmetric(horizontal: 25),
+                        margin: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 15),
+                        padding: const EdgeInsets.symmetric(horizontal: 25),
                         decoration: BoxDecoration(
-                          color: Color(0xFFF4F6FA),
+                          color: const Color(0xFFF4F6FA),
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
-                              color: Colors.black12,
+                              color: Color(0x1F000000),
                               blurRadius: 4,
                               spreadRadius: 2,
                             )
@@ -262,54 +267,55 @@ class FuserHomeScreen extends StatelessWidget {
                         child: Center(
                           child: Text(
                             symptoms[index],
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           ),
                         ),
                       );
                     }),
               ),
-              SizedBox(height: 15),
-              Padding(
+              const SizedBox(height: 15),
+              const Padding(
                 padding: EdgeInsets.only(left: 15),
                 child: Text(
                   " متوفر",
                   style: TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.w500,
-                    color: Colors.black54,
+                    color: Color(0x89000000),
                   ),
                 ),
               ),
               GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                 ),
                 itemCount: 4,
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return InkWell(
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FuserMedicineDitlesScreen(),
+                          builder: (context) =>
+                              const FuserMedicineDitlesScreen(),
                         ),
                       );
                     },
                     child: Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.symmetric(vertical: 15),
+                      margin: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.symmetric(vertical: 15),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
-                            color: Colors.black12,
+                            color: Color(0x1F000000),
                             blurRadius: 4,
                             spreadRadius: 2,
                           )
@@ -323,15 +329,15 @@ class FuserHomeScreen extends StatelessWidget {
                             backgroundImage:
                                 AssetImage("assets/images/${imgs[index]}"),
                           ),
-                          Text(
+                          const Text(
                             "إسم الدواء",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
-                              color: Colors.black54,
+                              color: Color(0x89000000),
                             ),
                           ),
-                          Text(
+                          const Text(
                             "تمت إضافته",
                             style: TextStyle(
                               color: Colors.black45,
@@ -340,7 +346,7 @@ class FuserHomeScreen extends StatelessWidget {
                           Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
+                            children: const [
                               Text(
                                 "الكمية :  37",
                                 style: TextStyle(

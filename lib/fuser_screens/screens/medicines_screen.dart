@@ -1,25 +1,29 @@
 // صفحة الأدوية
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 
 import 'medicine_detils2_screen.dart';
-import 'medicine_detils_home_screen.dart';
-import 'fuser_chat_screen.dart';
 
-class FuserMedicineScreen extends StatelessWidget {
-  List imgs = [
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-  ];
-  final clr = Color(0xFF58329B);
-  bool shadowColor = false;
-  double? scrolledUnderElevation;
+class FuserMedicineScreen extends StatefulWidget {
+  const FuserMedicineScreen({super.key});
 
+  @override
+  State<FuserMedicineScreen> createState() => _FuserMedicineScreenState();
+}
+
+List imgs = [
+  "doc2.jpg",
+  "doc2.jpg",
+  "doc2.jpg",
+  "doc2.jpg",
+  "doc2.jpg",
+  "doc2.jpg",
+];
+const clr = Color(0xFF58329B);
+bool shadowColor = false;
+double? scrolledUnderElevation;
+
+class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,11 +33,11 @@ class FuserMedicineScreen extends StatelessWidget {
         shadowColor: shadowColor ? Theme.of(context).colorScheme.shadow : clr,
         backgroundColor: Colors.white,
         title: Padding(
-          padding: EdgeInsets.symmetric(vertical: 20),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(right: 0, top: 5, left: 160),
+              const Padding(
+                padding: EdgeInsets.only(right: 0, top: 5, left: 160),
                 child: Text(
                   'الإستعلام عن الأدوية',
                   style: TextStyle(
@@ -44,13 +48,13 @@ class FuserMedicineScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
-                      color: Colors.black12,
+                      color: Color(0x1F000000),
                       blurRadius: 10,
                       spreadRadius: 2,
                     ),
@@ -59,23 +63,23 @@ class FuserMedicineScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 300,
                       child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 5),
+                        padding: const EdgeInsets.symmetric(horizontal: 5),
                         child: TextFormField(
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: "إستعلام",
                             border: InputBorder.none,
                           ),
                         ),
                       ),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.search,
                       color: Color(0xFF58329B),
                     ),
-                    Icon(
+                    const Icon(
                       Icons.photo_camera,
                       color: Color(0xFF58329B),
                     ),
@@ -88,10 +92,10 @@ class FuserMedicineScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          SizedBox(height: 3),
-          SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+          const SizedBox(height: 3),
+          const SizedBox(height: 20),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               " الأكثر طلباً",
               style: TextStyle(
@@ -100,7 +104,7 @@ class FuserMedicineScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           SizedBox(
             height: 90,
             child: ListView.builder(
@@ -109,15 +113,15 @@ class FuserMedicineScreen extends StatelessWidget {
               shrinkWrap: true,
               itemBuilder: (context, index) {
                 return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 12),
+                  margin: const EdgeInsets.symmetric(horizontal: 12),
                   width: 65,
                   height: 65,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black12,
+                        color: Color(0x1F000000),
                         spreadRadius: 2,
                         blurRadius: 10,
                       ),
@@ -127,7 +131,7 @@ class FuserMedicineScreen extends StatelessWidget {
                     textDirection: TextDirection.rtl,
                     children: [
                       Center(
-                        child: Container(
+                        child: SizedBox(
                           height: 65,
                           width: 65,
                           child: ClipRRect(
@@ -140,11 +144,11 @@ class FuserMedicineScreen extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.all(4),
-                        padding: EdgeInsets.all(3),
+                        margin: const EdgeInsets.all(4),
+                        padding: const EdgeInsets.all(3),
                         height: 20,
                         width: 20,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
                         ),
@@ -161,9 +165,9 @@ class FuserMedicineScreen extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           ListView.builder(
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: 6,
               shrinkWrap: true,
               itemBuilder: (context, index) {
@@ -175,7 +179,8 @@ class FuserMedicineScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => FuserMedicineDitles2Screen(),
+                            builder: (context) =>
+                                const FuserMedicineDitles2Screen(),
                           ));
                     },
                     leading: CircleAvatar(
@@ -184,27 +189,27 @@ class FuserMedicineScreen extends StatelessWidget {
                         "assets/images/${imgs[index]}",
                       ),
                     ),
-                    title: Text(
+                    title: const Text(
                       "إسم الدواء",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text(
+                    subtitle: const Text(
                       "وصف الدواء يتم كتابته هنا",
                       maxLines: 16,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.black54,
+                        color: Color(0x89000000),
                       ),
                     ),
-                    trailing: Text(
+                    trailing: const Text(
                       "12:30  : ساعة او تاريخ الإضافة",
                       style: TextStyle(
                         fontSize: 15,
-                        color: Colors.black54,
+                        color: Color(0x89000000),
                       ),
                     ),
                   ),

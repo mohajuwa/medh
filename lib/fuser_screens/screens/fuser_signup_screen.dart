@@ -1,6 +1,5 @@
 // صفحة التسجيل للصيدلي
 // ignore_for_file: unnecessary_import
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -9,6 +8,8 @@ import '../../pages/home_page.dart';
 import 'fuser_login_screen.dart';
 
 class FuserSignUpScreen extends StatefulWidget {
+  const FuserSignUpScreen({super.key});
+
   @override
   State<FuserSignUpScreen> createState() => _FuserSignUpScreenState();
 }
@@ -16,7 +17,7 @@ class FuserSignUpScreen extends StatefulWidget {
 class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
   bool shadowColor = false;
   double? scrolledUnderElevation;
-  final clr = Color(0xFF58329B);
+  final clr = const Color(0xFF58329B);
   bool passTooggle = true;
   @override
   Widget build(BuildContext context) {
@@ -33,29 +34,29 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                 shadowColor ? Theme.of(context).colorScheme.shadow : clr,
             backgroundColor: Colors.white,
             title: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 0, top: 2),
+                    padding: const EdgeInsets.only(right: 0, top: 2),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomePage(),
+                            builder: (context) => const HomePage(),
                           ),
                         );
                       },
                       child: Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
-                              color: Colors.black12,
+                              color: Color(0x1F000000),
                               blurRadius: 6,
                               spreadRadius: 4,
                             )
@@ -65,11 +66,11 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(3),
-                              decoration: BoxDecoration(
+                              padding: const EdgeInsets.all(3),
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Icon(
                                   Icons.home_filled,
                                   color: Color(0xFF58329B),
@@ -83,13 +84,13 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
-                          color: Colors.black12,
+                          color: Color(0x1F000000),
                           blurRadius: 6,
                           spreadRadius: 4,
                         )
@@ -99,11 +100,11 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          padding: EdgeInsets.all(3),
-                          decoration: BoxDecoration(
+                          padding: const EdgeInsets.all(3),
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                           ),
-                          child: CircleAvatar(
+                          child: const CircleAvatar(
                             radius: 15,
                             backgroundImage:
                                 AssetImage("assets/images/icon1.png"),
@@ -118,20 +119,20 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
           ),
           body: ListView(
             children: [
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Image.asset(
                   "assets/stickers/stic1.png",
                   height: 250,
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 2.9,
                 height: 2.0,
               ),
-              SizedBox(height: 5),
-              Padding(
+              const SizedBox(height: 5),
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
@@ -141,7 +142,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
@@ -151,7 +152,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
@@ -162,13 +163,14 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   obscureText: passTooggle ? true : false,
                   decoration: InputDecoration(
                     labelText: "كلمة المرور",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.lock),
+                    border: const OutlineInputBorder(),
+                    prefixIcon: const Icon(Icons.lock),
                     suffixIcon: InkWell(
                         onTap: () {
                           //
@@ -180,18 +182,18 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                           setState(() {});
                         },
                         child: passTooggle
-                            ? Icon(CupertinoIcons.eye_slash_fill)
-                            : Icon(CupertinoIcons.eye_fill)),
+                            ? const Icon(CupertinoIcons.eye_slash_fill)
+                            : const Icon(CupertinoIcons.eye_fill)),
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: SizedBox(
                   width: double.infinity,
                   child: Material(
-                    color: Color(0xFF58329B),
+                    color: const Color(0xFF58329B),
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
@@ -201,7 +203,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                               builder: (context) => FuserLoginScreen(),
                             ));
                       },
-                      child: Padding(
+                      child: const Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                         child: Center(
@@ -222,12 +224,12 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     " لديك حساب؟",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black54,
+                      color: Color(0x89000000),
                     ),
                   ),
                   TextButton(
@@ -238,7 +240,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                               builder: (context) => FuserLoginScreen(),
                             ));
                       },
-                      child: Text(
+                      child: const Text(
                         " تسجيل الدخول",
                         style: TextStyle(
                           fontSize: 18,

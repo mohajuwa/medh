@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medh/screens/home_screen.dart';
-
 import '/widgets/navbar_roots.dart';
 
 class CustomAddMedicineDone extends StatelessWidget {
@@ -8,6 +6,6 @@ class CustomAddMedicineDone extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NavBarRoots();
+    return const NavBarRoots();
   }
 }

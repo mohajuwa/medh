@@ -1,18 +1,19 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'package:custom_clippers/custom_clippers.dart';
-
 import 'package:flutter/material.dart';
 import 'package:medh/screens/home_screen.dart';
 
-import '../pages/home_page.dart';
-import 'small_screens/custom_add_done.dart';
+class CustomAddScreen extends StatefulWidget {
+  const CustomAddScreen({super.key});
 
-class CustomAddScreen extends StatelessWidget {
-  bool shadowColor = false;
-  double? scrolledUnderElevation;
-  final clr = Color(0xFF58329B);
-  bool passTooggle = true;
+  @override
+  State<CustomAddScreen> createState() => _CustomAddScreenState();
+}
+
+bool shadowColor = false;
+double? scrolledUnderElevation;
+const clr = Color(0xFF58329B);
+bool passTooggle = true;
+
+class _CustomAddScreenState extends State<CustomAddScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,13 +23,13 @@ class CustomAddScreen extends StatelessWidget {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: PreferredSize(
-            preferredSize: Size.fromHeight(70),
+            preferredSize: const Size.fromHeight(70),
             child: AppBar(
               backgroundColor: clr,
               leadingWidth: 30,
               title: Padding(
                 padding: const EdgeInsets.only(top: 5),
-                child: Row(children: [
+                child: Row(children: const [
                   CircleAvatar(
                     radius: 25,
                     backgroundImage: AssetImage("assets/images/icon1.png"),
@@ -44,7 +45,7 @@ class CustomAddScreen extends StatelessWidget {
                   )
                 ]),
               ),
-              actions: [
+              actions: const [
                 Padding(
                   padding: EdgeInsets.only(top: 8, right: 20),
                   child: Icon(
@@ -66,20 +67,20 @@ class CustomAddScreen extends StatelessWidget {
           ),
           body: ListView(
             children: [
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Image.asset(
                   "assets/images/icon1.png",
                   height: 100,
                 ),
               ),
-              Divider(
+              const Divider(
                 thickness: 2.9,
                 height: 2.0,
               ),
-              SizedBox(height: 5),
-              Padding(
+              const SizedBox(height: 5),
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
@@ -89,7 +90,7 @@ class CustomAddScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
@@ -99,7 +100,7 @@ class CustomAddScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
@@ -109,7 +110,7 @@ class CustomAddScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
@@ -119,7 +120,7 @@ class CustomAddScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
@@ -129,24 +130,24 @@ class CustomAddScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: SizedBox(
                   width: double.infinity,
                   child: Material(
-                    color: Color(0xFF58329B),
+                    color: const Color(0xFF58329B),
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomeScreen(),
+                            builder: (context) => const HomeScreen(),
                           ),
                         );
                       },
-                      child: Padding(
+                      child: const Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                         child: Center(
@@ -171,57 +172,3 @@ class CustomAddScreen extends StatelessWidget {
     );
   }
 }
-
-//   final clr = Color(0xFF58329B);
-//   final clr1 = Color(0xFFE1E1E2);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       crossAxisAlignment: CrossAxisAlignment.start,
-//       children: [
-//         Padding(
-//           padding: EdgeInsets.only(right: 80),
-//           child: ClipPath(
-//             clipper: UpperNipMessageClipper(MessageType.receive),
-//             child: Container(
-//               padding: EdgeInsets.all(20),
-//               decoration: BoxDecoration(
-//                 color: clr1,
-//               ),
-//               child: Text(
-//                 "مرحبا يا نقيب ، والله انها  شغلة ومشفالة",
-//                 style: TextStyle(
-//                   fontSize: 16,
-//                 ),
-//               ),
-//             ),
-//           ),
-//         ),
-//         Container(
-//           alignment: Alignment.centerRight,
-//           child: Padding(
-//             padding: EdgeInsets.only(top: 20, left: 80),
-//             child: ClipPath(
-//               clipper: LowerNipMessageClipper(MessageType.send),
-//               child: Container(
-//                 padding:
-//                     EdgeInsets.only(left: 20, top: 10, bottom: 25, right: 20),
-//                 decoration: BoxDecoration(
-//                   color: clr,
-//                 ),
-//                 child: Text(
-//                   "وانت تساكي ان الواجهات سهلة ، هههههههه ، ابلع ما ذلحين",
-//                   style: TextStyle(
-//                     fontSize: 16,
-//                     color: Colors.white,
-//                   ),
-//                 ),
-//               ),
-//             ),
-//           ),
-//         )
-//       ],
-//     );
-//   }
-// }

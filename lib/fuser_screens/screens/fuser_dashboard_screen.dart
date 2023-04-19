@@ -1,12 +1,11 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 import '../widgets/fuser_reports.dart';
 import '../widgets/fuser_upcoming_dashboard.dart';
 
 class FuserDashboardScreen extends StatefulWidget {
+  const FuserDashboardScreen({super.key});
+
   @override
   State<FuserDashboardScreen> createState() => _FuserDashboardScreenState();
 }
@@ -14,14 +13,14 @@ class FuserDashboardScreen extends StatefulWidget {
 class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
   int _buttonIndex = 0;
 
-  final clr = Color(0xFFF4F6FA);
-  final clr1 = Color(0xFF58329B);
+  final clr = const Color(0xFFF4F6FA);
+  final clr1 = const Color(0xFF58329B);
 
   final _dashboardWidgets = [
     // Upcoming Widget
-    UpcomingDashboard(),
+    const UpcomingDashboard(),
     // Complated Widget
-    FuserReports(),
+    const FuserReports(),
     // Canceled Widget
     Container(),
   ];
@@ -30,11 +29,11 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.only(top: 40),
+        padding: const EdgeInsets.only(top: 40),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Text(
                 "لوحة التحكم",
@@ -44,10 +43,10 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Container(
-              padding: EdgeInsets.all(5),
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.all(5),
+              margin: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
                 color: clr,
                 borderRadius: BorderRadius.circular(10),
@@ -62,8 +61,8 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                       });
                     },
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 12, horizontal: 20),
                       decoration: BoxDecoration(
                         color: _buttonIndex == 0 ? clr1 : Colors.transparent,
                         borderRadius: BorderRadius.circular(19),
@@ -86,8 +85,8 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                       });
                     },
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 12, horizontal: 25),
                       decoration: BoxDecoration(
                         color: _buttonIndex == 1 ? clr1 : Colors.transparent,
                         borderRadius: BorderRadius.circular(19),
@@ -130,7 +129,7 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             _dashboardWidgets[_buttonIndex],
           ],
         ),

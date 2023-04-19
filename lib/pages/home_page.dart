@@ -1,21 +1,17 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:medh/screens/login_screen.dart';
-import 'package:medh/screens/welcom_screen.dart';
 import 'package:medh/widgets/navbar_roots.dart';
 
 import '../fuser_screens/screens/fuser_login_screen.dart';
-import '../fuser_screens/screens/fuser_welcom_screen.dart';
-import 'nativ_bar.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  final clr = Color(0xFF58329B);
+  final clr = const Color(0xFF58329B);
   bool shadowColor = false;
   double? scrolledUnderElevation;
   @override
@@ -34,7 +30,7 @@ class _HomePageState extends State<HomePage> {
                 shadowColor ? Theme.of(context).colorScheme.shadow : clr,
             backgroundColor: Colors.white,
             title: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 // ignore: prefer_const_literals_to_create_immutables
@@ -70,13 +66,13 @@ class _HomePageState extends State<HomePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
-                              color: Colors.black12,
+                              color: Color(0x1F000000),
                               blurRadius: 6,
                               spreadRadius: 4,
                             )
@@ -86,11 +82,11 @@ class _HomePageState extends State<HomePage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(3),
-                              decoration: BoxDecoration(
+                              padding: const EdgeInsets.all(3),
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 radius: 15,
                                 backgroundImage:
                                     AssetImage("assets/images/icon1.png"),
@@ -109,19 +105,19 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 //app bar777777777777777777777777
-                SizedBox(height: 100),
+                const SizedBox(height: 100),
 
                 // card -> How do u feel
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
-                          color: Colors.black12,
+                          color: Color(0x1F000000),
                           blurRadius: 6,
                           spreadRadius: 4,
                         )
@@ -146,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
 
-                      SizedBox(
+                      const SizedBox(
                         width: 40,
                       ),
 
@@ -155,29 +151,29 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               'صيدلي؟',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 12,
                             ),
-                            Text(
+                            const Text(
                               'تفضل من هنا ',
                               style: TextStyle(
                                 fontSize: 14,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 12,
                             ),
                             Container(
-                              padding: EdgeInsets.all(12),
+                              padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: Color(0xFF58329B),
+                                color: const Color(0xFF58329B),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: InkWell(
@@ -189,7 +185,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   );
                                 },
-                                child: Center(
+                                child: const Center(
                                   child: Text(
                                     'البدء',
                                     style: TextStyle(color: Colors.white),
@@ -203,19 +199,19 @@ class _HomePageState extends State<HomePage> {
                     ]),
                   ),
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
 
                 // card -> How do u feel
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
-                          color: Colors.black12,
+                          color: Color(0x1F000000),
                           blurRadius: 6,
                           spreadRadius: 4,
                         )
@@ -240,7 +236,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
 
-                      SizedBox(
+                      const SizedBox(
                         width: 40,
                       ),
 
@@ -249,29 +245,29 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               'تدور علاج؟',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 12,
                             ),
-                            Text(
+                            const Text(
                               'تفضل من هنا ',
                               style: TextStyle(
                                 fontSize: 14,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 12,
                             ),
                             Container(
-                              padding: EdgeInsets.all(12),
+                              padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: Color(0xFF58329B),
+                                color: const Color(0xFF58329B),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: InkWell(
@@ -279,11 +275,11 @@ class _HomePageState extends State<HomePage> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => NavBarRoots(),
+                                      builder: (context) => const NavBarRoots(),
                                     ),
                                   );
                                 },
-                                child: Center(
+                                child: const Center(
                                   child: Text(
                                     'البدء',
                                     style: TextStyle(color: Colors.white),

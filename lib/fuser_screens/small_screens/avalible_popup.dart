@@ -1,5 +1,3 @@
-// // ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
-
 // import 'package:flutter/material.dart';
 
 // import '../screens/fuser_appoint2_screen.dart';
@@ -44,7 +42,7 @@
 //                 borderRadius: BorderRadius.circular(10),
 //                 boxShadow: [
 //                   BoxShadow(
-//                     color: Colors.black12,
+//                     color: const Color(0x1F000000),
 //                     blurRadius: 10,
 //                     spreadRadius: 2,
 //                   ),
@@ -101,7 +99,7 @@
 //                     color: Colors.white,
 //                     boxShadow: [
 //                       BoxShadow(
-//                         color: Colors.black12,
+//                         color: const Color(0x1F000000),
 //                         spreadRadius: 2,
 //                         blurRadius: 10,
 //                       ),
@@ -193,14 +191,14 @@
 //                       overflow: TextOverflow.ellipsis,
 //                       style: TextStyle(
 //                         fontSize: 16,
-//                         color: Colors.black54,
+//                         color: const Color(0x89000000),
 //                       ),
 //                     ),
 //                     trailing: Text(
 //                       "12:30  : ساعة او تاريخ الإضافة",
 //                       style: TextStyle(
 //                         fontSize: 15,
-//                         color: Colors.black54,
+//                         color: const Color(0x89000000),
 //                       ),
 //                     ),
 //                   ),

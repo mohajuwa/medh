@@ -1,5 +1,4 @@
 // القائمة الثابتة لكل الصفحات للمستخدم العادي
-// ignore_for_file: prefer_const_constructors, unused_field, prefer_final_fields
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -9,6 +8,8 @@ import '../screens/home_screen.dart';
 import '../screens/settings_screen.dart';
 
 class NavBarRoots extends StatefulWidget {
+  const NavBarRoots({super.key});
+
   @override
   State<NavBarRoots> createState() => _NavBarRootsState();
 }
@@ -37,14 +38,14 @@ class _NavBarRootsState extends State<NavBarRoots> {
         child: Scaffold(
           backgroundColor: Colors.white,
           body: _screens[_selectedIndex],
-          bottomNavigationBar: Container(
+          bottomNavigationBar: SizedBox(
             height: 80,
             child: BottomNavigationBar(
               backgroundColor: Colors.white,
               type: BottomNavigationBarType.fixed,
-              selectedItemColor: Color(0xFF58329B),
+              selectedItemColor: const Color(0xFF58329B),
               unselectedItemColor: Colors.black26,
-              selectedLabelStyle: TextStyle(
+              selectedLabelStyle: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 15,
               ),
@@ -54,7 +55,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
                   _selectedIndex = index;
                 });
               },
-              items: [
+              items: const [
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home_filled),
                   label: "الرئيسية",
