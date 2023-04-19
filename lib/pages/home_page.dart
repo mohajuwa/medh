@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                     height: 200,
                     child: Row(children: [
                       // Animation  or Cute Picture
-                      Container(
+                      SizedBox(
                         height: 150,
                         width: 150,
                         child: Column(
@@ -181,7 +181,8 @@ class _HomePageState extends State<HomePage> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => FuserLoginScreen(),
+                                      builder: (context) =>
+                                          const FuserLoginScreen(),
                                     ),
                                   );
                                 },
@@ -220,7 +221,7 @@ class _HomePageState extends State<HomePage> {
                     height: 200,
                     child: Row(children: [
                       // Animation  or Cute Picture
-                      Container(
+                      SizedBox(
                         height: 150,
                         width: 150,
                         child: Column(

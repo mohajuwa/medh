@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:medh/widgets/navbar_roots.dart';
 
+import 'custom2_add.dart';
+
 class AppointmentScreen extends StatefulWidget {
   const AppointmentScreen({super.key});
 
@@ -350,12 +352,12 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const NavBarRoots(),
+                          builder: (context) => const Custom2AddScreen(),
                         ));
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width,
-                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     decoration: BoxDecoration(
                       color: clr,
                       borderRadius: BorderRadius.circular(10),

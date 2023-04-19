@@ -54,8 +54,8 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
-                          boxShadow: const [
-                            BoxShadow(
+                          boxShadow: [
+                            const BoxShadow(
                               color: Color(0x1F000000),
                               blurRadius: 6,
                               spreadRadius: 4,
@@ -88,8 +88,8 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
-                      boxShadow: const [
-                        BoxShadow(
+                      boxShadow: [
+                        const BoxShadow(
                           color: Color(0x1F000000),
                           blurRadius: 6,
                           spreadRadius: 4,

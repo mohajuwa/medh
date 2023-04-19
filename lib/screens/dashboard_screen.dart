@@ -64,7 +64,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 12, horizontal: 20),
+                          vertical: 15, horizontal: 15),
                       decoration: BoxDecoration(
                         color: _buttonIndex == 0 ? clr1 : Colors.transparent,
                         borderRadius: BorderRadius.circular(19),

@@ -44,7 +44,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomePage(),
+                            builder: (context) => const HomePage(),
                           ),
                         );
                       },
@@ -211,7 +211,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => LoginScreen(),
+                              builder: (context) => const LoginScreen(),
                             ));
                       },
                       child: const Padding(
@@ -248,7 +248,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => LoginScreen(),
+                              builder: (context) => const LoginScreen(),
                             ));
                       },
                       child: const Text(

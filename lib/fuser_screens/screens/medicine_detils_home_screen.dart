@@ -318,7 +318,7 @@ class _FuserMedicineDitlesScreenState extends State<FuserMedicineDitlesScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => FuserEditMedcineScreen(),
+                        builder: (context) => const FuserEditMedcineScreen(),
                       ));
                   // Navigator.push(
                   //     context,
@@ -328,7 +328,7 @@ class _FuserMedicineDitlesScreenState extends State<FuserMedicineDitlesScreen> {
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                   decoration: BoxDecoration(
                     color: clr,
                     borderRadius: BorderRadius.circular(10),

@@ -18,23 +18,59 @@ class WelcomeScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 15),
             Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const NavBarRoots(),
+              alignment: Alignment.topRight,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 1, top: 2),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NavBarRoots(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.only(
+                            left: 30, right: 30, top: 5, bottom: 5),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Color(0xA159329B),
+                              blurRadius: 6,
+                              spreadRadius: 4,
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(3),
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  "تخطي",
+                                  style: TextStyle(
+                                    color: Color(0xFF58329B),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                  );
-                },
-                child: const Text(
-                  "تخطي",
-                  style: TextStyle(
-                    color: Color(0xFF58329B),
-                    fontSize: 20,
                   ),
-                ),
+                ],
               ),
             ),
             const SizedBox(height: 80),
@@ -77,7 +113,7 @@ class WelcomeScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => LoginScreen(),
+                            builder: (context) => const LoginScreen(),
                           ));
                     },
                     child: const Padding(
@@ -102,7 +138,7 @@ class WelcomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SignUpScreen(),
+                          builder: (context) => const SignUpScreen(),
                         ),
                       );
                     },
