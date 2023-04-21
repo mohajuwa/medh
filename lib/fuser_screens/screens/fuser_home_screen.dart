@@ -243,7 +243,7 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                 ),
               ),
               SizedBox(
-                height: 70,
+                height: 50,
                 child: ListView.builder(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
@@ -258,8 +258,8 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: const [
                             BoxShadow(
-                              color: Color(0x1F000000),
-                              blurRadius: 4,
+                              color: Color(0x6159329B),
+                              blurRadius: 3,
                               spreadRadius: 2,
                             )
                           ],
@@ -268,7 +268,7 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                           child: Text(
                             symptoms[index],
                             style: const TextStyle(
-                              fontSize: 16,
+                              fontSize: 12,
                               fontWeight: FontWeight.w500,
                               color: Color(0x89000000),
                             ),

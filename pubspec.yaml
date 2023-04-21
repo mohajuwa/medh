@@ -60,8 +60,7 @@ flutter:
     - family: IBMPlexSansArabic
       fonts:
         - asset: assets/fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.ttf
-        - asset: assets/fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Medium.ttf
-        - asset: assets/fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Bold.ttf
+        
           
 
     - family: El_Messiri
@@ -74,6 +73,13 @@ flutter:
       fonts:
          - asset: assets/fonts/Amiri_Quran/AmiriQuran-Regular.ttf
            weight: 700
+
+    - family: NotoSansArabic
+      fonts:
+         - asset: assets/fonts/Noto_Sans_Arabic/static/NotoSansArabic/NotoSansArabic-Regular.ttf
+           
+
+           
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

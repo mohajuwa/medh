@@ -77,7 +77,7 @@ class _FuserReportsState extends State<FuserReports> {
                     },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 4, horizontal: 10),
+                          vertical: 4, horizontal: 20),
                       decoration: BoxDecoration(
                         color: _buttonIndex == 1 ? clr1 : Colors.transparent,
                         borderRadius: BorderRadius.circular(19),

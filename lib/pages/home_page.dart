@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:medh/fuser_screens/screens/fuser_login_screen.dart';
 import 'package:medh/widgets/navbar_roots.dart';
-
-import '../fuser_screens/screens/fuser_login_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
