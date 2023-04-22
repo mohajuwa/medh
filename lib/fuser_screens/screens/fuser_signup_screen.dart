@@ -200,7 +200,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => FuserLoginScreen(),
+                              builder: (context) => const FuserLoginScreen(),
                             ));
                       },
                       child: const Padding(
@@ -237,7 +237,7 @@ class _FuserSignUpScreenState extends State<FuserSignUpScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => FuserLoginScreen(),
+                              builder: (context) => const FuserLoginScreen(),
                             ));
                       },
                       child: const Text(

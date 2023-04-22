@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medh/pages/home_page.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:carousel_pro/carousel_pro.dart';
 import 'appointm2_screen.dart';
 
@@ -53,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomePage(),
+                            builder: (context) => const HomePage(),
                           ),
                         );
                       },
@@ -225,7 +226,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Appointment2Screen(),
+                          builder: (context) => const Appointment2Screen(),
                         ),
                       );
                     },

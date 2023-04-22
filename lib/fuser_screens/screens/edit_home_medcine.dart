@@ -3,6 +3,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:medh/fuser_screens/screens/fuser_home_screen.dart';
+import 'package:medh/fuser_screens/widgets/fuser_navbar_roots.dart';
 
 import '../../pages/home_page.dart';
 import '../small_screens/edit_home_medicine_done.dart';
@@ -45,7 +47,10 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomePage(),
+                            builder: (
+                              context,
+                            ) =>
+                                const FuserHomeScreen(),
                           ),
                         );
                       },
@@ -54,8 +59,8 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            const BoxShadow(
+                          boxShadow: const [
+                            BoxShadow(
                               color: Color(0x1F000000),
                               blurRadius: 6,
                               spreadRadius: 4,
@@ -88,8 +93,8 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        const BoxShadow(
+                      boxShadow: const [
+                        BoxShadow(
                           color: Color(0x1F000000),
                           blurRadius: 6,
                           spreadRadius: 4,

@@ -18,14 +18,14 @@ class _NavBarRootsState extends State<NavBarRoots> {
   int _selectedIndex = 0;
   final _screens = [
     // Home Screen يا نقيب
-    HomeScreen(),
+    const HomeScreen(),
     // Messages Screen
-    MessagesScreen(),
+    const MessagesScreen(),
     // Schedule Screen
-    DashboardScreen(),
+    const DashboardScreen(),
     // Settings Screen
 
-    SettingsScreen(),
+    const SettingsScreen(),
   ];
 
   @override

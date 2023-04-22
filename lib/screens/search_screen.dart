@@ -67,7 +67,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 300,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -184,7 +184,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => AppointmentScreen(),
+                            builder: (context) => const AppointmentScreen(),
                           ));
                     },
                     leading: CircleAvatar(

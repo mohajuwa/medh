@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'pages/home_page.dart';
 
@@ -13,9 +14,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: const [
+        GlobalCupertinoLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
+      ],
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'El_Messiri'),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

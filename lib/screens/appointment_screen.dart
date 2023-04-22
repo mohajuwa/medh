@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:medh/widgets/navbar_roots.dart';
 
 import 'custom2_add.dart';
 

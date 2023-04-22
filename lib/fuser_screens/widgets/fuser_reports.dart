@@ -28,101 +28,106 @@ class _FuserReportsState extends State<FuserReports> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.only(top: 5),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 5),
-            Container(
-              padding: const EdgeInsets.all(5),
-              margin: const EdgeInsets.symmetric(horizontal: 40),
-              decoration: BoxDecoration(
-                color: clr,
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        _buttonIndex = 0;
-                      });
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 4, horizontal: 20),
-                      decoration: BoxDecoration(
-                        color: _buttonIndex == 0 ? clr1 : Colors.transparent,
-                        borderRadius: BorderRadius.circular(19),
-                      ),
-                      child: Text(
-                        " تقرير شهري",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color:
-                              _buttonIndex == 0 ? Colors.white : Colors.black38,
+    return WillPopScope(
+      onWillPop: () async => true,
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 5),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 5),
+              Container(
+                padding: const EdgeInsets.all(5),
+                margin: const EdgeInsets.symmetric(horizontal: 40),
+                decoration: BoxDecoration(
+                  color: clr,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          _buttonIndex = 0;
+                        });
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 4, horizontal: 20),
+                        decoration: BoxDecoration(
+                          color: _buttonIndex == 0 ? clr1 : Colors.transparent,
+                          borderRadius: BorderRadius.circular(19),
+                        ),
+                        child: Text(
+                          " تقرير شهري",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: _buttonIndex == 0
+                                ? Colors.white
+                                : Colors.black38,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        _buttonIndex = 1;
-                      });
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 4, horizontal: 20),
-                      decoration: BoxDecoration(
-                        color: _buttonIndex == 1 ? clr1 : Colors.transparent,
-                        borderRadius: BorderRadius.circular(19),
-                      ),
-                      child: Text(
-                        "تقرير سنوي",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color:
-                              _buttonIndex == 1 ? Colors.white : Colors.black38,
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          _buttonIndex = 1;
+                        });
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 4, horizontal: 20),
+                        decoration: BoxDecoration(
+                          color: _buttonIndex == 1 ? clr1 : Colors.transparent,
+                          borderRadius: BorderRadius.circular(19),
+                        ),
+                        child: Text(
+                          "تقرير سنوي",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: _buttonIndex == 1
+                                ? Colors.white
+                                : Colors.black38,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  // InkWell(
-                  //   onTap: () {
-                  //     setState(() {
-                  //       _buttonIndex = 2;
-                  //     });
-                  //   },
-                  //   child: Container(
-                  //     padding:
-                  //         EdgeInsets.symmetric(vertical: 12, horizontal: 25),
-                  //     decoration: BoxDecoration(
-                  //       color: _buttonIndex == 2 ? clr1 : Colors.transparent,
-                  //       borderRadius: BorderRadius.circular(19),
-                  //     ),
-                  //     child: Text(
-                  //       "ملغية",
-                  //       style: TextStyle(
-                  //         fontSize: 16,
-                  //         fontWeight: FontWeight.w500,
-                  //         color:
-                  //             _buttonIndex == 2 ? Colors.white : Colors.black38,
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-                ],
+                    // InkWell(
+                    //   onTap: () {
+                    //     setState(() {
+                    //       _buttonIndex = 2;
+                    //     });
+                    //   },
+                    //   child: Container(
+                    //     padding:
+                    //         EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+                    //     decoration: BoxDecoration(
+                    //       color: _buttonIndex == 2 ? clr1 : Colors.transparent,
+                    //       borderRadius: BorderRadius.circular(19),
+                    //     ),
+                    //     child: Text(
+                    //       "ملغية",
+                    //       style: TextStyle(
+                    //         fontSize: 16,
+                    //         fontWeight: FontWeight.w500,
+                    //         color:
+                    //             _buttonIndex == 2 ? Colors.white : Colors.black38,
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(height: 30),
-            _dashboardWidgets[_buttonIndex],
-          ],
+              const SizedBox(height: 30),
+              _dashboardWidgets[_buttonIndex],
+            ],
+          ),
         ),
       ),
     );
