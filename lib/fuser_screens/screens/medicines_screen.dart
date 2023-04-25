@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'add_medcine.dart';
 import 'medicine_detils2_screen.dart';
 
 class FuserMedicineScreen extends StatefulWidget {
@@ -26,6 +27,8 @@ double? scrolledUnderElevation;
 class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
   @override
   Widget build(BuildContext context) {
+    //  هذا عشان زر الرجوع
+
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
@@ -41,7 +44,7 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
                 const Padding(
                   padding: EdgeInsets.only(right: 0, top: 5, left: 160),
                   child: Text(
-                    'الإستعلام عن الأدوية',
+                    'الأدوية',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
@@ -71,7 +74,7 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
                           padding: const EdgeInsets.symmetric(horizontal: 5),
                           child: TextFormField(
                             decoration: const InputDecoration(
-                              hintText: "إستعلام",
+                              hintText: "بحث",
                               border: InputBorder.none,
                             ),
                           ),
@@ -94,7 +97,69 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
         ),
         body: ListView(
           children: [
-            const SizedBox(height: 3),
+            const SizedBox(height: 8),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AddMedcineScreen(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: clr,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x1F000000),
+                          blurRadius: 6,
+                          spreadRadius: 4,
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(
+                            Icons.add,
+                            color: clr,
+                            size: 20,
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        const Text(
+                          "إضافة دواء",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        Text(
+                          "جديد",
+                          style: TextStyle(
+                            color: Colors.blue.shade100,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
             const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),

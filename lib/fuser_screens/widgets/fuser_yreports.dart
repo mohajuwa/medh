@@ -19,8 +19,15 @@ class _YearlyReportsState extends State<YearlyReports> {
   @override
   Widget build(BuildContext context) {
     String formattedDate = DateFormat.y().format(DateTime(2024));
+    //  هذا عشان زر الرجوع
+
     return WillPopScope(
-      onWillPop: () async => true,
+      onWillPop: () {
+        //trigger leaving and use own data
+        Navigator.pop(context, true);
+        //we need to return a future
+        return Future.value(true);
+      },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(

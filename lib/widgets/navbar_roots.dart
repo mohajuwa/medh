@@ -30,49 +30,60 @@ class _NavBarRootsState extends State<NavBarRoots> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(fontFamily: 'El_Messiri'),
-      debugShowCheckedModeBanner: false,
-      home: Directionality(
-        textDirection: TextDirection.rtl,
-        child: Scaffold(
-          backgroundColor: Colors.white,
-          body: _screens[_selectedIndex],
-          bottomNavigationBar: SizedBox(
-            height: 80,
-            child: BottomNavigationBar(
-              backgroundColor: Colors.white,
-              type: BottomNavigationBarType.fixed,
-              selectedItemColor: const Color(0xFF58329B),
-              unselectedItemColor: Colors.black26,
-              selectedLabelStyle: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 15,
+    return WillPopScope(
+      onWillPop: () async {
+        if (_selectedIndex == 0) {
+          return true;
+        }
+        setState(() {
+          _selectedIndex = 0;
+        });
+        return false;
+      },
+      child: MaterialApp(
+        theme: ThemeData(fontFamily: 'El_Messiri'),
+        debugShowCheckedModeBanner: false,
+        home: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Scaffold(
+            backgroundColor: Colors.white,
+            body: _screens[_selectedIndex],
+            bottomNavigationBar: SizedBox(
+              height: 80,
+              child: BottomNavigationBar(
+                backgroundColor: Colors.white,
+                type: BottomNavigationBarType.fixed,
+                selectedItemColor: const Color(0xFF58329B),
+                unselectedItemColor: Colors.black26,
+                selectedLabelStyle: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+                currentIndex: _selectedIndex,
+                onTap: (index) {
+                  setState(() {
+                    _selectedIndex = index;
+                  });
+                },
+                items: const [
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.home_filled),
+                    label: "الرئيسية",
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(CupertinoIcons.search),
+                    label: "إستعلام",
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.notification_add_outlined),
+                    label: "لوحة الإشعارت",
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.settings),
+                    label: "إعدادات",
+                  ),
+                ],
               ),
-              currentIndex: _selectedIndex,
-              onTap: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                });
-              },
-              items: const [
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.home_filled),
-                  label: "الرئيسية",
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.search),
-                  label: "إستعلام",
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.notification_add_outlined),
-                  label: "لوحة الإشعارت",
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.settings),
-                  label: "إعدادات",
-                ),
-              ],
             ),
           ),
         ),

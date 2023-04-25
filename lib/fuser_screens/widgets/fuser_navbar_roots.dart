@@ -9,9 +9,7 @@ import '../screens/medicines_screen.dart';
 import '../screens/fuser_settings_screen.dart';
 
 class FuserNavBarRoots extends StatefulWidget {
-  const FuserNavBarRoots({
-    super.key,
-  });
+  const FuserNavBarRoots({super.key});
 
   @override
   State<FuserNavBarRoots> createState() => _FuserNavBarRootsState();
@@ -19,6 +17,7 @@ class FuserNavBarRoots extends StatefulWidget {
 
 class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
   int _currentIndex = 0;
+
   final _screens = [
     // Home Screen يا نقيب
     const FuserHomeScreen(),
@@ -33,6 +32,8 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
 
   @override
   Widget build(BuildContext context) {
+    //  هذا عشان زر الرجوع
+
     return WillPopScope(
       onWillPop: () async {
         if (_currentIndex == 0) {

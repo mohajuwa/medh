@@ -13,18 +13,26 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      localizationsDelegates: const [
-        GlobalCupertinoLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
-      ],
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'El_Messiri'),
-      home: const HomePage(),
+    return WillPopScope(
+      onWillPop: () {
+        //trigger leaving and use own data
+        Navigator.pop(context, false);
+        //we need to return a future
+        return Future.value(true);
+      },
+      child: MaterialApp(
+        localizationsDelegates: const [
+          GlobalCupertinoLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
+        ],
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(fontFamily: 'El_Messiri'),
+        home: const HomePage(),
+      ),
     );
   }
 }
