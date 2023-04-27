@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return WillPopScope(
       onWillPop: () {
         //trigger leaving and use own data
-        Navigator.pop(context, false);
+        Navigator.pop(context, true);
         //we need to return a future
         return Future.value(true);
       },

@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medh/fuser_screens/screens/fuser_login_screen.dart';
-import 'package:medh/fuser_screens/widgets/fuser_navbar_roots.dart';
-import 'package:medh/pages/nativ_bar.dart';
+import 'package:medh/fuser_screens/screens/fuser_welcom_screen.dart';
 import 'package:medh/widgets/navbar_roots.dart';
-
-import '../fuser_screens/screens/fuser_welcom_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     //  هذا عشان زر الرجوع
 
     return WillPopScope(
-      onWillPop: () async => false,
+      onWillPop: () async => true,
       child: MaterialApp(
         theme: ThemeData(fontFamily: 'El_Messiri'),
         debugShowCheckedModeBanner: false,
@@ -60,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           '  شفت!؟',
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w500,
                             color: Colors.black,
                             fontSize: 24,
                           ),
@@ -76,12 +72,12 @@ class _HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(18),
                             boxShadow: const [
                               BoxShadow(
                                 color: Color(0x1F000000),
-                                blurRadius: 6,
-                                spreadRadius: 4,
+                                blurRadius: 1.5,
+                                spreadRadius: 1,
                               )
                             ],
                           ),
@@ -121,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(18),
                         boxShadow: const [
                           BoxShadow(
                             color: Color(0x1F000000),
@@ -161,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                               const Text(
                                 'صيدلي؟',
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 16,
                                 ),
                               ),
@@ -181,7 +177,7 @@ class _HomePageState extends State<HomePage> {
                                 padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
                                   color: const Color(0xFF58329B),
-                                  borderRadius: BorderRadius.circular(20),
+                                  borderRadius: BorderRadius.circular(18),
                                 ),
                                 child: InkWell(
                                   onTap: () {
@@ -216,7 +212,7 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(18),
                         boxShadow: const [
                           BoxShadow(
                             color: Color(0x1F000000),
@@ -256,7 +252,7 @@ class _HomePageState extends State<HomePage> {
                               const Text(
                                 'تدور علاج؟',
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 16,
                                 ),
                               ),
@@ -276,7 +272,7 @@ class _HomePageState extends State<HomePage> {
                                 padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
                                   color: const Color(0xFF58329B),
-                                  borderRadius: BorderRadius.circular(20),
+                                  borderRadius: BorderRadius.circular(18),
                                 ),
                                 child: InkWell(
                                   onTap: () {

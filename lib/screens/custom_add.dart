@@ -156,7 +156,7 @@ class _CustomAddScreenState extends State<CustomAddScreen> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 25,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),

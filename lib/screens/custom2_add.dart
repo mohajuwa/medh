@@ -157,7 +157,7 @@ class _Custom2AddScreenState extends State<Custom2AddScreen> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 25,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),

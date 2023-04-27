@@ -1,12 +1,13 @@
 // صفحة تقرير الشهور للسنة للصيدلي
 //  مضافه الى صفحة التقارير تحديداً زر التقرير السنوي في القائمة
 
+// ignore_for_file: dead_code
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
-import 'package:medh/fuser_screens/widgets/fuser_yreports.dart';
 
 class Months12Reports extends StatefulWidget {
   const Months12Reports({super.key});
@@ -55,91 +56,99 @@ class _Months12ReportsState extends State<Months12Reports> {
               toolbarHeight: 60,
               scrolledUnderElevation: scrolledUnderElevation,
               shadowColor:
-                  // ignore: dead_code
                   shadowColor ? Theme.of(context).colorScheme.shadow : clr,
               backgroundColor: Colors.white,
-              title: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 0, top: 2),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.pop(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const YearlyReports(),
+              title: Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 1),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 0, top: 2),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pop(
+                              context,
+                            );
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(18),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0x1F000000),
+                                  blurRadius: 1.5,
+                                  spreadRadius: 1,
+                                )
+                              ],
                             ),
-                          );
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x1F000000),
-                                blurRadius: 6,
-                                spreadRadius: 4,
-                              )
-                            ],
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(3),
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: const Center(
-                                  child: Text(
-                                    "رجوع",
-                                    style: TextStyle(
-                                      color: Color(0xFF58329B),
+                            child: Center(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(3),
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        "رجوع",
+                                        style: TextStyle(
+                                          color: Color(0xFF58329B),
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x1F000000),
-                            blurRadius: 6,
-                            spreadRadius: 4,
-                          )
-                        ],
+                      const Text(
+                        " شعار البرنامج -->",
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.black,
+                          fontFamily: "Amiri_Quran",
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(3),
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(18),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Color(0x1F000000),
+                              blurRadius: 4,
+                              spreadRadius: 2,
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: const CircleAvatar(
+                                radius: 15,
+                                backgroundImage:
+                                    AssetImage("assets/images/icon1.png"),
+                              ),
                             ),
-                            child: const CircleAvatar(
-                              radius: 15,
-                              backgroundImage:
-                                  AssetImage("assets/images/icon1.png"),
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -155,7 +164,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                         "تقرير شهر [1]",
                         style: TextStyle(
                           fontSize: 20,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
 
@@ -198,7 +207,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'الصنف',
                                             style: TextStyle(
                                               fontSize: 14.0,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               color: Colors.blue,
                                             ),
                                           ),
@@ -208,7 +217,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'الموقع',
                                             style: TextStyle(
                                                 fontSize: 14.0,
-                                                fontWeight: FontWeight.w600,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.blue),
                                           ),
                                         ]),
@@ -217,7 +226,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'المورد',
                                             style: TextStyle(
                                                 fontSize: 14.0,
-                                                fontWeight: FontWeight.w600,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.blue),
                                           ),
                                         ]),
@@ -226,7 +235,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'الكمية',
                                             style: TextStyle(
                                                 fontSize: 14.0,
-                                                fontWeight: FontWeight.w600,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.blue),
                                           ),
                                         ]),
@@ -235,7 +244,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'السعر',
                                             style: TextStyle(
                                                 fontSize: 14.0,
-                                                fontWeight: FontWeight.w600,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.blue),
                                           ),
                                         ]),
@@ -244,7 +253,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'التاريخ',
                                             style: TextStyle(
                                                 fontSize: 14.0,
-                                                fontWeight: FontWeight.w600,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.blue),
                                           ),
                                         ]),
@@ -255,7 +264,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'ع.م - س',
                                             style: TextStyle(
                                               fontSize: 10,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               fontFamily: "Amiri_Quran",
                                               color: Colors.black,
                                             ),
@@ -266,7 +275,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'إب - السبل ',
                                             style: TextStyle(
                                               fontSize: 10,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               fontFamily: "Amiri_Quran",
                                               color: Colors.black,
                                             ),
@@ -277,7 +286,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             '5*',
                                             style: TextStyle(
                                               fontSize: 10,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               fontFamily: "Amiri_Quran",
                                               color: Colors.black,
                                             ),
@@ -289,7 +298,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '14',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -301,7 +310,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '500*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -324,7 +333,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'ع.م - س',
                                             style: TextStyle(
                                               fontSize: 10,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               fontFamily: "Amiri_Quran",
                                               color: Colors.black,
                                             ),
@@ -336,7 +345,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               'إب - السبل ',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -348,7 +357,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '5*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -360,7 +369,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '89',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -372,7 +381,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '500*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -395,7 +404,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'ع.م - س',
                                             style: TextStyle(
                                               fontSize: 10,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               fontFamily: "Amiri_Quran",
                                               color: Colors.black,
                                             ),
@@ -407,7 +416,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               'إب - السبل ',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -419,7 +428,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '5*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -431,7 +440,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '$intValue',
                                               style: const TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -443,7 +452,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '500*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -468,7 +477,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'ع.م - س',
                                             style: TextStyle(
                                               fontSize: 10,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               fontFamily: "Amiri_Quran",
                                               color: Colors.black,
                                             ),
@@ -480,7 +489,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               'إب - السبل ',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -492,7 +501,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '5*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -504,7 +513,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '$intValue',
                                               style: const TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -516,7 +525,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '500*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -539,7 +548,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'ع.م - س',
                                             style: TextStyle(
                                               fontSize: 10,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               fontFamily: "Amiri_Quran",
                                               color: Colors.black,
                                             ),
@@ -551,7 +560,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               'إب - السبل ',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -563,7 +572,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '5*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -575,7 +584,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '$intValue',
                                               style: const TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -587,7 +596,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '500*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -610,7 +619,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                             'ع.م - س',
                                             style: TextStyle(
                                               fontSize: 10,
-                                              fontWeight: FontWeight.w600,
+                                              fontWeight: FontWeight.w500,
                                               fontFamily: "Amiri_Quran",
                                               color: Colors.black,
                                             ),
@@ -622,7 +631,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               'إب - السبل ',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -634,7 +643,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '5*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -646,7 +655,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '$intValue',
                                               style: const TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),
@@ -658,7 +667,7 @@ class _Months12ReportsState extends State<Months12Reports> {
                                               '500*',
                                               style: TextStyle(
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontWeight: FontWeight.w500,
                                                   fontFamily: "Amiri_Quran",
                                                   color: Colors.black),
                                             ),

@@ -84,7 +84,7 @@ class _Appointment2ScreenState extends State<Appointment2Screen> {
                             const Text(
                               "المورد",
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w500,
                                 color: Colors.white,
                               ),
                             ),
@@ -234,7 +234,7 @@ class _Appointment2ScreenState extends State<Appointment2Screen> {
                                       ),
                                       title: const Text("إسم الدواء ",
                                           style: TextStyle(
-                                            fontWeight: FontWeight.bold,
+                                            fontWeight: FontWeight.w500,
                                           )),
                                       subtitle: const Text("وصف الدواء"),
                                       trailing: Row(
@@ -303,7 +303,7 @@ class _Appointment2ScreenState extends State<Appointment2Screen> {
                         title: const Text(
                           "إسم الصيدلية",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         subtitle: const Text(" موقع الصيدلية ، يظهر هنا "),
@@ -342,7 +342,7 @@ class _Appointment2ScreenState extends State<Appointment2Screen> {
                           style: TextStyle(
                             fontSize: 20,
                             color: Colors.black26,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w500,
                           ))
                     ],
                   ),

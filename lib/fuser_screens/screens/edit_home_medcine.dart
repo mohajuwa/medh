@@ -4,9 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:medh/fuser_screens/screens/fuser_home_screen.dart';
-import 'package:medh/fuser_screens/widgets/fuser_navbar_roots.dart';
 
-import '../../pages/home_page.dart';
 import '../small_screens/edit_home_medicine_done.dart';
 
 class FuserEditMedcineScreen extends StatefulWidget {
@@ -58,12 +56,12 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(18),
                           boxShadow: const [
                             BoxShadow(
                               color: Color(0x1F000000),
-                              blurRadius: 6,
-                              spreadRadius: 4,
+                              blurRadius: 1.5,
+                              spreadRadius: 1,
                             )
                           ],
                         ),
@@ -92,7 +90,7 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(18),
                       boxShadow: const [
                         BoxShadow(
                           color: Color(0x1F000000),
@@ -213,7 +211,7 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 25,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),

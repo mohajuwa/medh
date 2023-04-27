@@ -1,43 +1,91 @@
-import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:carousel_pro/carousel_pro.dart';
+// import 'dart:async';
 
-class CarouselPage extends StatefulWidget {
-  const CarouselPage({super.key});
+// import 'package:after_layout/after_layout.dart';
+// import 'package:flutter/material.dart';
+// import 'package:medh/fuser_screens/screens/fuser_welcom_screen.dart';
+// import 'package:medh/fuser_screens/widgets/fuser_navbar_roots.dart';
+// import 'package:medh/pages/home_page.dart';
+// import 'package:medh/widgets/navbar_roots.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
-  @override
-  State<CarouselPage> createState() => _CarouselPageState();
-}
+// void main() => runApp(const NuserMyApp());
 
-class _CarouselPageState extends State<CarouselPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SizedBox(
-          height: 300,
-          width: double.infinity,
-          child: Carousel(
-            images: const [
-              AssetImage("assets/images/doctor1.jpg"),
-              AssetImage("assets/images/doctor2.jpg"),
-              AssetImage("assets/images/doctor3.jpg"),
-            ],
-            dotSize: 15,
-            dotIncreaseSize: 1,
-            dotSpacing: 30,
-            dotColor: Colors.white,
-            dotBgColor: Colors.deepPurple.withOpacity(0.5),
-            indicatorBgPadding: 10,
-            boxFit: BoxFit.cover,
-            borderRadius: true,
-            radius: const Radius.circular(30),
-            overlayShadow: true,
-            overlayShadowColors: Colors.grey,
-            overlayShadowSize: 0.5,
-          ),
-        ),
-      ),
-    );
-  }
-}
+// class NuserMyApp extends StatelessWidget {
+//   const NuserMyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: NuserSplash(),
+//     );
+//   }
+// }
+
+// class NuserSplash extends StatefulWidget {
+//   const NuserSplash({super.key});
+
+//   @override
+//   NuserSplashState createState() => NuserSplashState();
+// }
+
+// class NuserSplashState extends State<NuserSplash>
+//     with AfterLayoutMixin<NuserSplash> {
+//   Future checkFirstSeen() async {
+//     SharedPreferences prefs = await SharedPreferences.getInstance();
+//     bool seen = (prefs.getBool('seen') ?? false);
+
+//     if (seen) {
+//       Navigator.of(context).pushReplacement(
+//           MaterialPageRoute(builder: (context) => const NuserHome()));
+//     } else {
+//       await prefs.setBool('seen', true);
+//       Navigator.of(context).pushReplacement(
+//           MaterialPageRoute(builder: (context) => const NuserIntroScreen()));
+//     }
+//   }
+
+//   @override
+//   void afterFirstLayout(BuildContext context) => checkFirstSeen();
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Scaffold(
+//       body: Center(
+//         child: Text('Loading...'),
+//       ),
+//     );
+//   }
+// }
+
+// class NuserHome extends StatelessWidget {
+//   const NuserHome({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       supportedLocales: const [
+//         Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
+//       ],
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(fontFamily: 'El_Messiri'),
+//       home: const NavBarRoots(),
+//     );
+//   }
+// }
+
+// class NuserIntroScreen extends StatelessWidget {
+//   const NuserIntroScreen({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       supportedLocales: const [
+//         Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
+//       ],
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(fontFamily: 'El_Messiri'),
+//       home: const FuserNavBarRoots(),
+//     );
+//   }
+// }

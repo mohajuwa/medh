@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:medh/fuser_screens/screens/add_medcine.dart';
-import 'package:medh/pages/home_page.dart';
 
 import '../widgets/fuser_navbar_roots.dart';
 
@@ -41,77 +40,13 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
     //  هذا عشان زر الرجوع
 
     return WillPopScope(
-      onWillPop: () async => false,
+      onWillPop: () async => true,
       child: MaterialApp(
         theme: ThemeData(fontFamily: 'El_Messiri'),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
-            appBar: AppBar(
-              toolbarHeight: 60,
-              scrolledUnderElevation: scrolledUnderElevation,
-              shadowColor:
-                  shadowColor ? Theme.of(context).colorScheme.shadow : clr,
-              backgroundColor: Colors.white,
-              title: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 0, top: 2),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const HomePage(),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x1F000000),
-                                blurRadius: 6,
-                                spreadRadius: 4,
-                              )
-                            ],
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(3),
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: const Center(
-                                  child: Icon(
-                                    Icons.home_filled,
-                                    color: Color(0xFF58329B),
-                                    size: 30,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    const CircleAvatar(
-                      radius: 25,
-                      backgroundImage: AssetImage("assets/images/icon1.png"),
-                    ),
-                  ],
-                ),
-              ),
-            ),
             body: ListView(
               children: [
                 const SizedBox(height: 25),
@@ -188,12 +123,12 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(18),
                           boxShadow: const [
                             BoxShadow(
                               color: Color(0x1F000000),
-                              blurRadius: 6,
-                              spreadRadius: 4,
+                              blurRadius: 1.5,
+                              spreadRadius: 1,
                             )
                           ],
                         ),
@@ -355,7 +290,7 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                                   "الكمية :  37",
                                   style: TextStyle(
                                     color: clr,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],

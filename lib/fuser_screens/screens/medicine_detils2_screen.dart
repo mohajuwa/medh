@@ -94,7 +94,7 @@ class _FuserMedicineDitles2ScreenState
                               const Text(
                                 "المورد",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w500,
                                   color: Colors.white,
                                 ),
                               ),
@@ -246,7 +246,7 @@ class _FuserMedicineDitles2ScreenState
                                         ),
                                         title: const Text("إسم الدواء ",
                                             style: TextStyle(
-                                              fontWeight: FontWeight.bold,
+                                              fontWeight: FontWeight.w500,
                                             )),
                                         subtitle:
                                             const Text("منذ 1 يوم : آخر شراء"),
@@ -323,7 +323,7 @@ class _FuserMedicineDitles2ScreenState
                           style: TextStyle(
                             fontSize: 20,
                             color: Color(0x1F000000),
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w500,
                           ))
                     ],
                   ),

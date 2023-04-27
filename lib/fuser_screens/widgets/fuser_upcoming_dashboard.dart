@@ -42,7 +42,7 @@ class UpcomingDashboard extends StatelessWidget {
                     title: Text(
                       "إسم الدواء",
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     subtitle: Text("وصفة"),
@@ -192,7 +192,7 @@ class UpcomingDashboard extends StatelessWidget {
                     title: Text(
                       "إسم الدواء",
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     subtitle: Text("وصفة"),
@@ -342,7 +342,7 @@ class UpcomingDashboard extends StatelessWidget {
                     title: Text(
                       "إسم الدواء",
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     subtitle: Text("وصفة"),

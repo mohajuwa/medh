@@ -32,7 +32,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
             "التقرير اليومي ",
             style: TextStyle(
               fontSize: 20,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w500,
             ),
           ),
 
@@ -73,7 +73,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'الصنف',
                                 style: TextStyle(
                                   fontSize: 14.0,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   color: Colors.blue,
                                 ),
                               ),
@@ -83,7 +83,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'الموقع',
                                 style: TextStyle(
                                     fontSize: 14.0,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w500,
                                     color: Colors.blue),
                               ),
                             ]),
@@ -92,7 +92,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'المورد',
                                 style: TextStyle(
                                     fontSize: 14.0,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w500,
                                     color: Colors.blue),
                               ),
                             ]),
@@ -101,7 +101,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'الكمية',
                                 style: TextStyle(
                                     fontSize: 14.0,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w500,
                                     color: Colors.blue),
                               ),
                             ]),
@@ -110,7 +110,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'السعر',
                                 style: TextStyle(
                                     fontSize: 14.0,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w500,
                                     color: Colors.blue),
                               ),
                             ]),
@@ -119,7 +119,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'التاريخ',
                                 style: TextStyle(
                                     fontSize: 14.0,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w500,
                                     color: Colors.blue),
                               ),
                             ]),
@@ -130,7 +130,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'ع.م - س',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontFamily: "Amiri_Quran",
                                   color: Colors.black,
                                 ),
@@ -141,7 +141,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'إب - السبل ',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontFamily: "Amiri_Quran",
                                   color: Colors.black,
                                 ),
@@ -152,7 +152,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 '5*',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontFamily: "Amiri_Quran",
                                   color: Colors.black,
                                 ),
@@ -164,7 +164,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '14',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -176,7 +176,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '500*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -199,7 +199,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'ع.م - س',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontFamily: "Amiri_Quran",
                                   color: Colors.black,
                                 ),
@@ -211,7 +211,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   'إب - السبل ',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -223,7 +223,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '5*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -235,7 +235,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '89',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -247,7 +247,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '500*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -270,7 +270,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'ع.م - س',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontFamily: "Amiri_Quran",
                                   color: Colors.black,
                                 ),
@@ -282,7 +282,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   'إب - السبل ',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -294,7 +294,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '5*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -306,7 +306,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '$intValue',
                                   style: const TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -318,7 +318,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '500*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -341,7 +341,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'ع.م - س',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontFamily: "Amiri_Quran",
                                   color: Colors.black,
                                 ),
@@ -353,7 +353,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   'إب - السبل ',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -365,7 +365,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '5*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -377,7 +377,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '$intValue',
                                   style: const TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -389,7 +389,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '500*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -412,7 +412,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'ع.م - س',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontFamily: "Amiri_Quran",
                                   color: Colors.black,
                                 ),
@@ -424,7 +424,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   'إب - السبل ',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -436,7 +436,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '5*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -448,7 +448,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '$intValue',
                                   style: const TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -460,7 +460,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '500*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -483,7 +483,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                 'ع.م - س',
                                 style: TextStyle(
                                   fontSize: 10,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontFamily: "Amiri_Quran",
                                   color: Colors.black,
                                 ),
@@ -495,7 +495,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   'إب - السبل ',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -507,7 +507,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '5*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -519,7 +519,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '$intValue',
                                   style: const TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),
@@ -531,7 +531,7 @@ class _MonthelyReportsState extends State<MonthelyReports> {
                                   '500*',
                                   style: TextStyle(
                                       fontSize: 10,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w500,
                                       fontFamily: "Amiri_Quran",
                                       color: Colors.black),
                                 ),

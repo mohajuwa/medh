@@ -86,7 +86,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                             const Text(
                               "المورد",
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w500,
                                 color: Colors.white,
                               ),
                             ),
@@ -236,7 +236,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                                       ),
                                       title: const Text("إسم الدواء ",
                                           style: TextStyle(
-                                            fontWeight: FontWeight.bold,
+                                            fontWeight: FontWeight.w500,
                                           )),
                                       subtitle:
                                           const Text("منذ 1 يوم : آخر شراء"),
@@ -302,7 +302,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                         title: const Text(
                           "إسم الصدلية",
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         subtitle: const Text(" موقع الصيدلية ، يظهر هنا "),
@@ -341,7 +341,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                         style: TextStyle(
                           fontSize: 20,
                           color: Color(0x1F000000),
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                         ))
                   ],
                 ),

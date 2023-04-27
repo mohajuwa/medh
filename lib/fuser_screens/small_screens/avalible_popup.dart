@@ -28,7 +28,7 @@
 //               "الأدوية",
 //               style: TextStyle(
 //                 fontSize: 28,
-//                 fontWeight: FontWeight.bold,
+//                 fontWeight: FontWeight.w500,
 //               ),
 //             ),
 //           ),
@@ -78,7 +78,7 @@
 //               " الأكثر طلباً",
 //               style: TextStyle(
 //                 fontSize: 20,
-//                 fontWeight: FontWeight.bold,
+//                 fontWeight: FontWeight.w500,
 //               ),
 //             ),
 //           ),
@@ -151,7 +151,7 @@
 //               style: TextStyle(
 //                 fontSize: 20,
 //                 color: Colors.black45,
-//                 fontWeight: FontWeight.bold,
+//                 fontWeight: FontWeight.w500,
 //               ),
 //             ),
 //           ),
@@ -182,7 +182,7 @@
 //                       "إسم الدواء",
 //                       style: TextStyle(
 //                         fontSize: 18,
-//                         fontWeight: FontWeight.bold,
+//                         fontWeight: FontWeight.w500,
 //                       ),
 //                     ),
 //                     subtitle: Text(

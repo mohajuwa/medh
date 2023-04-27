@@ -89,7 +89,7 @@ class _FuserMedicineDitlesScreenState extends State<FuserMedicineDitlesScreen> {
                             const Text(
                               "المورد",
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w500,
                                 color: Colors.white,
                               ),
                             ),
@@ -239,7 +239,7 @@ class _FuserMedicineDitlesScreenState extends State<FuserMedicineDitlesScreen> {
                                       ),
                                       title: const Text("إسم الدواء ",
                                           style: TextStyle(
-                                            fontWeight: FontWeight.bold,
+                                            fontWeight: FontWeight.w500,
                                           )),
                                       subtitle:
                                           const Text("منذ 1 يوم : آخر شراء"),
@@ -316,7 +316,7 @@ class _FuserMedicineDitlesScreenState extends State<FuserMedicineDitlesScreen> {
                           style: TextStyle(
                             fontSize: 20,
                             color: Color(0x1F000000),
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w500,
                           ))
                     ],
                   ),
