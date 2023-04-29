@@ -25,9 +25,7 @@ class FuserChatScreen extends StatelessWidget {
                 padding: EdgeInsets.only(left: 10),
                 child: Text(
                   "إسم الصيدلية",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
+                  style: TextStyle(),
                 ),
               )
             ]),
@@ -37,7 +35,6 @@ class FuserChatScreen extends StatelessWidget {
               padding: EdgeInsets.only(top: 8, right: 20),
               child: Icon(
                 Icons.call,
-                color: Colors.white,
                 size: 26,
               ),
             ),
@@ -45,7 +42,6 @@ class FuserChatScreen extends StatelessWidget {
               padding: EdgeInsets.only(top: 8, right: 10),
               child: Icon(
                 Icons.video_call,
-                color: Colors.white,
                 size: 30,
               ),
             ),
@@ -53,7 +49,6 @@ class FuserChatScreen extends StatelessWidget {
               padding: EdgeInsets.only(top: 8, right: 10),
               child: Icon(
                 Icons.more_vert,
-                color: Colors.white,
                 size: 26,
               ),
             ),

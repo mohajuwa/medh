@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:medh/screens/appointment_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
+import 'package:medh/provider.dart';
+import 'package:medh/screens/results_screen.dart';
 
-class MessagesScreen extends StatefulWidget {
+class MessagesScreen extends ConsumerStatefulWidget {
   const MessagesScreen({super.key});
 
   @override
-  State<MessagesScreen> createState() => _MessagesScreenState();
+  MessagesScreenState createState() => MessagesScreenState();
 }
 
 List imgs = [
@@ -24,11 +27,11 @@ List symptoms = [
   "المركزي",
   "الدائري",
 ];
-const clr = Color(0xFF58329B);
+const clr = Color(0x8659329B);
 bool shadowColor = false;
 double? scrolledUnderElevation;
 
-class _MessagesScreenState extends State<MessagesScreen> {
+class MessagesScreenState extends ConsumerState<MessagesScreen> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -39,15 +42,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
         return Future.value(true);
       },
       child: MaterialApp(
-        localizationsDelegates: const [
-          GlobalCupertinoLocalizations.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-        ],
-        supportedLocales: const [
-          Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
-        ],
-        theme: ThemeData(fontFamily: 'El_Messiri'),
+        theme: getAppTheme(context, ref.watch(appThemeProvider)),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
@@ -57,7 +52,6 @@ class _MessagesScreenState extends State<MessagesScreen> {
               scrolledUnderElevation: scrolledUnderElevation,
               shadowColor:
                   shadowColor ? Theme.of(context).colorScheme.shadow : clr,
-              backgroundColor: Colors.white,
               title: Padding(
                 padding: const EdgeInsets.only(top: 1, bottom: 5),
                 child: Column(
@@ -65,12 +59,12 @@ class _MessagesScreenState extends State<MessagesScreen> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: colors(context).color4,
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: const [
                           BoxShadow(
-                            color: Color(0x5F000000),
-                            blurRadius: 5,
+                            color: Color(0x3C000000),
+                            blurRadius: 4,
                             spreadRadius: 2,
                           ),
                         ],
@@ -84,8 +78,13 @@ class _MessagesScreenState extends State<MessagesScreen> {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 5),
                               child: TextFormField(
-                                decoration: const InputDecoration(
+                                decoration: InputDecoration(
                                   hintText: "إستعلام",
+                                  hintStyle: TextStyle(
+                                    color: colors(context)
+                                        .color2
+                                        ?.withOpacity(0.5),
+                                  ),
                                   border: InputBorder.none,
                                 ),
                               ),
@@ -93,11 +92,9 @@ class _MessagesScreenState extends State<MessagesScreen> {
                           ),
                           const Icon(
                             Icons.search,
-                            color: Color(0xFF58329B),
                           ),
                           const Icon(
                             Icons.photo_camera,
-                            color: Color(0xFF58329B),
                           ),
                         ],
                       ),
@@ -109,23 +106,19 @@ class _MessagesScreenState extends State<MessagesScreen> {
             body: ListView(
               children: [
                 const SizedBox(height: 3),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 2.0),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 2.0),
                   child: Divider(
-                    thickness: 1,
+                    color: colors(context).color3,
+                    thickness: 2,
                     height: 2.0,
                   ),
                 ),
                 const SizedBox(height: 10),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Text(
-                    "فلترة البحث حسب المنطقة",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text("فلترة البحث حسب المنطقة",
+                      style: Theme.of(context).textTheme.titleMedium),
                 ),
                 const SizedBox(height: 5),
                 SizedBox(
@@ -140,24 +133,20 @@ class _MessagesScreenState extends State<MessagesScreen> {
                               vertical: 10, horizontal: 15),
                           padding: const EdgeInsets.symmetric(horizontal: 25),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFF4F6FA),
+                            color: colors(context).color4,
                             borderRadius: BorderRadius.circular(10),
                             boxShadow: const [
                               BoxShadow(
-                                color: clr,
+                                color: Color(0x3C000000),
                                 blurRadius: 4,
-                                spreadRadius: 1,
+                                spreadRadius: 2,
                               )
                             ],
                           ),
                           child: Center(
                             child: Text(
                               symptoms[index],
-                              style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0x89000000),
-                              ),
+                              style: Theme.of(context).textTheme.titleSmall,
                             ),
                           ),
                         );
@@ -168,17 +157,13 @@ class _MessagesScreenState extends State<MessagesScreen> {
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Text(
                     "نتيجة الإستعلام ",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black45,
-                      fontWeight: FontWeight.w500,
-                    ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 2.0),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 2.0),
                   child: Divider(
-                    thickness: 1,
+                    color: colors(context).color3,
+                    thickness: 2,
                     height: 2.0,
                   ),
                 ),
@@ -196,8 +181,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) =>
-                                      const AppointmentScreen(),
+                                  builder: (context) => const ResultScreen(),
                                 ));
                           },
                           leading: CircleAvatar(
@@ -208,26 +192,16 @@ class _MessagesScreenState extends State<MessagesScreen> {
                           ),
                           title: const Text(
                             "إسم الدواء",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            ),
                           ),
-                          subtitle: const Text(
+                          subtitle: Text(
                             "وصف الدواء يتم كتابته هنا",
                             maxLines: 16,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Color(0x89000000),
-                            ),
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
-                          trailing: const Text(
+                          trailing: Text(
                             "موقع الصيدلية : بالقرب مني",
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Color(0x89000000),
-                            ),
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
                         ),
                       );

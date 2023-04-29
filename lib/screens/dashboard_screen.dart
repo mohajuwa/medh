@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
 
 import '../widgets/best_price_dashboard.dart';
 import '../widgets/neares_km_dashboard.dart';
 import '../widgets/upcoming_dashboard.dart';
 
-class DashboardScreen extends StatefulWidget {
+class DashboardScreen extends ConsumerStatefulWidget {
   const DashboardScreen({super.key});
 
   @override
-  State<DashboardScreen> createState() => _DashboardScreenState();
+  DashboardScreenState createState() => DashboardScreenState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class DashboardScreenState extends ConsumerState<DashboardScreen> {
   int _buttonIndex = 0;
 
   final clr = const Color(0xFFF4F6FA);
@@ -21,7 +23,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     // Upcoming Widget
     const UpcomingDashboard(),
     // Complated Widget
-    const BestPriceSample(),
+    const BestPriceDashboard(),
     // Canceled Widget
     const NearestKmDashboard(),
   ];
@@ -49,7 +51,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               padding: const EdgeInsets.all(5),
               margin: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
-                color: clr,
+                color: colors(context).color4,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
@@ -65,7 +67,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 15, horizontal: 15),
                       decoration: BoxDecoration(
-                        color: _buttonIndex == 0 ? clr1 : Colors.transparent,
+                        color: _buttonIndex == 0
+                            ? colors(context).color1
+                            : Colors.transparent,
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
@@ -73,8 +77,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color:
-                              _buttonIndex == 0 ? Colors.white : Colors.black38,
+                          color: _buttonIndex == 0
+                              ? Colors.white
+                              : colors(context).color3,
                         ),
                       ),
                     ),
@@ -89,7 +94,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 12, horizontal: 25),
                       decoration: BoxDecoration(
-                        color: _buttonIndex == 1 ? clr1 : Colors.transparent,
+                        color: _buttonIndex == 1
+                            ? colors(context).color1
+                            : Colors.transparent,
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
@@ -97,8 +104,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color:
-                              _buttonIndex == 1 ? Colors.white : Colors.black38,
+                          color: _buttonIndex == 1
+                              ? Colors.white
+                              : colors(context).color3,
                         ),
                       ),
                     ),
@@ -113,7 +121,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 12, horizontal: 25),
                       decoration: BoxDecoration(
-                        color: _buttonIndex == 2 ? clr1 : Colors.transparent,
+                        color: _buttonIndex == 2
+                            ? colors(context).color1
+                            : Colors.transparent,
                         borderRadius: BorderRadius.circular(19),
                       ),
                       child: Text(
@@ -121,8 +131,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color:
-                              _buttonIndex == 2 ? Colors.white : Colors.black38,
+                          color: _buttonIndex == 2
+                              ? Colors.white
+                              : colors(context).color3,
                         ),
                       ),
                     ),

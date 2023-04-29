@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
+import 'package:medh/provider.dart';
 
 import 'custom2_add.dart';
 
-class AppointmentScreen extends StatefulWidget {
-  const AppointmentScreen({super.key});
+class OrderScreen extends ConsumerStatefulWidget {
+  const OrderScreen({super.key});
 
   @override
-  State<AppointmentScreen> createState() => _AppointmentScreenState();
+  OrderScreenState createState() => OrderScreenState();
 }
 
 List imgs = [
-  "icon.png",
-  "icon.png",
   "icon.png",
   "icon.png",
   "icon.png",
@@ -21,16 +22,16 @@ List imgs = [
 const clr = Color(0xFF58329B);
 const clr2 = Color(0xFFF0EEFA);
 
-class _AppointmentScreenState extends State<AppointmentScreen> {
+class OrderScreenState extends ConsumerState<OrderScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'El_Messiri'),
+      theme: getAppTheme(context, ref.watch(appThemeProvider)),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          backgroundColor: clr,
+          backgroundColor: colors(context).color5,
           body: SingleChildScrollView(
             child: ListBody(
               children: [
@@ -49,7 +50,6 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                             child: const Icon(
                               Icons.arrow_back_ios_new,
                               color: Colors.white,
-                              size: 25,
                             ),
                           ),
                           InkWell(
@@ -59,7 +59,6 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                             child: const Icon(
                               Icons.more_vert,
                               color: Colors.white,
-                              size: 25,
                             ),
                           ),
                         ],
@@ -75,7 +74,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                             ),
                             const SizedBox(height: 15),
                             const Text(
-                              "إسم الدواء",
+                              "إسم الصيدلية",
                               style: TextStyle(
                                 fontSize: 23,
                                 fontWeight: FontWeight.w500,
@@ -96,8 +95,8 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                               children: [
                                 Container(
                                   padding: const EdgeInsets.all(10),
-                                  decoration: const BoxDecoration(
-                                    color: clr,
+                                  decoration: BoxDecoration(
+                                    color: colors(context).color1,
                                     shape: BoxShape.circle,
                                   ),
                                   child: const Icon(
@@ -109,8 +108,8 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                                 const SizedBox(width: 20),
                                 Container(
                                   padding: const EdgeInsets.all(10),
-                                  decoration: const BoxDecoration(
-                                    color: clr,
+                                  decoration: BoxDecoration(
+                                    color: colors(context).color1,
                                     shape: BoxShape.circle,
                                   ),
                                   child: const Icon(
@@ -135,9 +134,9 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                     top: 20,
                     right: 15,
                   ),
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
+                  decoration: BoxDecoration(
+                    color: colors(context).colorContainer,
+                    borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
                     ),
@@ -147,58 +146,40 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       const Text(
-                        "معلومات الدواء",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        ),
+                        "معلومات الصيدلية",
                       ),
                       const SizedBox(height: 5),
-                      const Text(
-                        "يتم كتابة كل ما يتعلق بالدواء هنا في هذه الخانه",
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Color(0x89000000),
-                        ),
+                      Text(
+                        "يتم كتابة كل ما يتعلق بالصيدلية هنا في هذه الخانه",
+                        style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       const SizedBox(height: 10),
                       Row(
                         children: [
                           const Text(
-                            "المراجعات",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            ),
+                            "التقييمات",
                           ),
                           const SizedBox(width: 10),
-                          const Icon(Icons.star, color: Colors.amber),
+                          Icon(Icons.star, color: colors(context).color2),
                           const Text(
                             "4.8",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                            ),
                           ),
                           const SizedBox(width: 5),
                           const Text(
                             "(عدد المراجعات)",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                              color: clr,
-                            ),
+                            style: TextStyle(fontSize: 12),
                           ),
                           // align next widget to the end of row
                           const Spacer(),
                           TextButton(
                             onPressed: () {},
-                            child: const Text(
+                            child: Text(
                               "قراءة المزيد",
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
-                                fontSize: 16,
-                                color: clr,
+                                fontSize: 12,
+                                color: colors(context).color1,
+                                fontFamily: 'El_Messiri',
                               ),
                             ),
                           ),
@@ -208,17 +189,17 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                         height: 200,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
-                          itemCount: 4,
+                          itemCount: 2,
                           itemBuilder: (context, index) {
                             return Container(
                               margin: const EdgeInsets.all(10),
                               padding: const EdgeInsets.symmetric(vertical: 5),
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: colors(context).color4,
                                 borderRadius: BorderRadius.circular(10),
                                 boxShadow: const [
                                   BoxShadow(
-                                    color: Color(0x1F000000),
+                                    color: Color(0x3C000000),
                                     blurRadius: 4,
                                     spreadRadius: 2,
                                   )
@@ -238,21 +219,24 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
                                           )),
-                                      subtitle:
-                                          const Text("منذ 1 يوم : آخر شراء"),
+                                      subtitle: const Text("وصف الدواء"),
                                       trailing: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
-                                        children: const [
-                                          Icon(
-                                            Icons.star,
-                                            color: Colors.amber,
+                                        children: [
+                                          Container(
+                                            padding: const EdgeInsets.all(5),
+                                            decoration: const BoxDecoration(
+                                              color: Colors.green,
+                                              shape: BoxShape.circle,
+                                            ),
                                           ),
+                                          const SizedBox(width: 5),
                                           Text(
-                                            "4.9",
+                                            "متوفر",
                                             style: TextStyle(
-                                              color: Color(0x89000000),
+                                              color: colors(context).color2,
                                             ),
                                           ),
                                         ],
@@ -266,9 +250,6 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
                                         "نشرة أساسية للدواء",
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                        ),
                                       ),
                                     ),
                                   ],
@@ -280,30 +261,22 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                       ),
                       const SizedBox(height: 10),
                       const Text(
-                        "موقع بالقرب منك وفر هذا الدواء من قبل",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        ),
+                        "موقع الصيدلية",
                       ),
                       ListTile(
                         leading: Container(
                           padding: const EdgeInsets.all(10),
-                          decoration: const BoxDecoration(
-                            color: clr2,
+                          decoration: BoxDecoration(
+                            color: colors(context).color4,
                             shape: BoxShape.circle,
                           ),
                           child: const Icon(
                             Icons.location_on,
-                            color: clr,
                             size: 30,
                           ),
                         ),
                         title: const Text(
                           "إسم الصدلية",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                          ),
                         ),
                         subtitle: const Text(" موقع الصيدلية ، يظهر هنا "),
                       ),
@@ -316,11 +289,11 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
           bottomNavigationBar: Container(
             padding: const EdgeInsets.all(15),
             height: 130,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
+            decoration: BoxDecoration(
+              color: colors(context).colorContainer,
+              boxShadow: const [
                 BoxShadow(
-                  color: Color(0x1F000000),
+                  color: Color(0x3C000000),
                   blurRadius: 4,
                   spreadRadius: 2,
                 )
@@ -330,44 +303,36 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       "سعر الدواء",
-                      style: TextStyle(
-                        color: Color(0x89000000),
-                      ),
                     ),
-                    Text("\$غير محدد",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Color(0x1F000000),
-                          fontWeight: FontWeight.w500,
-                        ))
+                    Text(
+                      "\$غير محدد",
+                      style: TextStyle(color: colors(context).color3),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 15),
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Custom2AddScreen(),
-                        ));
+                    // Go back to last page
+                    Navigator.pop(context);
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     decoration: BoxDecoration(
-                      color: clr,
+                      color: colors(context).color1,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: const Center(
-                        child: Text("طلب : إستعلام",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            ))),
+                      child: Text(
+                        "طلب : إستعلام",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.w600),
+                      ),
+                    ),
                   ),
                 ),
               ],

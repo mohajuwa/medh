@@ -21,7 +21,11 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'El_Messiri'),
+      theme: ThemeData(
+          useMaterial3: true,
+          colorSchemeSeed: const Color(0xFF58329B),
+          brightness: Brightness.dark,
+          fontFamily: 'El_Messiri'),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
@@ -52,7 +56,6 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                         child: Container(
                           padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
-                            color: Colors.white,
                             borderRadius: BorderRadius.circular(18),
                             boxShadow: const [
                               BoxShadow(
@@ -97,7 +100,6 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                     Container(
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: Colors.white,
                         borderRadius: BorderRadius.circular(18),
                         boxShadow: const [
                           BoxShadow(
@@ -200,7 +202,6 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                           child: Text(
                             "تسجيل الدخول",
                             style: TextStyle(
-                              color: Colors.white,
                               fontSize: 25,
                               fontWeight: FontWeight.w500,
                             ),

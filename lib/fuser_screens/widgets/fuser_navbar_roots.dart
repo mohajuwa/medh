@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:medh/darkmod/theme.dart';
 
 import '../../widgets/navbar_roots.dart';
 import '../screens/fuser_dashboard_screen.dart';
@@ -99,10 +100,10 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
                                     decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                     ),
-                                    child: const Center(
+                                    child: Center(
                                       child: Icon(
                                         Icons.switch_left_outlined,
-                                        color: Color(0xFF58329B),
+                                        color: colors(context).color1,
                                         size: 30,
                                       ),
                                     ),
@@ -170,9 +171,12 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
                 ),
                 onTap: onTapTapped,
                 currentIndex: _currentIndex,
-                items: const [
+                items: [
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.home_filled),
+                    icon: Icon(
+                      Icons.home_filled,
+                      color: colors(context).color1,
+                    ),
                     label: "الرئيسية",
                   ),
                   BottomNavigationBarItem(

@@ -1,36 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
 
-class BestPriceSample extends StatelessWidget {
-  const BestPriceSample({super.key});
-
+class BestPriceDashboard extends ConsumerStatefulWidget {
+  const BestPriceDashboard({super.key});
   @override
+  BestPriceDashboardState createState() => BestPriceDashboardState();
+}
+
+class BestPriceDashboardState extends ConsumerState<BestPriceDashboard> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             " ردود على حسب أفضل سعر ",
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.w400,
-              fontFamily: "Amiri_Quran",
-            ),
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           const SizedBox(height: 20),
           const Text(
             "صيدلية",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-            ),
           ),
           const SizedBox(height: 15),
           Container(
             padding: const EdgeInsets.symmetric(vertical: 5),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: colors(context).color4,
               borderRadius: BorderRadius.circular(10),
               boxShadow: const [
                 BoxShadow(
@@ -65,18 +62,17 @@ class BestPriceSample extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "سعر الدواء",
                         style: TextStyle(
-                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                       Text("\$الأقل سعراً",
                           style: TextStyle(
-                            color: Colors.blueGrey,
+                            color: colors(context).color2,
                             fontFamily: "IBMPlexSansArabic",
                             fontWeight: FontWeight.w500,
                           ))
@@ -84,27 +80,27 @@ class BestPriceSample extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "المسافة",
                         style: TextStyle(
-                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                       Text("كم : km",
                           style: TextStyle(
-                            color: Colors.black45,
+                            color: colors(context).color2,
                             fontFamily: "IBMPlexSansArabic",
                             fontWeight: FontWeight.w500,
                           ))
                     ],
                   ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Divider(
                       thickness: 1,
+                      color: colors(context).color3,
                       height: 20,
                     ),
                   ),
@@ -112,30 +108,26 @@ class BestPriceSample extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Row(
-                        children: const [
+                        children: [
                           Icon(
                             Icons.calendar_month,
-                            color: Color(0x89000000),
+                            color: colors(context).color1,
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "12/01/2023",
-                            style: TextStyle(
-                              color: Color(0x89000000),
-                            ),
                           ),
                         ],
                       ),
                       Row(
-                        children: const [
+                        children: [
                           Icon(
                             Icons.access_time_filled,
-                            color: Color(0x89000000),
+                            color: colors(context).color1,
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "02:58 AM",
-                            style: TextStyle(color: Color(0x89000000)),
                           )
                         ],
                       ),
@@ -151,9 +143,6 @@ class BestPriceSample extends StatelessWidget {
                           const SizedBox(width: 5),
                           const Text(
                             "متصل",
-                            style: TextStyle(
-                              color: Color(0x89000000),
-                            ),
                           )
                         ],
                       ),
@@ -169,17 +158,12 @@ class BestPriceSample extends StatelessWidget {
                           width: 150,
                           padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFF4F6FA),
+                            color: colors(context).color3,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Center(
                             child: Text(
                               "إلغاء",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black,
-                              ),
                             ),
                           ),
                         ),
@@ -190,7 +174,7 @@ class BestPriceSample extends StatelessWidget {
                           width: 150,
                           padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF58329B),
+                            color: colors(context).color1,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Center(
@@ -212,18 +196,15 @@ class BestPriceSample extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(height: 20),
           const Text(
             "صيدلية",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-            ),
           ),
           const SizedBox(height: 15),
           Container(
             padding: const EdgeInsets.symmetric(vertical: 5),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: colors(context).color4,
               borderRadius: BorderRadius.circular(10),
               boxShadow: const [
                 BoxShadow(
@@ -258,18 +239,17 @@ class BestPriceSample extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "سعر الدواء",
                         style: TextStyle(
-                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Text("\$الأقل سعراً",
+                      Text("\$السعر",
                           style: TextStyle(
-                            color: Colors.blueGrey,
+                            color: colors(context).color2,
                             fontFamily: "IBMPlexSansArabic",
                             fontWeight: FontWeight.w500,
                           ))
@@ -277,27 +257,27 @@ class BestPriceSample extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "المسافة",
                         style: TextStyle(
-                          color: Color(0x89000000),
                           fontFamily: "IBMPlexSansArabic",
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                       Text("كم : km",
                           style: TextStyle(
-                            color: Colors.black45,
+                            color: colors(context).color2,
                             fontFamily: "IBMPlexSansArabic",
                             fontWeight: FontWeight.w500,
                           ))
                     ],
                   ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Divider(
                       thickness: 1,
+                      color: colors(context).color3,
                       height: 20,
                     ),
                   ),
@@ -305,30 +285,26 @@ class BestPriceSample extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Row(
-                        children: const [
+                        children: [
                           Icon(
                             Icons.calendar_month,
-                            color: Color(0x89000000),
+                            color: colors(context).color1,
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "12/01/2023",
-                            style: TextStyle(
-                              color: Color(0x89000000),
-                            ),
                           ),
                         ],
                       ),
                       Row(
-                        children: const [
+                        children: [
                           Icon(
                             Icons.access_time_filled,
-                            color: Color(0x89000000),
+                            color: colors(context).color1,
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "02:58 AM",
-                            style: TextStyle(color: Color(0x89000000)),
                           )
                         ],
                       ),
@@ -344,9 +320,6 @@ class BestPriceSample extends StatelessWidget {
                           const SizedBox(width: 5),
                           const Text(
                             "متصل",
-                            style: TextStyle(
-                              color: Color(0x89000000),
-                            ),
                           )
                         ],
                       ),
@@ -362,17 +335,12 @@ class BestPriceSample extends StatelessWidget {
                           width: 150,
                           padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFF4F6FA),
+                            color: colors(context).color3,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Center(
                             child: Text(
                               "إلغاء",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black,
-                              ),
                             ),
                           ),
                         ),
@@ -383,7 +351,7 @@ class BestPriceSample extends StatelessWidget {
                           width: 150,
                           padding: const EdgeInsets.symmetric(vertical: 12),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF58329B),
+                            color: colors(context).color1,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Center(
@@ -405,395 +373,6 @@ class BestPriceSample extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 20),
-          const Text(
-            "صيدلية",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-          const SizedBox(height: 15),
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 5),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Color(0x1F000000),
-                  blurRadius: 4,
-                  spreadRadius: 2,
-                )
-              ],
-            ),
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                children: [
-                  const ListTile(
-                    title: Text(
-                      "إسم الدواء",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontFamily: "IBMPlexSansArabic",
-                      ),
-                    ),
-                    subtitle: Text(
-                      "ملاحظات",
-                      style: TextStyle(
-                        fontFamily: "IBMPlexSansArabic",
-                      ),
-                    ),
-                    trailing: CircleAvatar(
-                      radius: 25,
-                      backgroundImage: AssetImage("assets/images/icon.png"),
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
-                      Text(
-                        "سعر الدواء",
-                        style: TextStyle(
-                          color: Color(0x89000000),
-                          fontFamily: "IBMPlexSansArabic",
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Text("\$الأقل سعراً",
-                          style: TextStyle(
-                            color: Colors.blueGrey,
-                            fontFamily: "IBMPlexSansArabic",
-                            fontWeight: FontWeight.w500,
-                          ))
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
-                      Text(
-                        "المسافة",
-                        style: TextStyle(
-                          color: Color(0x89000000),
-                          fontFamily: "IBMPlexSansArabic",
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Text("كم : km",
-                          style: TextStyle(
-                            color: Colors.black45,
-                            fontFamily: "IBMPlexSansArabic",
-                            fontWeight: FontWeight.w500,
-                          ))
-                    ],
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
-                    child: Divider(
-                      thickness: 1,
-                      height: 20,
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Row(
-                        children: const [
-                          Icon(
-                            Icons.calendar_month,
-                            color: Color(0x89000000),
-                          ),
-                          SizedBox(width: 5),
-                          Text(
-                            "12/01/2023",
-                            style: TextStyle(
-                              color: Color(0x89000000),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          Icon(
-                            Icons.access_time_filled,
-                            color: Color(0x89000000),
-                          ),
-                          SizedBox(width: 5),
-                          Text(
-                            "02:58 AM",
-                            style: TextStyle(color: Color(0x89000000)),
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(5),
-                            decoration: const BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                          const SizedBox(width: 5),
-                          const Text(
-                            "متصل",
-                            style: TextStyle(
-                              color: Color(0x89000000),
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 15),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      InkWell(
-                        onTap: () {},
-                        child: Container(
-                          width: 150,
-                          padding: const EdgeInsets.symmetric(vertical: 12),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFF4F6FA),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              "إلغاء",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: Container(
-                          width: 150,
-                          padding: const EdgeInsets.symmetric(vertical: 12),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF58329B),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              "طلب",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
-          const Text(
-            "صيدلية",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-          const SizedBox(height: 15),
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 5),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: const [
-                BoxShadow(
-                  color: Color(0x1F000000),
-                  blurRadius: 4,
-                  spreadRadius: 2,
-                )
-              ],
-            ),
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                children: [
-                  const ListTile(
-                    title: Text(
-                      "إسم الدواء",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontFamily: "IBMPlexSansArabic",
-                      ),
-                    ),
-                    subtitle: Text(
-                      "ملاحظات",
-                      style: TextStyle(
-                        fontFamily: "IBMPlexSansArabic",
-                      ),
-                    ),
-                    trailing: CircleAvatar(
-                      radius: 25,
-                      backgroundImage: AssetImage("assets/images/icon.png"),
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
-                      Text(
-                        "سعر الدواء",
-                        style: TextStyle(
-                          color: Color(0x89000000),
-                          fontFamily: "IBMPlexSansArabic",
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Text("\$الأقل سعراً",
-                          style: TextStyle(
-                            color: Colors.blueGrey,
-                            fontFamily: "IBMPlexSansArabic",
-                            fontWeight: FontWeight.w500,
-                          ))
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
-                      Text(
-                        "المسافة",
-                        style: TextStyle(
-                          color: Color(0x89000000),
-                          fontFamily: "IBMPlexSansArabic",
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Text("كم : km",
-                          style: TextStyle(
-                            color: Colors.black45,
-                            fontFamily: "IBMPlexSansArabic",
-                            fontWeight: FontWeight.w500,
-                          ))
-                    ],
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
-                    child: Divider(
-                      thickness: 1,
-                      height: 20,
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Row(
-                        children: const [
-                          Icon(
-                            Icons.calendar_month,
-                            color: Color(0x89000000),
-                          ),
-                          SizedBox(width: 5),
-                          Text(
-                            "12/01/2023",
-                            style: TextStyle(
-                              color: Color(0x89000000),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          Icon(
-                            Icons.access_time_filled,
-                            color: Color(0x89000000),
-                          ),
-                          SizedBox(width: 5),
-                          Text(
-                            "02:58 AM",
-                            style: TextStyle(color: Color(0x89000000)),
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(5),
-                            decoration: const BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
-                            ),
-                          ),
-                          const SizedBox(width: 5),
-                          const Text(
-                            "متصل",
-                            style: TextStyle(
-                              color: Color(0x89000000),
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 15),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      InkWell(
-                        onTap: () {},
-                        child: Container(
-                          width: 150,
-                          padding: const EdgeInsets.symmetric(vertical: 12),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFF4F6FA),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              "إلغاء",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: Container(
-                          width: 150,
-                          padding: const EdgeInsets.symmetric(vertical: 12),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF58329B),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              "طلب",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
         ],
       ),
     );

@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/fuser_screens/screens/fuser_welcom_screen.dart';
+import 'package:medh/provider.dart';
 import 'package:medh/widgets/navbar_roots.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  final clr = const Color(0xFF58329B);
-  bool shadowColor = false;
-  double? scrolledUnderElevation;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    const clr = Color(0xFF58329B);
+    bool shadowColor = false;
+    double? scrolledUnderElevation;
+    var isDarkMode = ref.watch(appThemeProvider);
+
     //  هذا عشان زر الرجوع
 
     return WillPopScope(
       onWillPop: () async => true,
       child: MaterialApp(
-        theme: ThemeData(fontFamily: 'El_Messiri'),
+        theme: ThemeData(
+          fontFamily: 'El_Messiri',
+        ),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
@@ -30,6 +32,7 @@ class _HomePageState extends State<HomePage> {
               toolbarHeight: 65,
               scrolledUnderElevation: scrolledUnderElevation,
               shadowColor:
+                  // ignore: dead_code
                   shadowColor ? Theme.of(context).colorScheme.shadow : clr,
               backgroundColor: Colors.white,
               title: Padding(
@@ -41,25 +44,18 @@ class _HomePageState extends State<HomePage> {
                     // name
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Padding(
-                          padding: EdgeInsets.only(top: 8),
+                          padding: const EdgeInsets.only(top: 8),
                           child: Text(
                             'الباحث الدوائي',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black,
-                            ),
+                            style: Theme.of(context).textTheme.titleMedium,
                           ),
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Text(
                           '  شفت!؟',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
-                            fontSize: 24,
-                          ),
+                          style: Theme.of(context).textTheme.titleLarge,
                         )
                       ],
                     ),

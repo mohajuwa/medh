@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/provider.dart';
 
-import 'appointm2_screen.dart';
+import '../darkmod/theme.dart';
+import 'orderscreen.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  HomeScreenState createState() => HomeScreenState();
 }
 
 List symptoms = [
@@ -27,11 +30,11 @@ bool shadowColor = false;
 double? scrolledUnderElevation;
 const clr = Color(0xFF58329B);
 
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'El_Messiri'),
+      theme: getAppTheme(context, ref.watch(appThemeProvider)),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
@@ -50,30 +53,27 @@ class _HomeScreenState extends State<HomeScreen> {
                       AssetImage("assets/stickers/stic_f-50-80.png"),
                     ],
                     dotSize: 15,
-                    dotIncreaseSize: 1,
+                    dotIncreaseSize: 1.2,
                     dotSpacing: 30,
-                    dotColor: Colors.white,
-                    dotBgColor: Colors.deepPurple.withOpacity(0.5),
+                    dotColor: colors(context).color3?.withOpacity(0.4),
+                    dotIncreasedColor: colors(context).color4,
+                    dotBgColor: colors(context).color1?.withOpacity(0.5),
                     indicatorBgPadding: 6,
                     boxFit: BoxFit.fitHeight,
                     borderRadius: true,
                     radius: const Radius.circular(40),
                     overlayShadow: true,
-                    overlayShadowColors: Colors.grey,
+                    overlayShadowColors: colors(context).color4,
                     overlayShadowSize: 0.2,
                   ),
                 ),
               ),
               const SizedBox(height: 25),
-              const Padding(
-                padding: EdgeInsets.only(right: 20),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
                 child: Text(
                   "فلترة عرض الصيدليات حسب المنطقة",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                    color: Color(0x89000000),
-                  ),
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),
               SizedBox(
@@ -88,12 +88,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             vertical: 10, horizontal: 15),
                         padding: const EdgeInsets.symmetric(horizontal: 25),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFF4F6FA),
+                          color: colors(context).color4,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: const [
                             BoxShadow(
-                              color: Color(0x6159329B),
-                              blurRadius: 3,
+                              color: Color(0x3C000000),
+                              blurRadius: 4,
                               spreadRadius: 2,
                             )
                           ],
@@ -101,26 +101,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Center(
                           child: Text(
                             symptoms[index],
-                            style: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0x89000000),
-                            ),
+                            style: Theme.of(context).textTheme.titleSmall,
                           ),
                         ),
                       );
                     }),
               ),
               const SizedBox(height: 15),
-              const Padding(
-                padding: EdgeInsets.only(right: 20),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
                 child: Text(
                   "صيدليات توفر غالباً",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                    color: Color(0x89000000),
-                  ),
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),
               GridView.builder(
@@ -136,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const Appointment2Screen(),
+                          builder: (context) => const OrderScreen(),
                         ),
                       );
                     },
@@ -144,11 +136,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       margin: const EdgeInsets.all(10),
                       padding: const EdgeInsets.symmetric(vertical: 15),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: colors(context).color4,
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: const [
                           BoxShadow(
-                            color: Color(0x1F000000),
+                            color: Color(0x3C000000),
                             blurRadius: 4,
                             spreadRadius: 2,
                           )
@@ -162,32 +154,26 @@ class _HomeScreenState extends State<HomeScreen> {
                             backgroundImage:
                                 AssetImage("assets/images/${imgs[index]}"),
                           ),
-                          const Text(
+                          Text(
                             "إسم الصيدلية",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0x89000000),
-                            ),
+                            style: Theme.of(context).textTheme.titleMedium,
                           ),
-                          const Text(
+                          Text(
                             "عنوانها",
-                            style: TextStyle(
-                              color: Colors.black45,
-                            ),
+                            style: Theme.of(context).textTheme.titleSmall,
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.star,
-                                color: Colors.amber,
+                                color: colors(context).color2,
                               ),
-                              Text("4.5",
-                                  style: TextStyle(
-                                    color: Colors.black45,
-                                  ))
+                              Text(
+                                "4.5",
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
                             ],
                           )
                         ],

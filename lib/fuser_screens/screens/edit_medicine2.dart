@@ -28,108 +28,6 @@ class _FuserEdit2MedcineScreenState extends State<FuserEdit2MedcineScreen> {
       home: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          appBar: AppBar(
-            toolbarHeight: 60,
-            scrolledUnderElevation: scrolledUnderElevation,
-            shadowColor:
-                shadowColor ? Theme.of(context).colorScheme.shadow : clr,
-            backgroundColor: Colors.white,
-            title: Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 1),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 0, top: 2),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const FuserNavBarRoots(),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(18),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x1F000000),
-                                blurRadius: 1.5,
-                                spreadRadius: 1,
-                              )
-                            ],
-                          ),
-                          child: Center(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.all(3),
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const Center(
-                                    child: Icon(
-                                      Icons.switch_left_outlined,
-                                      color: Color(0xFF58329B),
-                                      size: 30,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const Text(
-                      " شعار البرنامج -->",
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.black,
-                        fontFamily: "Amiri_Quran",
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(18),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x1F000000),
-                            blurRadius: 4,
-                            spreadRadius: 2,
-                          )
-                        ],
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: const CircleAvatar(
-                              radius: 15,
-                              backgroundImage:
-                                  AssetImage("assets/images/icon1.png"),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
           body: ListView(
             children: [
               const SizedBox(height: 10),
@@ -205,11 +103,10 @@ class _FuserEdit2MedcineScreenState extends State<FuserEdit2MedcineScreen> {
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.pop(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                const FuserEdit2MedicineDone(),
+                            builder: (context) => const FuserNavBarRoots(),
                           ),
                         );
                       },

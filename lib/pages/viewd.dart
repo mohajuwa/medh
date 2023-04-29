@@ -68,7 +68,11 @@
 //         Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
 //       ],
 //       debugShowCheckedModeBanner: false,
-//       theme: ThemeData(fontFamily: 'El_Messiri'),
+//       theme: ThemeData(
+            // useMaterial3: true,
+            // colorSchemeSeed: const Color(0xFF58329B),
+            // brightness: Brightness.dark,
+            // fontFamily: 'El_Messiri'),
 //       home: const NavBarRoots(),
 //     );
 //   }
@@ -84,7 +88,11 @@
 //         Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
 //       ],
 //       debugShowCheckedModeBanner: false,
-//       theme: ThemeData(fontFamily: 'El_Messiri'),
+//       theme: ThemeData(
+            // useMaterial3: true,
+            // colorSchemeSeed: const Color(0xFF58329B),
+            // brightness: Brightness.dark,
+            // fontFamily: 'El_Messiri'),
 //       home: const FuserNavBarRoots(),
 //     );
 //   }

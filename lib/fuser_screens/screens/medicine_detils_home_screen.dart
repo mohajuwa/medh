@@ -28,7 +28,11 @@ class _FuserMedicineDitlesScreenState extends State<FuserMedicineDitlesScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'El_Messiri'),
+      theme: ThemeData(
+          useMaterial3: true,
+          colorSchemeSeed: const Color(0xFF58329B),
+          brightness: Brightness.dark,
+          fontFamily: 'El_Messiri'),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,

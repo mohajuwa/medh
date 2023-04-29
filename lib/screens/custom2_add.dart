@@ -141,11 +141,8 @@ class _Custom2AddScreenState extends State<Custom2AddScreen> {
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.pop(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => const NavBarRoots(),
-                          ),
                         );
                       },
                       child: const Padding(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:medh/pages/home_page.dart';
+import 'package:medh/screens/small_screens/general_settings.dart';
 import 'package:medh/screens/welcom_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -117,7 +118,14 @@ class SettingsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const GeneralSettings(),
+                  ),
+                );
+              },
               leading: Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
