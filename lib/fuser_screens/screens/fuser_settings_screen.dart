@@ -33,7 +33,7 @@ class FuserSettingsScreen extends ConsumerWidget {
                 const ListTile(
                   leading: CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage("assets/images/doctor1.jpg"),
+                    backgroundImage: AssetImage("assets/images/icon1.png"),
                   ),
                   title: Text(
                     "إسم المستخدم",
@@ -162,12 +162,12 @@ class FuserSettingsScreen extends ConsumerWidget {
                 const SizedBox(height: 20),
                 ListTile(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const GeneralSettings(),
-                      ),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => const GeneralSettings(),
+                    //   ),
+                    // );
                   },
                   leading: Container(
                     padding: const EdgeInsets.all(10),

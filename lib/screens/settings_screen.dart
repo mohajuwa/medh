@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/darkmod/theme.dart';
 import 'package:medh/pages/home_page.dart';
 import 'package:medh/provider.dart';
-import 'package:medh/screens/small_screens/general_settings.dart';
 import 'package:medh/screens/welcom_screen.dart';
 
 class SettingsScreen extends ConsumerWidget {
@@ -162,12 +161,12 @@ class SettingsScreen extends ConsumerWidget {
                 const SizedBox(height: 20),
                 ListTile(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const GeneralSettings(),
-                      ),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => const GeneralSettings(),
+                    //   ),
+                    // );
                   },
                   leading: Container(
                     padding: const EdgeInsets.all(10),
