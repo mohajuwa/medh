@@ -2,22 +2,23 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/darkmod/theme.dart';
+import 'package:medh/provider.dart';
 
-import '../../widgets/navbar_roots.dart';
 import '../screens/fuser_dashboard_screen.dart';
 import '../screens/fuser_home_screen.dart';
 import '../screens/medicines_screen.dart';
 import '../screens/fuser_settings_screen.dart';
 
-class FuserNavBarRoots extends StatefulWidget {
+class FuserNavBarRoots extends ConsumerStatefulWidget {
   const FuserNavBarRoots({super.key});
 
   @override
-  State<FuserNavBarRoots> createState() => _FuserNavBarRootsState();
+  FuserNavBarRootsState createState() => FuserNavBarRootsState();
 }
 
-class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
+class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
   int _currentIndex = 0;
 
   final _screens = [
@@ -50,7 +51,7 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
         return false;
       },
       child: MaterialApp(
-        theme: ThemeData(fontFamily: 'El_Messiri'),
+        theme: getAppTheme(context, ref.watch(appThemeProvider)),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
@@ -58,9 +59,9 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
             appBar: AppBar(
               toolbarHeight: 60,
               scrolledUnderElevation: scrolledUnderElevation,
-              shadowColor:
-                  shadowColor ? Theme.of(context).colorScheme.shadow : clr,
-              backgroundColor: Colors.white,
+              shadowColor: shadowColor
+                  ? Theme.of(context).colorScheme.shadow
+                  : colors(context).color1,
               title: Center(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 1),
@@ -81,13 +82,13 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
                           child: Container(
                             padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: colors(context).color4,
                               borderRadius: BorderRadius.circular(18),
                               boxShadow: const [
                                 BoxShadow(
                                   color: Color(0x1F000000),
-                                  blurRadius: 1.5,
-                                  spreadRadius: 1,
+                                  blurRadius: 4,
+                                  spreadRadius: 2,
                                 )
                               ],
                             ),
@@ -100,10 +101,9 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
                                     decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
                                     ),
-                                    child: Center(
+                                    child: const Center(
                                       child: Icon(
                                         Icons.switch_left_outlined,
-                                        color: colors(context).color1,
                                         size: 30,
                                       ),
                                     ),
@@ -114,19 +114,14 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
                           ),
                         ),
                       ),
-                      const Text(
+                      Text(
                         " شعار البرنامج -->",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                          fontFamily: "Amiri_Quran",
-                          fontWeight: FontWeight.w500,
-                        ),
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Container(
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: colors(context).color4,
                           borderRadius: BorderRadius.circular(18),
                           boxShadow: const [
                             BoxShadow(
@@ -159,24 +154,19 @@ class _FuserNavBarRootsState extends State<FuserNavBarRoots> {
             ),
             body: _screens[_currentIndex],
             bottomNavigationBar: SizedBox(
-              height: 80,
               child: BottomNavigationBar(
-                backgroundColor: Colors.white,
+                backgroundColor: colors(context).color4,
                 type: BottomNavigationBarType.fixed,
-                selectedItemColor: const Color(0xFF58329B),
-                unselectedItemColor: Colors.black26,
-                selectedLabelStyle: const TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 15,
+                selectedItemColor: colors(context).color1,
+                unselectedItemColor: colors(context).color3,
+                unselectedLabelStyle: const TextStyle(
+                  fontFamily: 'El_Messiri',
                 ),
                 onTap: onTapTapped,
                 currentIndex: _currentIndex,
-                items: [
+                items: const [
                   BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.home_filled,
-                      color: colors(context).color1,
-                    ),
+                    icon: Icon(Icons.home_filled),
                     label: "الرئيسية",
                   ),
                   BottomNavigationBarItem(

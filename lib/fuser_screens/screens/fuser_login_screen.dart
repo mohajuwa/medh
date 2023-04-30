@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:medh/darkmod/theme.dart';
 
 import '../widgets/fuser_navbar_roots.dart';
 import 'fuser_signup_screen.dart';
@@ -35,7 +36,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
             scrolledUnderElevation: scrolledUnderElevation,
             shadowColor:
                 shadowColor ? Theme.of(context).colorScheme.shadow : clr,
-            backgroundColor: Colors.white,
+            backgroundColor: colors(context).color4,
             title: Center(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 1),
@@ -77,7 +78,6 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                                   child: const Center(
                                     child: Icon(
                                       Icons.switch_left_outlined,
-                                      color: Color(0xFF58329B),
                                       size: 30,
                                     ),
                                   ),
@@ -92,7 +92,6 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                       " شعار البرنامج -->",
                       style: TextStyle(
                         fontSize: 24,
-                        color: Colors.black,
                         fontFamily: "Amiri_Quran",
                         fontWeight: FontWeight.w500,
                       ),
@@ -184,7 +183,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                 child: SizedBox(
                   width: double.infinity,
                   child: Material(
-                    color: const Color(0xFF58329B),
+                    color: colors(context).color1,
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
@@ -221,7 +220,6 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
-                      color: Color(0x89000000),
                     ),
                   ),
                   TextButton(
@@ -232,13 +230,12 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                             builder: (context) => const FuserSignUpScreen(),
                           ));
                     },
-                    child: const Text(
+                    child: Text(
                       "إنشاء حساب",
                       style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xFF58329B),
-                      ),
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: colors(context).color2),
                     ),
                   ),
                   const SizedBox(height: 12),

@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
+import 'package:medh/provider.dart';
 
 import '../widgets/fuser_reports.dart';
 import '../widgets/fuser_upcoming_dashboard.dart';
 
-class FuserDashboardScreen extends StatefulWidget {
+class FuserDashboardScreen extends ConsumerStatefulWidget {
   const FuserDashboardScreen({super.key});
 
   @override
-  State<FuserDashboardScreen> createState() => _FuserDashboardScreenState();
+  FuserDashboardScreenState createState() => FuserDashboardScreenState();
 }
 
-class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
+class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
   int _currentIndex = 0;
 
   final clr = const Color(0xFFF4F6FA);
@@ -18,7 +21,7 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
 
   final _dashboardWidgets = [
     // Upcoming Widget
-    const UpcomingDashboard(),
+    const FuserUpcomingDashboard(),
     // Complated Widget
     const FuserReports(),
     // Canceled Widget
@@ -32,7 +35,7 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
     return WillPopScope(
       onWillPop: () async => true,
       child: MaterialApp(
-        theme: ThemeData(fontFamily: 'El_Messiri'),
+        theme: getAppTheme(context, ref.watch(appThemeProvider)),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
@@ -58,9 +61,9 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                       const SizedBox(height: 20),
                       Container(
                         padding: const EdgeInsets.all(5),
-                        margin: const EdgeInsets.symmetric(horizontal: 10),
+                        margin: const EdgeInsets.symmetric(horizontal: 20),
                         decoration: BoxDecoration(
-                          color: clr,
+                          color: colors(context).color6,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Row(
@@ -77,18 +80,19 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                                     vertical: 12, horizontal: 20),
                                 decoration: BoxDecoration(
                                   color: _currentIndex == 0
-                                      ? clr1
+                                      ? colors(context).color1
                                       : Colors.transparent,
                                   borderRadius: BorderRadius.circular(19),
                                 ),
                                 child: Text(
                                   "الطلبات",
                                   style: TextStyle(
+                                    fontFamily: 'El_Messiri',
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
                                     color: _currentIndex == 0
                                         ? Colors.white
-                                        : Colors.black38,
+                                        : colors(context).color3,
                                   ),
                                 ),
                               ),
@@ -104,46 +108,50 @@ class _FuserDashboardScreenState extends State<FuserDashboardScreen> {
                                     vertical: 12, horizontal: 25),
                                 decoration: BoxDecoration(
                                   color: _currentIndex == 1
-                                      ? clr1
+                                      ? colors(context).color1
                                       : Colors.transparent,
                                   borderRadius: BorderRadius.circular(19),
                                 ),
                                 child: Text(
                                   "تقارير",
                                   style: TextStyle(
+                                    fontFamily: 'El_Messiri',
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
                                     color: _currentIndex == 1
                                         ? Colors.white
-                                        : Colors.black38,
+                                        : colors(context).color3,
                                   ),
                                 ),
                               ),
                             ),
-                            // InkWell(
-                            //   onTap: () {
-                            //     setState(() {
-                            //       _buttonIndex = 2;
-                            //     });
-                            //   },
-                            //   child: Container(
-                            //     padding:
-                            //         EdgeInsets.symmetric(vertical: 12, horizontal: 25),
-                            //     decoration: BoxDecoration(
-                            //       color: _buttonIndex == 2 ? clr1 : Colors.transparent,
-                            //       borderRadius: BorderRadius.circular(19),
-                            //     ),
-                            //     child: Text(
-                            //       "ملغية",
-                            //       style: TextStyle(
-                            //         fontSize: 16,
-                            //         fontWeight: FontWeight.w500,
-                            //         color:
-                            //             _buttonIndex == 2 ? Colors.white : Colors.black38,
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
+                            InkWell(
+                              onTap: () {
+                                setState(() {
+                                  _currentIndex = 2;
+                                });
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 12, horizontal: 25),
+                                decoration: BoxDecoration(
+                                  color: _currentIndex == 2
+                                      ? colors(context).color1
+                                      : Colors.transparent,
+                                  borderRadius: BorderRadius.circular(19),
+                                ),
+                                child: Text(
+                                  "ملغية",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: _currentIndex == 2
+                                        ? Colors.white
+                                        : colors(context).color3,
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),

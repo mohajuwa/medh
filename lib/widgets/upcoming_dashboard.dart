@@ -9,6 +9,7 @@ class UpcomingDashboard extends ConsumerStatefulWidget {
 }
 
 class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -32,8 +33,8 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x1F000000),
-                  blurRadius: 4,
-                  spreadRadius: 2,
+                  blurRadius: 1.5,
+                  spreadRadius: 1,
                 )
               ],
             ),
@@ -81,7 +82,7 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text(
+                      const Text(
                         "المسافة",
                         style: TextStyle(
                           fontFamily: "IBMPlexSansArabic",
@@ -97,7 +98,7 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Divider(
                       thickness: 1,
                       color: colors(context).color3,
@@ -113,8 +114,8 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                             Icons.calendar_month,
                             color: colors(context).color1,
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "12/01/2023",
                           ),
                         ],
@@ -125,8 +126,8 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                             Icons.access_time_filled,
                             color: colors(context).color1,
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "02:58 AM",
                           )
                         ],
@@ -209,8 +210,8 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x1F000000),
-                  blurRadius: 4,
-                  spreadRadius: 2,
+                  blurRadius: 1.5,
+                  spreadRadius: 1,
                 )
               ],
             ),
@@ -258,7 +259,7 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text(
+                      const Text(
                         "المسافة",
                         style: TextStyle(
                           fontFamily: "IBMPlexSansArabic",
@@ -274,7 +275,7 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Divider(
                       thickness: 1,
                       color: colors(context).color3,
@@ -290,8 +291,8 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                             Icons.calendar_month,
                             color: colors(context).color1,
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "12/01/2023",
                           ),
                         ],
@@ -302,8 +303,8 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                             Icons.access_time_filled,
                             color: colors(context).color1,
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "02:58 AM",
                           )
                         ],

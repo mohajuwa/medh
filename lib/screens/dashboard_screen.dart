@@ -51,7 +51,7 @@ class DashboardScreenState extends ConsumerState<DashboardScreen> {
               padding: const EdgeInsets.all(5),
               margin: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
-                color: colors(context).color4,
+                color: colors(context).color6,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(

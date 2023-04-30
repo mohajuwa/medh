@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:medh/screens/home_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
+import 'package:medh/provider.dart';
 
-class CustomAddScreen extends StatefulWidget {
+class CustomAddScreen extends ConsumerStatefulWidget {
   const CustomAddScreen({super.key});
 
   @override
-  State<CustomAddScreen> createState() => _CustomAddScreenState();
+  CustomAddScreenState createState() => CustomAddScreenState();
 }
 
 bool shadowColor = false;
@@ -13,57 +15,54 @@ double? scrolledUnderElevation;
 const clr = Color(0xFF58329B);
 bool passTooggle = true;
 
-class _CustomAddScreenState extends State<CustomAddScreen> {
+class CustomAddScreenState extends ConsumerState<CustomAddScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'El_Messiri'),
+      theme: getAppTheme(context, ref.watch(appThemeProvider)),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(70),
-            child: AppBar(
-              backgroundColor: clr,
-              leadingWidth: 30,
-              title: Padding(
-                padding: const EdgeInsets.only(top: 5),
-                child: Row(children: const [
-                  CircleAvatar(
-                    radius: 25,
-                    backgroundImage: AssetImage("assets/images/icon1.png"),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(right: 10),
-                    child: Text(
-                      "إسم الصيدلية",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+          appBar: AppBar(
+            backgroundColor: colors(context).color5,
+            leadingWidth: 30,
+            title: Padding(
+              padding: const EdgeInsets.only(top: 5),
+              child: Row(children: const [
+                CircleAvatar(
+                  radius: 25,
+                  backgroundImage: AssetImage("assets/images/icon1.png"),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Text(
+                    "إسم الصيدلية",
+                    style: TextStyle(
+                      color: Colors.white,
                     ),
-                  )
-                ]),
-              ),
-              actions: const [
-                Padding(
-                  padding: EdgeInsets.only(top: 8, right: 20),
-                  child: Icon(
-                    Icons.call,
-                    color: Colors.white,
-                    size: 26,
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 8, right: 10),
-                  child: Icon(
-                    Icons.more_vert,
-                    color: Colors.white,
-                    size: 26,
-                  ),
-                ),
-              ],
+                )
+              ]),
             ),
+            actions: const [
+              Padding(
+                padding: EdgeInsets.only(top: 8, right: 20),
+                child: Icon(
+                  Icons.call,
+                  color: Colors.white,
+                  size: 26,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 8, right: 10),
+                child: Icon(
+                  Icons.more_vert,
+                  color: Colors.white,
+                  size: 26,
+                ),
+              ),
+            ],
           ),
           body: ListView(
             children: [
@@ -75,58 +74,93 @@ class _CustomAddScreenState extends State<CustomAddScreen> {
                   height: 100,
                 ),
               ),
+              const SizedBox(height: 10),
               const Divider(
                 thickness: 2.9,
                 height: 2.0,
               ),
-              const SizedBox(height: 5),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "إسم الدواء",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.medical_information),
+                    border: const OutlineInputBorder(),
+                    label: Text(
+                      "إسم الدواء",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.medical_information,
+                      color: colors(context).color3,
+                    ),
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "وصفة",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.info),
+                    border: const OutlineInputBorder(),
+                    label: Text(
+                      "وصفة",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.info,
+                      color: colors(context).color3,
+                    ),
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "الكمية",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.numbers),
+                    border: const OutlineInputBorder(),
+                    label: Text(
+                      "الكمية",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.numbers,
+                      color: colors(context).color3,
+                    ),
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "الكمية",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.numbers),
+                    border: const OutlineInputBorder(),
+                    label: Text(
+                      "الكمية",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.numbers,
+                      color: colors(context).color3,
+                    ),
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "الكمية",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.numbers),
+                    border: const OutlineInputBorder(),
+                    label: Text(
+                      "الكمية",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.numbers,
+                      color: colors(context).color3,
+                    ),
                   ),
                 ),
               ),
@@ -136,7 +170,7 @@ class _CustomAddScreenState extends State<CustomAddScreen> {
                 child: SizedBox(
                   width: double.infinity,
                   child: Material(
-                    color: const Color(0xFF58329B),
+                    color: colors(context).color1,
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {

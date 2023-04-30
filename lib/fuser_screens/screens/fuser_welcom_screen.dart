@@ -1,27 +1,32 @@
 // صفحة الترحيب بالمستخدم الصيدللي    : تقريباً ملغية
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
 import 'package:medh/fuser_screens/screens/fuser_signup_screen.dart';
 
+import '../../provider.dart';
 import 'fuser_login_screen.dart';
 import '../widgets/fuser_navbar_roots.dart';
 
-class FuserWelcomeScreen extends StatelessWidget {
+class FuserWelcomeScreen extends ConsumerStatefulWidget {
   const FuserWelcomeScreen({super.key});
-
   @override
+  FuserWelcomeScreenState createState() => FuserWelcomeScreenState();
+}
+
+class FuserWelcomeScreenState extends ConsumerState<FuserWelcomeScreen> {
   Widget build(BuildContext context) {
     //  هذا عشان زر الرجوع
 
     return WillPopScope(
       onWillPop: () async => true,
       child: MaterialApp(
-        theme: ThemeData(fontFamily: 'El_Messiri'),
+        theme: getAppTheme(context, ref.watch(appThemeProvider)),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
-            backgroundColor: Colors.white,
             body: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
@@ -50,7 +55,7 @@ class FuserWelcomeScreen extends StatelessWidget {
                               padding: const EdgeInsets.only(
                                   left: 30, right: 30, top: 5, bottom: 5),
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: colors(context).color1,
                                 borderRadius: BorderRadius.circular(18),
                                 boxShadow: const [
                                   BoxShadow(
@@ -72,8 +77,7 @@ class FuserWelcomeScreen extends StatelessWidget {
                                       child: Text(
                                         "تخطي",
                                         style: TextStyle(
-                                          color: Color(0xFF58329B),
-                                          fontWeight: FontWeight.w500,
+                                          color: Colors.white,
                                         ),
                                       ),
                                     ),
@@ -96,7 +100,6 @@ class FuserWelcomeScreen extends StatelessWidget {
                     child: Text(
                       "صيدلانيون",
                       style: TextStyle(
-                        color: Color(0xFF58329B),
                         fontSize: 35,
                         fontWeight: FontWeight.w500,
                         wordSpacing: 2,
@@ -108,7 +111,6 @@ class FuserWelcomeScreen extends StatelessWidget {
                     child: Text(
                       "ومستعلمون عن الأدوية",
                       style: TextStyle(
-                        color: Color(0x89000000),
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                       ),
@@ -119,7 +121,7 @@ class FuserWelcomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Material(
-                        color: const Color(0xFF58329B),
+                        color: colors(context).color1,
                         borderRadius: BorderRadius.circular(10),
                         child: InkWell(
                           onTap: () {
@@ -145,7 +147,7 @@ class FuserWelcomeScreen extends StatelessWidget {
                         ),
                       ),
                       Material(
-                        color: const Color(0xFF58329B),
+                        color: colors(context).color1,
                         borderRadius: BorderRadius.circular(10),
                         child: InkWell(
                           onTap: () {

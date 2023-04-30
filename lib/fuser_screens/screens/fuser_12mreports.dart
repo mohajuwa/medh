@@ -7,27 +7,27 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart' as intl;
+import 'package:medh/darkmod/theme.dart';
+import 'package:medh/provider.dart';
 
-class Months12Reports extends StatefulWidget {
+class Months12Reports extends ConsumerStatefulWidget {
   const Months12Reports({super.key});
 
   @override
-  State<Months12Reports> createState() => _Months12ReportsState();
+  Months12ReportsState createState() => Months12ReportsState();
 }
 
 DateTime now = DateTime.now();
 
-class _Months12ReportsState extends State<Months12Reports> {
+class Months12ReportsState extends ConsumerState<Months12Reports> {
   String formattedDate = intl.DateFormat.MEd().format(now);
 
   @override
   Widget build(BuildContext context) {
     var intValue = Random().nextInt(10); // Value is >= 0 and < 10.
     intValue = Random().nextInt(100) + 50; // Value is >= 50 and < 150.
-    bool shadowColor = false;
-    double? scrolledUnderElevation;
-    const clr = Color(0xFF58329B);
 
     //  هذا عشان زر الرجوع
 
@@ -47,111 +47,11 @@ class _Months12ReportsState extends State<Months12Reports> {
         supportedLocales: const [
           Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
         ],
-        theme: ThemeData(fontFamily: 'El_Messiri'),
+        theme: getAppTheme(context, ref.watch(appThemeProvider)),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
-            appBar: AppBar(
-              toolbarHeight: 60,
-              scrolledUnderElevation: scrolledUnderElevation,
-              shadowColor:
-                  shadowColor ? Theme.of(context).colorScheme.shadow : clr,
-              backgroundColor: Colors.white,
-              title: Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 1),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 0, top: 2),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pop(
-                              context,
-                            );
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(18),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Color(0x1F000000),
-                                  blurRadius: 1.5,
-                                  spreadRadius: 1,
-                                )
-                              ],
-                            ),
-                            child: Center(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.all(3),
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: const Center(
-                                      child: Text(
-                                        "رجوع",
-                                        style: TextStyle(
-                                          color: Color(0xFF58329B),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const Text(
-                        " شعار البرنامج -->",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.black,
-                          fontFamily: "Amiri_Quran",
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(18),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Color(0x1F000000),
-                              blurRadius: 4,
-                              spreadRadius: 2,
-                            )
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                              ),
-                              child: const CircleAvatar(
-                                radius: 15,
-                                backgroundImage:
-                                    AssetImage("assets/images/icon1.png"),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
             body: ListView(
               children: [
                 const SizedBox(height: 40),

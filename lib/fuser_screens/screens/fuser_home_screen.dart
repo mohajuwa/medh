@@ -1,17 +1,21 @@
 // الصفحة الرئيسية للصيدلي
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/utils.dart';
+import 'package:medh/darkmod/theme.dart';
 import 'package:medh/fuser_screens/screens/add_medcine.dart';
+import 'package:medh/provider.dart';
 
 import '../widgets/fuser_navbar_roots.dart';
 
 import 'medicine_detils_home_screen.dart';
 
-class FuserHomeScreen extends StatefulWidget {
+class FuserHomeScreen extends ConsumerStatefulWidget {
   const FuserHomeScreen({super.key});
 
   @override
-  State<FuserHomeScreen> createState() => _FuserHomeScreenState();
+  FuserHomeScreenState createState() => FuserHomeScreenState();
 }
 
 List symptoms = [
@@ -34,7 +38,7 @@ bool shadowColor = false;
 double? scrolledUnderElevation;
 const clr = Color(0xFF58329B);
 
-class _FuserHomeScreenState extends State<FuserHomeScreen> {
+class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
   @override
   Widget build(BuildContext context) {
     //  هذا عشان زر الرجوع
@@ -42,7 +46,7 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
     return WillPopScope(
       onWillPop: () async => true,
       child: MaterialApp(
-        theme: ThemeData(fontFamily: 'El_Messiri'),
+        theme: getAppTheme(context, ref.watch(appThemeProvider)),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
@@ -65,7 +69,7 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                       child: Container(
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: clr,
+                          color: colors(context).color1,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: const [
                             BoxShadow(
@@ -81,7 +85,7 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                             Container(
                               padding: const EdgeInsets.all(8),
                               decoration: const BoxDecoration(
-                                color: Colors.white,
+                                color: Colors.white54,
                                 shape: BoxShape.circle,
                               ),
                               child: const Icon(
@@ -103,7 +107,7 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                             Text(
                               "جديد",
                               style: TextStyle(
-                                color: Colors.blue.shade100,
+                                color: colors(context).color2,
                               ),
                             )
                           ],
@@ -122,7 +126,7 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                       child: Container(
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: colors(context).color4,
                           borderRadius: BorderRadius.circular(18),
                           boxShadow: const [
                             BoxShadow(
@@ -137,13 +141,13 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                           children: [
                             Container(
                               padding: const EdgeInsets.all(8),
-                              decoration: const BoxDecoration(
-                                color: Color(0xFFF0EEFA),
+                              decoration: BoxDecoration(
+                                color: colors(context).color3,
                                 shape: BoxShape.circle,
                               ),
-                              child: const Icon(
+                              child: Icon(
                                 Icons.home_filled,
-                                color: clr,
+                                color: colors(context).color1,
                                 size: 35,
                               ),
                             ),
@@ -157,12 +161,10 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                               ),
                             ),
                             const SizedBox(height: 5),
-                            const Text(
+                            Text(
                               "ما تم طلبه بكثرة ",
-                              style: TextStyle(
-                                color: Color(0x89000000),
-                              ),
-                            )
+                              style: Theme.of(context).textTheme.bodySmall,
+                            ),
                           ],
                         ),
                       ),
@@ -170,15 +172,11 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                   ],
                 ),
                 const SizedBox(height: 25),
-                const Padding(
-                  padding: EdgeInsets.only(left: 15),
+                Padding(
+                  padding: EdgeInsets.only(right: 10),
                   child: Text(
                     "فلترة الأدوية حسب ",
-                    style: TextStyle(
-                      fontSize: 23,
-                      fontWeight: FontWeight.w500,
-                      color: Color(0x89000000),
-                    ),
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                 ),
                 SizedBox(
@@ -193,12 +191,12 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                               vertical: 10, horizontal: 15),
                           padding: const EdgeInsets.symmetric(horizontal: 25),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFF4F6FA),
+                            color: colors(context).color4,
                             borderRadius: BorderRadius.circular(10),
                             boxShadow: const [
                               BoxShadow(
-                                color: Color(0x6159329B),
-                                blurRadius: 3,
+                                color: Color(0x3C000000),
+                                blurRadius: 4,
                                 spreadRadius: 2,
                               )
                             ],
@@ -206,26 +204,18 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                           child: Center(
                             child: Text(
                               symptoms[index],
-                              style: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0x89000000),
-                              ),
+                              style: Theme.of(context).textTheme.bodySmall,
                             ),
                           ),
                         );
                       }),
                 ),
                 const SizedBox(height: 15),
-                const Padding(
-                  padding: EdgeInsets.only(left: 15),
+                Padding(
+                  padding: EdgeInsets.only(right: 10),
                   child: Text(
                     " متوفر",
-                    style: TextStyle(
-                      fontSize: 23,
-                      fontWeight: FontWeight.w500,
-                      color: Color(0x89000000),
-                    ),
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                 ),
                 GridView.builder(
@@ -250,11 +240,11 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                         margin: const EdgeInsets.all(10),
                         padding: const EdgeInsets.symmetric(vertical: 15),
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: colors(context).color4,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: const [
                             BoxShadow(
-                              color: Color(0x1F000000),
+                              color: Color(0x3C000000),
                               blurRadius: 4,
                               spreadRadius: 2,
                             )
@@ -268,29 +258,22 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                               backgroundImage:
                                   AssetImage("assets/images/${imgs[index]}"),
                             ),
-                            const Text(
+                            Text(
                               "إسم الدواء",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0x89000000),
-                              ),
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
-                            const Text(
+                            Text(
                               "تمت إضافته",
-                              style: TextStyle(
-                                color: Colors.black45,
-                              ),
+                              style: Theme.of(context).textTheme.titleSmall,
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
+                              children: [
                                 Text(
                                   "الكمية :  37",
                                   style: TextStyle(
-                                    color: clr,
-                                    fontWeight: FontWeight.w500,
+                                    color: colors(context).color1,
                                   ),
                                 ),
                               ],

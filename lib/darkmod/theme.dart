@@ -6,20 +6,28 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
   return ThemeData(
     extensions: <ThemeExtension<AppColors>>[
       AppColors(
-          // Icons Colors in Theme
-          color1: isDarkTheme ? Colors.purple : Colors.pink,
-          //
-          color2: isDarkTheme ? Colors.blue : Colors.blueGrey,
-          // Overley Icons Colors in Theme
-          color3: isDarkTheme ? Colors.white38 : Colors.black38,
-          // Containers Colors
-          colorContainer:
-              isDarkTheme ? const Color(0x5F000000) : const Color(0xE6FFFFFF),
-          // Like BackGrround Colors in Theme
-          color4:
-              isDarkTheme ? const Color(0xF7322C2C) : const Color(0xE6FFFFFF),
-          color5:
-              isDarkTheme ? const Color(0xF7322C2C) : const Color(0xFF58329B)),
+        // Icons Colors in Theme
+        color1: isDarkTheme ? Colors.purple : const Color(0xD09B1642),
+
+        //
+        color2: isDarkTheme ? Colors.blue : Colors.blueGrey,
+
+        // Overley Icons Colors in Theme
+        color3: isDarkTheme ? Colors.white38 : Colors.black38,
+
+        // Like BackGrround Colors in Theme
+        color4: isDarkTheme ? const Color(0xF7322C2C) : const Color(0xE6FFFFFF),
+
+        // Colors of some of
+        color5: isDarkTheme ? const Color(0xF7322C2C) : const Color(0xFF58329B),
+
+        // Colors of sub Wedgits
+        color6: isDarkTheme ? Colors.white12 : Colors.black12,
+
+        // Containers Colors
+        colorContainer:
+            isDarkTheme ? const Color(0x49000000) : const Color(0xE6FFFFFF),
+      ),
     ],
     scaffoldBackgroundColor:
         isDarkTheme ? const Color(0xA8322C2C) : Colors.white,
@@ -69,8 +77,8 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
       thumbColor: MaterialStateProperty.all(
           isDarkTheme ? Colors.orange : Colors.purple),
     ),
-    listTileTheme: ListTileThemeData(
-        iconColor: isDarkTheme ? Colors.pinkAccent : Colors.purple),
+    listTileTheme:
+        ListTileThemeData(iconColor: isDarkTheme ? Colors.pink : Colors.purple),
     appBarTheme: AppBarTheme(
         backgroundColor: isDarkTheme ? const Color(0xA8322C2C) : Colors.white,
         iconTheme:
@@ -85,6 +93,7 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color? color3;
   final Color? color4;
   final Color? color5;
+  final Color? color6;
   final Color? colorContainer;
 
   const AppColors({
@@ -93,6 +102,7 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.color3,
     required this.color4,
     required this.color5,
+    required this.color6,
     required this.colorContainer,
   });
 
@@ -103,6 +113,7 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? color3,
     Color? color4,
     Color? color5,
+    Color? color6,
     Color? colorContainer,
   }) {
     return AppColors(
@@ -111,6 +122,7 @@ class AppColors extends ThemeExtension<AppColors> {
       color3: color3 ?? this.color3,
       color4: color4 ?? this.color4,
       color5: color4 ?? this.color5,
+      color6: color4 ?? this.color6,
       colorContainer: colorContainer ?? this.colorContainer,
     );
   }
@@ -126,6 +138,7 @@ class AppColors extends ThemeExtension<AppColors> {
       color3: Color.lerp(color3, other.color3, t),
       color4: Color.lerp(color4, other.color4, t),
       color5: Color.lerp(color5, other.color5, t),
+      color6: Color.lerp(color6, other.color6, t),
       colorContainer: Color.lerp(colorContainer, other.colorContainer, t),
     );
   }

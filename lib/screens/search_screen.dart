@@ -82,7 +82,7 @@ class MessagesScreenState extends ConsumerState<MessagesScreen> {
                                   hintText: "إستعلام",
                                   hintStyle: TextStyle(
                                     color: colors(context)
-                                        .color2
+                                        .color6
                                         ?.withOpacity(0.5),
                                   ),
                                   border: InputBorder.none,

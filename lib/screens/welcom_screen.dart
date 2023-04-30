@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
+import 'package:medh/provider.dart';
 import 'signup_screen.dart';
 
 import 'login_screen.dart';
 import '../widgets/navbar_roots.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomeScreen extends ConsumerStatefulWidget {
   const WelcomeScreen({super.key});
+  @override
+  WelcomeScreenState createState() => WelcomeScreenState();
+}
 
+class WelcomeScreenState extends ConsumerState<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     //  هذا عشان زر الرجوع
@@ -14,12 +21,11 @@ class WelcomeScreen extends StatelessWidget {
     return WillPopScope(
       onWillPop: () async => true,
       child: MaterialApp(
-        theme: ThemeData(fontFamily: 'El_Messiri'),
+        theme: getAppTheme(context, ref.watch(appThemeProvider)),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
-            backgroundColor: Colors.white,
             body: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
@@ -49,13 +55,12 @@ class WelcomeScreen extends StatelessWidget {
                               padding: const EdgeInsets.only(
                                   left: 30, right: 30, top: 5, bottom: 5),
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: colors(context).color4,
                                 borderRadius: BorderRadius.circular(18),
                                 boxShadow: const [
                                   BoxShadow(
-                                    color: Color(0xA159329B),
-                                    blurRadius: 6,
-                                    spreadRadius: 4,
+                                    blurRadius: 1.5,
+                                    spreadRadius: 1,
                                   )
                                 ],
                               ),
@@ -70,10 +75,6 @@ class WelcomeScreen extends StatelessWidget {
                                     child: const Center(
                                       child: Text(
                                         "تخطي",
-                                        style: TextStyle(
-                                          color: Color(0xFF58329B),
-                                          fontWeight: FontWeight.w500,
-                                        ),
                                       ),
                                     ),
                                   ),
@@ -106,11 +107,6 @@ class WelcomeScreen extends StatelessWidget {
                   const Center(
                     child: Text(
                       "الباحث الدوائي خيارك الأمثل للإستعلام عن الأدوية المعدومة",
-                      style: TextStyle(
-                        color: Color(0x89000000),
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
                     ),
                   ),
                   const SizedBox(height: 60),
@@ -118,7 +114,7 @@ class WelcomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Material(
-                        color: const Color(0xFF58329B),
+                        color: colors(context).color1,
                         borderRadius: BorderRadius.circular(10),
                         child: InkWell(
                           onTap: () {
@@ -143,7 +139,7 @@ class WelcomeScreen extends StatelessWidget {
                         ),
                       ),
                       Material(
-                        color: const Color(0xFF58329B),
+                        color: colors(context).color1,
                         borderRadius: BorderRadius.circular(10),
                         child: InkWell(
                           onTap: () {

@@ -101,7 +101,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                         child: Center(
                           child: Text(
                             symptoms[index],
-                            style: Theme.of(context).textTheme.titleSmall,
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
                         ),
                       );

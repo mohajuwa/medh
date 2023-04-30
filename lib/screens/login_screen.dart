@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
+import 'package:medh/provider.dart';
 import 'package:medh/screens/signup_screen.dart';
 
 import '../widgets/navbar_roots.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  LoginScreenState createState() => LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class LoginScreenState extends ConsumerState<LoginScreen> {
   bool shadowColor = false;
   double? scrolledUnderElevation;
   final clr = const Color(0xFF58329B);
@@ -19,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'El_Messiri'),
+      theme: getAppTheme(context, ref.watch(appThemeProvider)),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
@@ -27,9 +30,9 @@ class _LoginScreenState extends State<LoginScreen> {
           appBar: AppBar(
             toolbarHeight: 60,
             scrolledUnderElevation: scrolledUnderElevation,
-            shadowColor:
-                shadowColor ? Theme.of(context).colorScheme.shadow : clr,
-            backgroundColor: Colors.white,
+            shadowColor: shadowColor
+                ? Theme.of(context).colorScheme.shadow
+                : colors(context).color1,
             title: Center(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 1),
@@ -50,13 +53,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Container(
                           padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: colors(context).color4,
                             borderRadius: BorderRadius.circular(18),
                             boxShadow: const [
                               BoxShadow(
                                 color: Color(0x1F000000),
-                                blurRadius: 1.5,
-                                spreadRadius: 1,
+                                blurRadius: 4,
+                                spreadRadius: 2,
                               )
                             ],
                           ),
@@ -72,7 +75,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                   child: const Center(
                                     child: Icon(
                                       Icons.switch_left_outlined,
-                                      color: Color(0xFF58329B),
                                       size: 30,
                                     ),
                                   ),
@@ -83,19 +85,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    const Text(
+                    Text(
                       " شعار البرنامج -->",
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.black,
-                        fontFamily: "Amiri_Quran",
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                     Container(
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: colors(context).color4,
                         borderRadius: BorderRadius.circular(18),
                         boxShadow: const [
                           BoxShadow(
@@ -153,13 +150,19 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 2.0,
               ),
               const SizedBox(height: 10),
-              const Padding(
-                padding: EdgeInsets.all(12),
+              Padding(
+                padding: const EdgeInsets.all(12),
                 child: TextField(
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    label: Text("إدخل إسم المستخدم"),
-                    prefixIcon: Icon(Icons.person),
+                    border: const OutlineInputBorder(),
+                    label: Text("إدخل إسم المستخدم",
+                        style: TextStyle(
+                          color: colors(context).color3,
+                        )),
+                    prefixIconColor: colors(context).color3,
+                    prefixIcon: const Icon(
+                      Icons.person,
+                    ),
                   ),
                 ),
               ),
@@ -169,8 +172,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   obscureText: passTooggle ? true : false,
                   decoration: InputDecoration(
                       border: const OutlineInputBorder(),
-                      label: const Text("إدخل كلمة السر "),
+                      label: Text(
+                        "إدخل كلمة السر ",
+                        style: TextStyle(
+                          color: colors(context).color3,
+                        ),
+                      ),
+                      prefixIconColor: colors(context).color3,
                       prefixIcon: const Icon(Icons.lock),
+                      suffixIconColor: colors(context).color3,
                       suffixIcon: InkWell(
                         onTap: () {
                           if (passTooggle == true) {
@@ -192,7 +202,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: SizedBox(
                   width: double.infinity,
                   child: Material(
-                    color: const Color(0xFF58329B),
+                    color: colors(context).color1,
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
@@ -227,11 +237,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   const Text(
                     "ليس لديك حساب؟",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Color(0x89000000),
-                    ),
                   ),
                   TextButton(
                     onPressed: () {
@@ -243,11 +248,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: const Text(
                       "إنشاء حساب",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xFF58329B),
-                      ),
+                      style: TextStyle(fontFamily: 'El_Messiri'),
                     ),
                   ),
                   const SizedBox(height: 12),

@@ -2,15 +2,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
+import 'package:medh/provider.dart';
 
 import 'add_medcine.dart';
 import 'medicine_detils2_screen.dart';
 
-class FuserMedicineScreen extends StatefulWidget {
+class FuserMedicineScreen extends ConsumerStatefulWidget {
   const FuserMedicineScreen({super.key});
 
   @override
-  State<FuserMedicineScreen> createState() => _FuserMedicineScreenState();
+  FuserMedicineScreenState createState() => FuserMedicineScreenState();
 }
 
 List imgs = [
@@ -25,7 +28,7 @@ const clr = Color(0xFF58329B);
 bool shadowColor = false;
 double? scrolledUnderElevation;
 
-class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
+class FuserMedicineScreenState extends ConsumerState<FuserMedicineScreen> {
   @override
   Widget build(BuildContext context) {
     //  هذا عشان زر الرجوع
@@ -45,7 +48,7 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
         supportedLocales: const [
           Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
         ],
-        theme: ThemeData(fontFamily: 'El_Messiri'),
+        theme: getAppTheme(context, ref.watch(appThemeProvider)),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
@@ -55,7 +58,6 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
               scrolledUnderElevation: scrolledUnderElevation,
               shadowColor:
                   shadowColor ? Theme.of(context).colorScheme.shadow : clr,
-              backgroundColor: Colors.white,
               title: Padding(
                 padding: const EdgeInsets.only(top: 0, bottom: 5),
                 child: Column(
@@ -63,12 +65,12 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: colors(context).color4,
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: const [
                           BoxShadow(
-                            color: Color(0x5F000000),
-                            blurRadius: 5,
+                            color: Color(0x3C000000),
+                            blurRadius: 4,
                             spreadRadius: 2,
                           ),
                         ],
@@ -82,8 +84,13 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 5),
                               child: TextFormField(
-                                decoration: const InputDecoration(
+                                decoration: InputDecoration(
                                   hintText: "بحث",
+                                  hintStyle: TextStyle(
+                                    color: colors(context)
+                                        .color6
+                                        ?.withOpacity(0.5),
+                                  ),
                                   border: InputBorder.none,
                                 ),
                               ),
@@ -91,11 +98,9 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
                           ),
                           const Icon(
                             Icons.search,
-                            color: Color(0xFF58329B),
                           ),
                           const Icon(
                             Icons.photo_camera,
-                            color: Color(0xFF58329B),
                           ),
                         ],
                       ),
@@ -121,27 +126,20 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
                       },
                       child: Container(
                         padding: const EdgeInsets.only(right: 20, top: 5),
-                        child: const Text(
+                        child: Text(
                           'الأدوية',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 28,
-                          ),
+                          style: Theme.of(context).textTheme.titleLarge,
                         ),
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 20),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Text(
                     " الأكثر طلباً",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -206,6 +204,14 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
                   ),
                 ),
                 const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                  child: Divider(
+                    color: colors(context).color3,
+                    thickness: 2,
+                    height: 2.0,
+                  ),
+                ),
                 ListView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: 6,
@@ -231,26 +237,16 @@ class _FuserMedicineScreenState extends State<FuserMedicineScreen> {
                           ),
                           title: const Text(
                             "إسم الدواء",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            ),
                           ),
-                          subtitle: const Text(
+                          subtitle: Text(
                             "وصف الدواء يتم كتابته هنا",
                             maxLines: 16,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Color(0x89000000),
-                            ),
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
-                          trailing: const Text(
+                          trailing: Text(
                             "12:30  : ساعة او تاريخ الإضافة",
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Color(0x89000000),
-                            ),
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
                         ),
                       );

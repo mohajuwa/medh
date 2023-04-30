@@ -3,18 +3,21 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/fuser_screens/widgets/fuser_navbar_roots.dart';
+import 'package:medh/provider.dart';
 
+import '../../darkmod/theme.dart';
 import '../small_screens/add_medicine_done.dart';
 
-class AddMedcineScreen extends StatefulWidget {
+class AddMedcineScreen extends ConsumerStatefulWidget {
   const AddMedcineScreen({super.key});
 
   @override
-  State<AddMedcineScreen> createState() => _AddMedcineScreenState();
+  AddMedcineScreenState createState() => AddMedcineScreenState();
 }
 
-class _AddMedcineScreenState extends State<AddMedcineScreen> {
+class AddMedcineScreenState extends ConsumerState<AddMedcineScreen> {
   bool shadowColor = false;
   double? scrolledUnderElevation;
   final clr = const Color(0xFF58329B);
@@ -22,17 +25,22 @@ class _AddMedcineScreenState extends State<AddMedcineScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'El_Messiri'),
+      theme: ThemeData(
+          useMaterial3: true,
+          colorSchemeSeed: const Color(0xFF58329B),
+          brightness: Brightness.dark,
+          fontFamily: 'El_Messiri'),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
+          backgroundColor: colors(context).color4,
           appBar: AppBar(
             toolbarHeight: 60,
             scrolledUnderElevation: scrolledUnderElevation,
             shadowColor:
                 shadowColor ? Theme.of(context).colorScheme.shadow : clr,
-            backgroundColor: Colors.white,
+            backgroundColor: colors(context).color4,
             title: Center(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 1),
@@ -53,7 +61,6 @@ class _AddMedcineScreenState extends State<AddMedcineScreen> {
                         child: Container(
                           padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
-                            color: Colors.white,
                             borderRadius: BorderRadius.circular(18),
                             boxShadow: const [
                               BoxShadow(
@@ -75,7 +82,6 @@ class _AddMedcineScreenState extends State<AddMedcineScreen> {
                                   child: const Center(
                                     child: Icon(
                                       Icons.switch_left_outlined,
-                                      color: Color(0xFF58329B),
                                       size: 30,
                                     ),
                                   ),
@@ -90,7 +96,6 @@ class _AddMedcineScreenState extends State<AddMedcineScreen> {
                       " شعار البرنامج -->",
                       style: TextStyle(
                         fontSize: 24,
-                        color: Colors.black,
                         fontFamily: "Amiri_Quran",
                         fontWeight: FontWeight.w500,
                       ),
@@ -98,7 +103,6 @@ class _AddMedcineScreenState extends State<AddMedcineScreen> {
                     Container(
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: Colors.white,
                         borderRadius: BorderRadius.circular(18),
                         boxShadow: const [
                           BoxShadow(
@@ -200,7 +204,7 @@ class _AddMedcineScreenState extends State<AddMedcineScreen> {
                 child: SizedBox(
                   width: double.infinity,
                   child: Material(
-                    color: const Color(0xFF58329B),
+                    color: colors(context).color1,
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {

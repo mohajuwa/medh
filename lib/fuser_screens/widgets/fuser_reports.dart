@@ -2,17 +2,19 @@
 //  مضافه الى صفحة لوحة التحكم تحديداً زر التقارير في القائمة
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
 import 'fuser_mreports.dart';
 import 'fuser_yreports.dart';
 
-class FuserReports extends StatefulWidget {
+class FuserReports extends ConsumerStatefulWidget {
   const FuserReports({super.key});
 
   @override
-  State<FuserReports> createState() => _FuserReportsState();
+  FuserReportsState createState() => FuserReportsState();
 }
 
-class _FuserReportsState extends State<FuserReports> {
+class FuserReportsState extends ConsumerState<FuserReports> {
   int _buttonIndex = 0;
 
   final clr = const Color(0xFFF4F6FA);
@@ -43,7 +45,7 @@ class _FuserReportsState extends State<FuserReports> {
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.symmetric(horizontal: 40),
                 decoration: BoxDecoration(
-                  color: clr,
+                  color: colors(context).color6,
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: Row(
@@ -59,7 +61,9 @@ class _FuserReportsState extends State<FuserReports> {
                         padding: const EdgeInsets.symmetric(
                             vertical: 4, horizontal: 20),
                         decoration: BoxDecoration(
-                          color: _buttonIndex == 0 ? clr1 : Colors.transparent,
+                          color: _buttonIndex == 0
+                              ? colors(context).color1
+                              : Colors.transparent,
                           borderRadius: BorderRadius.circular(19),
                         ),
                         child: Text(
@@ -69,7 +73,7 @@ class _FuserReportsState extends State<FuserReports> {
                             fontWeight: FontWeight.w500,
                             color: _buttonIndex == 0
                                 ? Colors.white
-                                : Colors.black38,
+                                : colors(context).color3,
                           ),
                         ),
                       ),
@@ -84,7 +88,9 @@ class _FuserReportsState extends State<FuserReports> {
                         padding: const EdgeInsets.symmetric(
                             vertical: 4, horizontal: 20),
                         decoration: BoxDecoration(
-                          color: _buttonIndex == 1 ? clr1 : Colors.transparent,
+                          color: _buttonIndex == 1
+                              ? colors(context).color1
+                              : Colors.transparent,
                           borderRadius: BorderRadius.circular(19),
                         ),
                         child: Text(
@@ -94,35 +100,11 @@ class _FuserReportsState extends State<FuserReports> {
                             fontWeight: FontWeight.w500,
                             color: _buttonIndex == 1
                                 ? Colors.white
-                                : Colors.black38,
+                                : colors(context).color3,
                           ),
                         ),
                       ),
                     ),
-                    // InkWell(
-                    //   onTap: () {
-                    //     setState(() {
-                    //       _buttonIndex = 2;
-                    //     });
-                    //   },
-                    //   child: Container(
-                    //     padding:
-                    //         EdgeInsets.symmetric(vertical: 12, horizontal: 25),
-                    //     decoration: BoxDecoration(
-                    //       color: _buttonIndex == 2 ? clr1 : Colors.transparent,
-                    //       borderRadius: BorderRadius.circular(19),
-                    //     ),
-                    //     child: Text(
-                    //       "ملغية",
-                    //       style: TextStyle(
-                    //         fontSize: 16,
-                    //         fontWeight: FontWeight.w500,
-                    //         color:
-                    //             _buttonIndex == 2 ? Colors.white : Colors.black38,
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
                   ],
                 ),
               ),

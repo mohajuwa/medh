@@ -32,8 +32,8 @@ class NearestKmDashboardState extends ConsumerState<NearestKmDashboard> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x1F000000),
-                  blurRadius: 4,
-                  spreadRadius: 2,
+                  blurRadius: 1.5,
+                  spreadRadius: 1,
                 )
               ],
             ),
@@ -209,8 +209,8 @@ class NearestKmDashboardState extends ConsumerState<NearestKmDashboard> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x1F000000),
-                  blurRadius: 4,
-                  spreadRadius: 2,
+                  blurRadius: 1.5,
+                  spreadRadius: 1,
                 )
               ],
             ),

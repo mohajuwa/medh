@@ -3,8 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/darkmod/theme.dart';
 import 'package:medh/provider.dart';
-
-import 'custom2_add.dart';
+import 'package:medh/screens/custom_add.dart';
 
 class OrderScreen extends ConsumerStatefulWidget {
   const OrderScreen({super.key});
@@ -294,8 +293,8 @@ class OrderScreenState extends ConsumerState<OrderScreen> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x3C000000),
-                  blurRadius: 4,
-                  spreadRadius: 2,
+                  blurRadius: 1.5,
+                  spreadRadius: 1,
                 )
               ],
             ),
@@ -317,7 +316,12 @@ class OrderScreenState extends ConsumerState<OrderScreen> {
                 InkWell(
                   onTap: () {
                     // Go back to last page
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CustomAddScreen(),
+                      ),
+                    );
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width,

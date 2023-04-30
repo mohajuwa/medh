@@ -29,7 +29,7 @@ class GeneralSettingsScreen extends ConsumerWidget {
         elevation: 0,
         leading: InkWell(
           onTap: () {
-            Navigator.push(
+            Navigator.pop(
               context,
               MaterialPageRoute(
                 builder: (context) => const NavBarRoots(),

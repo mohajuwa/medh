@@ -3,26 +3,28 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:medh/fuser_screens/screens/fuser_home_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/darkmod/theme.dart';
+import 'package:medh/provider.dart';
 
-import '../small_screens/edit_home_medicine_done.dart';
-
-class FuserEditMedcineScreen extends StatefulWidget {
+class FuserEditMedcineScreen extends ConsumerStatefulWidget {
   const FuserEditMedcineScreen({super.key});
 
   @override
-  State<FuserEditMedcineScreen> createState() => _FuserEditMedcineScreenState();
+  FuserEditMedcineScreenState createState() => FuserEditMedcineScreenState();
 }
 
-class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
-  bool shadowColor = false;
-  double? scrolledUnderElevation;
-  final clr = const Color(0xFF58329B);
-  bool passTooggle = true;
+bool shadowColor = false;
+double? scrolledUnderElevation;
+const clr = Color(0xFF58329B);
+bool passTooggle = true;
+
+class FuserEditMedcineScreenState
+    extends ConsumerState<FuserEditMedcineScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'El_Messiri'),
+      theme: getAppTheme(context, ref.watch(appThemeProvider)),
       debugShowCheckedModeBanner: false,
       home: Directionality(
         textDirection: TextDirection.rtl,
@@ -37,58 +39,93 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                   height: 100,
                 ),
               ),
+              const SizedBox(height: 10),
               const Divider(
                 thickness: 2.9,
                 height: 2.0,
               ),
-              const SizedBox(height: 5),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "إسم الدواء",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.medical_information),
+                    border: const OutlineInputBorder(),
+                    label: Text(
+                      "إسم الدواء",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.medical_information,
+                      color: colors(context).color3,
+                    ),
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "وصفة",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.info),
+                    border: const OutlineInputBorder(),
+                    label: Text(
+                      "وصفة",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.info,
+                      color: colors(context).color3,
+                    ),
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "الكمية",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.numbers),
+                    border: const OutlineInputBorder(),
+                    label: Text(
+                      "الكمية",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.numbers,
+                      color: colors(context).color3,
+                    ),
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "الكمية",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.numbers),
+                    border: const OutlineInputBorder(),
+                    label: Text(
+                      "الكمية",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.numbers,
+                      color: colors(context).color3,
+                    ),
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: "الكمية",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.numbers),
+                    border: const OutlineInputBorder(),
+                    label: Text(
+                      "الكمية",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    prefixIcon: Icon(
+                      Icons.numbers,
+                      color: colors(context).color3,
+                    ),
                   ),
                 ),
               ),
@@ -98,7 +135,7 @@ class _FuserEditMedcineScreenState extends State<FuserEditMedcineScreen> {
                 child: SizedBox(
                   width: double.infinity,
                   child: Material(
-                    color: const Color(0xFF58329B),
+                    color: colors(context).color1,
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
