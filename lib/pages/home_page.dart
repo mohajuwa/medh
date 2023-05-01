@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medh/fuser_screens/screens/fuser_welcom_screen.dart';
+import 'package:medh/darkmod/theme.dart';
+import 'package:medh/fuser_screens/widgets/fuser_navbar_roots.dart';
 import 'package:medh/provider.dart';
 import 'package:medh/widgets/navbar_roots.dart';
+
+import 'oneTimeScreen.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -13,28 +16,27 @@ class HomePage extends ConsumerWidget {
     const clr = Color(0xFF58329B);
     bool shadowColor = false;
     double? scrolledUnderElevation;
-    var isDarkMode = ref.watch(appThemeProvider);
 
     //  هذا عشان زر الرجوع
 
     return WillPopScope(
       onWillPop: () async => true,
       child: MaterialApp(
-        theme: ThemeData(
-          fontFamily: 'El_Messiri',
+        theme: getAppTheme(
+          context,
+          ref.watch(appThemeProvider),
         ),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
-            backgroundColor: Colors.white,
             appBar: AppBar(
               toolbarHeight: 65,
               scrolledUnderElevation: scrolledUnderElevation,
               shadowColor:
                   // ignore: dead_code
                   shadowColor ? Theme.of(context).colorScheme.shadow : clr,
-              backgroundColor: Colors.white,
+              backgroundColor: colors(context).color4,
               title: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -67,11 +69,11 @@ class HomePage extends ConsumerWidget {
                         Container(
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: colors(context).color4,
                             borderRadius: BorderRadius.circular(18),
                             boxShadow: const [
                               BoxShadow(
-                                color: Color(0x1F000000),
+                                color: Color(0x47000000),
                                 blurRadius: 1.5,
                                 spreadRadius: 1,
                               )
@@ -106,17 +108,17 @@ class HomePage extends ConsumerWidget {
                   //app bar777777777777777777777777
                   const SizedBox(height: 100),
 
-                  // card -> How do u feel
+                  // card -> F User Log in
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25.0),
                     child: Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: colors(context).color4,
                         borderRadius: BorderRadius.circular(18),
                         boxShadow: const [
                           BoxShadow(
-                            color: Color(0x1F000000),
+                            color: Color(0x47000000),
                             blurRadius: 6,
                             spreadRadius: 4,
                           )
@@ -172,7 +174,7 @@ class HomePage extends ConsumerWidget {
                               Container(
                                 padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
-                                  color: const Color(0xFF58329B),
+                                  color: colors(context).color1,
                                   borderRadius: BorderRadius.circular(18),
                                 ),
                                 child: InkWell(
@@ -181,7 +183,7 @@ class HomePage extends ConsumerWidget {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            const FuserWelcomeScreen(),
+                                            const FuserNavBarRoots(),
                                       ),
                                     );
                                   },
@@ -201,17 +203,17 @@ class HomePage extends ConsumerWidget {
                   ),
                   const SizedBox(height: 50),
 
-                  // card -> How do u feel
+                  // card -> N User Log in
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25.0),
                     child: Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: colors(context).color4,
                         borderRadius: BorderRadius.circular(18),
                         boxShadow: const [
                           BoxShadow(
-                            color: Color(0x1F000000),
+                            color: Color(0x47000000),
                             blurRadius: 6,
                             spreadRadius: 4,
                           )
@@ -267,7 +269,7 @@ class HomePage extends ConsumerWidget {
                               Container(
                                 padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
-                                  color: const Color(0xFF58329B),
+                                  color: colors(context).color1,
                                   borderRadius: BorderRadius.circular(18),
                                 ),
                                 child: InkWell(
@@ -294,12 +296,6 @@ class HomePage extends ConsumerWidget {
                       ]),
                     ),
                   ),
-
-                  // search bar
-
-                  //horizontal listview
-
-                  // doctor list
                 ],
               ),
             ),

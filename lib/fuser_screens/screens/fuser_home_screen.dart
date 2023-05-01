@@ -73,7 +73,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: const [
                             BoxShadow(
-                              color: Color(0x1F000000),
+                              color: Color(0x47000000),
                               blurRadius: 6,
                               spreadRadius: 4,
                             )
@@ -130,7 +130,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                           borderRadius: BorderRadius.circular(18),
                           boxShadow: const [
                             BoxShadow(
-                              color: Color(0x1F000000),
+                              color: Color(0x47000000),
                               blurRadius: 1.5,
                               spreadRadius: 1,
                             )

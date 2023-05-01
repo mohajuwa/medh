@@ -159,7 +159,7 @@ class FuserMedicineScreenState extends ConsumerState<FuserMedicineScreen> {
                           color: Colors.white,
                           boxShadow: [
                             BoxShadow(
-                              color: Color(0x1F000000),
+                              color: Color(0x47000000),
                               spreadRadius: 2,
                               blurRadius: 10,
                             ),

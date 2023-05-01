@@ -59,7 +59,7 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
                             borderRadius: BorderRadius.circular(18),
                             boxShadow: const [
                               BoxShadow(
-                                color: Color(0x1F000000),
+                                color: Color(0x47000000),
                                 blurRadius: 4,
                                 spreadRadius: 2,
                               )
@@ -98,7 +98,7 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
                         borderRadius: BorderRadius.circular(18),
                         boxShadow: const [
                           BoxShadow(
-                            color: Color(0x1F000000),
+                            color: Color(0x47000000),
                             blurRadius: 4,
                             spreadRadius: 2,
                           )

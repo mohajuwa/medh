@@ -27,6 +27,9 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
         // Containers Colors
         colorContainer:
             isDarkTheme ? const Color(0x49000000) : const Color(0xE6FFFFFF),
+
+        // Color of DashBoard Totals
+        color7: isDarkTheme ? const Color(0xF7322C2C) : const Color(0xF7322C2C),
       ),
     ],
     scaffoldBackgroundColor:
@@ -94,6 +97,8 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color? color4;
   final Color? color5;
   final Color? color6;
+  final Color? color7;
+
   final Color? colorContainer;
 
   const AppColors({
@@ -103,6 +108,7 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.color4,
     required this.color5,
     required this.color6,
+    required this.color7,
     required this.colorContainer,
   });
 
@@ -114,6 +120,7 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? color4,
     Color? color5,
     Color? color6,
+    Color? color7,
     Color? colorContainer,
   }) {
     return AppColors(
@@ -121,8 +128,9 @@ class AppColors extends ThemeExtension<AppColors> {
       color2: color2 ?? this.color2,
       color3: color3 ?? this.color3,
       color4: color4 ?? this.color4,
-      color5: color4 ?? this.color5,
-      color6: color4 ?? this.color6,
+      color5: color5 ?? this.color5,
+      color6: color6 ?? this.color6,
+      color7: color7 ?? this.color7,
       colorContainer: colorContainer ?? this.colorContainer,
     );
   }
@@ -139,6 +147,7 @@ class AppColors extends ThemeExtension<AppColors> {
       color4: Color.lerp(color4, other.color4, t),
       color5: Color.lerp(color5, other.color5, t),
       color6: Color.lerp(color6, other.color6, t),
+      color7: Color.lerp(color7, other.color7, t),
       colorContainer: Color.lerp(colorContainer, other.colorContainer, t),
     );
   }

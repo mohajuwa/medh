@@ -77,7 +77,7 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: const [
                             BoxShadow(
-                              color: Color(0x1F000000),
+                              color: Color(0x47000000),
                               blurRadius: 4,
                               spreadRadius: 2,
                             )

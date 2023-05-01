@@ -32,7 +32,7 @@ class FuserUpcomingDashboardState
               borderRadius: BorderRadius.circular(10),
               boxShadow: const [
                 BoxShadow(
-                  color: Color(0x1F000000),
+                  color: Color(0x47000000),
                   blurRadius: 1.5,
                   spreadRadius: 1,
                 )
@@ -171,7 +171,7 @@ class FuserUpcomingDashboardState
               borderRadius: BorderRadius.circular(10),
               boxShadow: const [
                 BoxShadow(
-                  color: Color(0x1F000000),
+                  color: Color(0x47000000),
                   blurRadius: 1.5,
                   spreadRadius: 1,
                 )
@@ -310,7 +310,7 @@ class FuserUpcomingDashboardState
               borderRadius: BorderRadius.circular(10),
               boxShadow: const [
                 BoxShadow(
-                  color: Color(0x1F000000),
+                  color: Color(0x47000000),
                   blurRadius: 1.5,
                   spreadRadius: 1,
                 )

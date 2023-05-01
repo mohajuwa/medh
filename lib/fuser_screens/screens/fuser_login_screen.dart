@@ -60,7 +60,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                             borderRadius: BorderRadius.circular(18),
                             boxShadow: const [
                               BoxShadow(
-                                color: Color(0x1F000000),
+                                color: Color(0x47000000),
                                 blurRadius: 1.5,
                                 spreadRadius: 1,
                               )
@@ -102,7 +102,7 @@ class _FuserLoginScreenState extends State<FuserLoginScreen> {
                         borderRadius: BorderRadius.circular(18),
                         boxShadow: const [
                           BoxShadow(
-                            color: Color(0x1F000000),
+                            color: Color(0x47000000),
                             blurRadius: 4,
                             spreadRadius: 2,
                           )

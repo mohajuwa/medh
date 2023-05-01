@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/Summary/Dashboard/overview.dart';
+import 'package:medh/Summary/Dashboard/overview_task_container.dart';
 import 'package:medh/darkmod/theme.dart';
 import 'package:medh/provider.dart';
 
@@ -7,7 +9,7 @@ import '../widgets/fuser_reports.dart';
 import '../widgets/fuser_upcoming_dashboard.dart';
 
 class FuserDashboardScreen extends ConsumerStatefulWidget {
-  const FuserDashboardScreen({super.key});
+  const FuserDashboardScreen({Key? key}) : super(key: key);
 
   @override
   FuserDashboardScreenState createState() => FuserDashboardScreenState();
@@ -25,7 +27,7 @@ class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
     // Complated Widget
     const FuserReports(),
     // Canceled Widget
-    Container(),
+    const DashboardOverview()
   ];
 
   @override
@@ -44,7 +46,7 @@ class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
               children: [
                 const SizedBox(height: 8),
                 Padding(
-                  padding: const EdgeInsets.only(top: 40),
+                  padding: const EdgeInsets.only(top: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -60,11 +62,11 @@ class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
                       ),
                       const SizedBox(height: 20),
                       Container(
-                        padding: const EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(2),
                         margin: const EdgeInsets.symmetric(horizontal: 20),
                         decoration: BoxDecoration(
                           color: colors(context).color6,
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(25),
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -141,7 +143,7 @@ class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
                                   borderRadius: BorderRadius.circular(19),
                                 ),
                                 child: Text(
-                                  "ملغية",
+                                  "ملخص",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,

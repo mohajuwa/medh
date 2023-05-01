@@ -42,7 +42,7 @@
 //                 borderRadius: BorderRadius.circular(10),
 //                 boxShadow: [
 //                   BoxShadow(
-//                     color: const Color(0x1F000000),
+//                     color: const Color(0x47000000),
 //                     blurRadius: 10,
 //                     spreadRadius: 2,
 //                   ),
@@ -99,7 +99,7 @@
 //                     color: Colors.white,
 //                     boxShadow: [
 //                       BoxShadow(
-//                         color: const Color(0x1F000000),
+//                         color: const Color(0x47000000),
 //                         spreadRadius: 2,
 //                         blurRadius: 10,
 //                       ),

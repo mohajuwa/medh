@@ -27,12 +27,11 @@ class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
     // Messages Screen
     const FuserMedicineScreen(),
     // Schedule Screen
-    const FuserDashboardScreen(),
+    FuserDashboardScreen(),
     // Settings Screen
 
     const FuserSettingsScreen(),
   ];
-  bool shadowColor = false;
   double? scrolledUnderElevation;
 
   @override
@@ -59,9 +58,6 @@ class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
             appBar: AppBar(
               toolbarHeight: 60,
               scrolledUnderElevation: scrolledUnderElevation,
-              shadowColor: shadowColor
-                  ? Theme.of(context).colorScheme.shadow
-                  : colors(context).color1,
               title: Center(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 1),
@@ -86,7 +82,7 @@ class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
                               borderRadius: BorderRadius.circular(18),
                               boxShadow: const [
                                 BoxShadow(
-                                  color: Color(0x1F000000),
+                                  color: Color(0x47000000),
                                   blurRadius: 4,
                                   spreadRadius: 2,
                                 )
@@ -125,7 +121,7 @@ class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
                           borderRadius: BorderRadius.circular(18),
                           boxShadow: const [
                             BoxShadow(
-                              color: Color(0x1F000000),
+                              color: Color(0x47000000),
                               blurRadius: 4,
                               spreadRadius: 2,
                             )
