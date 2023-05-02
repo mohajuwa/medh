@@ -109,7 +109,7 @@ flutter:
   assets:
       - assets/images/
       - assets/stickers/
-      - lib/Summary/assets/
+      - lib/FuseR/Summary/assets/
 
 
 

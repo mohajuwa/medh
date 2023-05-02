@@ -3,7 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:medh/darkmod/theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'pages/home_page.dart';
+import 'HomePage/home_page.dart';
 import 'provider.dart';
 
 void main() {
