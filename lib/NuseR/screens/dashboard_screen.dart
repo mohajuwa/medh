@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medh/darkmod/theme.dart';
+import 'package:medh/Theme/theme.dart';
 
 import '../widgets/best_price_dashboard.dart';
 import '../widgets/neares_km_dashboard.dart';

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medh/darkmod/theme.dart';
+import 'package:medh/Theme/theme.dart';
 import 'package:medh/FuseR/screens/fuser_signup_screen.dart';
 
 import '../../provider.dart';

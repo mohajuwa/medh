@@ -6,16 +6,11 @@ import 'package:medh/FuseR/Summary/Wedgits/overview_task_container.dart';
 import 'package:medh/FuseR/Summary/Wedgits/task_progress_card.dart';
 import 'package:tcard/tcard.dart';
 
-class DashboardOverview extends ConsumerStatefulWidget {
+class DashboardOverview extends ConsumerWidget {
   const DashboardOverview({Key? key}) : super(key: key);
 
   @override
-  DashboardOverviewState createState() => DashboardOverviewState();
-}
-
-class DashboardOverviewState extends ConsumerState<DashboardOverview> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final dynamic data = AppData.progressIndicatorList;
 
     List<Widget> cards = List.generate(

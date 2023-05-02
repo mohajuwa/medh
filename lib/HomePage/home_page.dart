@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medh/darkmod/theme.dart';
+import 'package:medh/Theme/theme.dart';
 import 'package:medh/FuseR/widgets/fuser_navbar_roots.dart';
 import 'package:medh/provider.dart';
 import 'package:medh/NuseR/widgets/navbar_roots.dart';
@@ -9,10 +9,7 @@ class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
-  @override
   Widget build(BuildContext context, WidgetRef ref) {
-    const clr = Color(0xFF58329B);
-
     double? scrolledUnderElevation;
 
     //  هذا عشان زر الرجوع

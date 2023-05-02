@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medh/darkmod/theme.dart';
+import 'package:medh/Theme/theme.dart';
 
 class UpcomingDashboard extends ConsumerStatefulWidget {
   const UpcomingDashboard({super.key});

@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:medh/FuseR/Summary/Constants/constants.dart';
 import 'package:medh/FuseR/Summary/Values/values.dart';
 import 'package:medh/FuseR/Summary/Wedgits/progress_card_close_button.dart';
-import 'package:medh/darkmod/theme.dart';
+import 'package:medh/Theme/theme.dart';
 
 class TaskProgressCard extends StatelessWidget {
   final String cardTitle;

@@ -33,7 +33,7 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
       ),
     ],
     scaffoldBackgroundColor:
-        isDarkTheme ? const Color(0xA8322C2C) : Color(0xFFF6F4FF),
+        isDarkTheme ? const Color(0xA8322C2C) : const Color(0xFFF6F4FF),
     textTheme: Theme.of(context)
         .textTheme
         .copyWith(

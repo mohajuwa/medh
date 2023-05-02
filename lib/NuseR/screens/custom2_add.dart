@@ -1,19 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/navbar_roots.dart';
-
-class Custom2AddScreen extends StatefulWidget {
+class Custom2AddScreen extends StatelessWidget {
   const Custom2AddScreen({super.key});
 
-  @override
-  State<Custom2AddScreen> createState() => _Custom2AddScreenState();
-}
-
-double? scrolledUnderElevation;
-const clr = Color(0xFF58329B);
-bool passTooggle = true;
-
-class _Custom2AddScreenState extends State<Custom2AddScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,7 +14,6 @@ class _Custom2AddScreenState extends State<Custom2AddScreen> {
           appBar: PreferredSize(
             preferredSize: const Size.fromHeight(70),
             child: AppBar(
-              backgroundColor: clr,
               leadingWidth: 30,
               title: Padding(
                 padding: const EdgeInsets.only(top: 5),

@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medh/darkmod/theme.dart';
+import 'package:medh/Theme/theme.dart';
 import 'package:medh/provider.dart';
 
+// ignore: must_be_immutable
 class CustomAddScreen extends ConsumerStatefulWidget {
   const CustomAddScreen({super.key});
-
   @override
   CustomAddScreenState createState() => CustomAddScreenState();
 }
-
-double? scrolledUnderElevation;
-const clr = Color(0xFF58329B);
-bool passTooggle = true;
 
 class CustomAddScreenState extends ConsumerState<CustomAddScreen> {
   @override

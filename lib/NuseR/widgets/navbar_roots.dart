@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medh/darkmod/theme.dart';
+import 'package:medh/Theme/theme.dart';
 import 'package:medh/provider.dart';
 import 'package:medh/NuseR/screens/search_screen.dart';
 import '../screens/dashboard_screen.dart';
@@ -147,49 +147,51 @@ class NavBarRootsState extends ConsumerState<NavBarRoots> {
               ),
             ),
             body: _screens[_selectedIndex],
-            bottomNavigationBar: Container(
-              padding: const EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                color: colors(context).color4,
-                borderRadius: BorderRadius.circular(18),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Color(0x47000000),
-                    blurRadius: 4,
-                    spreadRadius: 2,
-                  )
-                ],
-              ),
-              child: BottomNavigationBar(
-                backgroundColor: colors(context).color4,
-                type: BottomNavigationBarType.fixed,
-                selectedItemColor: colors(context).color1,
-                unselectedItemColor: colors(context).color3,
-                unselectedLabelStyle: const TextStyle(
-                  fontFamily: 'El_Messiri',
+            bottomNavigationBar: SizedBox(
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  color: colors(context).color4,
+                  borderRadius: BorderRadius.circular(18),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color(0x47000000),
+                      blurRadius: 4,
+                      spreadRadius: 2,
+                    )
+                  ],
                 ),
-                onTap: onTapTapped,
-                currentIndex: _selectedIndex,
-                items: const [
-                  BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.home_filled,
+                child: BottomNavigationBar(
+                  backgroundColor: colors(context).color4,
+                  type: BottomNavigationBarType.fixed,
+                  selectedItemColor: colors(context).color1,
+                  unselectedItemColor: colors(context).color3,
+                  unselectedLabelStyle: const TextStyle(
+                    fontFamily: 'El_Messiri',
+                  ),
+                  onTap: onTapTapped,
+                  currentIndex: _selectedIndex,
+                  items: const [
+                    BottomNavigationBarItem(
+                      icon: Icon(
+                        Icons.home_filled,
+                      ),
+                      label: "الرئيسية",
                     ),
-                    label: "الرئيسية",
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(CupertinoIcons.search),
-                    label: "إستعلام",
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.notification_add_outlined),
-                    label: "لوحة الإشعارت",
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.settings),
-                    label: "إعدادات",
-                  ),
-                ],
+                    BottomNavigationBarItem(
+                      icon: Icon(CupertinoIcons.search),
+                      label: "إستعلام",
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.notification_add_outlined),
+                      label: "لوحة الإشعارت",
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.settings),
+                      label: "إعدادات",
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

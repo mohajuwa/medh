@@ -5,17 +5,14 @@ import 'package:medh/FuseR/widgets/fuser_navbar_roots.dart';
 
 import 'small_screens/custom_add_done.dart';
 
-class AddMedcineScreen extends StatefulWidget {
-  const AddMedcineScreen({super.key});
-
-  @override
-  State<AddMedcineScreen> createState() => _AddMedcineScreenState();
-}
-
-class _AddMedcineScreenState extends State<AddMedcineScreen> {
+// ignore: must_be_immutable
+class AddMedcineScreen extends StatelessWidget {
   double? scrolledUnderElevation;
   final clr = const Color(0xFF58329B);
   bool passTooggle = true;
+
+  AddMedcineScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
