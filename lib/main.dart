@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:medh/HomePage/oneTimeScreen.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -42,3 +43,21 @@ class MyApp extends ConsumerWidget {
     );
   }
 }
+
+
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   SharedPreferences prefs = await SharedPreferences.getInstance();
+//   bool isFirstRun = prefs.getBool('isFirstRun') ?? true;
+
+//   if (isFirstRun) {
+//     await prefs.setBool('isFirstRun', false);
+//   }
+
+//   runApp(MyApp(isFirstRun: isFirstRun));
+// }
+// class MyApp extends ConsumerWidget {
+//  final bool isFirstRun;
+
+//   MyApp({required this.isFirstRun});

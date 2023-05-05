@@ -41,7 +41,7 @@ class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
     return WillPopScope(
       onWillPop: () async {
         if (_currentIndex == 0) {
-          return false;
+          return true;
         }
         setState(() {
           _currentIndex = 0;

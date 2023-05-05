@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:medh/FuseR/Summary/Values/values.dart';
+import 'package:medh/Theme/theme.dart';
 
 class DailyGoalCard extends StatelessWidget {
   const DailyGoalCard({Key? key}) : super(key: key);
@@ -8,12 +8,20 @@ class DailyGoalCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: double.infinity,
-        padding: EdgeInsets.all(20.0),
+        width: 400,
+        padding: const EdgeInsets.all(20.0),
         height: 220,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            color: AppColors.primaryBackgroundColor),
+          color: const Color(0xF7322C2C),
+          borderRadius: BorderRadius.circular(18),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0xAD000000),
+              blurRadius: 4,
+              spreadRadius: 2,
+            )
+          ],
+        ),
         child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -22,9 +30,9 @@ class DailyGoalCard extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Daily Goal',
-                      style: GoogleFonts.lato(
-                          color: HexColor.fromHex("616575"),
+                  Text('مبيعات يومية',
+                      style: TextStyle(
+                          color: colors(context).color2,
                           fontSize: 17,
                           fontWeight: FontWeight.w500)),
                   AppSpaces.verticalSpace10,
@@ -35,51 +43,56 @@ class DailyGoalCard extends StatelessWidget {
                           width: 50,
                           height: 25,
                           decoration: BoxDecoration(
-                              color: HexColor.fromHex("8ACA72"),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20.0))),
-                          child: Center(
-                            child: Text('3/5',
-                                style: GoogleFonts.lato(
+                              color: colors(context).color1,
+                              borderRadius: const BorderRadius.all(
+                                  Radius.circular(20.0))),
+                          child: const Center(
+                            child: Text('56',
+                                style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 16,
                                 )),
                           )),
                       AppSpaces.horizontalSpace10,
-                      Text('Tasks',
-                          style: GoogleFonts.lato(
+                      const Text('مبيعات',
+                          style: TextStyle(
                               color: Colors.white,
                               fontSize: 17,
                               fontWeight: FontWeight.w500)),
                     ],
                   ),
                   AppSpaces.verticalSpace10,
-                  Text('You marked 3/5 tasks\nare done 🎉',
-                      style: GoogleFonts.lato(
-                          color: HexColor.fromHex("616575"),
+                  const Text('مرتجع 56/5 \nمكتملة  56🎉',
+                      style: TextStyle(
+                          color: Colors.white70,
                           fontSize: 17,
                           fontWeight: FontWeight.w500)),
-                  AppSpaces.verticalSpace20,
-                  Container(
-                    width: 120,
-                    height: 40,
-                    child: ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                                HexColor.fromHex("C25FFF")),
-                            shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(50.0),
-                                    side: BorderSide(
-                                        color: HexColor.fromHex("C25FFF"))))),
-                        child: Text('All Task',
-                            style: GoogleFonts.lato(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white))),
-                  )
+                  Center(
+                    child: SizedBox(
+                      width: 90,
+                      height: 45,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          decoration: BoxDecoration(
+                            color: colors(context).color1,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              "كل المبيعات",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
               Stack(
@@ -95,12 +108,13 @@ class DailyGoalCard extends StatelessWidget {
                         child: Container(
                           width: 50,
                           height: 50,
-                          decoration: BoxDecoration(shape: BoxShape.circle),
-                          child: ClipOval(
+                          decoration:
+                              const BoxDecoration(shape: BoxShape.circle),
+                          child: const ClipOval(
                             child: Image(
                               fit: BoxFit.contain,
                               image: AssetImage(
-                                "assets/small-logo.png",
+                                "assets/images/icon1.png",
                               ),
                             ),
                           ),
@@ -114,13 +128,14 @@ class DailyGoalCard extends StatelessWidget {
                       child: TweenAnimationBuilder<double>(
                         tween: Tween<double>(begin: 0.0, end: 0.80),
                         duration: const Duration(milliseconds: 1000),
-                        builder: (context, value, _) => Container(
+                        builder: (context, value, _) => SizedBox(
                           width: 90,
                           height: 90,
                           child: CircularProgressIndicator(
-                              strokeWidth: 8,
-                              value: value,
-                              color: HexColor.fromHex("8FFFCF")),
+                            strokeWidth: 8,
+                            value: value,
+                            color: colors(context).color1,
+                          ),
                         ),
                       ),
                     ),

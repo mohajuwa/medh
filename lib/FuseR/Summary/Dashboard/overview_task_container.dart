@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:medh/FuseR/Summary/Values/values.dart';
 import 'package:medh/FuseR/Summary/Wedgits/task_container_image.dart';
 
@@ -19,10 +18,10 @@ class OverviewTaskContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Container(
           width: double.infinity,
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           height: 80,
           decoration: BoxDecoration(
               color: AppColors.primaryBackgroundColor,
@@ -38,20 +37,18 @@ class OverviewTaskContainer extends StatelessWidget {
                   ),
                   AppSpaces.horizontalSpace20,
                   Text(cardTitle,
-                      style: GoogleFonts.lato(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 20))
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w600, fontSize: 20))
                 ],
               ),
               Row(children: [
                 Text(numberOfItems,
-                    style: GoogleFonts.lato(
+                    style: TextStyle(
                         color: backgroundColor,
                         fontWeight: FontWeight.w600,
                         fontSize: 20)),
                 AppSpaces.horizontalSpace20,
-                Icon(Icons.chevron_right, color: Colors.white, size: 30)
+                const Icon(Icons.chevron_right, color: Colors.white, size: 30)
               ])
             ],
           )),

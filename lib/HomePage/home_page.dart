@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/Theme/theme.dart';
-import 'package:medh/FuseR/widgets/fuser_navbar_roots.dart';
 import 'package:medh/provider.dart';
-import 'package:medh/NuseR/widgets/navbar_roots.dart';
 
-class HomePage extends ConsumerWidget {
+import '../FuseR/widgets/fuser_navbar_roots.dart';
+import '../NuseR/widgets/navbar_roots.dart';
+
+class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    double? scrolledUnderElevation;
+  HomePageState createState() => HomePageState();
+}
 
+class HomePageState extends ConsumerState<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    double? scrolledUnderElevation;
     //  هذا عشان زر الرجوع
 
     return WillPopScope(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medh/FuseR/Summary/Values/values.dart';
 
 import 'bar_chart.dart';
 
@@ -9,12 +8,20 @@ class ProductivityChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: double.infinity,
-        padding: EdgeInsets.all(20.0),
+        width: 400,
+        padding: const EdgeInsets.all(20.0),
         height: 220,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            color: AppColors.primaryBackgroundColor),
+          borderRadius: BorderRadius.circular(18),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0xAD000000),
+              blurRadius: 4,
+              spreadRadius: 2,
+            )
+          ],
+          color: const Color(0xF7322C2C),
+        ),
         child: BarChartSample1());
   }
 }

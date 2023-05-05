@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/FuseR/Summary/Dashboard/overview.dart';
-import 'package:medh/FuseR/Summary/Dashboard/overview_task_container.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/provider.dart';
 
+import '../Summary/Dashboard/productivity.dart';
+import '../widgets/daytasks.dart';
 import '../widgets/fuser_reports.dart';
 import '../widgets/fuser_upcoming_dashboard.dart';
 
@@ -26,8 +27,10 @@ class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
     const FuserUpcomingDashboard(),
     // Complated Widget
     const FuserReports(),
-    // Canceled Widget
-    const DashboardOverview()
+    // Summary Widget
+    const DashboardOverview(),
+    // Summary Widget
+    const FuserDayTasks(),
   ];
 
   @override
@@ -63,13 +66,13 @@ class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
                       const SizedBox(height: 20),
                       Container(
                         padding: const EdgeInsets.all(2),
-                        margin: const EdgeInsets.symmetric(horizontal: 20),
+                        margin: const EdgeInsets.symmetric(horizontal: 5),
                         decoration: BoxDecoration(
                           color: colors(context).color6,
                           borderRadius: BorderRadius.circular(25),
                         ),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             TextButton(
                               onPressed: () {
@@ -107,7 +110,7 @@ class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
                               },
                               child: Container(
                                 padding: const EdgeInsets.symmetric(
-                                    vertical: 12, horizontal: 25),
+                                    vertical: 12, horizontal: 20),
                                 decoration: BoxDecoration(
                                   color: _currentIndex == 1
                                       ? colors(context).color1
@@ -148,6 +151,34 @@ class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500,
                                     color: _currentIndex == 2
+                                        ? Colors.white
+                                        : colors(context).color3,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                setState(() {
+                                  _currentIndex = 3;
+                                });
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 12, horizontal: 20),
+                                decoration: BoxDecoration(
+                                  color: _currentIndex == 3
+                                      ? colors(context).color1
+                                      : Colors.transparent,
+                                  borderRadius: BorderRadius.circular(19),
+                                ),
+                                child: Text(
+                                  "مبيعات",
+                                  style: TextStyle(
+                                    fontFamily: 'El_Messiri',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: _currentIndex == 3
                                         ? Colors.white
                                         : colors(context).color3,
                                   ),

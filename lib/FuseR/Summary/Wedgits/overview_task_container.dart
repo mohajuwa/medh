@@ -58,7 +58,7 @@ class OverviewTaskContainer extends StatelessWidget {
               ),
               Row(children: [
                 Text(numberOfItems,
-                    style: GoogleFonts.lato(
+                    style: TextStyle(
                         color: backgroundColor,
                         fontWeight: FontWeight.w600,
                         fontSize: 20)),

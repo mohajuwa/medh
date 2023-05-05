@@ -10,7 +10,7 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
         color1: isDarkTheme ? Colors.purple : const Color(0xD09B1642),
 
         //
-        color2: isDarkTheme ? Colors.blue : Colors.blueGrey,
+        color2: isDarkTheme ? Colors.blue : const Color(0xFF6DACCB),
 
         // Overley Icons Colors in Theme
         color3: isDarkTheme ? Colors.white38 : Colors.black38,

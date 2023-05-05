@@ -4,28 +4,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/Theme/theme.dart';
-import 'fuser_mreports.dart';
-import 'fuser_yreports.dart';
+import '../Summary/Wedgits/daily_goal_card.dart';
+import '../Summary/Wedgits/productivity_chart.dart';
 
-class FuserReports extends ConsumerStatefulWidget {
-  const FuserReports({super.key});
+class FuserDayTasks extends ConsumerStatefulWidget {
+  const FuserDayTasks({super.key});
 
   @override
-  FuserReportsState createState() => FuserReportsState();
+  FuserDayTasksState createState() => FuserDayTasksState();
 }
 
-class FuserReportsState extends ConsumerState<FuserReports> {
+class FuserDayTasksState extends ConsumerState<FuserDayTasks> {
   int _buttonIndex = 0;
-
-  final clr = const Color(0xFFF4F6FA);
-  final clr1 = const Color(0xFF58329B);
 
   final _dashboardWidgets = [
     // عرض التقرير الشهري
-    const MonthelyReports(),
+    const DailyGoalCard(),
 
     // عرض التقرير السنوي
-    const YearlyReports(),
+    const ProductivityChart(),
   ];
 
   @override
@@ -67,7 +64,7 @@ class FuserReportsState extends ConsumerState<FuserReports> {
                           borderRadius: BorderRadius.circular(19),
                         ),
                         child: Text(
-                          " تقرير يومي",
+                          " مبيعات اليوم",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
@@ -94,7 +91,7 @@ class FuserReportsState extends ConsumerState<FuserReports> {
                           borderRadius: BorderRadius.circular(19),
                         ),
                         child: Text(
-                          "تقرير سنوي",
+                          "مبيعات الإسبوع",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,

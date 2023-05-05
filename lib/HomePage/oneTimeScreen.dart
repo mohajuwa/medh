@@ -1,114 +1,69 @@
-// import 'dart:async';
+// ignore_for_file: use_build_context_synchronously
 
-// import 'package:after_layout/after_layout.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import 'package:medh/fuser_screens/widgets/fuser_navbar_roots.dart';
-// import 'package:medh/pages/home_page.dart';
-// import 'package:medh/widgets/navbar_roots.dart';
-// import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:async';
 
-// class OntimeApp extends StatelessWidget {
-//   const OntimeApp({super.key});
+import 'package:after_layout/after_layout.dart';
+import 'package:flutter/material.dart';
+import 'package:medh/FuseR/widgets/fuser_navbar_roots.dart';
+import 'package:medh/HomePage/home_page.dart';
+import 'package:medh/NuseR/widgets/navbar_roots.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return const MaterialApp(
-//       home: SplashScreen(),
-//     );
-//   }
-// }
+class OneTimeScreen extends StatefulWidget {
+  const OneTimeScreen({super.key});
 
-// class SplashScreen extends StatefulWidget {
-//   const SplashScreen({super.key});
+  @override
+  OneTimeScreenState createState() => OneTimeScreenState();
+}
 
-//   @override
-//   SplashScreenState createState() => SplashScreenState();
-// }
+class OneTimeScreenState extends State<OneTimeScreen>
+    with AfterLayoutMixin<OneTimeScreen> {
+  Future checkFirstSeen() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool seen = (prefs.getBool('seen') ?? false);
+    bool fseen = (prefs.getBool('fseen') ?? false);
 
-// class SplashScreenState extends State<SplashScreen>
-//     with AfterLayoutMixin<SplashScreen> {
-//   Future checkFirstSeen() async {
-//     SharedPreferences prefs = await SharedPreferences.getInstance();
-//     bool seen = (prefs.getBool('seen') ?? false);
+    if (seen) {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const NavBarRoots()));
+    } else {
+      await prefs.setBool(
+        'seen',
+        true,
+      );
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
+    }
+  }
 
-//     if (seen) {
-//       Navigator.of(context).pushReplacement(
-//           MaterialPageRoute(builder: (context) => const NHome()));
-//     } else {
-//       await prefs.setBool('seen', true);
-//       Navigator.of(context).pushReplacement(
-//           MaterialPageRoute(builder: (context) => const FIntroScreen()));
-//     }
-//   }
+  Future fcheckFirstSeen() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool fseen = (prefs.getBool('fseen') ?? false);
 
-//   @override
-//   void afterFirstLayout(BuildContext context) => checkFirstSeen();
+    if (fseen) {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const FuserNavBarRoots()));
+    } else {
+      await prefs.setBool(
+        'fseen',
+        true,
+      );
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
+    }
+    @override
+    void afterFirstLayout(BuildContext context) => fcheckFirstSeen();
+  }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Scaffold(
-//       body: Center(
-//         child: Text('جار التحميل …'),
-//       ),
-//     );
-//   }
-// }
+  @override
+  void afterFirstLayout(BuildContext context) => checkFirstSeen();
 
-// class NHome extends ConsumerStatefulWidget {
-//   const NHome({super.key});
-
-//   @override
-//   NHomeState createState() => NHomeState();
-// }
-
-// class NHomeState extends ConsumerState<NHome> {
-//   Widget build(BuildContext context) {
-//     return const MaterialApp(
-//       home: Directionality(
-//         textDirection: TextDirection.rtl,
-//         child: NavBarRoots(),
-//       ),
-//     );
-//   }
-// }
-
-// class NIntroScreen extends StatelessWidget {
-//   const NIntroScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const MaterialApp(
-//       home: HomePage(),
-//     );
-//   }
-// }
-
-// class FHome extends ConsumerStatefulWidget {
-//   const FHome({super.key});
-
-//   @override
-//   FHomeState createState() => FHomeState();
-// }
-
-// class FHomeState extends ConsumerState<FHome> {
-//   Widget build(BuildContext context) {
-//     return const MaterialApp(
-//       home: Directionality(
-//         textDirection: TextDirection.rtl,
-//         child: FuserNavBarRoots(),
-//       ),
-//     );
-//   }
-// }
-
-// class FIntroScreen extends StatelessWidget {
-//   const FIntroScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const MaterialApp(
-//       home: HomePage(),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Text('جار التحميل …'),
+      ),
+    );
+  }
+}

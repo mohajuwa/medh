@@ -54,8 +54,13 @@ dependencies:
   tcard: ^1.3.5
   flutter_shapes: ^0.3.0
   
-  
 
+  
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/icon1.png
+  android: true
+  ios: true
 
 
 

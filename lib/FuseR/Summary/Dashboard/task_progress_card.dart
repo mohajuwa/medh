@@ -51,12 +51,12 @@ class TaskProgressCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(cardTitle,
-                      style: GoogleFonts.lato(
-                          fontWeight: FontWeight.bold, fontSize: 22)),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22)),
                   AppSpaces.verticalSpace10,
                   Text('$rating is completed',
-                      style: GoogleFonts.lato(
-                          fontWeight: FontWeight.w500, fontSize: 16)),
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16)),
                   const SizedBox(
                     height: 10,
                   ),

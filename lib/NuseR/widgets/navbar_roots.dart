@@ -25,7 +25,7 @@ class NavBarRootsState extends ConsumerState<NavBarRoots> {
     // Home Screen يا نقيب
     const HomeScreen(),
     // Messages Screen
-    const MessagesScreen(),
+    SearchScreen(),
     // Schedule Screen
     const DashboardScreen(),
     // Settings Screen
@@ -35,8 +35,6 @@ class NavBarRootsState extends ConsumerState<NavBarRoots> {
 
   @override
   Widget build(BuildContext context) {
-    double? scrolledUnderElevation;
-
     return WillPopScope(
       onWillPop: () async {
         if (_selectedIndex == 0) {
@@ -54,8 +52,7 @@ class NavBarRootsState extends ConsumerState<NavBarRoots> {
           textDirection: TextDirection.rtl,
           child: Scaffold(
             appBar: AppBar(
-              toolbarHeight: 60,
-              scrolledUnderElevation: scrolledUnderElevation,
+              toolbarHeight: 55,
               title: Center(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 1),

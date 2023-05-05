@@ -4,35 +4,30 @@ import 'package:medh/Theme/theme.dart';
 import 'package:medh/provider.dart';
 import 'package:medh/NuseR/screens/results_screen.dart';
 
-class MessagesScreen extends ConsumerStatefulWidget {
-  const MessagesScreen({super.key});
+// ignore: must_be_immutable
+class SearchScreen extends ConsumerWidget {
+  List imgs = [
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+    "doc2.jpg",
+  ];
+  List symptoms = [
+    "الكل",
+    "الظهار",
+    "السبل",
+    "المركزي",
+    "الدائري",
+  ];
+
+  double? scrolledUnderElevation;
+
+  SearchScreen({super.key});
 
   @override
-  MessagesScreenState createState() => MessagesScreenState();
-}
-
-List imgs = [
-  "doc2.jpg",
-  "doc2.jpg",
-  "doc2.jpg",
-  "doc2.jpg",
-  "doc2.jpg",
-  "doc2.jpg",
-];
-List symptoms = [
-  "الكل",
-  "الظهار",
-  "السبل",
-  "المركزي",
-  "الدائري",
-];
-const clr = Color(0x8659329B);
-
-double? scrolledUnderElevation;
-
-class MessagesScreenState extends ConsumerState<MessagesScreen> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return WillPopScope(
       onWillPop: () {
         //trigger leaving and use own data
@@ -41,14 +36,16 @@ class MessagesScreenState extends ConsumerState<MessagesScreen> {
         return Future.value(true);
       },
       child: MaterialApp(
-        theme: getAppTheme(context, ref.watch(appThemeProvider)),
+        theme: getAppTheme(
+          context,
+          ref.watch(appThemeProvider),
+        ),
         debugShowCheckedModeBanner: false,
         home: Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
             appBar: AppBar(
               toolbarHeight: 60,
-              scrolledUnderElevation: scrolledUnderElevation,
               title: Padding(
                 padding: const EdgeInsets.only(top: 1, bottom: 5),
                 child: Column(
@@ -102,7 +99,6 @@ class MessagesScreenState extends ConsumerState<MessagesScreen> {
             ),
             body: ListView(
               children: [
-                const SizedBox(height: 3),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 2.0),
                   child: Divider(
@@ -117,7 +113,6 @@ class MessagesScreenState extends ConsumerState<MessagesScreen> {
                   child: Text("فلترة البحث حسب المنطقة",
                       style: Theme.of(context).textTheme.titleMedium),
                 ),
-                const SizedBox(height: 5),
                 SizedBox(
                   height: 50,
                   child: ListView.builder(

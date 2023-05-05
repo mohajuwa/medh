@@ -13,7 +13,7 @@ class TaskContainerImage extends StatelessWidget {
         width: 70,
         height: double.infinity,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            borderRadius: const BorderRadius.all(Radius.circular(10.0)),
             color: backgroundColor),
         child: ClipRRect(
             child: Image(image: AssetImage(imageUrl), fit: BoxFit.scaleDown)));

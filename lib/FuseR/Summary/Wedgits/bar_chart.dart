@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:medh/FuseR/Summary/Values/values.dart';
+import 'package:medh/Theme/theme.dart';
 
 class BarChartSample1 extends StatefulWidget {
   final List<Color> availableColors = [
@@ -14,7 +14,15 @@ class BarChartSample1 extends StatefulWidget {
     Colors.orange,
     Colors.pink,
     Colors.redAccent,
+    Colors.red,
+    Colors.deepOrange,
+    Colors.blueGrey,
+    Colors.white,
+    Colors.pinkAccent,
+    Colors.greenAccent,
   ];
+
+  BarChartSample1({super.key});
 
   @override
   State<StatefulWidget> createState() => BarChartSample1State();
@@ -22,7 +30,7 @@ class BarChartSample1 extends StatefulWidget {
 
 class BarChartSample1State extends State<BarChartSample1> {
   final Color barBackgroundColor = const Color(0xFFA06AFA);
-  static const Color mainColor = const Color(0xFFFAA3FF);
+  static const Color mainColor = Color(0xFFFAA3FF);
   final Duration animDuration = const Duration(milliseconds: 250);
 
   int touchedIndex = -1;
@@ -43,13 +51,12 @@ class BarChartSample1State extends State<BarChartSample1> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Completed in the last 7 Days",
-                      style: GoogleFonts.lato(
-                          color: HexColor.fromHex("616575"), fontSize: 13)),
+                  const Text("مبياعتي لهذا الإسبوع  (7  أيام)",
+                      style: TextStyle(color: Colors.white, fontSize: 16)),
                   IconButton(
                     icon: Icon(
                       isPlaying ? Icons.pause : Icons.play_arrow,
-                      color: const Color(0xff0f4a3c),
+                      color: Colors.pink,
                     ),
                     onPressed: () {
                       setState(() {
@@ -74,14 +81,14 @@ class BarChartSample1State extends State<BarChartSample1> {
               ),
               AppSpaces.verticalSpace10,
               Row(children: [
-                Text('108 Tasks',
-                    style: GoogleFonts.lato(
+                const Text('108  إجمالي',
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: mainColor,
                     )),
                 AppSpaces.horizontalSpace20,
-                Text('6 Projects',
-                    style: GoogleFonts.lato(
+                Text('6  ايام الدوام',
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: barBackgroundColor,
                     )),
@@ -106,12 +113,12 @@ class BarChartSample1State extends State<BarChartSample1> {
       barRods: [
         BarChartRodData(
           toY: isTouched ? y + 1 : y,
-          color: isTouched ? Colors.yellow : barColor,
+          color: isTouched ? Colors.yellowAccent : barColor,
           width: width,
           backDrawRodData: BackgroundBarChartRodData(
             show: true,
             toY: 20,
-            color: barBackgroundColor,
+            color: colors(context).color1,
           ),
         ),
       ],
@@ -144,37 +151,37 @@ class BarChartSample1State extends State<BarChartSample1> {
     return BarChartData(
       barTouchData: BarTouchData(
         touchTooltipData: BarTouchTooltipData(
-            tooltipBgColor: Colors.blueGrey,
+            tooltipBgColor: Colors.black87,
             getTooltipItem: (group, groupIndex, rod, rodIndex) {
               String weekDay;
               switch (group.x.toInt()) {
                 case 0:
-                  weekDay = 'Monday';
+                  weekDay = 'الجمعة';
                   break;
                 case 1:
-                  weekDay = 'Tuesday';
+                  weekDay = 'الخميس';
                   break;
                 case 2:
-                  weekDay = 'Wednesday';
+                  weekDay = 'الأربعاء';
                   break;
                 case 3:
-                  weekDay = 'Thursday';
+                  weekDay = 'الثلاثاء';
                   break;
                 case 4:
-                  weekDay = 'Friday';
+                  weekDay = 'الأثنين';
                   break;
                 case 5:
-                  weekDay = 'Saturday';
+                  weekDay = 'الأحد';
                   break;
                 case 6:
-                  weekDay = 'Sunday';
+                  weekDay = 'السبت';
                   break;
                 default:
                   throw Error();
               }
               return BarTooltipItem(
-                weekDay + '\n',
-                TextStyle(
+                '$weekDay\n',
+                const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
@@ -183,8 +190,8 @@ class BarChartSample1State extends State<BarChartSample1> {
                   TextSpan(
                     text: (rod.toY - 1).toString(),
                     style: TextStyle(
-                      color: Colors.yellow,
-                      fontSize: 12,
+                      color: colors(context).color2,
+                      fontSize: 18,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -222,21 +229,21 @@ class BarChartSample1State extends State<BarChartSample1> {
             getTitlesWidget: (double value, TitleMeta meta) {
               switch (value.toInt()) {
                 case 0:
-                  return _BarChartTitle('M');
+                  return const _BarChartTitle('M');
                 case 1:
-                  return _BarChartTitle('T');
+                  return const _BarChartTitle('T');
                 case 2:
-                  return _BarChartTitle('W');
+                  return const _BarChartTitle('W');
                 case 3:
-                  return _BarChartTitle('T');
+                  return const _BarChartTitle('T');
                 case 4:
-                  return _BarChartTitle('F');
+                  return const _BarChartTitle('F');
                 case 5:
-                  return _BarChartTitle('S');
+                  return const _BarChartTitle('S');
                 case 6:
-                  return _BarChartTitle('S');
+                  return const _BarChartTitle('S');
                 default:
-                  return _BarChartTitle('');
+                  return const _BarChartTitle('');
               }
             },
           ),
@@ -274,21 +281,21 @@ class BarChartSample1State extends State<BarChartSample1> {
             getTitlesWidget: (double value, TitleMeta meta) {
               switch (value.toInt()) {
                 case 0:
-                  return _BarChartTitle('M');
+                  return const _BarChartTitle('M');
                 case 1:
-                  return _BarChartTitle('T');
+                  return const _BarChartTitle('T');
                 case 2:
-                  return _BarChartTitle('W');
+                  return const _BarChartTitle('W');
                 case 3:
-                  return _BarChartTitle('T');
+                  return const _BarChartTitle('T');
                 case 4:
-                  return _BarChartTitle('F');
+                  return const _BarChartTitle('F');
                 case 5:
-                  return _BarChartTitle('S');
+                  return const _BarChartTitle('S');
                 case 6:
-                  return _BarChartTitle('S');
+                  return const _BarChartTitle('S');
                 default:
-                  return _BarChartTitle('');
+                  return const _BarChartTitle('');
               }
             },
           ),
