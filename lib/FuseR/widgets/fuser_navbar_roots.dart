@@ -23,9 +23,9 @@ class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
 
   final _screens = [
     // Home Screen يا نقيب
-    const FuserHomeScreen(),
-    // Messages Screen
-    const FuserMedicineScreen(),
+    FuserHomeScreen(),
+    // Medicines Screen
+    FuserMedicineScreen(),
     // Schedule Screen
     const FuserDashboardScreen(),
     // Settings Screen

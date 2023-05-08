@@ -2,23 +2,17 @@
 //  مضافه الى صفحة لوحة التحكم تحديداً زر الطلبات في القائمة
 
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/Theme/theme.dart';
 
-class FuserUpcomingDashboard extends ConsumerStatefulWidget {
+class FuserUpcomingDashboard extends StatelessWidget {
   const FuserUpcomingDashboard({super.key});
-  @override
-  FuserUpcomingDashboardState createState() => FuserUpcomingDashboardState();
-}
 
-class FuserUpcomingDashboardState
-    extends ConsumerState<FuserUpcomingDashboard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             "العميل",
@@ -33,13 +27,14 @@ class FuserUpcomingDashboardState
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x47000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],
             ),
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
+              height: 200,
               child: Column(
                 children: [
                   const ListTile(
@@ -172,13 +167,14 @@ class FuserUpcomingDashboardState
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x47000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],
             ),
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
+              height: 200,
               child: Column(
                 children: [
                   const ListTile(
@@ -311,13 +307,14 @@ class FuserUpcomingDashboardState
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x47000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],
             ),
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
+              height: 200,
               child: Column(
                 children: [
                   const ListTile(
@@ -353,8 +350,8 @@ class FuserUpcomingDashboardState
                             Icons.calendar_month,
                             color: colors(context).color1,
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "12/01/2023",
                           ),
                         ],
@@ -365,8 +362,8 @@ class FuserUpcomingDashboardState
                             Icons.access_time_filled,
                             color: colors(context).color1,
                           ),
-                          SizedBox(width: 5),
-                          Text(
+                          const SizedBox(width: 5),
+                          const Text(
                             "02:58 AM",
                           )
                         ],

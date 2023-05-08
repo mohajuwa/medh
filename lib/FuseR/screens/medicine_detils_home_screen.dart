@@ -77,7 +77,7 @@ class FuserMedicineDitlesScreenState
                                   AssetImage("assets/images/icon1.png"),
                             ),
                             const SizedBox(height: 15),
-                            const Text(
+                            const SelectableText(
                               "إسم الدواء",
                               style: TextStyle(
                                 fontSize: 23,
@@ -278,7 +278,7 @@ class FuserMedicineDitlesScreenState
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x3C000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],

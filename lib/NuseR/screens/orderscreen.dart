@@ -293,7 +293,7 @@ class OrderScreenState extends ConsumerState<OrderScreen> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x3C000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],

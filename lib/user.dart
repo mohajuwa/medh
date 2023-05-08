@@ -9,10 +9,10 @@ class User {
   User({required this.role});
 }
 
-class MyApp extends StatelessWidget {
+class UsersType extends StatelessWidget {
   final User user;
 
-  MyApp({required this.user});
+  const UsersType({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     } else if (user.role == 'medicine_provider') {
       return const NavBarRoots();
     } else {
-      return HomePage(); // add default behaviour for other roles
+      return const HomePage(); // add default behaviour for other roles
     }
   }
 }

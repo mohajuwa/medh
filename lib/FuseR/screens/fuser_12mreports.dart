@@ -66,13 +66,13 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 5),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: colors(context).color4,
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: const [
                           BoxShadow(
                             color: Color(0x47000000),
-                            blurRadius: 4,
-                            spreadRadius: 2,
+                            blurRadius: 3,
+                            spreadRadius: 1,
                           )
                         ],
                       ),
@@ -82,70 +82,76 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                           children: [
                             Center(
                               child: Container(
+                                color: Colors.white,
                                 margin: const EdgeInsets.only(
-                                    right: 2, left: 2, top: 0.5, bottom: 3),
+                                    right: 2, left: 2, bottom: 3),
                                 width: MediaQuery.of(context).size.width / 1.1,
                                 child: Table(
                                   defaultColumnWidth: const FlexColumnWidth(1),
                                   border: TableBorder.all(
-                                      color: const Color(0xFF58329B),
+                                      color: Colors.black,
                                       style: BorderStyle.solid,
                                       width: 1.5),
                                   children: [
                                     TableRow(children: [
-                                      Column(children: const [
+                                      Column(children: [
                                         Text(
                                           'الصنف',
                                           style: TextStyle(
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
-                                            color: Colors.blue,
+                                            color: colors(context).color2,
                                           ),
                                         ),
                                       ]),
-                                      Column(children: const [
+                                      Column(children: [
                                         Text(
                                           'الموقع',
                                           style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.blue),
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.w500,
+                                            color: colors(context).color2,
+                                          ),
                                         ),
                                       ]),
-                                      Column(children: const [
+                                      Column(children: [
                                         Text(
                                           'المورد',
                                           style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.blue),
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.w500,
+                                            color: colors(context).color2,
+                                          ),
                                         ),
                                       ]),
-                                      Column(children: const [
+                                      Column(children: [
                                         Text(
                                           'الكمية',
                                           style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.blue),
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.w500,
+                                            color: colors(context).color2,
+                                          ),
                                         ),
                                       ]),
-                                      Column(children: const [
+                                      Column(children: [
                                         Text(
                                           'السعر',
                                           style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.blue),
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.w500,
+                                            color: colors(context).color2,
+                                          ),
                                         ),
                                       ]),
-                                      Column(children: const [
+                                      Column(children: [
                                         Text(
                                           'التاريخ',
                                           style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.blue),
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.w500,
+                                            color: colors(context).color2,
+                                          ),
                                         ),
                                       ]),
                                     ]),
@@ -154,10 +160,10 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           'ع.م - س',
                                           style: TextStyle(
-                                            fontSize: 10,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.w500,
-                                            fontFamily: "Amiri_Quran",
                                             color: Colors.black,
+                                            fontFamily: "Amiri_Quran",
                                           ),
                                         ),
                                       ]),
@@ -165,10 +171,10 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           'إب - السبل ',
                                           style: TextStyle(
-                                            fontSize: 10,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.w500,
-                                            fontFamily: "Amiri_Quran",
                                             color: Colors.black,
+                                            fontFamily: "Amiri_Quran",
                                           ),
                                         ),
                                       ]),
@@ -176,10 +182,10 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           '5*',
                                           style: TextStyle(
-                                            fontSize: 10,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.w500,
-                                            fontFamily: "Amiri_Quran",
                                             color: Colors.black,
+                                            fontFamily: "Amiri_Quran",
                                           ),
                                         ),
                                       ]),
@@ -188,10 +194,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '14',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -200,10 +207,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '500*',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -211,10 +219,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           formattedDate,
                                           style: const TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: "Amiri_Quran",
-                                              color: Colors.black),
+                                            fontSize: 12,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w400,
+                                            fontFamily: "Amiri_Quran",
+                                          ),
                                         ),
                                       ]),
                                     ]),
@@ -223,10 +232,10 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           'ع.م - س',
                                           style: TextStyle(
-                                            fontSize: 10,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.w500,
-                                            fontFamily: "Amiri_Quran",
                                             color: Colors.black,
+                                            fontFamily: "Amiri_Quran",
                                           ),
                                         ),
                                       ]),
@@ -235,10 +244,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             'إب - السبل ',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -247,10 +257,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '5*',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -259,10 +270,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '89',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -271,10 +283,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '500*',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -282,10 +295,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           formattedDate,
                                           style: const TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: "Amiri_Quran",
-                                              color: Colors.black),
+                                            fontSize: 12,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w400,
+                                            fontFamily: "Amiri_Quran",
+                                          ),
                                         ),
                                       ]),
                                     ]),
@@ -294,10 +308,10 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           'ع.م - س',
                                           style: TextStyle(
-                                            fontSize: 10,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.w500,
-                                            fontFamily: "Amiri_Quran",
                                             color: Colors.black,
+                                            fontFamily: "Amiri_Quran",
                                           ),
                                         ),
                                       ]),
@@ -306,10 +320,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             'إب - السبل ',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -318,10 +333,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '5*',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -330,10 +346,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '$intValue',
                                             style: const TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.w500,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -342,83 +359,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '500*',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
-                                          ),
-                                        ],
-                                      ),
-                                      Column(
-                                        children: [
-                                          Text(
-                                            formattedDate,
-                                            style: const TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w400,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
-                                          ),
-                                        ],
-                                      ),
-                                    ]),
-                                    TableRow(children: [
-                                      Column(children: const [
-                                        Text(
-                                          'ع.م - س',
-                                          style: TextStyle(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w500,
-                                            fontFamily: "Amiri_Quran",
-                                            color: Colors.black,
-                                          ),
-                                        ),
-                                      ]),
-                                      Column(
-                                        children: const [
-                                          Text(
-                                            'إب - السبل ',
-                                            style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
-                                          ),
-                                        ],
-                                      ),
-                                      Column(
-                                        children: const [
-                                          Text(
-                                            '5*',
-                                            style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
-                                          ),
-                                        ],
-                                      ),
-                                      Column(
-                                        children: [
-                                          Text(
-                                            '$intValue',
-                                            style: const TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
-                                          ),
-                                        ],
-                                      ),
-                                      Column(
-                                        children: const [
-                                          Text(
-                                            '500*',
-                                            style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -426,10 +371,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           formattedDate,
                                           style: const TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: "Amiri_Quran",
-                                              color: Colors.black),
+                                            fontSize: 12,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w400,
+                                            fontFamily: "Amiri_Quran",
+                                          ),
                                         ),
                                       ]),
                                     ]),
@@ -438,10 +384,10 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           'ع.م - س',
                                           style: TextStyle(
-                                            fontSize: 10,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.w500,
-                                            fontFamily: "Amiri_Quran",
                                             color: Colors.black,
+                                            fontFamily: "Amiri_Quran",
                                           ),
                                         ),
                                       ]),
@@ -450,10 +396,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             'إب - السبل ',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -462,10 +409,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '5*',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -474,10 +422,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '$intValue',
                                             style: const TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.w500,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -486,10 +435,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '500*',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -497,10 +447,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           formattedDate,
                                           style: const TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: "Amiri_Quran",
-                                              color: Colors.black),
+                                            fontSize: 12,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w400,
+                                            fontFamily: "Amiri_Quran",
+                                          ),
                                         ),
                                       ]),
                                     ]),
@@ -509,10 +460,10 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           'ع.م - س',
                                           style: TextStyle(
-                                            fontSize: 10,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.w500,
-                                            fontFamily: "Amiri_Quran",
                                             color: Colors.black,
+                                            fontFamily: "Amiri_Quran",
                                           ),
                                         ),
                                       ]),
@@ -521,10 +472,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             'إب - السبل ',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -533,10 +485,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '5*',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -545,10 +498,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '$intValue',
                                             style: const TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.w500,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -557,10 +511,11 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                           Text(
                                             '500*',
                                             style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                fontFamily: "Amiri_Quran",
-                                                color: Colors.black),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -568,10 +523,87 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                         Text(
                                           formattedDate,
                                           style: const TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w400,
+                                            fontSize: 12,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w400,
+                                            fontFamily: "Amiri_Quran",
+                                          ),
+                                        ),
+                                      ]),
+                                    ]),
+                                    TableRow(children: [
+                                      Column(children: const [
+                                        Text(
+                                          'ع.م - س',
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black,
+                                            fontFamily: "Amiri_Quran",
+                                          ),
+                                        ),
+                                      ]),
+                                      Column(
+                                        children: const [
+                                          Text(
+                                            'إب - السبل ',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
                                               fontFamily: "Amiri_Quran",
-                                              color: Colors.black),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: const [
+                                          Text(
+                                            '5*',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Text(
+                                            '$intValue',
+                                            style: const TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.w500,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: const [
+                                          Text(
+                                            '500*',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black,
+                                              fontFamily: "Amiri_Quran",
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(children: [
+                                        Text(
+                                          formattedDate,
+                                          style: const TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w400,
+                                            fontFamily: "Amiri_Quran",
+                                          ),
                                         ),
                                       ]),
                                     ]),
@@ -584,30 +616,26 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                               children: [
                                 Row(
                                   children: [
-                                    const Icon(
+                                    Icon(
                                       Icons.calendar_month,
-                                      color: Color(0x89000000),
+                                      color: colors(context).color1,
                                     ),
                                     const SizedBox(width: 5),
                                     Text(
                                       formattedDate,
-                                      style: const TextStyle(
-                                        color: Color(0x89000000),
-                                      ),
+                                      style: const TextStyle(),
                                     ),
                                   ],
                                 ),
                                 Row(
-                                  children: const [
+                                  children: [
                                     Icon(
                                       Icons.access_time_filled,
-                                      color: Color(0x89000000),
+                                      color: colors(context).color1,
                                     ),
-                                    SizedBox(width: 5),
-                                    Text(
+                                    const SizedBox(width: 5),
+                                    const Text(
                                       "02:58 AM",
-                                      style:
-                                          TextStyle(color: Color(0x89000000)),
                                     )
                                   ],
                                 ),
@@ -623,9 +651,7 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                     const SizedBox(width: 5),
                                     const Text(
                                       "توريد …",
-                                      style: TextStyle(
-                                        color: Color(0x89000000),
-                                      ),
+                                      style: TextStyle(),
                                     )
                                   ],
                                 )
@@ -642,12 +668,14 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 12),
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFF4F6FA),
+                                      color: colors(context).color3,
                                       borderRadius: BorderRadius.circular(10),
                                     ),
-                                    child: const Center(
+                                    child: Center(
                                         child: Icon(
-                                            Icons.chrome_reader_mode_outlined)),
+                                      Icons.chrome_reader_mode_outlined,
+                                      color: colors(context).color5,
+                                    )),
                                   ),
                                 ),
                                 InkWell(
@@ -657,7 +685,7 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 12),
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFF58329B),
+                                      color: colors(context).color1,
                                       borderRadius: BorderRadius.circular(10),
                                     ),
                                     child: const Center(

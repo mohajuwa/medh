@@ -1,4 +1,6 @@
+// ignore_for_file: file_names
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class TaskContainerImage extends StatelessWidget {
   final String imageUrl;
@@ -9,11 +11,14 @@ class TaskContainerImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
     return Container(
-        width: 70,
-        height: double.infinity,
+        width: width.h / 50,
+        height: height.h / 30,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            borderRadius: const BorderRadius.all(Radius.circular(10.0)),
             color: backgroundColor),
         child: ClipRRect(
             child: Image(image: AssetImage(imageUrl), fit: BoxFit.scaleDown)));

@@ -8,14 +8,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:medh/Theme/theme.dart';
 
-class MonthelyReports extends ConsumerStatefulWidget {
-  const MonthelyReports({super.key});
+class DayReports extends ConsumerStatefulWidget {
+  const DayReports({super.key});
 
   @override
-  MonthelyReportsState createState() => MonthelyReportsState();
+  DayReportsState createState() => DayReportsState();
 }
 
-class MonthelyReportsState extends ConsumerState<MonthelyReports> {
+class DayReportsState extends ConsumerState<DayReports> {
   DateTime now = DateTime.now();
 
   @override
@@ -48,7 +48,7 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x47000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],
@@ -59,8 +59,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                 children: [
                   Center(
                     child: Container(
-                      margin: const EdgeInsets.only(
-                          right: 2, left: 2, top: 0.5, bottom: 3),
+                      color: Colors.white,
+                      margin:
+                          const EdgeInsets.only(right: 2, left: 2, bottom: 3),
                       width: MediaQuery.of(context).size.width / 1.1,
                       child: Table(
                         defaultColumnWidth: const FlexColumnWidth(1),
@@ -136,8 +137,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 'ع.م - س',
                                 style: TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w500,
+                                  color: Colors.black,
                                   fontFamily: "Amiri_Quran",
                                 ),
                               ),
@@ -146,8 +148,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 'إب - السبل ',
                                 style: TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w500,
+                                  color: Colors.black,
                                   fontFamily: "Amiri_Quran",
                                 ),
                               ),
@@ -156,8 +159,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 '5*',
                                 style: TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w500,
+                                  color: Colors.black,
                                   fontFamily: "Amiri_Quran",
                                 ),
                               ),
@@ -167,8 +171,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '14',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -179,8 +184,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '500*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -190,7 +196,8 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 formattedDate,
                                 style: const TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
+                                  color: Colors.black,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: "Amiri_Quran",
                                 ),
@@ -202,8 +209,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 'ع.م - س',
                                 style: TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w500,
+                                  color: Colors.black,
                                   fontFamily: "Amiri_Quran",
                                 ),
                               ),
@@ -213,8 +221,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   'إب - السبل ',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -225,8 +234,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '5*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -237,8 +247,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '89',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -249,8 +260,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '500*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -260,7 +272,8 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 formattedDate,
                                 style: const TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
+                                  color: Colors.black,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: "Amiri_Quran",
                                 ),
@@ -272,8 +285,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 'ع.م - س',
                                 style: TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w500,
+                                  color: Colors.black,
                                   fontFamily: "Amiri_Quran",
                                 ),
                               ),
@@ -283,8 +297,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   'إب - السبل ',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -295,8 +310,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '5*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -307,7 +323,8 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '$intValue',
                                   style: const TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: "Amiri_Quran",
                                   ),
@@ -319,8 +336,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '500*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -330,7 +348,8 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 formattedDate,
                                 style: const TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
+                                  color: Colors.black,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: "Amiri_Quran",
                                 ),
@@ -342,8 +361,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 'ع.م - س',
                                 style: TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w500,
+                                  color: Colors.black,
                                   fontFamily: "Amiri_Quran",
                                 ),
                               ),
@@ -353,8 +373,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   'إب - السبل ',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -365,8 +386,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '5*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -377,7 +399,8 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '$intValue',
                                   style: const TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: "Amiri_Quran",
                                   ),
@@ -389,8 +412,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '500*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -400,7 +424,8 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 formattedDate,
                                 style: const TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
+                                  color: Colors.black,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: "Amiri_Quran",
                                 ),
@@ -412,8 +437,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 'ع.م - س',
                                 style: TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w500,
+                                  color: Colors.black,
                                   fontFamily: "Amiri_Quran",
                                 ),
                               ),
@@ -423,8 +449,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   'إب - السبل ',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -435,8 +462,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '5*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -447,7 +475,8 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '$intValue',
                                   style: const TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: "Amiri_Quran",
                                   ),
@@ -459,8 +488,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '500*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -470,7 +500,8 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 formattedDate,
                                 style: const TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
+                                  color: Colors.black,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: "Amiri_Quran",
                                 ),
@@ -482,8 +513,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 'ع.م - س',
                                 style: TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w500,
+                                  color: Colors.black,
                                   fontFamily: "Amiri_Quran",
                                 ),
                               ),
@@ -493,8 +525,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   'إب - السبل ',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -505,8 +538,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '5*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -517,7 +551,8 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '$intValue',
                                   style: const TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w500,
                                     fontFamily: "Amiri_Quran",
                                   ),
@@ -529,8 +564,9 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                                 Text(
                                   '500*',
                                   style: TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w500,
+                                    color: Colors.black,
                                     fontFamily: "Amiri_Quran",
                                   ),
                                 ),
@@ -540,7 +576,8 @@ class MonthelyReportsState extends ConsumerState<MonthelyReports> {
                               Text(
                                 formattedDate,
                                 style: const TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 12,
+                                  color: Colors.black,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: "Amiri_Quran",
                                 ),

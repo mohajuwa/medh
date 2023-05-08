@@ -1,4 +1,4 @@
-// ignore_for_file: use_build_context_synchronously
+// ignore_for_file: use_build_context_synchronously, file_names
 
 import 'dart:async';
 
@@ -21,7 +21,6 @@ class OneTimeScreenState extends State<OneTimeScreen>
   Future checkFirstSeen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool seen = (prefs.getBool('seen') ?? false);
-    bool fseen = (prefs.getBool('fseen') ?? false);
 
     if (seen) {
       Navigator.of(context).pushReplacement(
@@ -31,8 +30,8 @@ class OneTimeScreenState extends State<OneTimeScreen>
         'seen',
         true,
       );
-      Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const HomePage()));
     }
   }
 
@@ -48,11 +47,9 @@ class OneTimeScreenState extends State<OneTimeScreen>
         'fseen',
         true,
       );
-      Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const HomePage()));
     }
-    @override
-    void afterFirstLayout(BuildContext context) => fcheckFirstSeen();
   }
 
   @override

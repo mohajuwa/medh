@@ -33,7 +33,7 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x47000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],
@@ -210,7 +210,7 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x47000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],

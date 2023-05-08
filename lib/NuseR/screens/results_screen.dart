@@ -4,8 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/provider.dart';
 
-import 'custom2_add.dart';
-
 class ResultScreen extends ConsumerStatefulWidget {
   const ResultScreen({super.key});
 
@@ -75,7 +73,7 @@ class ResultScreenState extends ConsumerState<ResultScreen> {
                                   AssetImage("assets/images/icon1.png"),
                             ),
                             const SizedBox(height: 15),
-                            const Text(
+                            const SelectableText(
                               "إسم الدواء",
                               style: TextStyle(
                                 fontSize: 23,
@@ -293,7 +291,7 @@ class ResultScreenState extends ConsumerState<ResultScreen> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x3C000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medh/FuseR/Summary/Constants/constants.dart';
 import 'package:medh/FuseR/Summary/Values/values.dart';
 import 'package:medh/FuseR/Summary/Wedgits/progress_card_close_button.dart';
+import 'package:medh/Theme/theme.dart';
 
 class TaskProgressCard extends StatelessWidget {
   final String cardTitle;
@@ -41,7 +42,7 @@ class TaskProgressCard extends StatelessWidget {
         child: Stack(children: [
           const Positioned(top: 5, right: 10, child: ProgressCardCloseButton()),
           Positioned(
-              top: 20,
+              top: 24,
               bottom: 20,
               right: 10,
               left: 20,
@@ -79,9 +80,9 @@ class TaskProgressCard extends StatelessWidget {
                             Expanded(
                                 flex: percentageGap,
                                 child: Container(
-                                    decoration: const BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.only(
+                                    decoration: BoxDecoration(
+                                  color: colors(context).color7,
+                                  borderRadius: const BorderRadius.only(
                                     topLeft: Radius.circular(20.0),
                                     bottomLeft: Radius.circular(20.0),
                                   ),
@@ -90,7 +91,10 @@ class TaskProgressCard extends StatelessWidget {
                           ])),
                       const Spacer(),
                       Text("$progressFigure%",
-                          style: TextStyle(fontWeight: FontWeight.bold))
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ))
                     ],
                   )
                 ],

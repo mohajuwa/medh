@@ -144,7 +144,7 @@ class FuserEdit2MedcineScreenState
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    FuserEdit2MedicineDone()));
+                                    const FuserEdit2MedicineDone()));
                       },
                       child: const Padding(
                         padding:

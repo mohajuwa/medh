@@ -9,6 +9,7 @@ class NearestKmDashboard extends ConsumerStatefulWidget {
 }
 
 class NearestKmDashboardState extends ConsumerState<NearestKmDashboard> {
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -32,7 +33,7 @@ class NearestKmDashboardState extends ConsumerState<NearestKmDashboard> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x47000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],
@@ -209,7 +210,7 @@ class NearestKmDashboardState extends ConsumerState<NearestKmDashboard> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x47000000),
-                  blurRadius: 1.5,
+                  blurRadius: 3,
                   spreadRadius: 1,
                 )
               ],

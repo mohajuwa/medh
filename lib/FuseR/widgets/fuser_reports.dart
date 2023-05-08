@@ -2,27 +2,27 @@
 //  مضافه الى صفحة لوحة التحكم تحديداً زر التقارير في القائمة
 
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/Theme/theme.dart';
 import 'fuser_mreports.dart';
 import 'fuser_yreports.dart';
 
-class FuserReports extends ConsumerStatefulWidget {
+class FuserReports extends StatefulWidget {
   const FuserReports({super.key});
 
   @override
-  FuserReportsState createState() => FuserReportsState();
+  State<FuserReports> createState() => _FuserReportsState();
 }
 
-class FuserReportsState extends ConsumerState<FuserReports> {
+class _FuserReportsState extends State<FuserReports> {
   int _buttonIndex = 0;
 
   final clr = const Color(0xFFF4F6FA);
+
   final clr1 = const Color(0xFF58329B);
 
   final _dashboardWidgets = [
     // عرض التقرير الشهري
-    const MonthelyReports(),
+    const DayReports(),
 
     // عرض التقرير السنوي
     const YearlyReports(),
@@ -33,7 +33,7 @@ class FuserReportsState extends ConsumerState<FuserReports> {
     //  هذا عشان زر الرجوع
 
     return WillPopScope(
-      onWillPop: () async => true,
+      onWillPop: () async => false,
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(top: 5),

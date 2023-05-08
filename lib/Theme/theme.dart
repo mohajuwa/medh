@@ -6,6 +6,8 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
   return ThemeData(
     extensions: <ThemeExtension<AppColors>>[
       AppColors(
+        // White To Black Colors
+        colorWhiteToBlack: isDarkTheme ? Colors.white : Colors.black,
         // Icons Colors in Theme
         color1: isDarkTheme ? Colors.purple : const Color(0xD09B1642),
 
@@ -62,13 +64,13 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
         )
         .copyWith(
           bodyMedium: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              fontSize: 16,
+              fontSize: 12,
               fontFamily: 'El_Messiri',
               fontWeight: FontWeight.w500),
         )
         .copyWith(
           bodySmall: Theme.of(context).textTheme.bodySmall?.copyWith(
-              fontSize: 14,
+              fontSize: 12,
               fontFamily: 'El_Messiri',
               fontWeight: FontWeight.w500),
         )
@@ -98,8 +100,8 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color? color5;
   final Color? color6;
   final Color? color7;
-
   final Color? colorContainer;
+  final Color? colorWhiteToBlack;
 
   const AppColors({
     required this.color1,
@@ -110,6 +112,7 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.color6,
     required this.color7,
     required this.colorContainer,
+    required this.colorWhiteToBlack,
   });
 
   @override
@@ -132,6 +135,7 @@ class AppColors extends ThemeExtension<AppColors> {
       color6: color6 ?? this.color6,
       color7: color7 ?? this.color7,
       colorContainer: colorContainer ?? this.colorContainer,
+      colorWhiteToBlack: colorWhiteToBlack ?? this.colorWhiteToBlack,
     );
   }
 
@@ -149,6 +153,8 @@ class AppColors extends ThemeExtension<AppColors> {
       color6: Color.lerp(color6, other.color6, t),
       color7: Color.lerp(color7, other.color7, t),
       colorContainer: Color.lerp(colorContainer, other.colorContainer, t),
+      colorWhiteToBlack:
+          Color.lerp(colorWhiteToBlack, other.colorWhiteToBlack, t),
     );
   }
 }

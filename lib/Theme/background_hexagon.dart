@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_shapes/flutter_shapes.dart';
 import 'package:medh/FuseR/Summary/Values/values.dart';
 
-class BackgroundHexagon extends CustomPainter {
+mixin BackgroundHexagon implements CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()..color = HexColor.fromHex("262A34");
@@ -14,11 +14,5 @@ class BackgroundHexagon extends CustomPainter {
         angle: 0);
 
     shapes.drawType(ShapeType.Hexagon); // enum
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
-    return false;
   }
 }

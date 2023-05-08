@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:medh/FuseR/Summary/Constants/constants.dart';
 import 'package:medh/FuseR/Summary/Values/values.dart';
 import 'package:medh/FuseR/Summary/Wedgits/progress_card_close_button.dart';
@@ -51,12 +50,12 @@ class TaskProgressCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(cardTitle,
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22)),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 22)),
                   AppSpaces.verticalSpace10,
                   Text('$rating is completed',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16)),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 16)),
                   const SizedBox(
                     height: 10,
                   ),

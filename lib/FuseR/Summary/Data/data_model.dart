@@ -4,7 +4,7 @@ import 'package:medh/FuseR/Summary/Values/values.dart';
 class AppData {
   static final List<Map<String, dynamic>> progressIndicatorList = [
     {
-      "cardTitle": "المهام",
+      "cardTitle": "إحصائيات ",
       "rating": "3/5",
       "progress": "68.99",
       "progressBar": "2"
@@ -17,19 +17,19 @@ class AppData {
     },
     {
       "cardTitle": "أكثر مبيعاً",
-      "rating": "2/5",
+      "rating": "اسم الصنف",
       "progress": "50",
       "progressBar": "1"
     },
     {
       "cardTitle": "عملاء جدد",
-      "rating": "3/4",
+      "rating": "المنطقة",
       "progress": "75",
       "progressBar": "3"
     },
     {
-      "cardTitle": "إحصائيات محدودة",
-      "rating": "3/5",
+      "cardTitle": "هذه إحصائيات محدودة",
+      "rating": "شراء النسخة المدفوعة؟",
       "progress": "68.99",
       "progressBar": "2"
     },
