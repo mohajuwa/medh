@@ -3,9 +3,12 @@
 Medical app UI Design Flutter .
 # ScreenShots 
  Dark Theme                                                       |  Light Theme
-:----------------------------------------------------------------:|:---------------------------------------:|:----------------------------------------------------------------:|:---------------------------------------:|
-![](assets/ScreenShots/HomePageDart.png?raw=true "Dark HomePage") | ![](assets/ScreenShots/HomePageLight.png?raw=true "Light HomePage") |![](assets/ScreenShots/HomePageDart.png?raw=true "Dark HomePage") | ![](assets/ScreenShots/HomePageLight.png?raw=true "Light HomePage")
-
+:----------------------------------------------------------------:|:---------------------------------------:|
+<p float="left">
+  <img src="assets/ScreenShots/HomePageLight.png" width="100" />
+  <img src="assets/ScreenShots/HomePageLight.png" width="100" /> 
+  <img src="assets/ScreenShots/HomePageLight.png" width="100" />
+</p>
 
 ## Getting Started
 
