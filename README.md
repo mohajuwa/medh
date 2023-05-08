@@ -6,27 +6,27 @@ Medical app UI Design Flutter .
 :------------:                                               
 
 <p float="left">
-  <img src="assets/ScreenShots/HomePageDark.png" width="200" />
-   <img src="assets/ScreenShots/PharmacistHomeLScreen.png" width="200" />
-  <img src="assets/ScreenShots/PharmacistYReporsLScreen.png" width="200" /> 
-    <img src="assets/ScreenShots/PharmacistSummaryLScreen.png" width="200" />
-    <img src="assets/ScreenShots/HomePageLight.png" width="200" />
-   <img src="assets/ScreenShots/PharmacistHomeScreen.png" width="200" />
-  <img src="assets/ScreenShots/PharmacistDashYReportsScreen.png" width="200" /> 
-    <img src="assets/ScreenShots/PharmacistDashSummaryScreen.png" width="200" />
+  <img src="assets/ScreenShots/HomePageDark.png" width="150" />
+   <img src="assets/ScreenShots/PharmacistHomeLScreen.png" width="150" />
+  <img src="assets/ScreenShots/PharmacistYReporsLScreen.png" width="150" /> 
+    <img src="assets/ScreenShots/PharmacistSummaryLScreen.png" width="150" />
+    <img src="assets/ScreenShots/HomePageLight.png" width="150" />
+   <img src="assets/ScreenShots/PharmacistHomeScreen.png" width="150" />
+  <img src="assets/ScreenShots/PharmacistDashYReportsScreen.png" width="150" /> 
+    <img src="assets/ScreenShots/PharmacistDashSummaryScreen.png" width="150" />
 </p>
 
 | User Screens|                                                   
 |:------------:
 <p float="left">
-  <img src="assets/ScreenShots/UserHomeLScreen.png" width="200" />
-   <img src="assets/ScreenShots/UserDashLScreen.png" width="200" />
-  <img src="assets/ScreenShots/UserSettingsDark.png" width="200" /> 
-    <img src="assets/ScreenShots/PharmacistMedsLScreen.png" width="200" />
-    <img src="assets/ScreenShots/UserHomeScreen.png" width="200" />
-   <img src="assets/ScreenShots/UserNotificationScreen.png" width="200" />
-  <img src="assets/ScreenShots/UserSettingsScreen.png" width="200" /> 
-    <img src="assets/ScreenShots/PharmacistMedsScreen.png" width="200" />
+  <img src="assets/ScreenShots/UserHomeLScreen.png" width="150" />
+   <img src="assets/ScreenShots/UserDashLScreen.png" width="150" />
+  <img src="assets/ScreenShots/UserSettingsDark.png" width="150" /> 
+    <img src="assets/ScreenShots/PharmacistMedsLScreen.png" width="150" />
+    <img src="assets/ScreenShots/UserHomeScreen.png" width="150" />
+   <img src="assets/ScreenShots/UserNotificationScreen.png" width="150" />
+  <img src="assets/ScreenShots/UserSettingsScreen.png" width="150" /> 
+    <img src="assets/ScreenShots/PharmacistMedsScreen.png" width="150" />
     
 
 </p>
