@@ -21,8 +21,8 @@ Medical app UI Design Flutter .
     <img src="assets/ScreenShots/PharmacistMedsLScreen.png" width="200" />
 
 </p>
-| Light Theme |                                                   
-|:------------:
+|Light Theme |                                                   
+:------------:
 <p float="left">
   <img src="assets/ScreenShots/HomePageLight.png" width="200" />
    <img src="assets/ScreenShots/PharmacistHomeScreen.png" width="200" />
