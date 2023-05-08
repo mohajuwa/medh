@@ -30,7 +30,7 @@ class OrderScreenState extends ConsumerState<OrderScreen> {
       home: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          backgroundColor: colors(context).color5,
+          backgroundColor: colors(context).color4,
           body: SingleChildScrollView(
             child: ListBody(
               children: [
@@ -46,18 +46,18 @@ class OrderScreenState extends ConsumerState<OrderScreen> {
                             onTap: () {
                               Navigator.pop(context);
                             },
-                            child: const Icon(
+                            child: Icon(
                               Icons.arrow_back_ios_new,
-                              color: Colors.white,
+                              color: colors(context).color3,
                             ),
                           ),
                           InkWell(
                             onTap: () {
                               Navigator.pop(context);
                             },
-                            child: const Icon(
+                            child: Icon(
                               Icons.more_vert,
-                              color: Colors.white,
+                              color: colors(context).color3,
                             ),
                           ),
                         ],
@@ -77,7 +77,6 @@ class OrderScreenState extends ConsumerState<OrderScreen> {
                               style: TextStyle(
                                 fontSize: 23,
                                 fontWeight: FontWeight.w500,
-                                color: Colors.white,
                               ),
                             ),
                             const SizedBox(height: 5),
@@ -85,7 +84,6 @@ class OrderScreenState extends ConsumerState<OrderScreen> {
                               "المورد",
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
-                                color: Colors.white,
                               ),
                             ),
                             const SizedBox(height: 15),

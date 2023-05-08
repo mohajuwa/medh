@@ -20,21 +20,21 @@ class CustomAddScreenState extends ConsumerState<CustomAddScreen> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: colors(context).color5,
+            backgroundColor: colors(context).color4,
             leadingWidth: 30,
             title: Padding(
               padding: const EdgeInsets.only(top: 5),
-              child: Row(children: const [
-                CircleAvatar(
+              child: Row(children: [
+                const CircleAvatar(
                   radius: 25,
                   backgroundImage: AssetImage("assets/images/icon1.png"),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(right: 10),
+                  padding: const EdgeInsets.only(right: 10),
                   child: Text(
                     "إسم الصيدلية",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: colors(context).colorWhiteToBlack,
                     ),
                   ),
                 )
@@ -45,7 +45,6 @@ class CustomAddScreenState extends ConsumerState<CustomAddScreen> {
                 padding: EdgeInsets.only(top: 8, right: 20),
                 child: Icon(
                   Icons.call,
-                  color: Colors.white,
                   size: 26,
                 ),
               ),
@@ -53,7 +52,6 @@ class CustomAddScreenState extends ConsumerState<CustomAddScreen> {
                 padding: EdgeInsets.only(top: 8, right: 10),
                 child: Icon(
                   Icons.more_vert,
-                  color: Colors.white,
                   size: 26,
                 ),
               ),

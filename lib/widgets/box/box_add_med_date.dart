@@ -15,7 +15,7 @@ class BoxAddMedDateContainer extends StatelessWidget {
       width: 9.h,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-        color: colors(context).color2,
+        color: colors(context).color1,
         boxShadow: const [
           BoxShadow(
             color: Color(0x83111111),

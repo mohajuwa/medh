@@ -135,7 +135,7 @@ class AppColors extends ThemeExtension<AppColors> {
       color6: color6 ?? this.color6,
       color7: color7 ?? this.color7,
       colorContainer: colorContainer ?? this.colorContainer,
-      colorWhiteToBlack: colorWhiteToBlack ?? this.colorWhiteToBlack,
+      colorWhiteToBlack: colorWhiteToBlack ?? colorWhiteToBlack,
     );
   }
 

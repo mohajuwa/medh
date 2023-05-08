@@ -20,7 +20,7 @@ class HomePageState extends ConsumerState<HomePage> {
     //  هذا عشان زر الرجوع
 
     return WillPopScope(
-      onWillPop: () async => true,
+      onWillPop: () async => false,
       child: MaterialApp(
         theme: getAppTheme(
           context,

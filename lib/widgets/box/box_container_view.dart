@@ -33,7 +33,7 @@ class BoxContainerList extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         height: 10.5.h,
         decoration: BoxDecoration(
-          color: colors(context).color7,
+          color: colors(context).color4,
           borderRadius: BorderRadius.circular(10.0),
           boxShadow: const [
             BoxShadow(
@@ -60,7 +60,6 @@ class BoxContainerList extends StatelessWidget {
                       Text(
                         cardTitle,
                         style: const TextStyle(
-                          color: Colors.white,
                           fontFamily: 'El_Messiri',
                           fontSize: 18,
                         ),
@@ -74,7 +73,7 @@ class BoxContainerList extends StatelessWidget {
                               color: backgroundColor,
                               fontWeight: FontWeight.w600,
                               fontSize: 16)),
-                      const Icon(Icons.add, color: Colors.orange, size: 19),
+                      Icon(Icons.add, color: colors(context).color1, size: 19),
                     ],
                   ),
                 ],

@@ -33,13 +33,13 @@ class ListsContainer extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         height: 10.5.h,
         decoration: BoxDecoration(
-          color: colors(context).color7,
+          color: colors(context).color4,
           borderRadius: BorderRadius.circular(10.0),
           boxShadow: const [
             BoxShadow(
               color: Color(0x47000000),
-              blurRadius: 4,
-              spreadRadius: 2,
+              blurRadius: 1.5,
+              spreadRadius: 1,
             )
           ],
         ),
@@ -60,7 +60,6 @@ class ListsContainer extends StatelessWidget {
                       Text(
                         cardTitle,
                         style: const TextStyle(
-                          color: Colors.white,
                           fontFamily: 'El_Messiri',
                           fontSize: 18,
                         ),
@@ -74,8 +73,8 @@ class ListsContainer extends StatelessWidget {
                               color: backgroundColor,
                               fontWeight: FontWeight.w600,
                               fontSize: 16)),
-                      const Icon(Icons.chevron_right,
-                          color: Colors.white, size: 30),
+                      Icon(Icons.chevron_right,
+                          color: colors(context).color1, size: 30),
                     ],
                   ),
                 ],

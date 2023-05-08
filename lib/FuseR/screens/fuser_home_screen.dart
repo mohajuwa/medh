@@ -11,13 +11,21 @@ import '../widgets/fuser_navbar_roots.dart';
 
 import 'medicine_detils_home_screen.dart';
 
-class FuserHomeScreen extends StatelessWidget {
+class FuserHomeScreen extends StatefulWidget {
+  const FuserHomeScreen({super.key});
+
+  @override
+  State<FuserHomeScreen> createState() => _FuserHomeScreenState();
+}
+
+class _FuserHomeScreenState extends State<FuserHomeScreen> {
   List symptoms = [
-    "الظهار",
-    "السبل",
-    "المركزي",
-    "الدائري",
+    "الكمية",
+    "مبيعات",
+    "الطلب",
+    "المورد",
   ];
+
   List imgs = [
     "icon.png",
     "icon.png",
@@ -35,7 +43,6 @@ class FuserHomeScreen extends StatelessWidget {
 
   double? scrolledUnderElevation;
 
-  FuserHomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -178,22 +185,25 @@ class FuserHomeScreen extends StatelessWidget {
                   return Container(
                     margin: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 15),
-                    padding: const EdgeInsets.symmetric(horizontal: 25),
+                    padding: EdgeInsets.symmetric(horizontal: 2.2.h),
                     decoration: BoxDecoration(
-                      color: colors(context).color4,
+                      color: colors(context).color3,
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: const [
                         BoxShadow(
-                          color: Color(0x3C000000),
-                          blurRadius: 4,
-                          spreadRadius: 2,
+                          color: Color(0x47000000),
+                          blurRadius: 1.5,
+                          spreadRadius: 1,
                         )
                       ],
                     ),
                     child: Center(
                       child: Text(
                         symptoms[index],
-                        style: Theme.of(context).textTheme.bodySmall,
+                        style: const TextStyle(
+                          fontFamily: 'El_Messiri',
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   );

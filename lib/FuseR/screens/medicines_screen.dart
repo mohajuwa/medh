@@ -8,6 +8,8 @@ import 'package:medh/widgets/listContainer/list_view.dart';
 import 'add_medcine.dart';
 import 'package:medh/FuseR/Summary/Values/values.dart';
 
+import 'edit_medicine2.dart';
+
 // ignore: must_be_immutable
 class FuserMedicineScreen extends StatelessWidget {
   List imgs = [
@@ -132,7 +134,7 @@ class FuserMedicineScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FuserEditMedcineScreen(),
+                        builder: (context) => const FuserEdit2MedcineScreen(),
                       ),
                     );
                   },

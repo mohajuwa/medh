@@ -30,7 +30,7 @@ class BarChartSample1 extends StatefulWidget {
 
 class BarChartSample1State extends State<BarChartSample1> {
   final Color barBackgroundColor = const Color(0xFFA06AFA);
-  static const Color mainColor = Color(0xFFFAA3FF);
+  static const Color mainColor = Color(0xFF6DACCB);
   final Duration animDuration = const Duration(milliseconds: 250);
 
   int touchedIndex = -1;
@@ -52,7 +52,7 @@ class BarChartSample1State extends State<BarChartSample1> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text("مبياعتي لهذا الإسبوع  (7  أيام)",
-                      style: TextStyle(color: Colors.white, fontSize: 16)),
+                      style: TextStyle(fontSize: 16)),
                   IconButton(
                     icon: Icon(
                       isPlaying ? Icons.pause : Icons.play_arrow,
@@ -80,17 +80,15 @@ class BarChartSample1State extends State<BarChartSample1> {
                 ),
               ),
               AppSpaces.verticalSpace10,
-              Row(children: [
-                const Text('108  إجمالي',
+              Row(children: const [
+                Text('108  إجمالي',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: mainColor,
                     )),
                 AppSpaces.horizontalSpace20,
                 Text('6  ايام الدوام',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: barBackgroundColor,
                     )),
               ])
             ],
@@ -118,7 +116,7 @@ class BarChartSample1State extends State<BarChartSample1> {
           backDrawRodData: BackgroundBarChartRodData(
             show: true,
             toY: 20,
-            color: colors(context).color1,
+            color: colors(context).color6,
           ),
         ),
       ],

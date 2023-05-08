@@ -13,7 +13,7 @@ class BoxFonList extends StatelessWidget {
       width: 150,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-        color: colors(context).color1,
+        color: colors(context).color6,
         boxShadow: const [
           BoxShadow(
             color: Color(0x83111111),

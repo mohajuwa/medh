@@ -23,7 +23,7 @@ class NavBarRootsState extends ConsumerState<NavBarRoots> {
   int _selectedIndex = 0;
   final _screens = [
     // Home Screen يا نقيب
-    HomeScreen(),
+    const HomeScreen(),
     // Messages Screen
     SearchScreen(),
     // Schedule Screen
