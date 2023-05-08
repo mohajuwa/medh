@@ -3,7 +3,9 @@
 Medical app UI Design Flutter .
 # ScreenShots
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![Alt text](assets/ScreenShots/HomePageDart.png?raw=true "Dark HomePage")
+![Alt text](assets/ScreenShots/HomePageLight.png?raw=true "Light HomePage")
+
 ## Getting Started
 
 - [Text me in Public Whatsapp](https://wa.me/+967775992377)
