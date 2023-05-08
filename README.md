@@ -4,7 +4,7 @@ Medical app UI Design Flutter .
 # ScreenShots 
 Solarized dark                                                    |  Solarized Ocean
 :----------------------------------------------------------------:|:---------------------------------------:
-![](assets/ScreenShots/HomePageDart.png?raw=true "Dark HomePage") | ![](assets/ScreenShots/HomePageLight.png?raw=true "Light HomePage")
+![](assets/ScreenShots/HomePageDart.png?raw=true "Dark HomePage") | ![](assets/ScreenShots/HomePageLight.png?raw=true "Light HomePage") | ![](assets/ScreenShots/HomePageDart.png?raw=true "Dark HomePage") | ![](assets/ScreenShots/HomePageLight.png?raw=true "Light HomePage")
 
 
 ## Getting Started
