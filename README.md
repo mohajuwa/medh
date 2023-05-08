@@ -4,11 +4,11 @@ Medical app UI Design Flutter .
 # ScreenShots 
  Dark Theme  |                                                   
 :------------:
-<p float="left">
-  <img src="assets/ScreenShots/HomePageDark.png" width="200" />
-  <img src="assets/ScreenShots/PharmacistYReporsLScreen.png" width="200" /> 
-  <img src="assets/ScreenShots/PharmacistHomeLScreen.png" width="200" />
-    <img src="assets/ScreenShots/PharmacistSummaryLScreen.png" width="200" />
+<p float="center">
+  <img src="assets/ScreenShots/HomePageDark.png" width="250" />
+   <img src="assets/ScreenShots/PharmacistHomeLScreen.png" width="250" />
+  <img src="assets/ScreenShots/PharmacistYReporsLScreen.png" width="250" /> 
+    <img src="assets/ScreenShots/PharmacistSummaryLScreen.png" width="250" />
 
 </p>
 
