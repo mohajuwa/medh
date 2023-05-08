@@ -128,8 +128,8 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                     boxShadow: const [
                       BoxShadow(
                         color: Color(0x47000000),
-                        blurRadius: 1.5,
-                        spreadRadius: 1,
+                        blurRadius: 4,
+                        spreadRadius: 2,
                       )
                     ],
                   ),
@@ -192,8 +192,8 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                       boxShadow: const [
                         BoxShadow(
                           color: Color(0x47000000),
-                          blurRadius: 1.5,
-                          spreadRadius: 1,
+                          blurRadius: 4,
+                          spreadRadius: 2,
                         )
                       ],
                     ),

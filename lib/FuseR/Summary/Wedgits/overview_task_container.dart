@@ -31,8 +31,8 @@ class OverviewTaskContainer extends StatelessWidget {
             boxShadow: const [
               BoxShadow(
                 color: Color(0x47000000),
-                blurRadius: 1.5,
-                spreadRadius: 1,
+                blurRadius: 4,
+                spreadRadius: 2,
               )
             ],
           ),

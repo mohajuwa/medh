@@ -72,7 +72,7 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                           BoxShadow(
                             color: Color(0x47000000),
                             blurRadius: 3,
-                            spreadRadius: 1,
+                            spreadRadius: 2,
                           )
                         ],
                       ),

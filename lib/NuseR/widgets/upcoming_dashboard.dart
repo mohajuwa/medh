@@ -34,7 +34,7 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                 BoxShadow(
                   color: Color(0x47000000),
                   blurRadius: 3,
-                  spreadRadius: 1,
+                  spreadRadius: 2,
                 )
               ],
             ),
@@ -211,7 +211,7 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                 BoxShadow(
                   color: Color(0x47000000),
                   blurRadius: 3,
-                  spreadRadius: 1,
+                  spreadRadius: 2,
                 )
               ],
             ),

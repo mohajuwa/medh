@@ -279,7 +279,7 @@ class FuserMedicineDitlesScreenState
                 BoxShadow(
                   color: Color(0x3C000000),
                   blurRadius: 3,
-                  spreadRadius: 1,
+                  spreadRadius: 2,
                 )
               ],
             ),
