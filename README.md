@@ -1,10 +1,11 @@
 # ModWir - Group 3 Graduation Project in Ibb City - Yemen
 
 Medical app UI Design Flutter .
-# ScreenShots
+# ScreenShots 
+Solarized dark                                                    |  Solarized Ocean
+:----------------------------------------------------------------:|:---------------------------------------:
+![](assets/ScreenShots/HomePageDart.png?raw=true "Dark HomePage") | ![](assets/ScreenShots/HomePageLight.png?raw=true "Light HomePage")
 
-![Alt text](assets/ScreenShots/HomePageDart.png?raw=true "Dark HomePage")
-![Alt text](assets/ScreenShots/HomePageLight.png?raw=true "Light HomePage")
 
 ## Getting Started
 
