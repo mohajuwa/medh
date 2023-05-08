@@ -12,6 +12,15 @@ Medical app UI Design Flutter .
     <img src="assets/ScreenShots/PharmacistSummaryLScreen.png" width="200" />
 </p>
 
+| User Screns |                                                   
+|:------------:
+<p float="left">
+  <img src="assets/ScreenShots/UserHomeLScreen.png" width="200" />
+   <img src="assets/ScreenShots/UserDashLScreen.png" width="200" />
+  <img src="assets/ScreenShots/UserSettingsDark.png" width="200" /> 
+    <img src="assets/ScreenShots/PharmacistMedsLScreen.png" width="200" />
+
+</p>
 | Light Theme    |                                                   
 |:------------:
 <p float="left">
@@ -19,6 +28,15 @@ Medical app UI Design Flutter .
    <img src="assets/ScreenShots/PharmacistHomeScreen.png" width="200" />
   <img src="assets/ScreenShots/PharmacistDashYReportsScreen.png" width="200" /> 
     <img src="assets/ScreenShots/PharmacistDashSummaryScreen.png" width="200" />
+
+</p>
+| User Screns |                                                   
+|:------------:
+<p float="left">
+  <img src="assets/ScreenShots/UserHomeScreen.png" width="200" />
+   <img src="assets/ScreenShots/UserNotificationScreen.png" width="200" />
+  <img src="assets/ScreenShots/UserSettingsScreen.png" width="200" /> 
+    <img src="assets/ScreenShots/PharmacistMedsScreen.png" width="200" />
 
 </p>
  
