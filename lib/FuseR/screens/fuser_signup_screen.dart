@@ -1,3 +1,4 @@
+// ID  -- >        2040752
 // صفحة التسجيل للصيدلي
 // ignore_for_file: unnecessary_import
 
@@ -45,7 +46,8 @@ class FuserSignUpScreenState extends ConsumerState<FuserSignUpScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const FuserNavBarRoots(),
+                              builder: (context) =>
+                                  const FuserNavBarRoots(), // ID  -- >        2040712
                             ),
                           );
                         },
@@ -245,7 +247,8 @@ class FuserSignUpScreenState extends ConsumerState<FuserSignUpScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const FuserLoginScreen(),
+                              builder: (context) =>
+                                  const FuserLoginScreen(), // ID  -- >        2040751
                             ));
                       },
                       child: const Padding(
@@ -277,7 +280,8 @@ class FuserSignUpScreenState extends ConsumerState<FuserSignUpScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const FuserLoginScreen(),
+                          builder: (context) =>
+                              const FuserLoginScreen(), // ID  -- >        2040751
                         ),
                       );
                     },

@@ -1,4 +1,5 @@
-// صفحة التقارير للصيدلي
+// ID  -- >        2040717
+// صفحة المبيعات للصيدلي
 //  مضافه الى صفحة لوحة التحكم تحديداً زر التقارير في القائمة
 
 import 'package:flutter/material.dart';
@@ -18,11 +19,9 @@ class FuserDayTasksState extends ConsumerState<FuserDayTasks> {
   int _buttonIndex = 0;
 
   final _dashboardWidgets = [
-    // عرض التقرير الشهري
-    const DailyGoalCard(),
+    const DailyGoalCard(), //  ID  -- >        2040722
 
-    // عرض التقرير السنوي
-    const ProductivityChart(),
+    const ProductivityChart(), //  ID  -- >        2040724
   ];
 
   @override

@@ -1,3 +1,4 @@
+// ID  -- >    2040681
 // القائمة الثابتة لكل الصفحات للمستخدم العادي
 
 // ignore_for_file: dead_code
@@ -22,15 +23,13 @@ class NavBarRoots extends ConsumerStatefulWidget {
 class NavBarRootsState extends ConsumerState<NavBarRoots> {
   int _selectedIndex = 0;
   final _screens = [
-    // Home Screen يا نقيب
-    const HomeScreen(),
-    // Messages Screen
-    SearchScreen(),
-    // Schedule Screen
-    const DashboardScreen(),
-    // Settings Screen
+    const HomeScreen(), // ID  -- >    2040682
 
-    const SettingsScreen(),
+    SearchScreen(), // ID  -- >    2040683
+
+    const DashboardScreen(), // ID  -- >    2040684
+
+    const SettingsScreen(), // ID  -- >    2040685
   ];
 
   @override
@@ -66,7 +65,8 @@ class NavBarRootsState extends ConsumerState<NavBarRoots> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const NavBarRoots(),
+                                builder: (context) =>
+                                    const NavBarRoots(), //ID  -- >    2040681
                               ),
                             );
                           },

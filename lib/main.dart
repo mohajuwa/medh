@@ -10,10 +10,30 @@ import 'HomePage/home_page.dart';
 import 'provider.dart';
 
 void main() {
+  ErrorWidget.builder = (FlutterErrorDetails details) {
+    return Material(
+      child: Container(
+        color: Colors.pinkAccent,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              details.exception.toString(),
+              style: const TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  };
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+      const SystemUiOverlayStyle(statusBarColor: Color(0x2D000000)));
   runApp(const ProviderScope(child: MyApp()));
   FlutterNativeSplash.remove();
 }
@@ -34,21 +54,22 @@ class MyApp extends ConsumerWidget {
             return Future.value(false);
           },
           child: MaterialApp(
-            localizationsDelegates: const [
-              GlobalCupertinoLocalizations.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-            ],
-            supportedLocales: const [
-              Locale("ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
-            ],
-            debugShowCheckedModeBanner: false,
-            theme: getAppTheme(
-              context,
-              ref.watch(appThemeProvider),
-            ),
-            home: const HomePage(),
-          ),
+              localizationsDelegates: const [
+                GlobalCupertinoLocalizations.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+              ],
+              supportedLocales: const [
+                Locale(
+                    "ar", "YE"), // OR Locale('ar', 'AE') OR Other RTL locales
+              ],
+              debugShowCheckedModeBanner: false,
+              theme: getAppTheme(
+                context,
+                ref.watch(appThemeProvider),
+              ),
+              home: const HomePage() // ID  -- >    2040680,
+              ),
         );
       },
     );

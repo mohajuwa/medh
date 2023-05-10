@@ -1,3 +1,5 @@
+// ID  -- >        2040744
+
 // صفحة إضافة دواء للصيدلي
 // ignore_for_file: unnecessary_import
 
@@ -50,7 +52,8 @@ class AddMedcineScreenState extends ConsumerState<AddMedcineScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const FuserNavBarRoots(),
+                              builder: (context) =>
+                                  const FuserNavBarRoots(), // ID  -- >        2040712// ID  -- >        2040712
                             ),
                           );
                         },
@@ -207,7 +210,8 @@ class AddMedcineScreenState extends ConsumerState<AddMedcineScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const FuserAddMedicineDone(),
+                            builder: (context) =>
+                                const FuserAddMedicineDone(), // ID  -- >        2040741
                           ),
                         );
                       },

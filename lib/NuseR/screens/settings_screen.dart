@@ -1,3 +1,4 @@
+// ID  -- >    2040685
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -55,7 +56,7 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                   trailing: Consumer(builder: (context, ref, child) {
                     return Transform.scale(
-                      scale: 1,
+                      scale: 1.2,
                       child: Switch(
                         activeColor: Colors.pink,
                         onChanged: (value) {
@@ -76,7 +77,8 @@ class SettingsScreen extends ConsumerWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const WelcomeScreen(),
+                        builder: (context) =>
+                            const WelcomeScreen(), // ID  -- >    2040692
                       ),
                     );
                   },
@@ -167,7 +169,7 @@ class SettingsScreen extends ConsumerWidget {
                     // Navigator.push(
                     //   context,
                     //   MaterialPageRoute(
-                    //     builder: (context) => const GeneralSettings(),
+                    //     builder: (context) => const GeneralSettings(), //ID  -- >    2040696
                     //   ),
                     // );
                   },
@@ -230,8 +232,9 @@ class SettingsScreen extends ConsumerWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomePage(),
-                      ),
+                          builder: (context) =>
+                              const HomePage() // ID  -- >    2040680,
+                          ),
                     );
                   },
                   leading: Container(

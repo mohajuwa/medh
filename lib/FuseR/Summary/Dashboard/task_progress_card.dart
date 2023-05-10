@@ -1,15 +1,17 @@
+// ID  -- >        2040736
+
 import 'package:flutter/material.dart';
 import 'package:medh/FuseR/Summary/Constants/constants.dart';
 import 'package:medh/FuseR/Summary/Values/values.dart';
 import 'package:medh/FuseR/Summary/Wedgits/progress_card_close_button.dart';
 import 'package:medh/Theme/theme.dart';
 
-class TaskProgressCard extends StatelessWidget {
+class GTaskProgressCard extends StatelessWidget {
   final String cardTitle;
   final String rating;
   final String progressFigure;
   final int percentageGap;
-  const TaskProgressCard(
+  const GTaskProgressCard(
       {Key? key,
       required this.rating,
       required this.cardTitle,
@@ -34,13 +36,16 @@ class TaskProgressCard extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              ...progressCardGradientList,
+              ...progressCardGradientList, // ID  -- >        2040740
             ],
           ),
         ),
         child: Stack(children: [
           const Positioned(
-              top: 10, right: 10, child: ProgressCardCloseButton()),
+            top: 10,
+            right: 10,
+            child: ProgressCardCloseButton(), // ID  -- >        2040725
+          ),
           Positioned(
               top: 30,
               bottom: 20,
@@ -52,7 +57,7 @@ class TaskProgressCard extends StatelessWidget {
                   Text(cardTitle,
                       style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 22)),
-                  AppSpaces.verticalSpace10,
+                  AppSpaces.verticalSpace10, // ID  -- >        2040704
                   Text('$rating is completed',
                       style: const TextStyle(
                           fontWeight: FontWeight.w500, fontSize: 16)),

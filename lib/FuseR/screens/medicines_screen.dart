@@ -1,7 +1,7 @@
+//  ID  -- >        2040759
 // صفحة الأدوية
 
 import 'package:flutter/material.dart';
-import 'package:medh/FuseR/screens/edit_home_medcine.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/widgets/listContainer/list_view.dart';
 
@@ -96,7 +96,8 @@ class FuserMedicineScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const AddMedcineScreen(),
+                          builder: (context) =>
+                              const AddMedcineScreen(), // ID  -- >        2040744
                         ),
                       );
                     },
@@ -134,7 +135,8 @@ class FuserMedicineScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FuserEdit2MedcineScreen(),
+                        builder: (context) =>
+                            const FuserEdit2MedcineScreen(), // ID  -- >        2040746
                       ),
                     );
                   },
@@ -145,28 +147,31 @@ class FuserMedicineScreen extends StatelessWidget {
                         Column(
                           children: [
                             ListsContainer(
-                                cardTitle: "إسم الصنف ",
-                                cardSubTitle: "شوية كلام يكتب هنا",
-                                numberOfItems: "120",
-                                cardDate: "2024/2/11 م",
-                                imageUrl:
-                                    "lib/FuseR/Summary/assets/orange_pencil.png",
-                                backgroundColor: HexColor.fromHex("EFA17D")),
+                              cardTitle: "إسم الصنف ",
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              numberOfItems: "120",
+                              cardDate: "2024/2/11 م",
+                              imageUrl:
+                                  "lib/FuseR/Summary/assets/orange_pencil.png",
+                              backgroundColor: HexColor.fromHex("EFA17D"),
+                            ), //  ID  -- >        2040703
                             ListsContainer(
-                                cardSubTitle: "شوية كلام يكتب هنا",
-                                cardTitle: "إسم الصنف",
-                                numberOfItems: "74",
-                                cardDate: "2024/2/11 م",
-                                imageUrl:
-                                    "lib/FuseR/Summary/assets/green_pencil.png",
-                                backgroundColor: HexColor.fromHex("7FBC69")),
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              cardTitle: "إسم الصنف",
+                              numberOfItems: "74",
+                              cardDate: "2024/2/11 م",
+                              imageUrl:
+                                  "lib/FuseR/Summary/assets/green_pencil.png",
+                              backgroundColor: HexColor.fromHex("7FBC69"),
+                            ),
                             ListsContainer(
-                                cardSubTitle: "شوية كلام يكتب هنا",
-                                cardTitle: "إسم الصنف ",
-                                numberOfItems: "5",
-                                cardDate: "2024/2/11 م",
-                                imageUrl: "lib/FuseR/Summary/assets/cone.png",
-                                backgroundColor: HexColor.fromHex("EDA7FA")),
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              cardTitle: "إسم الصنف ",
+                              numberOfItems: "5",
+                              cardDate: "2024/2/11 م",
+                              imageUrl: "lib/FuseR/Summary/assets/cone.png",
+                              backgroundColor: HexColor.fromHex("EDA7FA"),
+                            ), // ID  -- >        2040703
                           ],
                         ),
                         Column(
@@ -186,12 +191,13 @@ class FuserMedicineScreen extends StatelessWidget {
                                 imageUrl: "assets/stickers/stic_10-17.png",
                                 backgroundColor: HexColor.fromHex("7FBC69")),
                             ListsContainer(
-                                cardSubTitle: "شوية كلام يكتب هنا",
-                                cardTitle: "إسم الصنف ",
-                                numberOfItems: "3",
-                                cardDate: "2024/2/11 م",
-                                imageUrl: "assets/images/icon1.png",
-                                backgroundColor: HexColor.fromHex("EDA7FA")),
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              cardTitle: "إسم الصنف ",
+                              numberOfItems: "3",
+                              cardDate: "2024/2/11 م",
+                              imageUrl: "assets/images/icon1.png",
+                              backgroundColor: HexColor.fromHex("EDA7FA"),
+                            ), // ID  -- >        2040703
                           ],
                         ),
                       ],

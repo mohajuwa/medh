@@ -1,3 +1,4 @@
+// ID  -- >        2040738
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/FuseR/Summary/Data/data_model.dart';
@@ -11,16 +12,18 @@ class DashboardOverview extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final dynamic data = AppData.progressIndicatorList;
+    final dynamic data =
+        AppData.progressIndicatorList; //  ID  -- >        2040734
 
     List<Widget> cards = List.generate(
-        5,
-        (index) => TaskProgressCard(
-              cardTitle: data[index]['cardTitle'],
-              rating: data[index]['rating'],
-              progressFigure: data[index]['progress'],
-              percentageGap: int.parse(data[index]['progressBar']),
-            ));
+      5,
+      (index) => TaskProgressCard(
+        cardTitle: data[index]['cardTitle'],
+        rating: data[index]['rating'],
+        progressFigure: data[index]['progress'],
+        percentageGap: int.parse(data[index]['progressBar']),
+      ), // ID  -- >        2040727
+    );
 
     return Padding(
       padding: const EdgeInsets.all(8.0),
@@ -32,44 +35,55 @@ class DashboardOverview extends ConsumerWidget {
               cards: cards,
             ),
           ),
-          AppSpaces.verticalSpace10,
+          AppSpaces
+              .verticalSpace10, // ID  -- >        2040704 // ID  -- >        2040704
           Column(
             children: [
               OverviewTaskContainer(
-                  cardTitle: "إجمالي ",
-                  numberOfItems: "120",
-                  imageUrl: "lib/FuseR/Summary/assets/orange_pencil.png",
-                  backgroundColor: HexColor.fromHex("EFA17D")),
+                cardTitle: "إجمالي ",
+                numberOfItems: "120",
+                imageUrl: "lib/FuseR/Summary/assets/orange_pencil.png",
+                backgroundColor: HexColor.fromHex("EFA17D"),
+              ), // ID  -- >        2040723
+
               OverviewTaskContainer(
-                  cardTitle: "عمليات  مكتملة",
-                  numberOfItems: "74",
-                  imageUrl: "lib/FuseR/Summary/assets/green_pencil.png",
-                  backgroundColor: HexColor.fromHex("7FBC69")),
+                cardTitle: "عمليات  مكتملة",
+                numberOfItems: "74",
+                imageUrl: "lib/FuseR/Summary/assets/green_pencil.png",
+                backgroundColor: HexColor.fromHex("7FBC69"),
+              ), // ID  -- >        2040723
+
               OverviewTaskContainer(
-                  cardTitle: "عمليات غير مكتملة",
-                  numberOfItems: "5",
-                  imageUrl: "lib/FuseR/Summary/assets/cone.png",
-                  backgroundColor: HexColor.fromHex("EDA7FA")),
+                cardTitle: "عمليات غير مكتملة",
+                numberOfItems: "5",
+                imageUrl: "lib/FuseR/Summary/assets/cone.png",
+                backgroundColor: HexColor.fromHex("EDA7FA"),
+              ), // ID  -- >        2040723
             ],
           ),
-          AppSpaces.verticalSpace10,
+          AppSpaces.verticalSpace10, // ID  -- >        2040704
           Column(
             children: [
               OverviewTaskContainer(
-                  cardTitle: "أصناف نادرة",
-                  numberOfItems: "24",
-                  imageUrl: "assets/images/icon.png",
-                  backgroundColor: HexColor.fromHex("EFA17D")),
+                cardTitle: "أصناف نادرة",
+                numberOfItems: "24",
+                imageUrl: "assets/images/icon.png",
+                backgroundColor: HexColor.fromHex("EFA17D"),
+              ), // ID  -- >        2040723
+
               OverviewTaskContainer(
-                  cardTitle: "عملاء بالقرب منك",
-                  numberOfItems: "80",
-                  imageUrl: "assets/stickers/stic_10-17.png",
-                  backgroundColor: HexColor.fromHex("7FBC69")),
+                cardTitle: "عملاء بالقرب منك",
+                numberOfItems: "80",
+                imageUrl: "assets/stickers/stic_10-17.png",
+                backgroundColor: HexColor.fromHex("7FBC69"),
+              ), // ID  -- >        2040723
+
               OverviewTaskContainer(
-                  cardTitle: "عمليات ملغية",
-                  numberOfItems: "3",
-                  imageUrl: "assets/images/icon1.png",
-                  backgroundColor: HexColor.fromHex("EDA7FA")),
+                cardTitle: "عمليات ملغية",
+                numberOfItems: "3",
+                imageUrl: "assets/images/icon1.png",
+                backgroundColor: HexColor.fromHex("EDA7FA"),
+              ), // ID  -- >        2040723
             ],
           ),
         ],

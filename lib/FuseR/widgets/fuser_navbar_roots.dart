@@ -1,3 +1,5 @@
+// ID  -- >        2040712
+
 // القائمة الثابتة لكل الصفحات للصيدلي
 
 import 'package:flutter/material.dart';
@@ -22,15 +24,13 @@ class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
   int _currentIndex = 0;
 
   final _screens = [
-    // Home Screen يا نقيب
-    const FuserHomeScreen(),
-    // Medicines Screen
-    FuserMedicineScreen(),
-    // Schedule Screen
-    const FuserDashboardScreen(),
-    // Settings Screen
+    const FuserHomeScreen(), // ID  -- >        2040750
 
-    const FuserSettingsScreen(),
+    FuserMedicineScreen(), //  ID  -- >        2040759
+
+    const FuserDashboardScreen(), // ID  -- >        2040749
+
+    const FuserSettingsScreen(), // ID  -- >        2040753
   ];
   double? scrolledUnderElevation;
 
@@ -70,7 +70,8 @@ class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const FuserNavBarRoots(),
+                                builder: (context) =>
+                                    const FuserNavBarRoots(), // ID  -- >        2040712
                               ),
                             );
                           },

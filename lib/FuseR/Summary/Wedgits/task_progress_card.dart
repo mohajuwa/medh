@@ -1,3 +1,4 @@
+// ID  -- >        2040727
 import 'package:flutter/material.dart';
 import 'package:medh/FuseR/Summary/Constants/constants.dart';
 import 'package:medh/FuseR/Summary/Values/values.dart';
@@ -35,12 +36,15 @@ class TaskProgressCard extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              ...progressCardGradientList,
+              ...progressCardGradientList, // ID  -- >        2040740
             ],
           ),
         ),
         child: Stack(children: [
-          const Positioned(top: 5, right: 10, child: ProgressCardCloseButton()),
+          const Positioned(
+            top: 5, right: 10,
+            child: ProgressCardCloseButton(), //ID  -- >        2040725
+          ),
           Positioned(
               top: 24,
               bottom: 20,
@@ -56,7 +60,7 @@ class TaskProgressCard extends StatelessWidget {
                       fontFamily: 'El_Messiri',
                     ),
                   ),
-                  AppSpaces.verticalSpace10,
+                  AppSpaces.verticalSpace10, // ID  -- >        2040704
                   Text(
                     '$rating co',
                     style: const TextStyle(

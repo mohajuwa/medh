@@ -1,3 +1,4 @@
+// ID  -- >        2040713
 // صفحة التقارير للصيدلي
 //  مضافه الى صفحة لوحة التحكم تحديداً زر التقارير في القائمة
 
@@ -22,10 +23,10 @@ class _FuserReportsState extends State<FuserReports> {
 
   final _dashboardWidgets = [
     // عرض التقرير الشهري
-    const DayReports(),
+    const DayReports(), // ID  -- >        2040716
 
     // عرض التقرير السنوي
-    const YearlyReports(),
+    const YearlyReports(), // ID  -- >        2040715
   ];
 
   @override

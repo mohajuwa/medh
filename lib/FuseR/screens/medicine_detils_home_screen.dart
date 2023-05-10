@@ -1,3 +1,4 @@
+// ID  -- >        2040755
 // صفحة تفاصيل الأدوية
 
 import 'package:flutter/material.dart';
@@ -304,7 +305,8 @@ class FuserMedicineDitlesScreenState
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FuserEditMedcineScreen(),
+                        builder: (context) =>
+                            const FuserEditMedcineScreen(), // ID  -- >        2040745
                       ),
                     );
                   },
