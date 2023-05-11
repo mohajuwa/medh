@@ -1,54 +1,54 @@
-HomePage                               2040680
-NavBarRoots                            2040681
-HomeScreen                             2040682
-SearchScreen                           2040683
-DashboardScreen                        2040684
-SettingsScreen                         2040685
-OrderScreen                            2040686
-CustomAddScreen                        2040687
-UpcomingDashboard                      2040688
-BestPriceDashboard                     2040689
-NearestKmDashboard                     2040690
-Custom2AddScreen                       2040691
-WelcomeScreen                          2040692
-SignUpScreen                           2040693
-LoginScreen                            2040694
-ResultScreen                           2040695
-GeneralSettings                        2040696
-UsersType                              2040697
-Theme                                  2040698
-BackgroundHexagon                      2040699
-AddMedDateContainer                    2040700
-ListsFontContainer                     2040701
-ListContainerImage                     2040702
-ListsContainer                         2040703
-AppSpaces                              2040704
-BoxAddMedDateContainer                 2040705
-BoxContainerList                       2040706
-BoxContainerListImage                  2040707
-BoxFonList                             2040708
-CustomAddMedicineDone                  2040709
-NativBar                               2040710
-OneTimeScreen                          2040711
-FuserNavBarRoots                       2040712
-FuserReports                           2040713
-FuserUpcomingDashboard                 2040714
-YearlyReports                          2040715
-DayReports                             2040716
-FuserDayTasks                          2040717
-FuserChatSample                        2040720
-BarChartSample1                        2040721
-DailyGoalCard                          2040722
-OverviewTaskContainer                  2040723
-ProductivityChart                      2040724
-ProgressCardCloseButton                2040725
-TaskContainerImage                     2040726
-TaskProgressCard                       2040727
-library values;                        2040728
-  AppTextStyles                        2040729
-  AppSpaces                            2040730
-ButtonStyles                           2040731
-BoxDecorationStyles                    2040732
+HomePage              ,                2040680        ,      صفحة اختيار نوع المستخدم
+NavBarRoots           ,                2040681        ,      المستخدم العادي ، عناصر اسفل  واعلى الشاشة
+HomeScreen            ,                2040682        ,      الصفحة الرئيسية للمستخدم العادي
+SearchScreen          ,                2040683        ,      صفحة الإستعلام عن الأدوية
+NotifacationsScreen   ,                2040684        ,      صفحة الإشعارات 
+SettingsScreen        ,                2040685        ,      صفحة الإعدادات
+OrderScreen           ,                2040686        ,      صفحة طلب من صيدلية مخصصة
+CustomAddScreen       ,                2040687        ,      صفحة إدخال معلومات الطلب المخصص
+UpcomingDashboard     ,                2040688        ,      صفحة ردود على حسب اسرع رد 
+BestPriceDashboard    ,                2040689        ,      صفحة ردود على حسب أفضل سعر 
+NearestKmDashboard    ,                2040690        ,      صفحة ردود على حسب القرب 
+Custom2AddScreen      ,                2040691        ,      صفحة طلب   مخصص
+WelcomeScreen         ,                2040692        ,      صفحة الترحيب بالمستخدم العادي
+SignUpScreen          ,                2040693        ,      صفحة التسجيل للمستخدم العادي
+LoginScreen           ,                2040694        ,      صفحة تسجيل الدخول للمستخدم العادي
+ResultScreen          ,                2040695        ,      صفحة معلومات الأدوية الناتجة عن الإستعلام
+GeneralSettings       ,                2040696        ,      صفحة الإعدادات العامة
+UsersType             ,                2040697        ,      صفحة كلاس نوع المستخدم
+Theme                 ,                2040698        ,      صفحة كلاس الثيم
+BackgroundHexagon     ,                2040699        ,      صفحة كلاس لون // غير مستخدم
+AddMedDateContainer   ,                2040700        ,      كلاس عرض تاريخ ،مضمن في كلاس حاوية عرض الأدوية للمستخدم الصيدلي
+ListsFontContainer    ,                2040701        ,      كلاس عرض وصف الأدوية ،مضمن في كلاس حاوية عرض الأدوية للمستخدم الصيدلي
+ListContainerImage    ,                2040702        ,      كلاس عرض الصور ،مضمن في كلاس حاوية عرض الأدوية للمستخدم الصيدلي
+ListsContainer        ,                2040703        ,      كلاس حاوية عرض الأدوية مضمن في صفحة عرض الأدوية
+AppSpaces             ,                2040704        ,      كلاس المسافات
+BoxAddMedDateContainer,                2040705        ,      نفس كلاس رقم 2040700 بس مستخدم في الرئيسية للمستخدم الصيدلي
+BoxContainerList      ,                2040706        ,      نفس كلاس رقم 2040703 بس مستخدم في الرئيسية للمستخدم الصيدلي
+BoxContainerListImage ,                2040707        ,      نفس كلاس رقم 2040702 بس مستخدم في الرئيسية للمستخدم الصيدلي
+BoxFonList            ,                2040708        ,      نفس كلاس رقم 2040701 بس مستخدم في الرئيسية للمستخدم  الصيدلي
+CustomAddMedicineDone ,                2040709        ,      صفحة تمت إضافة الدواء بنجاح
+NativBar              ,                2040710        ,      عناصر أسفل الشاشة ، // غير مستخدم
+OneTimeScreen         ,                2040711        ,      صفحة لمرة واحدة // غير مستخدمة بعد
+FuserNavBarRoots      ,                2040712        ,      المستخدم الصيدلي ، عناصر اسفل  واعلى الشاشة
+FuserReports          ,                2040713        ,      صفحة التقارير للمستخدم الصيدلي مضمنة في صفحة لوحة التحكم
+FuserUpcomingDashboard,                2040714        ,      صفحة الطلبات للمستخدم الصيدلي مضمنة في صفحة لوحة التحكم
+YearlyReports         ,                2040715        ,      صفحة التقرير السنوي مضمنة في صفحة التقارير
+DayReports            ,                2040716        ,      صفحة التقرير اليومي مضمنة في صفحة التقارير
+FuserDayTasks         ,                2040717
+FuserChatSample       ,                2040720
+BarChartSample1       ,                2040721
+DailyGoalCard         ,                2040722
+OverviewTaskContainer ,                2040723
+ProductivityChart     ,                2040724
+ProgressCardCloseButton,               2040725
+TaskContainerImage     ,               2040726
+TaskProgressCard       ,               2040727
+library values;       ,                2040728
+  AppTextStyles       ,                2040729
+  AppSpaces           ,                2040730
+ButtonStyles          ,                2040731
+BoxDecorationStyles   ,                2040732
   AppColors                            2040733
 AppData                                2040734
 MyTask                                 2040735

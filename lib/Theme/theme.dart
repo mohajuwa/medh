@@ -9,7 +9,7 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
     extensions: <ThemeExtension<AppColors>>[
       AppColors(
         // White To Black Colors
-        colorWhiteToBlack: isDarkTheme ? Colors.white : Colors.black,
+        colorWhiteToBlack: isDarkTheme ? Colors.white : Colors.black54,
         // Icons Colors in Theme
         color1: isDarkTheme ? Colors.purple : const Color(0xD09B1642),
 

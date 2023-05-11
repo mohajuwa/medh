@@ -1,20 +1,14 @@
 // ID  -- >    2040683
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/FuseR/Summary/Values/values.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/NuseR/screens/results_screen.dart';
+import 'package:medh/widgets/listContainer/list_view.dart';
+import 'package:sizer/sizer.dart';
 
 // ignore: must_be_immutable
-class SearchScreen extends ConsumerWidget {
-  List imgs = [
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-    "doc2.jpg",
-  ];
+class SearchScreen extends StatelessWidget {
   List symptoms = [
     "الكل",
     "الظهار",
@@ -28,20 +22,23 @@ class SearchScreen extends ConsumerWidget {
   SearchScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 60,
-          title: Padding(
-            padding: const EdgeInsets.only(top: 1, bottom: 5),
-            child: Column(
-              children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
+  Widget build(BuildContext context) {
+    return CustomScrollView(
+      slivers: [
+        const SliverAppBar(
+          toolbarHeight: 8,
+          floating: true,
+        ),
+        SliverList(
+          delegate: SliverChildListDelegate(
+            [
+              Padding(
+                padding: const EdgeInsets.all(7.0),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 2),
                   decoration: BoxDecoration(
                     color: colors(context).color4,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(20),
                     boxShadow: const [
                       BoxShadow(
                         color: Color(0x3C000000),
@@ -51,17 +48,17 @@ class SearchScreen extends ConsumerWidget {
                     ],
                   ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       SizedBox(
-                        width: 300,
+                        width: MediaQuery.of(context).size.width / 1.23,
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 5),
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
                           child: TextFormField(
-                            onTap: () => showSearch(
-                              context: context,
-                              delegate: CustomSearshDelegate(),
-                            ),
+                            // onTap: () => showSearch(
+                            //   context: context,
+                            //   delegate: CustomSearshDelegate(),
+                            // ),
                             decoration: InputDecoration(
                               hintText: "إستعلام",
                               hintStyle: TextStyle(
@@ -72,124 +69,164 @@ class SearchScreen extends ConsumerWidget {
                           ),
                         ),
                       ),
-                      const Icon(
+                      Icon(
                         Icons.search,
+                        color: colors(context).colorWhiteToBlack,
                       ),
-                      const Icon(
+                      Icon(
                         Icons.photo_camera,
+                        color: colors(context).colorWhiteToBlack,
                       ),
                     ],
                   ),
                 ),
-              ],
-            ),
-          ),
-        ),
-        body: ListView(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 2.0),
-              child: Divider(
-                color: colors(context).color3,
-                thickness: 2,
-                height: 2.0,
               ),
-            ),
-            const SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Text("فلترة البحث حسب المنطقة",
-                  style: Theme.of(context).textTheme.titleMedium),
-            ),
-            SizedBox(
-              height: 50,
-              child: ListView.builder(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: symptoms.length,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      margin: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 15),
-                      padding: const EdgeInsets.symmetric(horizontal: 25),
-                      decoration: BoxDecoration(
-                        color: colors(context).color4,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x3C000000),
-                            blurRadius: 4,
-                            spreadRadius: 2,
-                          )
-                        ],
-                      ),
-                      child: Center(
-                        child: Text(
-                          symptoms[index],
-                          style: Theme.of(context).textTheme.titleSmall,
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: SelectableText(
+                  "فلترة البحث حسب المنطقة",
+                  style: Theme.of(context).textTheme.titleSmall,
+                ),
+              ),
+              const SizedBox(height: 1),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                child: Divider(
+                  color: colors(context).color3,
+                  thickness: 2,
+                  height: 2.0,
+                ),
+              ),
+              SizedBox(
+                height: 5.3.h,
+                child: ListView.builder(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: symptoms.length,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 15),
+                        padding: EdgeInsets.symmetric(horizontal: 2.2.h),
+                        decoration: BoxDecoration(
+                          color: colors(context).color3,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Color(0x47000000),
+                              blurRadius: 1.5,
+                              spreadRadius: 1,
+                            )
+                          ],
                         ),
+                        child: Center(
+                          child: Text(
+                            symptoms[index],
+                            style: const TextStyle(
+                              fontFamily: 'El_Messiri',
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      );
+                    }),
+              ),
+              const SizedBox(height: 8),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  "نتيجة الإستعلام ",
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                child: Divider(
+                  color: colors(context).color3,
+                  thickness: 2,
+                  height: 2.0,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const ResultScreen(), // ID  -- >    2040695
                       ),
                     );
-                  }),
-            ),
-            const SizedBox(height: 10),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                "نتيجة الإستعلام ",
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 2.0),
-              child: Divider(
-                color: colors(context).color3,
-                thickness: 2,
-                height: 2.0,
-              ),
-            ),
-            const SizedBox(height: 10),
-            ListView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: 6,
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 10),
-                    child: ListTile(
-                      minVerticalPadding: 15,
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  const ResultScreen(), // ID  -- >    2040695
-                            ));
-                      },
-                      leading: CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage(
-                          "assets/images/${imgs[index]}",
+                  },
+                  child: Hero(
+                    tag: "hero",
+                    child: Column(
+                      children: [
+                        Column(
+                          children: [
+                            ListsContainer(
+                              cardTitle: "إسم الدواء ",
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              numberOfItems: "120",
+                              cardDate: "99%  متوفر ",
+                              imageUrl:
+                                  "lib/FuseR/Summary/assets/green_pencil.png",
+                              backgroundColor: HexColor.fromHex("7FBC69"),
+                            ), //  ID  -- >        2040703
+                            ListsContainer(
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              cardTitle: "إسم الدواء",
+                              numberOfItems: "74",
+                              cardDate: "85%  متوفر ",
+                              imageUrl:
+                                  "lib/FuseR/Summary/assets/orange_pencil.png",
+                              backgroundColor: HexColor.fromHex("EFA17D"),
+                            ),
+                            ListsContainer(
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              cardTitle: "إسم الدواء ",
+                              numberOfItems: "23",
+                              cardDate: "77%  متوفر ",
+                              imageUrl: "assets/images/icon.png",
+                              backgroundColor: HexColor.fromHex("C395FC"),
+                            ), // ID  -- >        2040703
+                            ListsContainer(
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              cardTitle: "إسم الدواء ",
+                              numberOfItems: "15",
+                              cardDate: "60%  متوفر ",
+                              imageUrl: "lib/FuseR/Summary/assets/cone.png",
+                              backgroundColor: HexColor.fromHex("EDA7FA"),
+                            ), // ID  -- >        2040703
+                            const ListsContainer(
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              cardTitle: "إسم الدواء ",
+                              numberOfItems: "7",
+                              cardDate: "41%  متوفر ",
+                              imageUrl: "assets/stickers/stic_10-17.png",
+                              backgroundColor: Color(0xFFC44036),
+                            ), // ID  -- >        2040703
+                            const ListsContainer(
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              cardTitle: "إسم الدواء ",
+                              numberOfItems: "3",
+                              cardDate: "5%  متوفر ",
+                              imageUrl: "assets/images/icon1.png",
+                              backgroundColor: Color(0xFF9B0A00),
+                            ), // ID  -- >
+                          ],
                         ),
-                      ),
-                      title: const Text(
-                        "إسم الدواء",
-                      ),
-                      subtitle: Text(
-                        "وصف الدواء يتم كتابته هنا",
-                        maxLines: 16,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
-                      trailing: Text(
-                        "موقع الصيدلية : بالقرب مني",
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
+                      ],
                     ),
-                  );
-                })
-          ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }

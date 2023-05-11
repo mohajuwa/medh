@@ -2,13 +2,14 @@
 
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
-import 'package:medh/Theme/theme.dart';
 import 'package:sizer/sizer.dart';
 
 class AddMedDateContainer extends StatelessWidget {
   final String cardDate;
+  final Color backgroundColor;
 
-  const AddMedDateContainer({Key? key, required this.cardDate})
+  const AddMedDateContainer(
+      {Key? key, required this.cardDate, required this.backgroundColor})
       : super(key: key);
 
   @override
@@ -17,12 +18,12 @@ class AddMedDateContainer extends StatelessWidget {
       width: 9.h,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-        color: colors(context).color1,
+        color: backgroundColor,
         boxShadow: const [
           BoxShadow(
             color: Color(0x83111111),
-            blurRadius: 4,
-            spreadRadius: 2,
+            blurRadius: 1.5,
+            spreadRadius: 1,
           )
         ],
       ),
@@ -31,8 +32,8 @@ class AddMedDateContainer extends StatelessWidget {
           cardDate,
           style: const TextStyle(
             color: Colors.white,
-            fontWeight: FontWeight.w500,
-            fontSize: 11,
+            fontWeight: FontWeight.w600,
+            fontSize: 13,
           ),
         ),
       ),

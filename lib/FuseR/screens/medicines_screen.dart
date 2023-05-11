@@ -53,10 +53,10 @@ class FuserMedicineScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           SizedBox(
-                            width: MediaQuery.of(context).size.width / 1.2,
+                            width: MediaQuery.of(context).size.width / 1.23,
                             child: Padding(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 5),
@@ -152,8 +152,8 @@ class FuserMedicineScreen extends StatelessWidget {
                               numberOfItems: "120",
                               cardDate: "2024/2/11 م",
                               imageUrl:
-                                  "lib/FuseR/Summary/assets/orange_pencil.png",
-                              backgroundColor: HexColor.fromHex("EFA17D"),
+                                  "lib/FuseR/Summary/assets/green_pencil.png",
+                              backgroundColor: HexColor.fromHex("7FBC69"),
                             ), //  ID  -- >        2040703
                             ListsContainer(
                               cardSubTitle: "شوية كلام يكتب هنا",
@@ -161,42 +161,40 @@ class FuserMedicineScreen extends StatelessWidget {
                               numberOfItems: "74",
                               cardDate: "2024/2/11 م",
                               imageUrl:
-                                  "lib/FuseR/Summary/assets/green_pencil.png",
-                              backgroundColor: HexColor.fromHex("7FBC69"),
+                                  "lib/FuseR/Summary/assets/orange_pencil.png",
+                              backgroundColor: HexColor.fromHex("EFA17D"),
                             ),
                             ListsContainer(
                               cardSubTitle: "شوية كلام يكتب هنا",
                               cardTitle: "إسم الصنف ",
-                              numberOfItems: "5",
+                              numberOfItems: "23",
+                              cardDate: "2024/2/11 م",
+                              imageUrl: "assets/images/icon.png",
+                              backgroundColor: HexColor.fromHex("C395FC"),
+                            ), // ID  -- >        2040703
+                            ListsContainer(
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              cardTitle: "إسم الصنف ",
+                              numberOfItems: "15",
                               cardDate: "2024/2/11 م",
                               imageUrl: "lib/FuseR/Summary/assets/cone.png",
                               backgroundColor: HexColor.fromHex("EDA7FA"),
-                            ), // ID  -- >        2040703
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            ListsContainer(
-                                cardSubTitle: "شوية كلام يكتب هنا",
-                                cardTitle: "إسم الصنف ",
-                                numberOfItems: "24",
-                                cardDate: "2024/2/11 م",
-                                imageUrl: "assets/images/icon.png",
-                                backgroundColor: HexColor.fromHex("EFA17D")),
-                            ListsContainer(
-                                cardSubTitle: "شوية كلام يكتب هنا",
-                                cardTitle: "إسم الصنف ",
-                                numberOfItems: "80",
-                                cardDate: "2024/2/11 م",
-                                imageUrl: "assets/stickers/stic_10-17.png",
-                                backgroundColor: HexColor.fromHex("7FBC69")),
-                            ListsContainer(
+                            ),
+                            const ListsContainer(
+                              cardSubTitle: "شوية كلام يكتب هنا",
+                              cardTitle: "إسم الصنف ",
+                              numberOfItems: "9",
+                              cardDate: "2024/2/11 م",
+                              imageUrl: "assets/stickers/stic_10-17.png",
+                              backgroundColor: Color(0xFFC44036),
+                            ),
+                            const ListsContainer(
                               cardSubTitle: "شوية كلام يكتب هنا",
                               cardTitle: "إسم الصنف ",
                               numberOfItems: "3",
                               cardDate: "2024/2/11 م",
                               imageUrl: "assets/images/icon1.png",
-                              backgroundColor: HexColor.fromHex("EDA7FA"),
+                              backgroundColor: Color(0xFF9B0A00),
                             ), // ID  -- >        2040703
                           ],
                         ),

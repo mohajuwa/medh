@@ -100,6 +100,7 @@ class ListsContainer extends StatelessWidget {
                       children: [
                         AddMedDateContainer(
                           cardDate: cardDate,
+                          backgroundColor: backgroundColor,
                         ), //ID  -- >        2040700
                       ],
                     ),
