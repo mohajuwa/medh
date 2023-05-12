@@ -288,7 +288,7 @@ class _FuserHomeScreenState extends State<FuserHomeScreen> {
                           cardTitle: "إسم الصنف ",
                           numberOfItems: "3",
                           cardDate: "2024/2/11 م",
-                          imageUrl: "assets/images/icon1.png",
+                          imageUrl: "assets/images/Logo.png",
                           backgroundColor: HexColor.fromHex("EDA7FA"),
                         ), // ID  -- >        2040706
                       ],

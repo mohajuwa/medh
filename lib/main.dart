@@ -13,7 +13,7 @@ void main() {
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return Material(
       child: Container(
-        color: Colors.pinkAccent,
+        color: Colors.black,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

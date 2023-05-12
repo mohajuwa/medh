@@ -19,6 +19,7 @@ class FuserChatScreen extends StatelessWidget {
             padding: const EdgeInsets.only(top: 5),
             child: Row(children: const [
               CircleAvatar(
+                backgroundColor: Colors.transparent,
                 radius: 25,
                 backgroundImage: AssetImage("assets/images/doctor1.jpg"),
               ),

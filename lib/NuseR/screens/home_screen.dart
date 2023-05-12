@@ -2,19 +2,21 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:medh/Theme/theme.dart';
+import 'package:medh/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'orderscreen.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  HomeScreenState createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreenState extends ConsumerState<HomeScreen> {
   List symptoms = [
     "الظهار",
     "السبل",
@@ -23,21 +25,21 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List imgs = [
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
+    "lined heart.png",
+    "lined heart.png",
+    "lined heart.png",
+    "lined heart.png",
+    "lined heart.png",
+    "lined heart.png",
+    "lined heart.png",
+    "lined heart.png",
+    "lined heart.png",
+    "lined heart.png",
+    "lined heart.png",
+    "lined heart.png",
   ];
 
-  double? scrolledUnderElevation;
+  get isDarkTheme => ref.watch(appThemeProvider);
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(right: 20),
                 child: Text(
@@ -120,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                     }),
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 12),
               Padding(
                 padding: const EdgeInsets.only(right: 20),
                 child: Text(
@@ -131,12 +133,21 @@ class _HomeScreenState extends State<HomeScreen> {
               GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
+                  mainAxisExtent: 160,
+                  mainAxisSpacing: 2,
                 ),
                 itemCount: 12,
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return InkWell(
+                    hoverColor: colors(context).color3,
+                    focusColor: colors(context).color5,
+                    splashColor: colors(context).color2,
+                    overlayColor: MaterialStateColor.resolveWith(
+                      (states) =>
+                          isDarkTheme ? Colors.purple : const Color(0xD09B1642),
+                    ),
                     onTap: () {
                       Navigator.push(
                         context,
@@ -147,26 +158,46 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                     },
                     child: Container(
-                      margin: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(12.0),
                       padding: const EdgeInsets.symmetric(vertical: 2),
                       decoration: BoxDecoration(
                         color: colors(context).color4,
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(20),
                         boxShadow: const [
                           BoxShadow(
                             color: Color(0x3C000000),
-                            blurRadius: 4,
-                            spreadRadius: 2,
+                            blurRadius: 1.5,
+                            spreadRadius: 1,
                           )
                         ],
                       ),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          CircleAvatar(
-                            radius: 15,
-                            backgroundImage:
-                                AssetImage("assets/images/${imgs[index]}"),
+                          const SizedBox(height: 3),
+                          Container(
+                            width: 11.h,
+                            height: 5.h,
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(10.0),
+                              ),
+                              color: colors(context).color4,
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0x3C000000),
+                                  blurRadius: 1.5,
+                                  spreadRadius: 1,
+                                )
+                              ],
+                            ),
+                            child: ClipRRect(
+                              child: Image(
+                                image:
+                                    AssetImage("assets/images/${imgs[index]}"),
+                                fit: BoxFit.scaleDown,
+                              ),
+                            ),
                           ),
                           Text(
                             "إسم الصيدلية",
@@ -191,17 +222,32 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ],
                           ),
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.chevron_right,
-                                color: colors(context).color1,
-                                size: 3.h,
+                          Container(
+                            width: 10.h,
+                            height: 2.h,
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(5.0),
                               ),
-                            ],
-                          )
+                              color: colors(context).color1,
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0x3C000000),
+                                  blurRadius: 1.5,
+                                  spreadRadius: 1,
+                                )
+                              ],
+                            ),
+                            child: const Center(
+                              child: Text(
+                                "تفاصيل",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),

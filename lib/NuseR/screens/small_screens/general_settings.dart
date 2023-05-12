@@ -34,7 +34,8 @@ class GeneralSettingsScreen extends ConsumerWidget {
             Navigator.pop(
               context,
               MaterialPageRoute(
-                builder: (context) => const NavBarRoots(), // ID  -- >    2040681
+                builder: (context) =>
+                    const NavBarRoots(), // ID  -- >    2040681
               ),
             );
           },

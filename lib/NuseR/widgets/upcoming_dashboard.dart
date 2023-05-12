@@ -58,6 +58,7 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                       ),
                     ),
                     trailing: CircleAvatar(
+                      backgroundColor: Colors.transparent,
                       radius: 25,
                       backgroundImage: AssetImage("assets/images/icon.png"),
                     ),
@@ -235,6 +236,7 @@ class UpcomingDashboardState extends ConsumerState<UpcomingDashboard> {
                       ),
                     ),
                     trailing: CircleAvatar(
+                      backgroundColor: Colors.transparent,
                       radius: 25,
                       backgroundImage: AssetImage("assets/images/icon.png"),
                     ),

@@ -32,8 +32,9 @@ class FuserSettingsScreen extends ConsumerWidget {
                 const SizedBox(height: 30),
                 const ListTile(
                   leading: CircleAvatar(
+                    backgroundColor: Colors.transparent,
                     radius: 30,
-                    backgroundImage: AssetImage("assets/images/icon1.png"),
+                    backgroundImage: AssetImage("assets/images/Logo.png"),
                   ),
                   title: Text(
                     "إسم المستخدم",

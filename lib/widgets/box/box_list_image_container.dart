@@ -12,16 +12,13 @@ class BoxContainerListImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-          width: 10.h,
-          height: 5.h,
-          decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-              color: backgroundColor),
-          child: ClipRRect(
-              child:
-                  Image(image: AssetImage(imageUrl), fit: BoxFit.scaleDown))),
-    );
+    return Container(
+        width: 10.h,
+        height: 5.h,
+        decoration: BoxDecoration(
+            borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+            color: backgroundColor),
+        child: ClipRRect(
+            child: Image(image: AssetImage(imageUrl), fit: BoxFit.scaleDown)));
   }
 }

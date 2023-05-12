@@ -174,7 +174,7 @@ class AvaliablePupScreen extends StatelessWidget {
         //                       builder: (context) => FuserAppointme2ntScreen(),
         //                     ));
         //               },
-        //               leading: CircleAvatar(
+        //               leading: CircleAvatar( backgroundColor: Colors.transparent,
         //                 radius: 30,
         //                 backgroundImage: AssetImage(
         //                   "assets/images/${imgs[index]}",

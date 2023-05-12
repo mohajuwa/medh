@@ -73,9 +73,10 @@ class FuserMedicineDitlesScreenState
                         child: Column(
                           children: [
                             const CircleAvatar(
+                              backgroundColor: Colors.transparent,
                               radius: 35,
                               backgroundImage:
-                                  AssetImage("assets/images/icon1.png"),
+                                  AssetImage("assets/images/Logo.png"),
                             ),
                             const SizedBox(height: 15),
                             const SelectableText(
@@ -216,6 +217,7 @@ class FuserMedicineDitlesScreenState
                                   children: [
                                     ListTile(
                                       leading: CircleAvatar(
+                                        backgroundColor: Colors.transparent,
                                         radius: 25,
                                         backgroundImage: AssetImage(
                                             "assets/images/${imgs[index]}"),

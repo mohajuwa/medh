@@ -81,7 +81,7 @@ class DashboardOverview extends ConsumerWidget {
               OverviewTaskContainer(
                 cardTitle: "عمليات ملغية",
                 numberOfItems: "3",
-                imageUrl: "assets/images/icon1.png",
+                imageUrl: "assets/images/Logo.png",
                 backgroundColor: HexColor.fromHex("EDA7FA"),
               ), // ID  -- >        2040723
             ],

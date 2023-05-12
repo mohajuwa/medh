@@ -36,7 +36,7 @@ class FuserEditMedcineScreenState
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Image.asset(
-                  "assets/images/icon1.png",
+                  "assets/images/Logo.png",
                   height: 100,
                 ),
               ),

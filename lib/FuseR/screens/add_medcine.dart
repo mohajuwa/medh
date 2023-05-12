@@ -119,9 +119,10 @@ class AddMedcineScreenState extends ConsumerState<AddMedcineScreen> {
                               shape: BoxShape.circle,
                             ),
                             child: const CircleAvatar(
+                              backgroundColor: Colors.transparent,
                               radius: 15,
                               backgroundImage:
-                                  AssetImage("assets/images/icon1.png"),
+                                  AssetImage("assets/images/Logo.png"),
                             ),
                           ),
                         ],
@@ -138,7 +139,7 @@ class AddMedcineScreenState extends ConsumerState<AddMedcineScreen> {
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Image.asset(
-                  "assets/images/icon1.png",
+                  "assets/images/Logo.png",
                   height: 100,
                 ),
               ),

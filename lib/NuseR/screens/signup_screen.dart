@@ -110,9 +110,10 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
                               shape: BoxShape.circle,
                             ),
                             child: const CircleAvatar(
+                              backgroundColor: Colors.transparent,
                               radius: 15,
                               backgroundImage:
-                                  AssetImage("assets/images/icon1.png"),
+                                  AssetImage("assets/images/Logo.png"),
                             ),
                           ),
                         ],

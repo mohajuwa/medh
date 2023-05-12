@@ -51,8 +51,9 @@ class FuserUpcomingDashboard extends StatelessWidget {
                       "وصفة",
                     ),
                     trailing: CircleAvatar(
+                      backgroundColor: Colors.transparent,
                       radius: 25,
-                      backgroundImage: AssetImage("assets/images/icon1.png"),
+                      backgroundImage: AssetImage("assets/images/Logo.png"),
                     ),
                   ),
                   Padding(
@@ -191,8 +192,9 @@ class FuserUpcomingDashboard extends StatelessWidget {
                       "وصفة",
                     ),
                     trailing: CircleAvatar(
+                      backgroundColor: Colors.transparent,
                       radius: 25,
-                      backgroundImage: AssetImage("assets/images/icon1.png"),
+                      backgroundImage: AssetImage("assets/images/Logo.png"),
                     ),
                   ),
                   Padding(
@@ -331,8 +333,9 @@ class FuserUpcomingDashboard extends StatelessWidget {
                       "وصفة",
                     ),
                     trailing: CircleAvatar(
+                      backgroundColor: Colors.transparent,
                       radius: 25,
-                      backgroundImage: AssetImage("assets/images/icon1.png"),
+                      backgroundImage: AssetImage("assets/images/Logo.png"),
                     ),
                   ),
                   Padding(

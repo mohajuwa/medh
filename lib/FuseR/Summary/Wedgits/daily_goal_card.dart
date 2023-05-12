@@ -113,7 +113,7 @@ class DailyGoalCard extends StatelessWidget {
                               child: Image(
                                 fit: BoxFit.contain,
                                 image: AssetImage(
-                                  "assets/images/icon1.png",
+                                  "assets/images/Logo.png",
                                 ),
                               ),
                             ),

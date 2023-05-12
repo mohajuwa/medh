@@ -213,7 +213,7 @@ class SearchScreen extends StatelessWidget {
                               cardTitle: "إسم الدواء ",
                               numberOfItems: "3",
                               cardDate: "5%  متوفر ",
-                              imageUrl: "assets/images/icon1.png",
+                              imageUrl: "assets/images/Logo.png",
                               backgroundColor: Color(0xFF9B0A00),
                             ), // ID  -- >
                           ],

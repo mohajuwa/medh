@@ -32,6 +32,7 @@ class SettingsScreen extends ConsumerWidget {
                 const SizedBox(height: 30),
                 const ListTile(
                   leading: CircleAvatar(
+                    backgroundColor: Colors.transparent,
                     radius: 30,
                     backgroundImage: AssetImage("assets/images/doctor1.jpg"),
                   ),

@@ -27,8 +27,9 @@ class CustomAddScreenState extends ConsumerState<CustomAddScreen> {
               padding: const EdgeInsets.only(top: 5),
               child: Row(children: [
                 const CircleAvatar(
+                  backgroundColor: Colors.transparent,
                   radius: 25,
-                  backgroundImage: AssetImage("assets/images/icon1.png"),
+                  backgroundImage: AssetImage("assets/images/Logo.png"),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 10),
@@ -64,7 +65,7 @@ class CustomAddScreenState extends ConsumerState<CustomAddScreen> {
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Image.asset(
-                  "assets/images/icon1.png",
+                  "assets/images/Logo.png",
                   height: 100,
                 ),
               ),

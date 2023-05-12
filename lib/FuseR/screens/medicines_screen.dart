@@ -13,12 +13,12 @@ import 'edit_medicine2.dart';
 // ignore: must_be_immutable
 class FuserMedicineScreen extends StatelessWidget {
   List imgs = [
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
-    "icon1.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
   ];
 
   FuserMedicineScreen({super.key});
@@ -193,7 +193,7 @@ class FuserMedicineScreen extends StatelessWidget {
                               cardTitle: "إسم الصنف ",
                               numberOfItems: "3",
                               cardDate: "2024/2/11 م",
-                              imageUrl: "assets/images/icon1.png",
+                              imageUrl: "assets/images/Logo.png",
                               backgroundColor: Color(0xFF9B0A00),
                             ), // ID  -- >        2040703
                           ],

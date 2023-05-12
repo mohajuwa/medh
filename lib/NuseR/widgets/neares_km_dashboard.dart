@@ -59,6 +59,7 @@ class NearestKmDashboardState extends ConsumerState<NearestKmDashboard> {
                       ),
                     ),
                     trailing: CircleAvatar(
+                      backgroundColor: Colors.transparent,
                       radius: 25,
                       backgroundImage: AssetImage("assets/images/icon.png"),
                     ),
@@ -236,6 +237,7 @@ class NearestKmDashboardState extends ConsumerState<NearestKmDashboard> {
                       ),
                     ),
                     trailing: CircleAvatar(
+                      backgroundColor: Colors.transparent,
                       radius: 25,
                       backgroundImage: AssetImage("assets/images/icon.png"),
                     ),
