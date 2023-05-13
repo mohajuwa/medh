@@ -39,8 +39,8 @@ class BoxContainerList extends StatelessWidget {
           boxShadow: const [
             BoxShadow(
               color: Color(0x47000000),
-              blurRadius: 4,
-              spreadRadius: 2,
+              blurRadius: 1.5,
+              spreadRadius: 1,
             )
           ],
         ),
@@ -74,7 +74,7 @@ class BoxContainerList extends StatelessWidget {
                               color: backgroundColor,
                               fontWeight: FontWeight.w600,
                               fontSize: 16)),
-                      Icon(Icons.add, color: colors(context).color1, size: 19),
+                      Icon(Icons.add, color: backgroundColor, size: 19),
                     ],
                   ),
                 ],

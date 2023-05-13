@@ -11,7 +11,7 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
         // White To Black Colors
         colorWhiteToBlack: isDarkTheme ? Colors.white : Colors.black54,
         // Icons Colors in Theme
-        color1: isDarkTheme ? Colors.purple : const Color(0xD09B1642),
+        color1: isDarkTheme ? Colors.purple[500] : const Color(0xD09B1642),
 
         //
         color2: isDarkTheme ? Colors.blue : const Color(0xFF6DACCB),

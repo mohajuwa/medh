@@ -59,8 +59,8 @@ class FuserSignUpScreenState extends ConsumerState<FuserSignUpScreen> {
                             boxShadow: const [
                               BoxShadow(
                                 color: Color(0x47000000),
-                                blurRadius: 4,
-                                spreadRadius: 2,
+                                blurRadius: 1.5,
+                                spreadRadius: 1,
                               )
                             ],
                           ),
@@ -98,8 +98,8 @@ class FuserSignUpScreenState extends ConsumerState<FuserSignUpScreen> {
                         boxShadow: const [
                           BoxShadow(
                             color: Color(0x47000000),
-                            blurRadius: 4,
-                            spreadRadius: 2,
+                            blurRadius: 1.5,
+                            spreadRadius: 1,
                           )
                         ],
                       ),

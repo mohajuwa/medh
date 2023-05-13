@@ -27,7 +27,7 @@ class TaskProgressCard extends StatelessWidget {
           boxShadow: const [
             BoxShadow(
               color: Colors.black12,
-              blurRadius: 4,
+              blurRadius: 1.5,
               offset: Offset(4, 8), // Shadow position
             ),
           ],
@@ -61,6 +61,7 @@ class TaskProgressCard extends StatelessWidget {
                     ),
                   ),
                   AppSpaces.verticalSpace10, // ID  -- >        2040704
+
                   Text(
                     '$rating co',
                     style: const TextStyle(

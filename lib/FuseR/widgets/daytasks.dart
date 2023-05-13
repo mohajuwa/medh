@@ -1,6 +1,6 @@
 // ID  -- >        2040717
 // صفحة المبيعات للصيدلي
-//  مضافه الى صفحة لوحة التحكم تحديداً زر التقارير في القائمة
+//  مضافه الى صفحة لوحة التحكم تحديداً زر المبيعات في القائمة
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

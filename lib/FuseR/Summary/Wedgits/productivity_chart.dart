@@ -21,8 +21,8 @@ class ProductivityChart extends StatelessWidget {
             boxShadow: const [
               BoxShadow(
                 color: Color(0xAD000000),
-                blurRadius: 4,
-                spreadRadius: 2,
+                blurRadius: 1.5,
+                spreadRadius: 1,
               )
             ],
           ),

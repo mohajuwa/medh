@@ -67,7 +67,7 @@ class FuserChatScreen extends StatelessWidget {
         decoration: const BoxDecoration(color: Colors.white, boxShadow: [
           BoxShadow(
             color: Color(0x47000000),
-            spreadRadius: 2,
+            spreadRadius: 1,
             blurRadius: 10,
           )
         ]),

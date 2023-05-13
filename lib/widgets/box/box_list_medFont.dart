@@ -18,8 +18,8 @@ class BoxFonList extends StatelessWidget {
         boxShadow: const [
           BoxShadow(
             color: Color(0x83111111),
-            blurRadius: 4,
-            spreadRadius: 2,
+            blurRadius: 1.5,
+            spreadRadius: 1,
           )
         ],
       ),

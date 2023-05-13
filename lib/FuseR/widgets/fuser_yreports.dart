@@ -5,6 +5,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:medh/FuseR/Summary/Wedgits/roundedborder_with_icon.dart';
 
 import '../screens/fuser_12mreports.dart';
 
@@ -73,7 +74,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -101,7 +106,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -128,7 +137,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -156,7 +169,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -183,7 +200,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -211,7 +232,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -238,7 +263,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -266,7 +295,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -293,7 +326,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -321,7 +358,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -348,7 +389,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,
@@ -376,7 +421,11 @@ class _YearlyReportsState extends State<YearlyReports> {
                   fontFamily: "Amiri_Quran",
                 ),
               ),
-              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              trailing: const RoundedBorderWithIcon(
+                icon: Icons.arrow_circle_left_outlined,
+                width: 30,
+                height: 30,
+              ),
             ),
             const Divider(
               thickness: 1.5,

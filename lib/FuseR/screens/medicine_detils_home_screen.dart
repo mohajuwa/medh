@@ -206,8 +206,8 @@ class FuserMedicineDitlesScreenState
                                 boxShadow: const [
                                   BoxShadow(
                                     color: Color(0x3C000000),
-                                    blurRadius: 4,
-                                    spreadRadius: 2,
+                                    blurRadius: 1.5,
+                                    spreadRadius: 1,
                                   )
                                 ],
                               ),
@@ -282,7 +282,7 @@ class FuserMedicineDitlesScreenState
                 BoxShadow(
                   color: Color(0x3C000000),
                   blurRadius: 3,
-                  spreadRadius: 2,
+                  spreadRadius: 1,
                 )
               ],
             ),

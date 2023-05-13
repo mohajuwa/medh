@@ -46,7 +46,7 @@ class AvaliablePupScreen extends StatelessWidget {
         //             BoxShadow(
         //               color: const Color(0x47000000),
         //               blurRadius: 10,
-        //               spreadRadius: 2,
+        //               spreadRadius: 1,
         //             ),
         //           ],
         //         ),
@@ -102,7 +102,7 @@ class AvaliablePupScreen extends StatelessWidget {
         //               boxShadow: [
         //                 BoxShadow(
         //                   color: const Color(0x47000000),
-        //                   spreadRadius: 2,
+        //                   spreadRadius: 1,
         //                   blurRadius: 10,
         //                 ),
         //               ],

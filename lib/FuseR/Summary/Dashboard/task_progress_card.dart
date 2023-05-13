@@ -27,7 +27,7 @@ class GTaskProgressCard extends StatelessWidget {
           boxShadow: const [
             BoxShadow(
               color: Colors.black12,
-              blurRadius: 4,
+              blurRadius: 1.5,
               offset: Offset(4, 8), // Shadow position
             ),
           ],

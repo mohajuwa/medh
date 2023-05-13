@@ -60,8 +60,8 @@ class WelcomeScreenState extends ConsumerState<WelcomeScreen> {
                                 borderRadius: BorderRadius.circular(18),
                                 boxShadow: const [
                                   BoxShadow(
-                                    blurRadius: 4,
-                                    spreadRadius: 2,
+                                    blurRadius: 1.5,
+                                    spreadRadius: 1,
                                   )
                                 ],
                               ),

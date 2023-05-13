@@ -20,8 +20,8 @@ class DailyGoalCard extends StatelessWidget {
             boxShadow: const [
               BoxShadow(
                 color: Color(0xAD000000),
-                blurRadius: 4,
-                spreadRadius: 2,
+                blurRadius: 1.5,
+                spreadRadius: 1,
               )
             ],
           ),
@@ -35,7 +35,7 @@ class DailyGoalCard extends StatelessWidget {
                   children: [
                     Text('مبيعات يومية',
                         style: TextStyle(
-                            color: colors(context).color2,
+                            color: colors(context).colorWhiteToBlack,
                             fontSize: 17,
                             fontWeight: FontWeight.w500)),
                     AppSpaces.verticalSpace10, // ID  -- >        2040704
@@ -43,19 +43,24 @@ class DailyGoalCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Container(
-                            width: 50,
-                            height: 25,
-                            decoration: BoxDecoration(
-                                color: colors(context).color1,
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(20.0))),
-                            child: const Center(
-                              child: Text('56',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                  )),
-                            )),
+                          width: 50,
+                          height: 25,
+                          decoration: BoxDecoration(
+                            color: colors(context).color2,
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(20.0),
+                            ),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              '56',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ),
+                        ),
                         AppSpaces.horizontalSpace10,
                         const Text('مبيعات',
                             style: TextStyle(
@@ -76,7 +81,7 @@ class DailyGoalCard extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(vertical: 12),
                             decoration: BoxDecoration(
                               color: colors(context).color1,
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(20),
                             ),
                             child: const Center(
                               child: Text(
@@ -133,7 +138,7 @@ class DailyGoalCard extends StatelessWidget {
                             child: CircularProgressIndicator(
                               strokeWidth: 8,
                               value: value,
-                              color: colors(context).color1,
+                              color: colors(context).color2,
                             ),
                           ),
                         ),

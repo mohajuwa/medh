@@ -35,95 +35,44 @@ FuserReports          ,                2040713        ,      صفحة التقا
 FuserUpcomingDashboard,                2040714        ,      صفحة الطلبات للمستخدم الصيدلي مضمنة في صفحة لوحة التحكم
 YearlyReports         ,                2040715        ,      صفحة التقرير السنوي مضمنة في صفحة التقارير
 DayReports            ,                2040716        ,      صفحة التقرير اليومي مضمنة في صفحة التقارير
-FuserDayTasks         ,                2040717
-FuserChatSample       ,                2040720
-BarChartSample1       ,                2040721
-DailyGoalCard         ,                2040722
-OverviewTaskContainer ,                2040723
-ProductivityChart     ,                2040724
-ProgressCardCloseButton,               2040725
-TaskContainerImage     ,               2040726
-TaskProgressCard       ,               2040727
-library values;       ,                2040728
-  AppTextStyles       ,                2040729
-  AppSpaces           ,                2040730
-ButtonStyles          ,                2040731
-BoxDecorationStyles   ,                2040732
-  AppColors                            2040733
-AppData                                2040734
-MyTask                                 2040735
-GTaskProgressCard                      2040736
-DashboardProductivity                  2040737
-DashboardOverview                      2040738
-GOverviewTaskContainer                 2040739
-progressCardGradientList               2040740
-FuserAddMedicineDone                   2040741
-FuserEditMedicineDone                  2040742
-FuserEdit2MedicineDone                 2040743
-AddMedcineScreen                       2040744
-FuserEditMedcineScreen                 2040745
-FuserEdit2MedcineScreen                2040746
-Months12Reports                        2040747
-FuserChatScreen                        2040748
-FuserDashboardScreen                   2040749
-FuserHomeScreen                        2040750
-FuserLoginScreen                       2040751
-FuserSignUpScreen                      2040752
-FuserSettingsScreen                    2040753
-FuserWelcomeScreen                     2040754
-FuserMedicineDitlesScreen              2040755
-FuserMedicineDitles2Screen             2040756
-DaleteMedsScreen                       2040757
-AvaliablePupScreen                     2040758
-FuserMedicineScreen                    2040759
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-                                      2040760
-                                      2040761
-                                      2040762
-                                      2040763
-                                      2040764
-                                      2040765
-                                      2040766
-                                      2040767
-                                      2040768
-                                      2040769
-                                      2040770
-                                      2040771
-                                      2040772
-                                      2040773
-                                      2040774
-                                      2040775
-                                      2040776
-                                      2040777
-                                      2040778
-                                      2040779
-                                      2040780
-                                      2040781
-                                      2040782
-                                      2040783
-                                      2040784
-                                      2040785
-                                      2040786
-                                      2040787
-                                      2040788
-                                      2040789
-                                      2040790
-                                      2040791
-                                      2040792
-                                      2040793
-                                      2040794
-                                      2040795
-                                      2040796
-                                      2040797
-                                      2040798
-                                      2040799
+FuserDayTasks         ,                2040717        ,      صفحة المبيعات للصيدلي //   مضافه الى صفحة لوحة التحكم تحديداً زر المبيعات في القائمة
+FuserChatSample       ,                2040720        ,      المحادثة // غير مستخدم بعد 
+BarChartSample1       ,                2040721        ,      كلاس عرض مبيعات الإسبوع// مضافه الى صفحة المبيعات للصيدلي     
+DailyGoalCard         ,                2040722        ,      كلاس عرض مبيعات يومية// مضافه الى صفحة المبيعات للصيدلي 
+OverviewTaskContainer ,                2040723        ,      كلاس  حاوية الملخص // مضمن في كلاس الملخص  
+ProductivityChart     ,                2040724        ,      كلاس حاوية مبيعات الإسبوع // مضمن في كلاس عرض مبيعات الإسبوع
+ProgressCardCloseButton,               2040725        ,      كلاس علامة الإكس في حاوية الإحصائيات // مضمن في كلاس رقم 2040727
+TaskContainerImage     ,               2040726        ,      كلاس عرض الصور ،مضمن في كلاس حاوية عرض الملخص للمستخدم الصيدلي
+TaskProgressCard       ,               2040727        ,      كلاس بطاقة  الملخص ،مضمن في كلاس حاوية عرض الملخص للمستخدم الصيدلي
+library values;       ,                2040728        ,      كلاس مكتبة  
+  AppTextStyles       ,                2040729        ,      كلاس مكتبة
+ButtonStyles          ,                2040731        ,      كلاس مكتبة
+BoxDecorationStyles   ,                2040732        ,      كلاس شكل الحاوية // غير مستخدم بعد
+  AppColors           ,                2040733        ,      كلاس الوان مخصصة // مستخدم بشكل قيليل جداً
+AppData                       ,        2040734        ,      كلاس بيانات بطاقة الإحصائيات // تحديداً في صفحة الملخص 
+MyTask                        ,        2040735        ,      كلاس غير مستخدم
+GTaskProgressCard             ,        2040736        ,      كلاس مشابة للكلاس رقم 2040727 ولكن // غير مستخدم
+DashboardProductivity         ,        2040737        ,      كلاس // غير مستخدم // مرجع فقط
+DashboardOverview             ,        2040738        ,      كلاس الملخص مضمن في لوحة التحكم تحديداً زر الملخص
+GOverviewTaskContainer        ,        2040739        ,      كلاس مشابة للكلاس رقم 2040723 // ولكن غير مستخدم 
+progressCardGradientList       ,       2040740        ,      كلاس ثلاثة الوان مستخدم في كلاس رقم 2040727
+FuserAddMedicineDone           ,       2040741        ,      صفحة تمت إضافة الدواء بنجاح للمستخدم الصيدلي
+FuserEditMedicineDone         ,        2040742        ,      صفحة تم التعديل على معلومات الدواء // من صفحة رقم 2040745
+FuserEdit2MedicineDone        ,        2040743        ,      صفحة تم التعديل على معلومات الدواء // من صفحة رقم 2040746
+AddMedcineScreen               ,       2040744        ,      صفحة إضافة دواء جديد مضمنه في الرئيسية للمستخدم الصيدلي
+FuserEditMedcineScreen         ,       2040745        ,      صفحة  التعديل على معلومات الدواء // من صفحة رقم 2040755
+FuserEdit2MedcineScreen        ,       2040746        ,      صفحة  التعديل على معلومات الدواء // من صفحة رقم 2040756
+Months12Reports                ,       2040747        ,      صفحة تقرير الشهور للسنة للصيدلي // مضمنه في صفحة التقارير تحديداً زر التقرير السنوي للصيدلي
+FuserChatScreen                ,       2040748        ,      كلاس الدردشة  للمستخدم الصيدلي // غير مستخدم
+FuserDashboardScreen           ,       2040749        ,      صفحة لوحة التحكم للصيدلي
+FuserHomeScreen                ,       2040750        ,      الصفحة الرئيسية للمستخدم الصيدلي
+FuserLoginScreen               ,       2040751        ,      صفحة تسجيل الدخول للصيدلي
+FuserSignUpScreen              ,       2040752        ,      صفحة التسجيل للصيدلي
+FuserSettingsScreen            ,       2040753        ,      صفحة الإعدادات للصيدلي
+FuserWelcomeScreen             ,       2040754        ,      صفحة الترحيب للصيدلي
+FuserMedicineDitlesScreen      ,       2040755        ,      صفحة تفاصيل معلومات الأدوية للصيدلي // مضمنه في الرئيسية للصيدلي
+FuserMedicineDitles2Screen     ,       2040756        ,      صفحة تفاصيل الأدوية للصيدلي // مضمنه في صفحة الأدوية للصيدلي
+DaleteMedsScreen                ,      2040757        ,      صفحة حذف الأدوية  // غير مستخدم بعد وليس جاهز
+AvaliablePupScreen              ,      2040758        ,      صفحة متوفر للصيدلي // غير مستخدم بعد
+FuserMedicineScreen            ,       2040759        ,      صفحة الأدوية للصيدلي
+RoundedBorderWithIcon          ,       2040760        ,      كلاس السهم المضمن في صفحة رقم 2040715  
