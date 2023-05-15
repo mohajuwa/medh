@@ -5,9 +5,9 @@ import 'dart:async';
 
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
-import 'package:medh/FuseR/widgets/fuser_navbar_roots.dart';
+import 'package:medh/FUSER/Fuser_widgets/fuser_navbar_roots.dart';
 import 'package:medh/HomePage/home_page.dart';
-import 'package:medh/NuseR/widgets/navbar_roots.dart';
+import 'package:medh/NUSER/Nuser_widgets/navbar_roots.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class OneTimeScreen extends StatefulWidget {

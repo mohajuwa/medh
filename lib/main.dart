@@ -33,7 +33,7 @@ void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(statusBarColor: Color(0x2D000000)));
+      SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   runApp(const ProviderScope(child: MyApp()));
   FlutterNativeSplash.remove();
 }

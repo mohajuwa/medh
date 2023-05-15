@@ -1,9 +1,9 @@
 // ID  -- >    2040697
 
 import 'package:flutter/cupertino.dart';
-import 'package:medh/FuseR/widgets/fuser_navbar_roots.dart';
+import 'package:medh/FUSER/Fuser_widgets/fuser_navbar_roots.dart';
 import 'package:medh/HomePage/home_page.dart';
-import 'package:medh/NuseR/widgets/navbar_roots.dart';
+import 'package:medh/NUSER/Nuser_widgets/navbar_roots.dart';
 
 class User {
   final String role;

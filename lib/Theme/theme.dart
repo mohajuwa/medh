@@ -1,6 +1,7 @@
 //                 ID  -- >    2040698
 
 import 'package:flutter/material.dart';
+import 'package:medh/Values/values.dart';
 
 AppColors colors(context) => Theme.of(context).extension<AppColors>()!;
 
@@ -9,9 +10,11 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
     extensions: <ThemeExtension<AppColors>>[
       AppColors(
         // White To Black Colors
-        colorWhiteToBlack: isDarkTheme ? Colors.white : Colors.black54,
+        colorWhiteToBlack: isDarkTheme ? Colors.white54 : Colors.black54,
+        // White To Black Colors
+        colorWhiteToBlack0: isDarkTheme ? Colors.white : Colors.black,
         // Icons Colors in Theme
-        color1: isDarkTheme ? Colors.purple[500] : const Color(0xD09B1642),
+        color1: isDarkTheme ? Colors.deepPurple : const Color(0xD09B1642),
 
         //
         color2: isDarkTheme ? Colors.blue : const Color(0xFF6DACCB),
@@ -20,7 +23,7 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
         color3: isDarkTheme ? Colors.white38 : Colors.black38,
 
         // Like BackGrround Colors in Theme
-        color4: isDarkTheme ? const Color(0xF7322C2C) : const Color(0xE6FFFFFF),
+        color4: isDarkTheme ? HexColor.fromHex("262A34") : Color(0xD2E5E4E4),
 
         // Colors of some of
         color5: isDarkTheme ? const Color(0xF7322C2C) : const Color(0xFF58329B),
@@ -37,7 +40,7 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
       ),
     ],
     scaffoldBackgroundColor:
-        isDarkTheme ? const Color(0xA8322C2C) : const Color(0xFFF6F4FF),
+        isDarkTheme ? Color(0xA81B1717) : Color(0xFFC8C8C8),
     textTheme: Theme.of(context)
         .textTheme
         .copyWith(
@@ -87,7 +90,8 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
     listTileTheme:
         ListTileThemeData(iconColor: isDarkTheme ? Colors.pink : Colors.purple),
     appBarTheme: AppBarTheme(
-        backgroundColor: isDarkTheme ? const Color(0xA8322C2C) : Colors.white,
+        backgroundColor:
+            isDarkTheme ? HexColor.fromHex("262A34") : Color(0xD2E5E4E4),
         iconTheme:
             IconThemeData(color: isDarkTheme ? Colors.white : Colors.black54)),
   );
@@ -104,6 +108,7 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color? color7;
   final Color? colorContainer;
   final Color? colorWhiteToBlack;
+  final Color? colorWhiteToBlack0;
 
   const AppColors({
     required this.color1,
@@ -115,6 +120,7 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.color7,
     required this.colorContainer,
     required this.colorWhiteToBlack,
+    required this.colorWhiteToBlack0,
   });
 
   @override
@@ -127,6 +133,8 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? color6,
     Color? color7,
     Color? colorContainer,
+    Color? colorWhiteToBlack0,
+    Color? colorWhiteToBlack,
   }) {
     return AppColors(
       color1: color1 ?? this.color1,
@@ -137,7 +145,8 @@ class AppColors extends ThemeExtension<AppColors> {
       color6: color6 ?? this.color6,
       color7: color7 ?? this.color7,
       colorContainer: colorContainer ?? this.colorContainer,
-      colorWhiteToBlack: colorWhiteToBlack ?? colorWhiteToBlack,
+      colorWhiteToBlack: colorWhiteToBlack ?? this.colorWhiteToBlack,
+      colorWhiteToBlack0: colorWhiteToBlack0 ?? this.colorWhiteToBlack0,
     );
   }
 
@@ -147,16 +156,17 @@ class AppColors extends ThemeExtension<AppColors> {
       return this;
     }
     return AppColors(
-      color1: Color.lerp(color1, other.color1, t),
-      color2: Color.lerp(color2, other.color2, t),
-      color3: Color.lerp(color3, other.color3, t),
-      color4: Color.lerp(color4, other.color4, t),
-      color5: Color.lerp(color5, other.color5, t),
-      color6: Color.lerp(color6, other.color6, t),
-      color7: Color.lerp(color7, other.color7, t),
-      colorContainer: Color.lerp(colorContainer, other.colorContainer, t),
-      colorWhiteToBlack:
-          Color.lerp(colorWhiteToBlack, other.colorWhiteToBlack, t),
-    );
+        color1: Color.lerp(color1, other.color1, t),
+        color2: Color.lerp(color2, other.color2, t),
+        color3: Color.lerp(color3, other.color3, t),
+        color4: Color.lerp(color4, other.color4, t),
+        color5: Color.lerp(color5, other.color5, t),
+        color6: Color.lerp(color6, other.color6, t),
+        color7: Color.lerp(color7, other.color7, t),
+        colorContainer: Color.lerp(colorContainer, other.colorContainer, t),
+        colorWhiteToBlack:
+            Color.lerp(colorWhiteToBlack, other.colorWhiteToBlack, t),
+        colorWhiteToBlack0:
+            Color.lerp(colorWhiteToBlack0, other.colorWhiteToBlack0, t));
   }
 }

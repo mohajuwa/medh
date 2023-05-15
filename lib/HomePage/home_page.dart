@@ -5,8 +5,8 @@ import 'package:medh/Theme/theme.dart';
 import 'package:medh/provider.dart';
 import 'package:sizer/sizer.dart';
 
-import '../FuseR/widgets/fuser_navbar_roots.dart';
-import '../NuseR/widgets/navbar_roots.dart';
+import '../FUSER/Fuser_widgets/fuser_navbar_roots.dart';
+import '../NUSER/Nuser_widgets/navbar_roots.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
@@ -22,7 +22,7 @@ class HomePageState extends ConsumerState<HomePage> {
     //  هذا عشان زر الرجوع
 
     return WillPopScope(
-      onWillPop: () async => false,
+      onWillPop: () async => true,
       child: MaterialApp(
         theme: getAppTheme(
           context,
@@ -71,7 +71,7 @@ class HomePageState extends ConsumerState<HomePage> {
                             borderRadius: BorderRadius.circular(18),
                             boxShadow: const [
                               BoxShadow(
-                                color: Color(0x47000000),
+                                color: Color(0x5C130F0F),
                                 blurRadius: 1.5,
                                 spreadRadius: 1,
                               )
@@ -101,7 +101,8 @@ class HomePageState extends ConsumerState<HomePage> {
                 ),
               ),
             ),
-            body: SafeArea(
+            body: Padding(
+              padding: const EdgeInsets.all(20),
               child: ListView(
                 children: [
                   Column(
@@ -120,8 +121,8 @@ class HomePageState extends ConsumerState<HomePage> {
                             boxShadow: const [
                               BoxShadow(
                                 color: Color(0x47000000),
-                                blurRadius: 6,
-                                spreadRadius: 4,
+                                blurRadius: 1.5,
+                                spreadRadius: 1,
                               )
                             ],
                           ),
@@ -216,8 +217,8 @@ class HomePageState extends ConsumerState<HomePage> {
                             boxShadow: const [
                               BoxShadow(
                                 color: Color(0x47000000),
-                                blurRadius: 6,
-                                spreadRadius: 4,
+                                blurRadius: 1.5,
+                                spreadRadius: 1,
                               )
                             ],
                           ),
