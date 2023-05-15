@@ -20,7 +20,7 @@ class AppPrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       //padding: EdgeInsets.all(20),
       // width: 180,
       // height: 50,

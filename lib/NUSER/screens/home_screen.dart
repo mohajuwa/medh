@@ -9,7 +9,6 @@ import 'package:medh/Values/values.dart';
 import 'package:medh/provider.dart';
 import 'package:medh/widgets/Buttons/primary_tab_buttons.dart';
 import 'package:medh/widgets/Shapes/app_settings_icon.dart';
-import 'package:sizer/sizer.dart';
 import 'orderscreen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -47,8 +46,8 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
           Column(
             children: [
               SizedBox(
-                height: 20.h,
-                width: double.infinity.h,
+                height: 200,
+                width: double.infinity,
                 child: Carousel(
                   images: const [
                     AssetImage("assets/stickers/stic_18-30.png"),
@@ -97,7 +96,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                       ),
                       Container(
                           alignment: Alignment.centerRight,
-                          child: AppSettingsIcon(
+                          child: const AppSettingsIcon(
                               // callback: ((),{_showDashboardSettings(context);}),
                               ))
                     ]),
@@ -105,8 +104,8 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
               AppSpaces.verticalSpace10,
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const Padding(
+                children: const [
+                  Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20),
                     child: Text(
                       "صيدليات توفر غالباً",
@@ -172,8 +171,8 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                           children: [
                             const SizedBox(height: 3),
                             Container(
-                              width: 11.h,
-                              height: 5.h,
+                              width: 100,
+                              height: 35,
                               decoration: BoxDecoration(
                                 borderRadius: const BorderRadius.all(
                                   Radius.circular(10.0),
@@ -210,7 +209,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                                 Icon(
                                   Icons.star,
                                   color: colors(context).color2,
-                                  size: 2.h,
+                                  size: 12,
                                 ),
                                 Text(
                                   "4.5",
@@ -219,8 +218,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                               ],
                             ),
                             Container(
-                              width: 10.h,
-                              height: 2.h,
+                              width: 80,
                               decoration: BoxDecoration(
                                 borderRadius: const BorderRadius.all(
                                   Radius.circular(5.0),

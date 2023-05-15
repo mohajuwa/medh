@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/provider.dart';
-import 'package:sizer/sizer.dart';
 
 import '../FUSER/Fuser_widgets/fuser_navbar_roots.dart';
 import '../NUSER/Nuser_widgets/navbar_roots.dart';
@@ -126,8 +125,8 @@ class HomePageState extends ConsumerState<HomePage> {
                               )
                             ],
                           ),
-                          height: 22.h,
-                          width: 60.h,
+                          height: 200,
+                          width: 350,
                           child: Row(children: [
                             // Animation  or Cute Picture
                             SizedBox(
@@ -204,7 +203,7 @@ class HomePageState extends ConsumerState<HomePage> {
                           ]),
                         ),
                       ),
-                      SizedBox(height: 15.h),
+                      const SizedBox(height: 120),
 
                       // card -> N User Log in
                       Padding(
@@ -222,8 +221,8 @@ class HomePageState extends ConsumerState<HomePage> {
                               )
                             ],
                           ),
-                          height: 22.h,
-                          width: 60.h,
+                          height: 200,
+                          width: 350,
                           child: Row(children: [
                             // Animation  or Cute Picture
                             SizedBox(

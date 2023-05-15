@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/Theme/theme.dart';
-import 'package:medh/provider.dart';
 
 class RoundedBorderWithIcon extends ConsumerWidget {
   const RoundedBorderWithIcon(
@@ -13,7 +12,6 @@ class RoundedBorderWithIcon extends ConsumerWidget {
   final double? height;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var isDarkMode = ref.watch(appThemeProvider);
     return Container(
       width: width ?? 30,
       height: height ?? 30,

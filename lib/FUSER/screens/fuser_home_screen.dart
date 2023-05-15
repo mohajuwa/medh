@@ -9,7 +9,6 @@ import 'package:medh/Theme/theme.dart';
 import 'package:medh/FUSER/screens/add_medcine.dart';
 import 'package:medh/widgets/Buttons/primary_tab_buttons.dart';
 import 'package:medh/widgets/Shapes/app_settings_icon.dart';
-import 'package:sizer/sizer.dart';
 
 import '../Fuser_widgets/fuser_navbar_roots.dart';
 
@@ -31,7 +30,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(top: 20, right: 20, left: 20),
+        padding: const EdgeInsets.only(top: 20, right: 30, left: 30),
         child: ListView(
           children: [
             AppSpaces.verticalSpace20,
@@ -44,12 +43,11 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            AddMedcineScreen(), // ID  -- >        2040744
+                            const AddMedcineScreen(), // ID  -- >        2040744
                       ),
                     );
                   },
                   child: Container(
-                    height: 10.h,
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: colors(context).color1,
@@ -188,7 +186,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                     ),
                     Container(
                         alignment: Alignment.centerRight,
-                        child: AppSettingsIcon(
+                        child: const AppSettingsIcon(
                             // callback: ((),{_showDashboardSettings(context);}),
                             ))
                   ]),
@@ -257,7 +255,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                             imageUrl: "lib/FUSER/Summary/assets/cone.png",
                             backgroundColor: HexColor.fromHex("EDA7FA"),
                           ), // ID  -- >        2040706
-                          BoxContainerList(
+                          const BoxContainerList(
                             cardSubTitle: "شوية كلام يكتب هنا",
                             cardTitle: "إسم الصنف ",
                             numberOfItems: "80",
@@ -265,7 +263,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                             imageUrl: "assets/stickers/stic_10-17.png",
                             backgroundColor: Color(0xFFC44036),
                           ), // ID  -- >        2040706
-                          BoxContainerList(
+                          const BoxContainerList(
                             cardSubTitle: "شوية كلام يكتب هنا",
                             cardTitle: "إسم الصنف ",
                             numberOfItems: "3",

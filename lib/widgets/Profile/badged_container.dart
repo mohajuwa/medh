@@ -23,7 +23,7 @@ class BadgedContainer extends StatelessWidget {
       child: Container(
         width: double.infinity,
         height: 90,
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         decoration: BoxDecoration(
             color: AppColors.primaryBackgroundColor,
             borderRadius: BorderRadius.circular(10)),
@@ -33,7 +33,8 @@ class BadgedContainer extends StatelessWidget {
               height: 50,
               decoration: BoxDecoration(
                   color: HexColor.fromHex("A06AFA"), shape: BoxShape.circle),
-              child: Icon(Icons.do_not_disturb, color: Colors.white, size: 30)),
+              child: const Icon(Icons.do_not_disturb,
+                  color: Colors.white, size: 30)),
           AppSpaces.horizontalSpace20,
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text(label,
@@ -41,14 +42,15 @@ class BadgedContainer extends StatelessWidget {
                     color: Colors.white,
                     fontSize: 17,
                     fontWeight: FontWeight.bold)),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             (value == "Off")
                 ? Text(value,
                     style: GoogleFonts.lato(
                         fontWeight: FontWeight.bold,
                         color: HexColor.fromHex("5E6272")))
                 : Container(
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: HexColor.fromHex(badgeColor),

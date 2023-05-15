@@ -51,7 +51,7 @@ class LabelledFormInput extends StatelessWidget {
                   : false,
 
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(
+              contentPadding: const EdgeInsets.symmetric(
                 horizontal: 0,
                 vertical: 20,
               ),
@@ -84,7 +84,7 @@ class LabelledFormInput extends StatelessWidget {
               focusedBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: HexColor.fromHex("BEF0B2")),
               ),
-              border: UnderlineInputBorder(
+              border: const UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.green))),
         ),
       ],

@@ -16,9 +16,8 @@ class DefaultNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      AppBackButton(),
-      Text(this.title,
-          style: GoogleFonts.lato(fontSize: 20, color: Colors.white)),
+      const AppBackButton(),
+      Text(title, style: GoogleFonts.lato(fontSize: 20, color: Colors.white)),
       Builder(builder: (context) {
         if (type == ProfileDummyType.Icon) {
           return ProfileDummy(
@@ -47,5 +46,4 @@ class DefaultNav extends StatelessWidget {
   }
 }
 
-class EditProfilePage {
-}
+class EditProfilePage {}

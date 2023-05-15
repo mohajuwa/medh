@@ -9,7 +9,7 @@ class SearchTaskCard extends StatelessWidget {
   final String header;
   final String subHeader;
   final String date;
-  SearchTaskCard(
+  const SearchTaskCard(
       {Key? key,
       required this.date,
       required this.activated,
@@ -19,17 +19,17 @@ class SearchTaskCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool newBool = this.activated;
-    ValueNotifier<bool> _totalDueTrigger = ValueNotifier(newBool);
+    final bool newBool = activated;
+    ValueNotifier<bool> totalDueTrigger = ValueNotifier(newBool);
 
     return ValueListenableBuilder(
-        valueListenable: _totalDueTrigger,
+        valueListenable: totalDueTrigger,
         builder: (BuildContext context, _, __) {
-          return _totalDueTrigger.value
+          return totalDueTrigger.value
               ? Column(children: [
                   InactiveTaskCard(
                       header: header,
-                      notifier: _totalDueTrigger,
+                      notifier: totalDueTrigger,
                       subHeader: subHeader,
                       date: date),
                   AppSpaces.verticalSpace10
@@ -37,7 +37,7 @@ class SearchTaskCard extends StatelessWidget {
               : Column(children: [
                   ActiveTaskCard(
                       header: header,
-                      notifier: _totalDueTrigger,
+                      notifier: totalDueTrigger,
                       subHeader: subHeader,
                       date: date),
                   AppSpaces.verticalSpace10

@@ -5,7 +5,7 @@ class AppTextStyles {
       color: Colors.black, fontSize: 25, fontWeight: FontWeight.w600);
 
   static final TextStyle flyInTextStyle = GoogleFonts.lato(
-      color: Color.fromRGBO(154, 116, 84, 0.5),
+      color: const Color(0x7E9A7454),
       fontSize: 100,
       fontWeight: FontWeight.w300);
 

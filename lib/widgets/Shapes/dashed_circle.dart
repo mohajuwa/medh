@@ -28,8 +28,7 @@ class CircularBorder extends StatelessWidget {
           icon!,
           CustomPaint(
             size: Size(size, size),
-            foregroundPainter:
-                new MyPainter(completeColor: color, width: width),
+            foregroundPainter: MyPainter(completeColor: color, width: width),
           ),
         ],
       ),
@@ -44,13 +43,13 @@ class MyPainter extends CustomPainter {
   MyPainter({required this.completeColor, required this.width});
   @override
   void paint(Canvas canvas, Size size) {
-    Paint complete = new Paint()
+    Paint complete = Paint()
       ..color = completeColor
       ..strokeCap = StrokeCap.round
       ..style = PaintingStyle.stroke
       ..strokeWidth = width;
 
-    Offset center = new Offset(size.width / 2, size.height / 2);
+    Offset center = Offset(size.width / 2, size.height / 2);
     double radius = min(size.width / 2, size.height / 2);
     var percent = (size.width * 0.001) / 2;
 
@@ -59,7 +58,7 @@ class MyPainter extends CustomPainter {
     for (var i = 0; i < 12; i++) {
       var init = (-pi / 2) * (i / 2);
 
-      canvas.drawArc(new Rect.fromCircle(center: center, radius: radius), init,
+      canvas.drawArc(Rect.fromCircle(center: center, radius: radius), init,
           arcAngle, false, complete);
     }
   }

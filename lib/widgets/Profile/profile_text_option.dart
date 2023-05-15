@@ -9,7 +9,7 @@ class ProfileTextOption extends StatelessWidget {
   final IconData icon;
   final double? margin;
 
-  ProfileTextOption(
+  const ProfileTextOption(
       {Key? key, required this.label, required this.icon, this.margin})
       : super(key: key);
 
@@ -23,7 +23,7 @@ class ProfileTextOption extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                vertical: this.margin ?? 10.0), // 8.0 as default margin.
+                vertical: margin ?? 10.0), // 8.0 as default margin.
             child: ListTile(
                 title: Row(
                   children: [
@@ -33,7 +33,7 @@ class ProfileTextOption extends StatelessWidget {
                             fontSize: 18, color: Colors.white)),
                   ],
                 ),
-                trailing: SizedBox()),
+                trailing: const SizedBox()),
           ),
           Divider(height: 1, color: HexColor.fromHex("353742"))
           // Divider(height: 1, color: HexColor.fromHex("616575"))

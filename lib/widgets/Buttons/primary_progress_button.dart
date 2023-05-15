@@ -19,7 +19,7 @@ class PrimaryProgressButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width ?? 130,
       height: height ?? 60,
       child: ElevatedButton(

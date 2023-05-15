@@ -42,7 +42,7 @@ class ActiveTaskCard extends StatelessWidget {
         child: Container(
             width: double.infinity,
             height: 100,
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             decoration: BoxDecoration(
                 color: AppColors.primaryBackgroundColor,
                 borderRadius: BorderRadius.circular(10)),
@@ -53,7 +53,7 @@ class ActiveTaskCard extends StatelessWidget {
                     Container(
                       width: 50,
                       height: 50,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           shape: BoxShape.circle, color: Colors.black),
                       child: ClipOval(
                         child: Center(
@@ -73,14 +73,14 @@ class ActiveTaskCard extends StatelessWidget {
                                   child: Container(
                                       width: 25,
                                       height: 25,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           color: Colors.black,
                                           shape: BoxShape.circle),
                                       child: Center(
                                           child: Container(
                                               width: 12,
                                               height: 12,
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                   color: Colors.white,
                                                   shape: BoxShape.circle)))))),
                         ),

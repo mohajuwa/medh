@@ -37,7 +37,7 @@ class UnlabelledFormInput extends StatelessWidget {
               : false,
 
       decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(
+          contentPadding: const EdgeInsets.symmetric(
             horizontal: 0,
             vertical: 18,
           ),
@@ -55,7 +55,7 @@ class UnlabelledFormInput extends StatelessWidget {
                   onTap: () {
                     controller!.text = "";
                   },
-                  child: Icon(FontAwesomeIcons.solidTimesCircle,
+                  child: const Icon(FontAwesomeIcons.solidTimesCircle,
                       color: Colors.white70, size: 20),
                 ),
           hintText: placeholder,
@@ -70,7 +70,7 @@ class UnlabelledFormInput extends StatelessWidget {
           focusedBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: HexColor.fromHex("BEF0B2")),
           ),
-          border: UnderlineInputBorder(
+          border: const UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.green))),
     );
   }

@@ -5,14 +5,14 @@ class OutlinedButtonWithText extends StatelessWidget {
   final String content;
   final double width;
   final VoidCallback? onPressed;
-  OutlinedButtonWithText(
+  const OutlinedButtonWithText(
       {Key? key, required this.content, required this.width, this.onPressed})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: this.width,
+    return SizedBox(
+        width: width,
         height: 45,
         child: ElevatedButton(
             onPressed: onPressed,
@@ -26,6 +26,7 @@ class OutlinedButtonWithText extends StatelessWidget {
                             color: HexColor.fromHex("246EFE"), width: 2)))),
             child: Center(
                 child: Text(content,
-                    style: TextStyle(fontSize: 17, color: Colors.white)))));
+                    style:
+                        const TextStyle(fontSize: 17, color: Colors.white)))));
   }
 }

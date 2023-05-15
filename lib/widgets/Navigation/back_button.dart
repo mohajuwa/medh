@@ -11,7 +11,7 @@ class AppBackButton extends StatelessWidget {
       onTap: () {
         Get.back();
       },
-      child: RoundedBorderWithIcon(icon: Icons.arrow_back),
+      child: const RoundedBorderWithIcon(icon: Icons.arrow_back),
     );
   }
 }

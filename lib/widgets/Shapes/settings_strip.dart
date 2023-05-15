@@ -21,7 +21,7 @@ class SettingsStrip extends ConsumerWidget {
             ),
           ),
         ),
-        SizedBox(width: 2),
+        const SizedBox(width: 2),
         Container(
           width: 15,
           height: 3,

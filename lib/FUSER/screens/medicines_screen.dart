@@ -16,12 +16,12 @@ import 'edit_medicine2.dart';
 // ignore: must_be_immutable
 class FuserMedicineScreen extends StatelessWidget {
   FuserMedicineScreen({super.key});
-  final _searchController = new TextEditingController();
+  final _searchController = TextEditingController();
   final _settingsButtonTrigger = ValueNotifier(0);
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 20, right: 20, left: 20),
+      padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
       child: Scaffold(
         body: ListView(
           children: [
@@ -43,7 +43,7 @@ class FuserMedicineScreen extends StatelessWidget {
                 Expanded(
                     flex: 1,
                     child: Container(
-                      padding: EdgeInsets.only(top: 20, right: 10),
+                      padding: const EdgeInsets.only(top: 20, right: 10),
                       height: 60,
                       child: Text("إلغاء",
                           textAlign: TextAlign.right,
@@ -76,7 +76,7 @@ class FuserMedicineScreen extends StatelessWidget {
               ),
               Container(
                   alignment: Alignment.centerRight,
-                  child: AppSettingsIcon(
+                  child: const AppSettingsIcon(
                       // callback: ((),{_showDashboardSettings(context);}),
                       ))
             ]),
@@ -90,7 +90,7 @@ class FuserMedicineScreen extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            AddMedcineScreen(), // ID  -- >        2040744
+                            const AddMedcineScreen(), // ID  -- >        2040744
                       ),
                     );
                   },

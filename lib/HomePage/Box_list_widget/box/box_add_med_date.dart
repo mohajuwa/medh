@@ -2,7 +2,6 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:medh/Theme/theme.dart';
-import 'package:sizer/sizer.dart';
 
 class BoxAddMedDateContainer extends StatelessWidget {
   final String cardDate;
@@ -13,7 +12,7 @@ class BoxAddMedDateContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 9.h,
+      width: 90,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(5.0)),
         color: colors(context).color1,

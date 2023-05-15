@@ -2,7 +2,6 @@
 
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 
 class AddMedDateContainer extends StatelessWidget {
   final String cardDate;
@@ -15,7 +14,7 @@ class AddMedDateContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 9.h,
+      width: 70,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(5.0)),
         color: backgroundColor,
@@ -32,7 +31,7 @@ class AddMedDateContainer extends StatelessWidget {
           cardDate,
           style: const TextStyle(
             color: Colors.white,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w500,
             fontSize: 13,
           ),
         ),

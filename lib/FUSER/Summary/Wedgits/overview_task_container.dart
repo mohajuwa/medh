@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:medh/FUSER/Summary/Values/values.dart';
 import 'package:medh/Theme/theme.dart';
-import 'package:sizer/sizer.dart';
 
 import 'task_container_image.dart';
 
@@ -24,9 +23,9 @@ class OverviewTaskContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6.0),
       child: Container(
-          width: double.infinity.h,
+          width: double.infinity,
           padding: const EdgeInsets.all(8),
-          height: 7.h,
+          height: 60,
           decoration: BoxDecoration(
             color: colors(context).color4,
             borderRadius: BorderRadius.circular(10.0),

@@ -23,7 +23,8 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
         color3: isDarkTheme ? Colors.white38 : Colors.black38,
 
         // Like BackGrround Colors in Theme
-        color4: isDarkTheme ? HexColor.fromHex("262A34") : Color(0xD2E5E4E4),
+        color4:
+            isDarkTheme ? HexColor.fromHex("262A34") : const Color(0xD2E5E4E4),
 
         // Colors of some of
         color5: isDarkTheme ? const Color(0xF7322C2C) : const Color(0xFF58329B),
@@ -40,7 +41,7 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
       ),
     ],
     scaffoldBackgroundColor:
-        isDarkTheme ? Color(0xA81B1717) : Color(0xFFC8C8C8),
+        isDarkTheme ? const Color(0xA81B1717) : const Color(0xFFC8C8C8),
     textTheme: Theme.of(context)
         .textTheme
         .copyWith(
@@ -91,7 +92,7 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
         ListTileThemeData(iconColor: isDarkTheme ? Colors.pink : Colors.purple),
     appBarTheme: AppBarTheme(
         backgroundColor:
-            isDarkTheme ? HexColor.fromHex("262A34") : Color(0xD2E5E4E4),
+            isDarkTheme ? HexColor.fromHex("262A34") : const Color(0xD2E5E4E4),
         iconTheme:
             IconThemeData(color: isDarkTheme ? Colors.white : Colors.black54)),
   );

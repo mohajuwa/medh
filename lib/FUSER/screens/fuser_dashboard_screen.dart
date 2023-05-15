@@ -55,7 +55,7 @@ class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
               ),
               AppSpaces.verticalSpace20,
               Container(
-                padding: EdgeInsets.symmetric(vertical: 8),
+                padding: const EdgeInsets.symmetric(vertical: 8),
                 decoration: BoxDecoration(
                   color: colors(context).color6,
                   borderRadius: BorderRadius.circular(10),

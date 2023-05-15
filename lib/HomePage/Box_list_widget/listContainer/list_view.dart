@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/HomePage/Box_list_widget/spacing.dart';
-import 'package:sizer/sizer.dart';
 
 import 'add_med_date.dart';
 import 'lis_medFont.dart';
@@ -30,9 +29,9 @@ class ListsContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5.0),
       child: Container(
-        width: double.infinity.h,
+        width: double.infinity,
         padding: const EdgeInsets.all(8),
-        height: 10.5.h,
+        height: 90,
         decoration: BoxDecoration(
           color: colors(context).color4,
           borderRadius: BorderRadius.circular(10.0),
@@ -47,7 +46,7 @@ class ListsContainer extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(0.6.h),
+              padding: const EdgeInsets.only(top: 0, right: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -82,8 +81,8 @@ class ListsContainer extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(
-                right: 12.h,
+              margin: const EdgeInsets.only(
+                right: 100,
               ),
               child: Row(
                 children: [
@@ -93,8 +92,8 @@ class ListsContainer extends StatelessWidget {
                     ), // ID  -- >        2040701
                   ]),
                   Container(
-                    margin: EdgeInsets.only(
-                      right: 5.h,
+                    margin: const EdgeInsets.only(
+                      right: 60,
                     ),
                     child: Row(
                       children: [

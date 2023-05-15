@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 enum ProfileDummyType { Icon, Image, Button }
@@ -8,7 +10,7 @@ class ProfileDummy extends StatelessWidget {
   final String? image;
   final Color? color;
   final IconData? icon;
-  ProfileDummy(
+  const ProfileDummy(
       {Key? key,
       required this.dummyType,
       required this.scale,
@@ -24,7 +26,7 @@ class ProfileDummy extends StatelessWidget {
         height: 40 * scale,
         decoration: BoxDecoration(color: color, shape: BoxShape.circle),
         child: ClipOval(
-            child: this.dummyType == ProfileDummyType.Icon
+            child: dummyType == ProfileDummyType.Icon
                 ? Icon(Icons.person, color: Colors.white, size: 30 * scale)
                 : Image(
                     fit: (scale == 1.2) ? BoxFit.cover : BoxFit.contain,

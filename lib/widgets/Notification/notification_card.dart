@@ -30,7 +30,7 @@ class NotificationCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: double.infinity,
-        padding: EdgeInsets.only(top: 10),
+        padding: const EdgeInsets.only(top: 10),
         height: 160,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text('$userName mentioned you in $mention',
@@ -56,7 +56,7 @@ class NotificationCard extends StatelessWidget {
                           child: Container(
                               width: 18,
                               height: 18,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   shape: BoxShape.circle, color: Colors.black),
                               child: Center(
                                   child: Container(
@@ -65,7 +65,7 @@ class NotificationCard extends StatelessWidget {
                                       decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                           color: HexColor.fromHex("94D57B"))))))
-                      : SizedBox(),
+                      : const SizedBox(),
                 ],
               ),
               AppSpaces.horizontalSpace20,
@@ -112,7 +112,7 @@ class NotificationCard extends StatelessWidget {
                                   ],
                                 ),
                               )
-                            : Text('$message',
+                            : Text(message,
                                 style: GoogleFonts.lato(
                                   fontSize: 16,
                                   color: HexColor.fromHex("666A7B"),

@@ -1,7 +1,6 @@
 // ID  -- >        2040707
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 
 class BoxContainerListImage extends StatelessWidget {
   final String imageUrl;
@@ -13,8 +12,8 @@ class BoxContainerListImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 10.h,
-      height: 5.h,
+      width: 80,
+      height: 50,
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(10.0)),
           color: backgroundColor),

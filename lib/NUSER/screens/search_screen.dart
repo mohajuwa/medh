@@ -12,156 +12,159 @@ import 'package:medh/HomePage/Box_list_widget/listContainer/list_view.dart';
 // ignore: must_be_immutable
 class SearchScreen extends StatelessWidget {
   SearchScreen({super.key});
-  final _searchController = new TextEditingController();
+  final _searchController = TextEditingController();
   final _settingsButtonTrigger = ValueNotifier(0);
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: 20, right: 20, left: 20),
-      child: ListView(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(
-                flex: 7,
-                child: Container(
-                  height: 60,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: SearchBox(
-                      placeholder: 'إستعلام', controller: _searchController),
-                ),
-              ),
-              Expanded(
-                  flex: 1,
-                  child: Container(
-                    padding: EdgeInsets.only(top: 20, right: 10),
-                    height: 60,
-                    child: Text("إلغاء",
-                        textAlign: TextAlign.right,
-                        style: TextStyle(
-                            color: HexColor.fromHex("616575"),
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold)),
-                  )),
-            ],
-          ),
-          AppSpaces.verticalSpace10,
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            //tab indicators
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
+        child: ListView(
+          children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                PrimaryTabButton(
-                    buttonText: "الكل",
-                    itemIndex: 0,
-                    notifier: _settingsButtonTrigger),
-                PrimaryTabButton(
-                    buttonText: "السبل ",
-                    itemIndex: 1,
-                    notifier: _settingsButtonTrigger),
-                PrimaryTabButton(
-                    buttonText: "الظهار",
-                    itemIndex: 2,
-                    notifier: _settingsButtonTrigger)
+                Expanded(
+                  flex: 7,
+                  child: Container(
+                    height: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: SearchBox(
+                        placeholder: 'إستعلام', controller: _searchController),
+                  ),
+                ),
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                      padding: const EdgeInsets.only(top: 20, right: 10),
+                      height: 60,
+                      child: Text("إلغاء",
+                          textAlign: TextAlign.right,
+                          style: TextStyle(
+                              color: HexColor.fromHex("616575"),
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold)),
+                    )),
               ],
             ),
-            Container(
-                alignment: Alignment.centerRight,
-                child: AppSettingsIcon(
-                    // callback: ((),{_showDashboardSettings(context);}),
-                    ))
-          ]),
-          AppSpaces.verticalSpace20,
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              "نتيجة الإستعلام ",
-              style: TextStyle(fontSize: 18),
+            AppSpaces.verticalSpace10,
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              //tab indicators
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  PrimaryTabButton(
+                      buttonText: "الكل",
+                      itemIndex: 0,
+                      notifier: _settingsButtonTrigger),
+                  PrimaryTabButton(
+                      buttonText: "السبل ",
+                      itemIndex: 1,
+                      notifier: _settingsButtonTrigger),
+                  PrimaryTabButton(
+                      buttonText: "الظهار",
+                      itemIndex: 2,
+                      notifier: _settingsButtonTrigger)
+                ],
+              ),
+              Container(
+                  alignment: Alignment.centerRight,
+                  child: const AppSettingsIcon(
+                      // callback: ((),{_showDashboardSettings(context);}),
+                      ))
+            ]),
+            AppSpaces.verticalSpace20,
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                "نتيجة الإستعلام ",
+                style: TextStyle(fontSize: 18),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 2.0),
-            child: Divider(
-              color: colors(context).color3,
-              thickness: 2,
-              height: 2.0,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 2.0),
+              child: Divider(
+                color: colors(context).color3,
+                thickness: 2,
+                height: 2.0,
+              ),
             ),
-          ),
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            const ResultScreen(), // ID  -- >    2040695
-                      ),
-                    );
-                  },
-                  child: Column(
-                    children: [
-                      ListsContainer(
-                        cardTitle: "إسم الدواء ",
-                        cardSubTitle: "شوية كلام يكتب هنا",
-                        numberOfItems: "120",
-                        cardDate: "99%  متوفر ",
-                        imageUrl: "lib/FUSER/Summary/assets/green_pencil.png",
-                        backgroundColor: HexColor.fromHex("7FBC69"),
-                      ), //  ID  -- >        2040703
-                      ListsContainer(
-                        cardSubTitle: "شوية كلام يكتب هنا",
-                        cardTitle: "إسم الدواء",
-                        numberOfItems: "74",
-                        cardDate: "85%  متوفر ",
-                        imageUrl: "lib/FUSER/Summary/assets/orange_pencil.png",
-                        backgroundColor: HexColor.fromHex("EFA17D"),
-                      ),
-                      ListsContainer(
-                        cardSubTitle: "شوية كلام يكتب هنا",
-                        cardTitle: "إسم الدواء ",
-                        numberOfItems: "23",
-                        cardDate: "77%  متوفر ",
-                        imageUrl: "assets/images/icon.png",
-                        backgroundColor: HexColor.fromHex("C395FC"),
-                      ), // ID  -- >        2040703
-                      ListsContainer(
-                        cardSubTitle: "شوية كلام يكتب هنا",
-                        cardTitle: "إسم الدواء ",
-                        numberOfItems: "15",
-                        cardDate: "60%  متوفر ",
-                        imageUrl: "lib/FUSER/Summary/assets/cone.png",
-                        backgroundColor: HexColor.fromHex("EDA7FA"),
-                      ), // ID  -- >        2040703
-                      const ListsContainer(
-                        cardSubTitle: "شوية كلام يكتب هنا",
-                        cardTitle: "إسم الدواء ",
-                        numberOfItems: "7",
-                        cardDate: "41%  متوفر ",
-                        imageUrl: "assets/stickers/stic_10-17.png",
-                        backgroundColor: Color(0xFFC44036),
-                      ), // ID  -- >        2040703
-                      const ListsContainer(
-                        cardSubTitle: "شوية كلام يكتب هنا",
-                        cardTitle: "إسم الدواء ",
-                        numberOfItems: "3",
-                        cardDate: "5%  متوفر ",
-                        imageUrl: "assets/images/Logo.png",
-                        backgroundColor: Color(0xFF9B0A00),
-                      ), // ID  -- >
-                    ],
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const ResultScreen(), // ID  -- >    2040695
+                        ),
+                      );
+                    },
+                    child: Column(
+                      children: [
+                        ListsContainer(
+                          cardTitle: "إسم الدواء ",
+                          cardSubTitle: "شوية كلام يكتب هنا",
+                          numberOfItems: "120",
+                          cardDate: "99%  متوفر ",
+                          imageUrl: "lib/FUSER/Summary/assets/green_pencil.png",
+                          backgroundColor: HexColor.fromHex("7FBC69"),
+                        ), //  ID  -- >        2040703
+                        ListsContainer(
+                          cardSubTitle: "شوية كلام يكتب هنا",
+                          cardTitle: "إسم الدواء",
+                          numberOfItems: "74",
+                          cardDate: "85%  متوفر ",
+                          imageUrl:
+                              "lib/FUSER/Summary/assets/orange_pencil.png",
+                          backgroundColor: HexColor.fromHex("EFA17D"),
+                        ),
+                        ListsContainer(
+                          cardSubTitle: "شوية كلام يكتب هنا",
+                          cardTitle: "إسم الدواء ",
+                          numberOfItems: "23",
+                          cardDate: "77%  متوفر ",
+                          imageUrl: "assets/images/icon.png",
+                          backgroundColor: HexColor.fromHex("C395FC"),
+                        ), // ID  -- >        2040703
+                        ListsContainer(
+                          cardSubTitle: "شوية كلام يكتب هنا",
+                          cardTitle: "إسم الدواء ",
+                          numberOfItems: "15",
+                          cardDate: "60%  متوفر ",
+                          imageUrl: "lib/FUSER/Summary/assets/cone.png",
+                          backgroundColor: HexColor.fromHex("EDA7FA"),
+                        ), // ID  -- >        2040703
+                        const ListsContainer(
+                          cardSubTitle: "شوية كلام يكتب هنا",
+                          cardTitle: "إسم الدواء ",
+                          numberOfItems: "7",
+                          cardDate: "41%  متوفر ",
+                          imageUrl: "assets/stickers/stic_10-17.png",
+                          backgroundColor: Color(0xFFC44036),
+                        ), // ID  -- >        2040703
+                        const ListsContainer(
+                          cardSubTitle: "شوية كلام يكتب هنا",
+                          cardTitle: "إسم الدواء ",
+                          numberOfItems: "3",
+                          cardDate: "5%  متوفر ",
+                          imageUrl: "assets/images/Logo.png",
+                          backgroundColor: Color(0xFF9B0A00),
+                        ), // ID  -- >
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

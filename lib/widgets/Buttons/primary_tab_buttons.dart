@@ -20,7 +20,7 @@ class PrimaryTabButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     var isDarkMode = ref.watch(appThemeProvider);
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
       child: ValueListenableBuilder(
         valueListenable: notifier,
         builder: (BuildContext context, _, __) {
@@ -56,7 +56,7 @@ class PrimaryTabButton extends ConsumerWidget {
             ),
             child: Text(
               buttonText,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 16, fontFamily: 'El_Messiri', color: Colors.white),
             ),
           );

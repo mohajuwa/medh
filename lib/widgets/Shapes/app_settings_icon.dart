@@ -3,7 +3,7 @@ import 'package:medh/widgets/Shapes/settings_strip.dart';
 
 class AppSettingsIcon extends StatelessWidget {
   final VoidCallback? callback;
-  AppSettingsIcon({
+  const AppSettingsIcon({
     Key? key,
     this.callback,
   }) : super(key: key);
@@ -12,13 +12,11 @@ class AppSettingsIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: callback,
-      child: Container(
-        child: Column(children: [
-          SettingsStrip(),
-          SizedBox(height: 2),
-          RotatedBox(quarterTurns: 2, child: SettingsStrip())
-        ]),
-      ),
+      child: Column(children: const [
+        SettingsStrip(),
+        SizedBox(height: 2),
+        RotatedBox(quarterTurns: 2, child: SettingsStrip())
+      ]),
     );
   }
 }

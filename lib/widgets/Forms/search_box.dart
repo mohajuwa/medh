@@ -29,12 +29,12 @@ class SearchBox extends StatelessWidget {
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.circular(12.0),
         ),
-        contentPadding: EdgeInsets.symmetric(
+        contentPadding: const EdgeInsets.symmetric(
           horizontal: 10,
           vertical: 15,
         ),
         prefixIcon: Padding(
-          padding: EdgeInsets.only(right: 8.0),
+          padding: const EdgeInsets.only(right: 8.0),
           child: Icon(
             FeatherIcons.search,
             color: colors(context).colorWhiteToBlack,

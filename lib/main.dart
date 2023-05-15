@@ -13,15 +13,15 @@ void main() {
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return Material(
       child: Container(
-        color: Colors.black,
+        color: Colors.black54,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               details.exception.toString(),
               style: const TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
                 color: Colors.white,
               ),
             )
@@ -33,7 +33,7 @@ void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+      const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   runApp(const ProviderScope(child: MyApp()));
   FlutterNativeSplash.remove();
 }

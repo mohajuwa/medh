@@ -19,42 +19,40 @@ class RectPrimaryButtonWithIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ValueListenableBuilder(
-          valueListenable: notifier,
-          builder: (BuildContext context, _, __) {
-            return ElevatedButton(
-                onPressed: () {
-                  notifier.value = itemIndex;
-                  if (callback != null) {
-                    callback!();
-                  }
-                },
-                style: ButtonStyle(
-                    backgroundColor: notifier.value == itemIndex
-                        ? MaterialStateProperty.all<Color>(
-                            HexColor.fromHex("246CFE"))
-                        : MaterialStateProperty.all<Color>(
-                            HexColor.fromHex("181A1F")),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                            side: notifier.value == itemIndex
-                                ? BorderSide(color: HexColor.fromHex("246CFE"))
-                                : BorderSide(
-                                    color: HexColor.fromHex("181A1F"))))),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      if (icon != null) Icon(icon!, color: Colors.white),
-                      Text("   $buttonText",
-                          style: GoogleFonts.lato(
-                              fontSize: 14, color: Colors.white)),
-                    ],
-                  ),
-                ));
-          }),
-    );
+    return ValueListenableBuilder(
+        valueListenable: notifier,
+        builder: (BuildContext context, _, __) {
+          return ElevatedButton(
+              onPressed: () {
+                notifier.value = itemIndex;
+                if (callback != null) {
+                  callback!();
+                }
+              },
+              style: ButtonStyle(
+                  backgroundColor: notifier.value == itemIndex
+                      ? MaterialStateProperty.all<Color>(
+                          HexColor.fromHex("246CFE"))
+                      : MaterialStateProperty.all<Color>(
+                          HexColor.fromHex("181A1F")),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          side: notifier.value == itemIndex
+                              ? BorderSide(color: HexColor.fromHex("246CFE"))
+                              : BorderSide(
+                                  color: HexColor.fromHex("181A1F"))))),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if (icon != null) Icon(icon!, color: Colors.white),
+                    Text("   $buttonText",
+                        style: GoogleFonts.lato(
+                            fontSize: 14, color: Colors.white)),
+                  ],
+                ),
+              ));
+        });
   }
 }

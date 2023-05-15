@@ -14,8 +14,8 @@ class ProgressCardCloseButton extends StatelessWidget {
           height: 25,
           decoration: BoxDecoration(
               color: AppColors.primaryAccentColor, shape: BoxShape.circle),
-          child:
-              Center(child: Icon(Icons.close, size: 20, color: Colors.white))),
+          child: const Center(
+              child: Icon(Icons.close, size: 20, color: Colors.white))),
     );
   }
 }

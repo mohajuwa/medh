@@ -25,7 +25,7 @@ class InactiveTaskCard extends StatelessWidget {
       child: Container(
           width: double.infinity,
           height: 100,
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           decoration: BoxDecoration(
               border:
                   Border.all(color: AppColors.primaryBackgroundColor, width: 4),
@@ -40,7 +40,7 @@ class InactiveTaskCard extends StatelessWidget {
                     shape: BoxShape.circle,
                     color: AppColors.primaryBackgroundColor,
                   ),
-                  child: GreenDoneIcon()),
+                  child: const GreenDoneIcon()),
               AppSpaces.horizontalSpace20,
               Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,

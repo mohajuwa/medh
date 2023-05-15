@@ -67,24 +67,37 @@ dependencies:
 flutter_native_splash:
   color: "#eeeeee"
   image: assets/images/Logo.png
-  branding: assets/images/Logo.png
   color_dark: "#121212"
   image_dark: assets/images/Logo.png
-  branding_dark: assets/images/Logo.png
-
-  android_12:
-    image: assets/images/Logo.png
-    icon_background_color: "#eeeeee"
-    image_dark: assets/images/Logo.png
-    icon_background_color_dark: "#121212"
-
-  web: false
 
   
+  android_12:
+    image: assets/images/Logo.png
+    image_dark: assets/images/Logo.png
+
+  web: true
+
+  #color_web: "#42a5f5"
+  #color_dark_web: "#042a49"
+  #image_web: assets/images/Logo.png
+  #image_dark_web: assets/images/Logo.png
+  #background_image_android: "assets/background-android.png"
+  #background_image_dark_android: "assets/dark-background-android.png"
+  #background_image_ios: "assets/background-ios.png"
+  #background_image_dark_ios: "assets/dark-background-ios.png"
+  #background_image_web: "assets/background-web.png"
+  #background_image_dark_web: "assets/dark-background-web.png"
+  #branding_android: assets/brand-android.png
+  #branding_dark_android: assets/dart_dark-android.png
+  #branding_ios: assets/brand-ios.gif
+  #branding_dark_ios: assets/dart_dark-ios.gif
+
   
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^2.0.0
+
     
   flutter_launcher_icons: "^0.13.1"
 
@@ -111,7 +124,6 @@ flutter_launcher_icons:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
