@@ -22,6 +22,7 @@ class FuserUpcomingDashboard extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           Container(
+            width: 400,
             padding: const EdgeInsets.symmetric(vertical: 5),
             decoration: BoxDecoration(
               color: colors(context).color4,
@@ -163,6 +164,7 @@ class FuserUpcomingDashboard extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           Container(
+            width: 400,
             padding: const EdgeInsets.symmetric(vertical: 5),
             decoration: BoxDecoration(
               color: colors(context).color4,
@@ -304,6 +306,7 @@ class FuserUpcomingDashboard extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           Container(
+            width: 400,
             padding: const EdgeInsets.symmetric(vertical: 5),
             decoration: BoxDecoration(
               color: colors(context).color4,

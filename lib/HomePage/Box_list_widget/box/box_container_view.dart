@@ -29,7 +29,7 @@ class BoxContainerList extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5.0),
       child: Container(
-        width: double.infinity,
+        width: 350,
         height: 85,
         decoration: BoxDecoration(
           color: colors(context).color4,
@@ -80,27 +80,27 @@ class BoxContainerList extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.only(
-                right: 90,
+                left: 10,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: Column(
                 children: [
-                  Row(children: [
-                    BoxFonList(
-                      cardSubTitle: cardSubTitle,
-                    ), // ID  -- >        2040708
-                  ]),
-                  Container(
-                    margin: const EdgeInsets.only(
-                      right: 40,
-                    ),
-                    child: Row(
-                      children: [
-                        BoxAddMedDateContainer(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Row(children: [
+                        BoxFonList(
+                          cardSubTitle: cardSubTitle,
+                        ), // ID  -- >        2040708
+                      ]),
+                      Container(
+                        margin: const EdgeInsets.only(
+                          right: 40,
+                        ),
+                        child: BoxAddMedDateContainer(
                           cardDate: cardDate,
-                        ), // ID  -- >        2040705
-                      ],
-                    ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

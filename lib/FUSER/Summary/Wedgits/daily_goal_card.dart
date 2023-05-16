@@ -12,6 +12,7 @@ class DailyGoalCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Container(
+            width: 400,
             padding: const EdgeInsets.all(15.0),
             decoration: BoxDecoration(
               color: colors(context).color4,

@@ -29,15 +29,16 @@ class FuserDayTasksState extends ConsumerState<FuserDayTasks> {
     //  هذا عشان زر الرجوع
 
     return WillPopScope(
-      onWillPop: () async => true,
+      onWillPop: () async => false,
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(top: 5),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 5),
               Container(
+                width: 400,
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.symmetric(horizontal: 40),
                 decoration: BoxDecoration(

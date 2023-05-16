@@ -52,6 +52,7 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                   // لا ئحة التقارير الشهرية
                   const SizedBox(height: 20),
                   Container(
+                    width: 500,
                     padding: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       color: colors(context).color4,
@@ -701,7 +702,7 @@ class Months12ReportsState extends ConsumerState<Months12Reports> {
                         Navigator.pop(context);
                       },
                       child: Container(
-                        width: double.infinity,
+                        width: 200,
                         padding: const EdgeInsets.symmetric(vertical: 12),
                         decoration: BoxDecoration(
                           color: colors(context).color1,

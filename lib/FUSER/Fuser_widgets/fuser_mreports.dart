@@ -42,6 +42,7 @@ class DayReportsState extends ConsumerState<DayReports> {
           // لا ئحة التقارير اليومية
           const SizedBox(height: 20),
           Container(
+            width: 500,
             padding: const EdgeInsets.all(5),
             decoration: BoxDecoration(
               color: colors(context).color4,

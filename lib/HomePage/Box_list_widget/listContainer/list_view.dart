@@ -29,7 +29,7 @@ class ListsContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5.0),
       child: Container(
-        width: double.infinity,
+        width: 350,
         padding: const EdgeInsets.all(8),
         height: 90,
         decoration: BoxDecoration(
