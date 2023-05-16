@@ -191,11 +191,14 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                                   notifier: _settingsButtonTrigger)
                             ],
                           ),
-                          Container(
-                              alignment: Alignment.centerRight,
-                              child: const AppSettingsIcon(
-                                  // callback: ((),{_showDashboardSettings(context);}),
-                                  ))
+                          Padding(
+                            padding: const EdgeInsets.only(right: 70),
+                            child: Container(
+                                alignment: Alignment.centerRight,
+                                child: const AppSettingsIcon(
+                                    // callback: ((),{_showDashboardSettings(context);}),
+                                    )),
+                          )
                         ]),
                   ),
                 ],

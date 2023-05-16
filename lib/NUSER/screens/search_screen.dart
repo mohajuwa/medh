@@ -5,7 +5,6 @@ import 'package:medh/widgets/Forms/search_box.dart';
 import 'package:medh/widgets/Shapes/app_settings_icon.dart';
 import 'package:flutter/foundation.dart';
 import 'package:medh/FUSER/Summary/Values/values.dart';
-import 'package:medh/Theme/theme.dart';
 import 'package:medh/NUSER/screens/results_screen.dart';
 import 'package:medh/HomePage/Box_list_widget/listContainer/list_view.dart';
 
@@ -21,75 +20,95 @@ class SearchScreen extends StatelessWidget {
         padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
         child: ListView(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            Column(
               children: [
-                Expanded(
-                  flex: 7,
-                  child: Container(
-                    height: 60,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: SearchBox(
-                        placeholder: 'إستعلام', controller: _searchController),
+                SizedBox(
+                  width: 350,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                width: 300,
+                                height: 60,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: SearchBox(
+                                    placeholder: 'إستعلام',
+                                    controller: _searchController),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            padding: const EdgeInsets.only(top: 20, right: 10),
+                            height: 60,
+                            child: Text("إلغاء",
+                                textAlign: TextAlign.right,
+                                style: TextStyle(
+                                    color: HexColor.fromHex("616575"),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
-                Expanded(
-                    flex: 1,
-                    child: Container(
-                      padding: const EdgeInsets.only(top: 20, right: 10),
-                      height: 60,
-                      child: Text("إلغاء",
-                          textAlign: TextAlign.right,
-                          style: TextStyle(
-                              color: HexColor.fromHex("616575"),
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold)),
-                    )),
               ],
             ),
             AppSpaces.verticalSpace10,
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               //tab indicators
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+              Column(
                 children: [
-                  PrimaryTabButton(
-                      buttonText: "الكل",
-                      itemIndex: 0,
-                      notifier: _settingsButtonTrigger),
-                  PrimaryTabButton(
-                      buttonText: "السبل ",
-                      itemIndex: 1,
-                      notifier: _settingsButtonTrigger),
-                  PrimaryTabButton(
-                      buttonText: "الظهار",
-                      itemIndex: 2,
-                      notifier: _settingsButtonTrigger)
+                  Row(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          PrimaryTabButton(
+                              buttonText: "الكل",
+                              itemIndex: 0,
+                              notifier: _settingsButtonTrigger),
+                          PrimaryTabButton(
+                              buttonText: "السبل ",
+                              itemIndex: 1,
+                              notifier: _settingsButtonTrigger),
+                          PrimaryTabButton(
+                              buttonText: "الظهار",
+                              itemIndex: 2,
+                              notifier: _settingsButtonTrigger)
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
-              Container(
-                  alignment: Alignment.centerRight,
-                  child: const AppSettingsIcon(
-                      // callback: ((),{_showDashboardSettings(context);}),
-                      ))
+              Padding(
+                padding: const EdgeInsets.only(right: 70),
+                child: Container(
+                    alignment: Alignment.centerRight,
+                    child: const AppSettingsIcon(
+                        // callback: ((),{_showDashboardSettings(context);}),
+                        )),
+              )
             ]),
             AppSpaces.verticalSpace20,
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                "نتيجة الإستعلام ",
-                style: TextStyle(fontSize: 18),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 2.0),
-              child: Divider(
-                color: colors(context).color3,
-                thickness: 2,
-                height: 2.0,
+            SizedBox(
+              width: 400,
+              child: Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.only(left: 200, top: 5),
+                    child: const Text(
+                      "نتيجة الإستعلام ",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                ],
               ),
             ),
             Column(

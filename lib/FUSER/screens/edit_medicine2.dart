@@ -35,7 +35,7 @@ class FuserEdit2MedcineScreenState
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 600,
+                width: 400,
                 child: ListView(
                   children: [
                     const SizedBox(height: 10),
@@ -137,40 +137,44 @@ class FuserEdit2MedcineScreenState
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: SizedBox(
-                        width: double.infinity,
-                        child: Material(
-                          color: colors(context).color1,
-                          borderRadius: BorderRadius.circular(10),
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.pop(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const FuserEdit2MedicineDone(), // ID  -- >        2040743
-                                ),
-                              );
-                            },
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 15, horizontal: 40),
-                              child: Center(
-                                child: Text(
-                                  "تعديل",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w500,
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: SizedBox(
+                            width: 200,
+                            child: Material(
+                              color: colors(context).color1,
+                              borderRadius: BorderRadius.circular(10),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.pop(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const FuserEdit2MedicineDone(), // ID  -- >        2040743
+                                    ),
+                                  );
+                                },
+                                child: const Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 15, horizontal: 40),
+                                  child: Center(
+                                    child: Text(
+                                      "تعديل",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
                         ),
-                      ),
+                      ],
                     ),
                   ],
                 ),

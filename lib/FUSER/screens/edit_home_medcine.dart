@@ -34,7 +34,7 @@ class FuserEditMedcineScreenState
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 600,
+                width: 400,
                 child: Padding(
                   padding: const EdgeInsets.all(20),
                   child: ListView(

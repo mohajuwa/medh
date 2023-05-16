@@ -35,7 +35,7 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 1),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(right: 0, top: 2),
@@ -124,175 +124,185 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
             ),
           ),
           body: Padding(
-            padding: const EdgeInsets.only(top: 50, bottom: 2),
-            child: ListView(
+            padding: const EdgeInsets.only(top: 20, bottom: 2),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Column(
-                  children: [
-                    Row(
-                      children: [
-                        Image.asset(
-                          "assets/stickers/stic3.png",
-                          height: 200,
-                        ),
-                        Row(
-                          children: [
-                            Image.asset(
-                              "assets/stickers/stic4.png",
-                              height: 200,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                const Divider(
-                  thickness: 2.9,
-                  height: 2.0,
-                ),
-                const SizedBox(height: 2),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      label: Text(
-                        "الإسم كامل",
-                        style: TextStyle(
-                          color: colors(context).color3,
-                        ),
+                SizedBox(
+                  width: 400,
+                  child: ListView(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                "assets/stickers/stic3.png",
+                                height: 200,
+                              ),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    "assets/stickers/stic4.png",
+                                    height: 200,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                      prefixIconColor: colors(context).color3,
-                      prefixIcon: const Icon(Icons.person),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      label: Text(
-                        "البريد",
-                        style: TextStyle(
-                          color: colors(context).color3,
-                        ),
+                      const Divider(
+                        thickness: 2.9,
+                        height: 2.0,
                       ),
-                      prefixIconColor: colors(context).color3,
-                      prefixIcon: const Icon(Icons.email),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      label: Text(
-                        " رقم الجوال",
-                        style: TextStyle(
-                          color: colors(context).color3,
-                        ),
-                      ),
-                      prefixIconColor: colors(context).color3,
-                      prefixIcon: const Icon(Icons.phone),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-                  child: TextField(
-                    obscureText: passTooggle ? true : false,
-                    decoration: InputDecoration(
-                      label: Text(
-                        "إدخل كلمة السر ",
-                        style: TextStyle(
-                          color: colors(context).color3,
-                        ),
-                      ),
-                      border: const OutlineInputBorder(),
-                      prefixIconColor: colors(context).color3,
-                      prefixIcon: const Icon(Icons.lock),
-                      suffixIconColor: colors(context).color3,
-                      suffixIcon: InkWell(
-                          onTap: () {
-                            //
-                            if (passTooggle == true) {
-                              passTooggle = false;
-                            } else {
-                              passTooggle = true;
-                            }
-                            setState(() {});
-                          },
-                          child: passTooggle
-                              ? const Icon(CupertinoIcons.eye_slash_fill)
-                              : const Icon(CupertinoIcons.eye_fill)),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: SizedBox(
-                    width: double.infinity,
-                    child: Material(
-                      color: colors(context).color1,
-                      borderRadius: BorderRadius.circular(10),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    const LoginScreen(), //ID  -- >    2040694
-                              ));
-                        },
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 15, horizontal: 40),
-                          child: Center(
-                            child: Text(
-                              "إنشاء حساب",
+                      const SizedBox(height: 2),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 15),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
+                            label: Text(
+                              "الإسم كامل",
                               style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
+                                color: colors(context).color3,
+                              ),
+                            ),
+                            prefixIconColor: colors(context).color3,
+                            prefixIcon: const Icon(Icons.person),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 15),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
+                            label: Text(
+                              "البريد",
+                              style: TextStyle(
+                                color: colors(context).color3,
+                              ),
+                            ),
+                            prefixIconColor: colors(context).color3,
+                            prefixIcon: const Icon(Icons.email),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 15),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
+                            label: Text(
+                              " رقم الجوال",
+                              style: TextStyle(
+                                color: colors(context).color3,
+                              ),
+                            ),
+                            prefixIconColor: colors(context).color3,
+                            prefixIcon: const Icon(Icons.phone),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 15),
+                        child: TextField(
+                          obscureText: passTooggle ? true : false,
+                          decoration: InputDecoration(
+                            label: Text(
+                              "إدخل كلمة السر ",
+                              style: TextStyle(
+                                color: colors(context).color3,
+                              ),
+                            ),
+                            border: const OutlineInputBorder(),
+                            prefixIconColor: colors(context).color3,
+                            prefixIcon: const Icon(Icons.lock),
+                            suffixIconColor: colors(context).color3,
+                            suffixIcon: InkWell(
+                                onTap: () {
+                                  //
+                                  if (passTooggle == true) {
+                                    passTooggle = false;
+                                  } else {
+                                    passTooggle = true;
+                                  }
+                                  setState(() {});
+                                },
+                                child: passTooggle
+                                    ? const Icon(CupertinoIcons.eye_slash_fill)
+                                    : const Icon(CupertinoIcons.eye_fill)),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: SizedBox(
+                          width: double.infinity,
+                          child: Material(
+                            color: colors(context).color1,
+                            borderRadius: BorderRadius.circular(10),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const LoginScreen(), //ID  -- >    2040694
+                                    ));
+                              },
+                              child: const Padding(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 15, horizontal: 40),
+                                child: Center(
+                                  child: Text(
+                                    "إنشاء حساب",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            " لديك حساب؟",
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const LoginScreen(), //ID  -- >    2040694
+                                ),
+                              );
+                            },
+                            child: const Text(
+                              " تسجيل الدخول",
+                              style: TextStyle(fontFamily: 'El_Messiri'),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      " لديك حساب؟",
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const LoginScreen(), //ID  -- >    2040694
-                          ),
-                        );
-                      },
-                      child: const Text(
-                        " تسجيل الدخول",
-                        style: TextStyle(fontFamily: 'El_Messiri'),
-                      ),
-                    ),
-                  ],
-                )
               ],
             ),
           ),

@@ -30,158 +30,167 @@ class FuserWelcomeScreenState extends ConsumerState<FuserWelcomeScreen> {
           textDirection: TextDirection.rtl,
           child: Scaffold(
             body: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                padding: const EdgeInsets.all(10),
-                child: ListView(
-                  children: [
-                    const SizedBox(height: 15),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 1, top: 2),
-                            child: InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        const FuserNavBarRoots(), // ID  -- >        2040712
-                                  ),
-                                );
-                              },
-                              child: Container(
-                                padding: const EdgeInsets.only(
-                                    left: 30, right: 30, top: 5, bottom: 5),
-                                decoration: BoxDecoration(
-                                  color: colors(context).color1,
-                                  borderRadius: BorderRadius.circular(18),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      color: Color(0xA159329B),
-                                      blurRadius: 6,
-                                      spreadRadius: 4,
-                                    )
-                                  ],
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.all(3),
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
+              padding: const EdgeInsets.all(5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 400,
+                    padding: const EdgeInsets.all(10),
+                    child: ListView(
+                      children: [
+                        const SizedBox(height: 15),
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(right: 1, top: 2),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const FuserNavBarRoots(), // ID  -- >        2040712
                                       ),
-                                      child: const Center(
-                                        child: Text(
-                                          "تخطي",
-                                          style: TextStyle(
-                                            color: Colors.white,
+                                    );
+                                  },
+                                  child: Container(
+                                    padding: const EdgeInsets.only(
+                                        left: 30, right: 30, top: 5, bottom: 5),
+                                    decoration: BoxDecoration(
+                                      color: colors(context).color1,
+                                      borderRadius: BorderRadius.circular(18),
+                                      boxShadow: const [
+                                        BoxShadow(
+                                          color: Color(0xA159329B),
+                                          blurRadius: 6,
+                                          spreadRadius: 4,
+                                        )
+                                      ],
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(3),
+                                          decoration: const BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: const Center(
+                                            child: Text(
+                                              "تخطي",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                      ),
+                                      ],
                                     ),
-                                  ],
+                                  ),
                                 ),
                               ),
-                            ),
+                            ],
                           ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 30),
-                    Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Image.asset("assets/stickers/stic1.png"),
-                    ),
-                    const SizedBox(height: 50),
-                    const Center(
-                      child: Text(
-                        "صيدلانيون",
-                        style: TextStyle(
-                          fontSize: 35,
-                          fontWeight: FontWeight.w500,
-                          wordSpacing: 2,
                         ),
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    const Center(
-                      child: Text(
-                        "ومستعلمون عن الأدوية",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
+                        const SizedBox(height: 30),
+                        Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Image.asset(
+                            "assets/stickers/stic1.png",
+                            height: 270,
+                          ),
                         ),
-                      ),
-                    ),
-                    const SizedBox(height: 60),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Material(
-                          color: colors(context).color1,
-                          borderRadius: BorderRadius.circular(10),
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const FuserLoginScreen(), // ID  -- >        2040751
-                                ),
-                              );
-                            },
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 15, horizontal: 40),
-                              child: Text(
-                                "الدخول",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
+                        const SizedBox(height: 50),
+                        const Center(
+                          child: Text(
+                            "صيدلانيون",
+                            style: TextStyle(
+                              fontSize: 35,
+                              fontWeight: FontWeight.w500,
+                              wordSpacing: 2,
                             ),
                           ),
                         ),
-                        Material(
-                          color: colors(context).color1,
-                          borderRadius: BorderRadius.circular(10),
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const FuserSignUpScreen(), // ID  -- >        2040752
-                                ),
-                              );
-                            },
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 15, horizontal: 40),
-                              child: Text(
-                                "التسجيل",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
+                        const SizedBox(height: 10),
+                        const Center(
+                          child: Text(
+                            "ومستعلمون عن الأدوية",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
+                        const SizedBox(height: 60),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Material(
+                              color: colors(context).color1,
+                              borderRadius: BorderRadius.circular(10),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const FuserLoginScreen(), // ID  -- >        2040751
+                                    ),
+                                  );
+                                },
+                                child: const Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 15, horizontal: 40),
+                                  child: Text(
+                                    "الدخول",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Material(
+                              color: colors(context).color1,
+                              borderRadius: BorderRadius.circular(10),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const FuserSignUpScreen(), // ID  -- >        2040752
+                                    ),
+                                  );
+                                },
+                                child: const Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 15, horizontal: 40),
+                                  child: Text(
+                                    "التسجيل",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
                       ],
-                    )
-                  ],
-                ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

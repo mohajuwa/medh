@@ -23,7 +23,6 @@ class CustomAddScreenState extends ConsumerState<CustomAddScreen> {
           backgroundColor: colors(context).color4,
           appBar: AppBar(
             backgroundColor: colors(context).color4,
-            leadingWidth: 30,
             title: Padding(
               padding: const EdgeInsets.only(top: 5),
               child: Row(children: [
@@ -60,142 +59,155 @@ class CustomAddScreenState extends ConsumerState<CustomAddScreen> {
               ),
             ],
           ),
-          body: Padding(
-            padding: const EdgeInsets.all(20),
-            child: ListView(
-              children: [
-                const SizedBox(height: 10),
-                Padding(
+          body: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 400  ,
+                child: Padding(
                   padding: const EdgeInsets.all(20),
-                  child: Image.asset(
-                    "assets/images/Logo.png",
-                    height: 100,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                const Divider(
-                  thickness: 2.9,
-                  height: 2.0,
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      label: Text(
-                        "إسم الدواء",
-                        style: Theme.of(context).textTheme.bodyMedium,
+                  child: ListView(
+                    children: [
+                      const SizedBox(height: 10),
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Image.asset(
+                          "assets/images/Logo.png",
+                          height: 100,
+                        ),
                       ),
-                      prefixIcon: Icon(
-                        Icons.medical_information,
-                        color: colors(context).color3,
+                      const SizedBox(height: 10),
+                      const Divider(
+                        thickness: 2.9,
+                        height: 2.0,
                       ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      label: Text(
-                        "وصفة",
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
-                      prefixIcon: Icon(
-                        Icons.info,
-                        color: colors(context).color3,
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      label: Text(
-                        "الكمية",
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
-                      prefixIcon: Icon(
-                        Icons.numbers,
-                        color: colors(context).color3,
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      label: Text(
-                        "الكمية",
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
-                      prefixIcon: Icon(
-                        Icons.numbers,
-                        color: colors(context).color3,
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      label: Text(
-                        "الكمية",
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
-                      prefixIcon: Icon(
-                        Icons.numbers,
-                        color: colors(context).color3,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: SizedBox(
-                    width: double.infinity,
-                    child: Material(
-                      color: colors(context).color1,
-                      borderRadius: BorderRadius.circular(10),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.pop(
-                            context,
-                          );
-                        },
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 15, horizontal: 40),
-                          child: Center(
-                            child: Text(
-                              "طلب",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                fontWeight: FontWeight.w500,
-                              ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 15),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
+                            label: Text(
+                              "إسم الدواء",
+                              style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                            prefixIcon: Icon(
+                              Icons.medical_information,
+                              color: colors(context).color3,
                             ),
                           ),
                         ),
                       ),
-                    ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 15),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
+                            label: Text(
+                              "وصفة",
+                              style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                            prefixIcon: Icon(
+                              Icons.info,
+                              color: colors(context).color3,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 15),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
+                            label: Text(
+                              "الكمية",
+                              style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                            prefixIcon: Icon(
+                              Icons.numbers,
+                              color: colors(context).color3,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 15),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
+                            label: Text(
+                              "الكمية",
+                              style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                            prefixIcon: Icon(
+                              Icons.numbers,
+                              color: colors(context).color3,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 15),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
+                            label: Text(
+                              "الكمية",
+                              style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                            prefixIcon: Icon(
+                              Icons.numbers,
+                              color: colors(context).color3,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: SizedBox(
+                              width: 200,
+                              child: Material(
+                                color: colors(context).color1,
+                                borderRadius: BorderRadius.circular(10),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.pop(
+                                      context,
+                                    );
+                                  },
+                                  child: const Padding(
+                                    padding: EdgeInsets.symmetric(
+                                        vertical: 15, horizontal: 40),
+                                    child: Center(
+                                      child: Text(
+                                        "طلب",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

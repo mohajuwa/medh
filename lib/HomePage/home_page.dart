@@ -37,7 +37,7 @@ class HomePageState extends ConsumerState<HomePage> {
               title: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
                     // name
