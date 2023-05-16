@@ -1,6 +1,6 @@
 // ID  -- >        2040740
 import 'package:flutter/material.dart';
-import 'package:medh/FUSER/Summary/Values/values.dart';
+import 'package:medh/Values/values.dart';
 
 String tabSpace = "\t\t\t";
 

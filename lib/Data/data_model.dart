@@ -1,35 +1,37 @@
+//  ID  -- >        2040734
+
 import 'package:flutter/material.dart';
 import 'package:medh/Values/values.dart';
 
 class AppData {
   static final List<Map<String, dynamic>> progressIndicatorList = [
     {
-      "cardTitle": "Progress Task Progress",
+      "cardTitle": "إحصائيات ",
       "rating": "3/5",
       "progress": "68.99",
       "progressBar": "2"
     },
     {
-      "cardTitle": "Registration",
+      "cardTitle": "تم زيارة ملف الصيدلية",
       "rating": "3/4",
       "progress": "75.00",
       "progressBar": "3"
     },
     {
-      "cardTitle": "Invite 5 Members",
-      "rating": "2/5",
+      "cardTitle": "أكثر مبيعاً",
+      "rating": "اسم الصنف",
       "progress": "50",
       "progressBar": "1"
     },
     {
-      "cardTitle": "Setup Profile",
-      "rating": "3/4",
+      "cardTitle": "عملاء جدد",
+      "rating": "المنطقة",
       "progress": "75",
       "progressBar": "3"
     },
     {
-      "cardTitle": "Complete Workspace",
-      "rating": "3/5",
+      "cardTitle": "هذه إحصائيات محدودة",
+      "rating": "شراء النسخة المدفوعة؟",
       "progress": "68.99",
       "progressBar": "2"
     },
@@ -41,7 +43,7 @@ class AppData {
       "mentionedIn": "Unity Gaming",
       "read": false,
       "date": "Nov 2nd",
-      "profileImage": "assets/memoji/1.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/1.png",
       "hashTagPresent": true,
       "userOnline": false,
       "color": "BBF1C3",
@@ -54,7 +56,7 @@ class AppData {
       "mentionedIn": "Unity Gaming",
       "read": true,
       "date": "Nov 2nd",
-      "profileImage": "assets/memoji/2.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/2.png",
       "hashTagPresent": false,
       "color": "DBCFFE",
       "userOnline": true,
@@ -67,7 +69,7 @@ class AppData {
       "mentionedIn": "UI8 Products",
       "read": true,
       "date": "Nov 2nd",
-      "profileImage": "assets/memoji/4.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/4.png",
       "hashTagPresent": false,
       "userOnline": true,
       "color": "FFC5D5",
@@ -80,7 +82,7 @@ class AppData {
       "mentionedIn": "Productivity",
       "date": "Nov 2nd",
       "read": true,
-      "profileImage": "assets/memoji/7.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/7.png",
       "hashTagPresent": false,
       "color": "FAA3FF",
       "userOnline": false,
@@ -92,7 +94,7 @@ class AppData {
       "mentionedIn": "Unity Gaming",
       "read": true,
       "date": "Nov 2nd",
-      "profileImage": "assets/memoji/2.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/2.png",
       "hashTagPresent": false,
       "color": "DBCFFE",
       "userOnline": true,
@@ -105,7 +107,7 @@ class AppData {
       "mentionedIn": "UI8 Products",
       "read": true,
       "date": "Nov 2nd",
-      "profileImage": "assets/memoji/4.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/4.png",
       "hashTagPresent": false,
       "userOnline": true,
       "color": "FFC5D5",
@@ -118,7 +120,7 @@ class AppData {
       "mentionedIn": "Productivity",
       "date": "Nov 2nd",
       "read": true,
-      "profileImage": "assets/memoji/7.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/7.png",
       "hashTagPresent": false,
       "color": "FAA3FF",
       "userOnline": false,
@@ -128,10 +130,10 @@ class AppData {
   ];
 
   static final List<String> profileImages = [
-    "assets/memoji/1.png",
-    "assets/memoji/2.png",
-    "assets/memoji/4.png",
-    "assets/memoji/7.png"
+    "lib/FUSER/Summary/assets/memoji/1.png",
+    "lib/FUSER/Summary/assets/memoji/2.png",
+    "lib/FUSER/Summary/assets/memoji/4.png",
+    "lib/FUSER/Summary/assets/memoji/7.png"
   ];
 
   static final List<Color> groupBackgroundColors = [
@@ -144,72 +146,72 @@ class AppData {
   static final List<Map<String, dynamic>> onlineUsers = [
     {
       "name": "Gareth Reid 🔥",
-      "profileImage": "assets/memoji/1.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/1.png",
       "color": "BAF0C5",
     },
     {
       "name": "Vincent Lyons 🇺🇸",
-      "profileImage": "assets/memoji/2.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/2.png",
       "color": "DACFFE",
     },
     {
       "name": "Adeline Nunez 🎉",
-      "profileImage": "assets/memoji/4.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/4.png",
       "color": "FFC7D5",
     },
     {
       "name": "Samuel Doyle 🔥",
-      "profileImage": "assets/memoji/7.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/7.png",
       "color": "C0E7FD",
     },
     {
       "name": "Ruth Benson 🔥",
-      "profileImage": "assets/memoji/9.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/9.png",
       "color": "D7D2D4",
     },
     {
       "name": "Adeline Nunez 🎉",
-      "profileImage": "assets/memoji/4.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/4.png",
       "color": "FFC7D5",
     },
     {
       "name": "Samuel Doyle 🔥",
-      "profileImage": "assets/memoji/7.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/7.png",
       "color": "C0E7FD",
     },
     {
       "name": "Ruth Benson 🔥",
-      "profileImage": "assets/memoji/9.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/9.png",
       "color": "D7D2D4",
     },
     {
       "name": "Adeline Nunez 🎉",
-      "profileImage": "assets/memoji/4.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/4.png",
       "color": "FFC7D5",
     },
     {
       "name": "Samuel Doyle 🔥",
-      "profileImage": "assets/memoji/7.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/7.png",
       "color": "C0E7FD",
     },
     {
       "name": "Ruth Benson 🔥",
-      "profileImage": "assets/memoji/9.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/9.png",
       "color": "D7D2D4",
     },
     {
       "name": "Gareth Reid 🔥",
-      "profileImage": "assets/memoji/1.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/1.png",
       "color": "BAF0C5",
     },
     {
       "name": "Vincent Lyons 🇺🇸",
-      "profileImage": "assets/memoji/2.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/2.png",
       "color": "DACFFE",
     },
     {
       "name": "Adeline Nunez 🎉",
-      "profileImage": "assets/memoji/4.png",
+      "profileImage": "lib/FUSER/Summary/assets/memoji/4.png",
       "color": "FFC7D5",
     },
   ];
@@ -217,49 +219,49 @@ class AppData {
   static final List<Map<String, dynamic>> employeeData = [
     {
       "employeeName": "Aaliyah Langosh",
-      "employeeImage": "assets/girl_smile.png",
+      "employeeImage": "lib/FUSER/Summary/assets/girl_smile.png",
       "color": HexColor.fromHex("FCA3FF"),
       "activated": true,
       "employeePosition": "Senior Interactions Agent"
     },
     {
       "employeeName": "Greta Streich",
-      "employeeImage": "assets/man-head.png",
+      "employeeImage": "lib/FUSER/Summary/assets/man-head.png",
       "color": HexColor.fromHex("94F1F1"),
       "activated": false,
       "employeePosition": "Dynamic Security Technician"
     },
     {
       "employeeName": "Judd Koch",
-      "employeeImage": "assets/memoji/7.png",
+      "employeeImage": "lib/FUSER/Summary/assets/memoji/7.png",
       "color": HexColor.fromHex("8D96FF"),
       "activated": true,
       "employeePosition": "Senior Interactions Agent"
     },
     {
       "employeeName": "Katherine Wells",
-      "employeeImage": "assets/memoji/2.png",
+      "employeeImage": "lib/FUSER/Summary/assets/memoji/2.png",
       "color": HexColor.fromHex("DBD0FD"),
       "activated": false,
       "employeePosition": "Dynamic Security Technician"
     },
     {
       "employeeName": "Betha Ramos",
-      "employeeImage": "assets/memoji/9.png",
+      "employeeImage": "lib/FUSER/Summary/assets/memoji/9.png",
       "color": HexColor.fromHex("FFC5D5"),
       "activated": false,
       "employeePosition": "Dynamic Security Technician"
     },
     {
       "employeeName": "Greta Streich",
-      "employeeImage": "assets/girl_smile.png",
+      "employeeImage": "lib/FUSER/Summary/assets/girl_smile.png",
       "color": HexColor.fromHex("94F1F1"),
       "activated": false,
       "employeePosition": "Dynamic Security Technician"
     },
     {
       "employeeName": "Aaliyah Langosh",
-      "employeeImage": "assets/girl_smile.png",
+      "employeeImage": "lib/FUSER/Summary/assets/girl_smile.png",
       "color": HexColor.fromHex("FCA3FF"),
       "activated": true,
       "employeePosition": "Senior Interactions Agent"

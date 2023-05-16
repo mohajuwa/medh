@@ -8,7 +8,7 @@ import 'package:medh/widgets/Forms/search_box.dart';
 import 'package:medh/widgets/Shapes/app_settings_icon.dart';
 
 import 'add_medcine.dart';
-import 'package:medh/FUSER/Summary/Values/values.dart';
+import 'package:medh/Values/values.dart';
 
 import 'edit_medicine2.dart';
 

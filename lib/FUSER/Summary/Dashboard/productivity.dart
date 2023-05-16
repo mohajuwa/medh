@@ -1,6 +1,6 @@
 // ID  -- >        2040737
 import 'package:flutter/material.dart';
-import 'package:medh/FUSER/Summary/Values/values.dart';
+import 'package:medh/Values/values.dart';
 import 'package:medh/FUSER/Summary/Wedgits/daily_goal_card.dart';
 import 'package:medh/FUSER/Summary/Wedgits/productivity_chart.dart';
 

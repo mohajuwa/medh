@@ -1,7 +1,7 @@
 // ID  -- >        2040727
 import 'package:flutter/material.dart';
 import 'package:medh/FUSER/Summary/Constants/constants.dart';
-import 'package:medh/FUSER/Summary/Values/values.dart';
+import 'package:medh/Values/values.dart';
 import 'package:medh/FUSER/Summary/Wedgits/progress_card_close_button.dart';
 import 'package:medh/Theme/theme.dart';
 

@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:medh/FUSER/Summary/Values/values.dart';
+import 'package:medh/Values/values.dart';
 import 'package:medh/Theme/theme.dart';
 
 class BarChartSample1 extends StatefulWidget {

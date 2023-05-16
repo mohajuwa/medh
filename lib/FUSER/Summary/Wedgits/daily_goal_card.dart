@@ -1,6 +1,6 @@
 // ID  -- >        2040722
 import 'package:flutter/material.dart';
-import 'package:medh/FUSER/Summary/Values/values.dart';
+import 'package:medh/Values/values.dart';
 import 'package:medh/Theme/theme.dart';
 
 class DailyGoalCard extends StatelessWidget {

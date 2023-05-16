@@ -1,6 +1,6 @@
 // ID  -- >        2040723
 import 'package:flutter/material.dart';
-import 'package:medh/FUSER/Summary/Values/values.dart';
+import 'package:medh/Values/values.dart';
 import 'package:medh/Theme/theme.dart';
 
 import 'task_container_image.dart';

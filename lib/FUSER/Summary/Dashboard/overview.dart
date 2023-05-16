@@ -1,8 +1,8 @@
 // ID  -- >        2040738
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:medh/FUSER/Summary/Data/data_model.dart';
-import 'package:medh/FUSER/Summary/Values/values.dart';
+import 'package:medh/Data/data_model.dart';
+import 'package:medh/Values/values.dart';
 import 'package:medh/FUSER/Summary/Wedgits/overview_task_container.dart';
 import 'package:medh/FUSER/Summary/Wedgits/task_progress_card.dart';
 import 'package:tcard/tcard.dart';
