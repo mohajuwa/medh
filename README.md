@@ -13,7 +13,7 @@ Medical app UI Design Flutter .
     <img src="assets/ScreenShots/PharmasestReportsScreen.png" width="200" />
    <img src="assets/ScreenShots/PharmasestMReportsScreen.png" width="200" />
   <img src="assets/ScreenShots/PharmaSettingdDarkScreen.png" width="200" /> 
-    <img src="assets/ScreenShots/PharmacistDashSummaryScreen.png" width="200" />
+    <img src="assets/ScreenShots/UserHomePage.png" width="200" />
 </p>
 
 | User Screens|                                                   
