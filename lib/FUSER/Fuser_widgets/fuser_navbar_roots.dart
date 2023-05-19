@@ -154,7 +154,7 @@ class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
               padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: colors(context).color4,
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(18),
                 boxShadow: const [
                   BoxShadow(
                     color: Color(0x47000000),
