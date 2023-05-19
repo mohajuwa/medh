@@ -34,7 +34,7 @@ ThemeData getAppTheme(BuildContext context, bool isDarkTheme) {
 
         // Containers Colors
         colorContainer:
-            isDarkTheme ? const Color(0x49000000) : const Color(0xE6FFFFFF),
+            isDarkTheme ? const Color(0xC1000000) : const Color(0xE6FFFFFF),
 
         // Color of DashBoard Totals
         color7: isDarkTheme ? const Color(0xF7322C2C) : const Color(0xF7322C2C),

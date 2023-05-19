@@ -2,10 +2,10 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 
-class ListContainerImage extends StatelessWidget {
+class ListMedsContainerImage extends StatelessWidget {
   final String imageUrl;
   final Color backgroundColor;
-  const ListContainerImage(
+  const ListMedsContainerImage(
       {Key? key, required this.backgroundColor, required this.imageUrl})
       : super(key: key);
 

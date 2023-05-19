@@ -41,7 +41,7 @@ class PrimaryTabButton extends ConsumerWidget {
                     ),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50.0),
+                  borderRadius: BorderRadius.circular(12.0),
                   side: notifier.value == itemIndex
                       ? BorderSide(
                           color: isDarkMode
@@ -57,7 +57,7 @@ class PrimaryTabButton extends ConsumerWidget {
             child: Text(
               buttonText,
               style: const TextStyle(
-                  fontSize: 16, fontFamily: 'El_Messiri', color: Colors.white),
+                  fontSize: 12, fontFamily: 'El_Messiri', color: Colors.white),
             ),
           );
         },

@@ -46,7 +46,7 @@ class TaskProgressCard extends StatelessWidget {
             child: ProgressCardCloseButton(), //ID  -- >        2040725
           ),
           Positioned(
-              top: 24,
+              top: 30,
               bottom: 20,
               right: 10,
               left: 20,

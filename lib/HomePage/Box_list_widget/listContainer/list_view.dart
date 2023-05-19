@@ -1,11 +1,9 @@
 // ID  -- >        2040703
 import 'package:flutter/material.dart';
 import 'package:medh/Theme/theme.dart';
-import 'package:medh/HomePage/Box_list_widget/spacing.dart';
 
-import 'add_med_date.dart';
-import 'lis_medFont.dart';
-import 'list_image_container.dart';
+import 'package:medh/HomePage/Box_list_widget/listContainer/list_image_container.dart';
+import 'package:medh/Values/values.dart';
 
 class ListsContainer extends StatelessWidget {
   final Color backgroundColor;
@@ -14,6 +12,9 @@ class ListsContainer extends StatelessWidget {
   final String cardTitle;
   final String cardDate;
   final String cardSubTitle;
+  final String cardTitle2;
+  final String cardTitle3;
+
   const ListsContainer(
       {Key? key,
       required this.imageUrl,
@@ -21,7 +22,9 @@ class ListsContainer extends StatelessWidget {
       required this.cardTitle,
       required this.cardSubTitle,
       required this.numberOfItems,
-      required this.cardDate})
+      required this.cardDate,
+      required this.cardTitle2,
+      required this.cardTitle3})
       : super(key: key);
 
   @override
@@ -29,9 +32,9 @@ class ListsContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5.0),
       child: Container(
-        width: 350,
-        padding: const EdgeInsets.all(8),
-        height: 90,
+        width: 280,
+        padding: const EdgeInsets.all(15),
+        height: 70,
         decoration: BoxDecoration(
           color: colors(context).color4,
           borderRadius: BorderRadius.circular(10.0),
@@ -46,7 +49,7 @@ class ListsContainer extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 0, right: 5),
+              padding: const EdgeInsets.only(top: 0, right: 2),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -56,7 +59,8 @@ class ListsContainer extends StatelessWidget {
                         imageUrl: imageUrl,
                         backgroundColor: backgroundColor,
                       ), //ID  -- >        2040702
-                      AppSpaces.horizontalSpace20,
+                      AppSpaces.horizontalSpace10,
+
                       Text(
                         cardTitle,
                         style: const TextStyle(
@@ -72,7 +76,7 @@ class ListsContainer extends StatelessWidget {
                           style: TextStyle(
                               color: backgroundColor,
                               fontWeight: FontWeight.w600,
-                              fontSize: 16)),
+                              fontSize: 14)),
                       Icon(Icons.chevron_right,
                           color: colors(context).color1, size: 30),
                     ],
@@ -80,36 +84,119 @@ class ListsContainer extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              margin: const EdgeInsets.only(
-                right: 100,
-              ),
-              child: Row(
-                children: [
-                  Row(children: [
-                    ListsFontContainer(
-                      cardSubTitle: cardSubTitle,
-                    ), // ID  -- >        2040701
-                  ]),
-                  Container(
-                    margin: const EdgeInsets.only(
-                      right: 60,
-                    ),
-                    child: Row(
-                      children: [
-                        AddMedDateContainer(
-                          cardDate: cardDate,
-                          backgroundColor: backgroundColor,
-                        ), //ID  -- >        2040700
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            // Container(
+            //   margin: const EdgeInsets.only(
+            //     right: 100,
+            //   ),
+            //   child: Row(
+            //     children: [
+            //       Row(children: [
+            //         ListsFontContainer(
+            //           cardSubTitle: cardSubTitle,
+            //         ), // ID  -- >        2040701
+            //       ]),
+            //       Container(
+            //         margin: const EdgeInsets.only(
+            //           right: 60,
+            //         ),
+            //         child: Row(
+            //           children: [
+            //             AddMedDateContainer(
+            //               cardDate: cardDate,
+            //               backgroundColor: backgroundColor,
+            //             ), //ID  -- >        2040700
+            //           ],
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
           ],
         ),
       ),
     );
   }
 }
+
+final allMedsFuser = [
+  ListsContainer(
+    cardTitle: "Nobasi",
+    cardTitle2: "Osamasi",
+    cardTitle3: "Cadamsi",
+    cardSubTitle: "وصف مختصر للصنف",
+    numberOfItems: "120",
+    cardDate: "2024/2/11 م",
+    imageUrl: "lib/FUSER/Summary/assets/green_pencil.png",
+    backgroundColor: HexColor.fromHex("7FBC69"),
+  ), //  ID  -- >        2040703
+  ListsContainer(
+    cardSubTitle: "وصف مختصر للصنف",
+    cardTitle: "Aspren",
+    cardTitle2: "Panadol",
+    cardTitle3: "Selpadeen",
+    numberOfItems: "74",
+    cardDate: "2024/2/11 م",
+    imageUrl: "lib/FUSER/Summary/assets/orange_pencil.png",
+    backgroundColor: HexColor.fromHex("EFA17D"),
+  ),
+  ListsContainer(
+    cardSubTitle: "وصف مختصر للصنف",
+    cardTitle: "Mocafin",
+    cardTitle2: "Tocafin",
+    cardTitle3: "Nakfin",
+    numberOfItems: "23",
+    cardDate: "2024/2/11 م",
+    imageUrl: "assets/images/icon.png",
+    backgroundColor: HexColor.fromHex("C395FC"),
+  ), // ID  -- >        2040703
+  ListsContainer(
+    cardSubTitle: "وصف مختصر للصنف",
+    cardTitle: "Kafilen",
+    cardTitle2: "Tafilen",
+    cardTitle3: "Hafilen",
+    numberOfItems: "15",
+    cardDate: "2024/2/11 م",
+    imageUrl: "lib/FUSER/Summary/assets/cone.png",
+    backgroundColor: HexColor.fromHex("EDA7FA"),
+  ),
+  const ListsContainer(
+    cardSubTitle: "وصف مختصر للصنف",
+    cardTitle: "Dobalen",
+    cardTitle2: "Sovalen",
+    cardTitle3: "Cosalen",
+    numberOfItems: "9",
+    cardDate: "2024/2/11 م",
+    imageUrl: "assets/stickers/stic_10-17.png",
+    backgroundColor: Color(0xFFC44036),
+  ),
+  const ListsContainer(
+    cardSubTitle: "وصف مختصر للصنف",
+    cardTitle: "Hashilen",
+    cardTitle2: "Fashilen",
+    cardTitle3: "Mashilen",
+    numberOfItems: "3",
+    cardDate: "2024/2/11 م",
+    imageUrl: "assets/images/Logo.png",
+    backgroundColor: Color(0xFF9B0A00),
+  ), // ID  -- >        2040703
+  const ListsContainer(
+    cardSubTitle: "وصف مختصر للصنف",
+    cardTitle: "Fattallen",
+    cardTitle2: "Mazzallen",
+    cardTitle3: "Tappallen",
+    numberOfItems: "1",
+    cardDate: "2024/2/11 م",
+    imageUrl: "assets/images/Logo.png",
+    backgroundColor: Color(0xFF700700),
+  ), // ID  -- >        2040703
+  const ListsContainer(
+    cardSubTitle: "وصف مختصر للصنف",
+    cardTitle: "Dezmocin",
+    cardTitle2: "Mezdocin",
+    cardTitle3: "Jezmocin",
+    numberOfItems: "0",
+    cardDate: "2024/2/11 م",
+    imageUrl: "assets/images/Logo.png",
+    backgroundColor: Color(0xFF3C0400),
+  ), // ID  -- >        2040703
+];

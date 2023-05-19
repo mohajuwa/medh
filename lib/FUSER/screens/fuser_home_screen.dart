@@ -3,16 +3,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:medh/HomePage/Box_list_widget/listContainer/list_view.dart';
 import 'package:medh/Values/values.dart';
-import 'package:medh/HomePage/Box_list_widget/box/box_container_view.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/FUSER/screens/add_medcine.dart';
 import 'package:medh/widgets/Buttons/primary_tab_buttons.dart';
+import 'package:medh/widgets/Dev_Search/meds_screen_fuser.dart';
 import 'package:medh/widgets/Shapes/app_settings_icon.dart';
 
 import '../Fuser_widgets/fuser_navbar_roots.dart';
-
-import 'medicine_detils_home_screen.dart';
 
 class FuserHomeScreen extends ConsumerStatefulWidget {
   const FuserHomeScreen({super.key});
@@ -23,6 +22,7 @@ class FuserHomeScreen extends ConsumerStatefulWidget {
 
 class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
   final _settingsButtonTrigger = ValueNotifier(0);
+  List<ListsContainer> medfuser = allMedsFuser;
 
   double? scrolledUnderElevation;
 
@@ -32,7 +32,6 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
       body: ListView(
         children: [
           Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               AppSpaces.verticalSpace20,
               SizedBox(
@@ -72,9 +71,9 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                                 color: Colors.white54,
                                 shape: BoxShape.circle,
                               ),
-                              child: const Icon(
+                              child: Icon(
                                 Icons.add,
-                                color: clr,
+                                color: colors(context).color1,
                                 size: 15,
                               ),
                             ),
@@ -147,7 +146,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                             ),
                             const SizedBox(height: 1),
                             Text(
-                              "ما تم طلبه بكثرة ",
+                              "التقارير جيدة عندما تتوفر الطموح",
                               style: Theme.of(context).textTheme.bodySmall,
                             ),
                           ],
@@ -157,7 +156,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 100),
                 child: Text(
@@ -169,7 +168,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(10),
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -178,7 +177,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               PrimaryTabButton(
-                                  buttonText: "أكثر مبيعاً",
+                                  buttonText: "أكثر طلباً",
                                   itemIndex: 0,
                                   notifier: _settingsButtonTrigger),
                               PrimaryTabButton(
@@ -205,89 +204,48 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
               ),
               AppSpaces.verticalSpace10,
               Padding(
-                padding: const EdgeInsets.only(left: 200),
+                padding: const EdgeInsets.only(left: 100),
                 child: Text(
-                  " متوفر",
+                  "تم طلبها ولكن لم يتم توفيرها",
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            const FuserMedicineDitlesScreen(), // ID  -- >        2040755
-                      ),
-                    );
-                  },
-                  child: Hero(
-                    tag: "hero",
-                    child: Column(
+              SizedBox(
+                width: 360,
+                child: Column(
+                  children: <Widget>[
+                    Row(
                       children: [
-                        Column(
-                          children: [
-                            BoxContainerList(
-                              cardTitle: "إسم الصنف ",
-                              cardSubTitle: "شوية كلام يكتب هنا",
-                              numberOfItems: "120",
-                              cardDate: "2024/2/11 م",
-                              imageUrl:
-                                  "lib/FUSER/Summary/assets/green_pencil.png",
-                              backgroundColor: HexColor.fromHex("7FBC69"),
-                            ), // ID  -- >        2040706
-                            BoxContainerList(
-                              cardSubTitle: "شوية كلام يكتب هنا",
-                              cardTitle: "إسم الصنف",
-                              numberOfItems: "74",
-                              cardDate: "2024/2/11 م",
-                              imageUrl:
-                                  "lib/FUSER/Summary/assets/orange_pencil.png",
-                              backgroundColor: HexColor.fromHex("EFA17D"),
-                            ), // ID  -- >        2040706
-                            BoxContainerList(
-                              cardSubTitle: "شوية كلام يكتب هنا",
-                              cardTitle: "إسم الصنف ",
-                              numberOfItems: "5",
-                              cardDate: "2024/2/11 م",
-                              imageUrl: "assets/images/icon.png",
-                              backgroundColor: HexColor.fromHex("C395FC"),
-                            ), // ID  -- >        2040706
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            BoxContainerList(
-                              cardSubTitle: "شوية كلام يكتب هنا",
-                              cardTitle: "إسم الصنف ",
-                              numberOfItems: "24",
-                              cardDate: "2024/2/11 م",
-                              imageUrl: "lib/FUSER/Summary/assets/cone.png",
-                              backgroundColor: HexColor.fromHex("EDA7FA"),
-                            ), // ID  -- >        2040706
-                            const BoxContainerList(
-                              cardSubTitle: "شوية كلام يكتب هنا",
-                              cardTitle: "إسم الصنف ",
-                              numberOfItems: "80",
-                              cardDate: "2024/2/11 م",
-                              imageUrl: "assets/stickers/stic_10-17.png",
-                              backgroundColor: Color(0xFFC44036),
-                            ), // ID  -- >        2040706
-                            const BoxContainerList(
-                              cardSubTitle: "شوية كلام يكتب هنا",
-                              cardTitle: "إسم الصنف ",
-                              numberOfItems: "3",
-                              cardDate: "2024/2/11 م",
-                              imageUrl: "assets/images/Logo.png",
-                              backgroundColor: Color(0xFF9B0A00),
-                            ), // ID  -- >        2040706
-                          ],
+                        Expanded(
+                          child: ListView.builder(
+                            scrollDirection: Axis.vertical,
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: medfuser.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              final medsf = medfuser[index];
+
+                              return SingleChildScrollView(
+                                physics: const NeverScrollableScrollPhysics(),
+                                scrollDirection: Axis.vertical,
+                                child: ListTile(
+                                  title: medsf,
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => FuserMedsScreen(
+                                        medsFuser: medsf,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
                         ),
                       ],
                     ),
-                  ),
+                  ],
                 ),
               ),
             ],
