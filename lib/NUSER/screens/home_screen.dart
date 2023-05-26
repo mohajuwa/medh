@@ -1,9 +1,8 @@
 // ID  -- >    2040682
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
+import 'package:medh/Data/data_model.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/Values/values.dart';
 import 'package:medh/provider.dart';
@@ -40,45 +39,60 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final List<Widget> imageSliders = imgList
+        .map((item) => ClipRRect(
+            borderRadius: const BorderRadius.all(
+              Radius.circular(20),
+            ),
+            child: Stack(
+              children: <Widget>[
+                Image.asset(
+                  item,
+                  fit: BoxFit.fitHeight,
+                  width: 1000.0,
+                ),
+                Positioned(
+                  bottom: 0.0,
+                  left: 0.0,
+                  right: 0.0,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0x739B1642),
+                          Color(0x00683AB7),
+                        ],
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                      ),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10.0, horizontal: 20.0),
+                    child: Text(
+                      'No. ${imgList.indexOf(item)} image',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            )))
+        .toList();
     return SafeArea(
       child: ListView(
         children: [
           Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 5),
-                child: Container(
-                  height: 200, 
-                  width: 400,
-                  decoration: BoxDecoration(
-                    color: colors(context).color4,
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Color(0x65000000),
-                        blurRadius: 1.5,
-                        spreadRadius: 1,
-                      )
-                    ],
-                  ),
-                  child: Carousel(
-                    images: const [
-                      AssetImage("assets/stickers/stic_18-30.png"),
-                      AssetImage("assets/stickers/stic4.png"),
-                      AssetImage("assets/stickers/stic_f-50-80.png"),
-                    ],
-                    dotSize: 15,
-                    dotIncreaseSize: 1.2,
-                    dotSpacing: 30,
-                    dotColor: colors(context).color3?.withOpacity(0.4),
-                    dotIncreasedColor: colors(context).color4,
-                    dotBgColor: colors(context).color2?.withOpacity(0.5),
-                    indicatorBgPadding: 6,
-                    boxFit: BoxFit.fitHeight,
-                    borderRadius: true,
-                    radius: const Radius.circular(20),
-                  ),
+              CarouselSlider(
+                options: CarouselOptions(
+                  autoPlay: true,
+                  aspectRatio: 2.0,
+                  enlargeCenterPage: true,
                 ),
+                items: imageSliders,
               ),
               AppSpaces.verticalSpace10,
               Row(
@@ -120,9 +134,9 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                 ],
               ),
               AppSpaces.verticalSpace10,
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Padding(
                     padding: EdgeInsets.only(left: 200),
                     child: Text(

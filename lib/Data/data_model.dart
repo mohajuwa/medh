@@ -3,6 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:medh/Values/values.dart';
 
+final List<String> imgList = [
+  "assets/stickers/stic_18-30.png",
+  "assets/stickers/stic4.png",
+  "assets/stickers/stic_f-50-80.png",
+];
+
 class AppData {
   static final List<Map<String, dynamic>> progressIndicatorList = [
     {

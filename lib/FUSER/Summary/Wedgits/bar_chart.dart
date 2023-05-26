@@ -81,7 +81,7 @@ class BarChartSample1State extends State<BarChartSample1> {
                 ),
               ),
               AppSpaces.verticalSpace10, // ID  -- >        2040704
-              Row(children: const [
+              const Row(children: [
                 Text('108  إجمالي',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,

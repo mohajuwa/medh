@@ -30,13 +30,13 @@ class FuserWelcomeScreenState extends ConsumerState<FuserWelcomeScreen> {
           textDirection: TextDirection.rtl,
           child: Scaffold(
             body: Padding(
-              padding: const EdgeInsets.all(5),
+              padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 400,
-                    padding: const EdgeInsets.all(10),
+                    width: 360,
+                    padding: const EdgeInsets.all(8),
                     child: ListView(
                       children: [
                         const SizedBox(height: 15),

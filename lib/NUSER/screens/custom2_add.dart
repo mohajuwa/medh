@@ -16,9 +16,9 @@ class Custom2AddScreen extends StatelessWidget {
             preferredSize: const Size.fromHeight(70),
             child: AppBar(
               leadingWidth: 30,
-              title: Padding(
-                padding: const EdgeInsets.only(top: 5),
-                child: Row(children: const [
+              title: const Padding(
+                padding: EdgeInsets.only(top: 5),
+                child: Row(children: [
                   CircleAvatar(
                     backgroundColor: Colors.transparent,
                     radius: 25,

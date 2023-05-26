@@ -42,7 +42,7 @@ class NavBarRootsState extends ConsumerState<NavBarRoots> {
         setState(() {
           _selectedIndex = 0;
         });
-        return false;
+        return true;
       },
       child: MaterialApp(
         theme: getAppTheme(context, ref.watch(appThemeProvider)),

@@ -12,7 +12,7 @@ class AppSettingsIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: callback,
-      child: Column(children: const [
+      child: const Column(children: [
         SettingsStrip(),
         SizedBox(height: 2),
         RotatedBox(quarterTurns: 2, child: SettingsStrip())

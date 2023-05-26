@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "844009676274",
+    "project_id": "mtry-5f0e2",
+    "storage_bucket": "mtry-5f0e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844009676274:android:35bb781e125fd7985bdf6b",
+        "android_client_info": {
+          "package_name": "com.example.medh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844009676274-1neqm3cosq3gue84uvofbeb8for18qud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp1L-cRVu-vwFD0mNItYDESz5pLW4Uuh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844009676274-1neqm3cosq3gue84uvofbeb8for18qud.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "844009676274-oti3rbjsaj9daunjbq463i502c9m6858.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.medh"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -35,7 +35,7 @@ class DashboardScreenState extends ConsumerState<DashboardScreen> {
     return SafeArea(
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -153,11 +153,11 @@ class DashboardScreenState extends ConsumerState<DashboardScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    width: 370,
+                    width: 360,
                     child: Column(
                       children: [
                         SizedBox(
-                            width: 370, child: _dashboardWidgets[_buttonIndex]),
+                            width: 360, child: _dashboardWidgets[_buttonIndex]),
                       ],
                     ),
                   ),

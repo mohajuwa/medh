@@ -13,7 +13,7 @@ class ListsContainer extends StatelessWidget {
   final String cardDate;
   final String cardSubTitle;
   final String cardTitle2;
-  final String cardTitle3;
+  final String cardCompany;
 
   const ListsContainer(
       {Key? key,
@@ -24,7 +24,7 @@ class ListsContainer extends StatelessWidget {
       required this.numberOfItems,
       required this.cardDate,
       required this.cardTitle2,
-      required this.cardTitle3})
+      required this.cardCompany})
       : super(key: key);
 
   @override
@@ -122,7 +122,7 @@ final allMedsFuser = [
   ListsContainer(
     cardTitle: "Nobasi",
     cardTitle2: "Osamasi",
-    cardTitle3: "Cadamsi",
+    cardCompany: "الشركة الوطنية للأدوية",
     cardSubTitle: "وصف مختصر للصنف",
     numberOfItems: "120",
     cardDate: "2024/2/11 م",
@@ -133,7 +133,7 @@ final allMedsFuser = [
     cardSubTitle: "وصف مختصر للصنف",
     cardTitle: "Aspren",
     cardTitle2: "Panadol",
-    cardTitle3: "Selpadeen",
+    cardCompany: "الشركة الوطنية للأدوية",
     numberOfItems: "74",
     cardDate: "2024/2/11 م",
     imageUrl: "lib/FUSER/Summary/assets/orange_pencil.png",
@@ -143,7 +143,7 @@ final allMedsFuser = [
     cardSubTitle: "وصف مختصر للصنف",
     cardTitle: "Mocafin",
     cardTitle2: "Tocafin",
-    cardTitle3: "Nakfin",
+    cardCompany: "الشركة الوطنية للأدوية",
     numberOfItems: "23",
     cardDate: "2024/2/11 م",
     imageUrl: "assets/images/icon.png",
@@ -153,7 +153,7 @@ final allMedsFuser = [
     cardSubTitle: "وصف مختصر للصنف",
     cardTitle: "Kafilen",
     cardTitle2: "Tafilen",
-    cardTitle3: "Hafilen",
+    cardCompany: "الشركة الوطنية للأدوية",
     numberOfItems: "15",
     cardDate: "2024/2/11 م",
     imageUrl: "lib/FUSER/Summary/assets/cone.png",
@@ -163,7 +163,7 @@ final allMedsFuser = [
     cardSubTitle: "وصف مختصر للصنف",
     cardTitle: "Dobalen",
     cardTitle2: "Sovalen",
-    cardTitle3: "Cosalen",
+    cardCompany: "شركة المقوتي للإدوية",
     numberOfItems: "9",
     cardDate: "2024/2/11 م",
     imageUrl: "assets/stickers/stic_10-17.png",
@@ -173,7 +173,7 @@ final allMedsFuser = [
     cardSubTitle: "وصف مختصر للصنف",
     cardTitle: "Hashilen",
     cardTitle2: "Fashilen",
-    cardTitle3: "Mashilen",
+    cardCompany: "شركة عبدالله سعيد للقمح والأدوية",
     numberOfItems: "3",
     cardDate: "2024/2/11 م",
     imageUrl: "assets/images/Logo.png",
@@ -183,7 +183,7 @@ final allMedsFuser = [
     cardSubTitle: "وصف مختصر للصنف",
     cardTitle: "Fattallen",
     cardTitle2: "Mazzallen",
-    cardTitle3: "Tappallen",
+    cardCompany: "الوازعية للإدوية العقارية",
     numberOfItems: "1",
     cardDate: "2024/2/11 م",
     imageUrl: "assets/images/Logo.png",
@@ -193,7 +193,7 @@ final allMedsFuser = [
     cardSubTitle: "وصف مختصر للصنف",
     cardTitle: "Dezmocin",
     cardTitle2: "Mezdocin",
-    cardTitle3: "Jezmocin",
+    cardCompany: "الشركة المفروطة للإدوية ",
     numberOfItems: "0",
     cardDate: "2024/2/11 م",
     imageUrl: "assets/images/Logo.png",

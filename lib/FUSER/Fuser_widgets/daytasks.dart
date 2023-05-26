@@ -56,7 +56,7 @@ class FuserDayTasksState extends ConsumerState<FuserDayTasks> {
                       },
                       child: Container(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 4, horizontal: 20),
+                            vertical: 4, horizontal: 10),
                         decoration: BoxDecoration(
                           color: _buttonIndex == 0
                               ? colors(context).color1

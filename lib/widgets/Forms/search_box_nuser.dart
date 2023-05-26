@@ -3,11 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:medh/widgets/Dev_Search/meds_screen.dart';
-import 'package:medh/widgets/Dev_Search/widgets/list_meds_container.dart';
+import 'package:medh/HomePage/Box_list_widget/listContainer/list_view.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/Values/values.dart';
 import 'package:medh/widgets/Buttons/primary_tab_buttons.dart';
+import 'package:medh/widgets/Dev_Search/meds_screen.dart';
 import 'package:medh/widgets/Shapes/app_settings_icon.dart';
 
 class SearchBox extends StatefulWidget {
@@ -27,7 +27,7 @@ class SearchBox extends StatefulWidget {
 final _settingsButtonTrigger = ValueNotifier(0);
 
 class _SearchBoxState extends State<SearchBox> {
-  List<Meds> med = allMeds;
+  List<ListsContainer> medfuser = allMedsFuser;
 
   @override
   Widget build(BuildContext context) {
@@ -99,19 +99,23 @@ class _SearchBoxState extends State<SearchBox> {
             child: Column(
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     PrimaryTabButton(
                         buttonText: "الكل",
                         itemIndex: 0,
                         notifier: _settingsButtonTrigger),
                     PrimaryTabButton(
-                        buttonText: "السبل ",
+                        buttonText: "الطلب ",
                         itemIndex: 1,
                         notifier: _settingsButtonTrigger),
                     PrimaryTabButton(
-                        buttonText: "الظهار",
+                        buttonText: "الكمية",
                         itemIndex: 2,
+                        notifier: _settingsButtonTrigger),
+                    PrimaryTabButton(
+                        buttonText: "الأقل",
+                        itemIndex: 3,
                         notifier: _settingsButtonTrigger),
                     Row(
                       children: [
@@ -134,44 +138,43 @@ class _SearchBoxState extends State<SearchBox> {
                   ],
                 ),
                 AppSpaces.verticalSpace20,
-                
+                Column(
+                  children: <Widget>[
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ListView.builder(
+                            scrollDirection: Axis.vertical,
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: medfuser.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              final meds = medfuser[index];
+
+                              return SingleChildScrollView(
+                                physics: const NeverScrollableScrollPhysics(),
+                                scrollDirection: Axis.vertical,
+                                child: ListTile(
+                                  title: meds,
+                                  onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MedsScreen(
+                                        meds: meds,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ],
             ),
-          ),
-          Column(
-            children: <Widget>[
-              Row(
-                children: [
-                  Expanded(
-                    child: ListView.builder(
-                      scrollDirection: Axis.vertical,
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: med.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        final meds = med[index];
-
-                        return SingleChildScrollView(
-                          physics: const NeverScrollableScrollPhysics(),
-                          scrollDirection: Axis.vertical,
-                          child: ListTile(
-                            title: meds,
-                            onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MedsScreen(
-                                  meds: meds,
-                                ),
-                              ),
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ],
           ),
         ],
       ),
@@ -179,13 +182,14 @@ class _SearchBoxState extends State<SearchBox> {
   }
 
   void searchMeds(String query) {
-    final suggesstions = allMeds.where((meds) {
-      final cartTitle = meds.cardTitle.toLowerCase();
+    final suggesstions = allMedsFuser.where((medsFuser) {
+      final cartTitle = medsFuser.cardTitle.toLowerCase();
+
       final input = query.toLowerCase();
 
       return cartTitle.contains(input);
     }).toList();
 
-    setState(() => med = suggesstions);
+    setState(() => medfuser = suggesstions);
   }
 }

@@ -11,37 +11,34 @@ class FuserMedicineScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
-        child: ListView(
-          children: <Widget>[
-            SizedBox(
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        children: [
-                          Container(
-                            width: 340,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: FuserSearchBox(
-                              placeholder: 'إستعلام',
-                              controller: _searchController,
-                            ),
+      child: ListView(
+        children: <Widget>[
+          SizedBox(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          width: 340,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+                          child: FuserSearchBox(
+                            placeholder: 'إستعلام',
+                            controller: _searchController,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

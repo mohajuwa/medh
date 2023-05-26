@@ -28,12 +28,12 @@ class WelcomeScreenState extends ConsumerState<WelcomeScreen> {
           textDirection: TextDirection.rtl,
           child: Scaffold(
             body: Padding(
-              padding: const EdgeInsets.all(5),
+              padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 400  ,
+                    width: 360,
                     height: MediaQuery.of(context).size.height,
                     padding: const EdgeInsets.all(10),
                     child: ListView(

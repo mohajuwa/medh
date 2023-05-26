@@ -20,7 +20,6 @@ class FuserLoginScreen extends ConsumerStatefulWidget {
 
 class FuserLoginScreenState extends ConsumerState<FuserLoginScreen> {
   double? scrolledUnderElevation;
-  final clr = const Color(0xFF58329B);
   bool passTooggle = true;
   @override
   Widget build(BuildContext context) {
@@ -131,7 +130,7 @@ class FuserLoginScreenState extends ConsumerState<FuserLoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 400,
+                  width: 360,
                   child: ListView(
                     children: [
                       Column(
@@ -142,13 +141,13 @@ class FuserLoginScreenState extends ConsumerState<FuserLoginScreen> {
                             children: [
                               Image.asset(
                                 "assets/stickers/stic3.png",
-                                height: 200,
+                                height: 160,
                               ),
                               Row(
                                 children: [
                                   Image.asset(
                                     "assets/stickers/stic4.png",
-                                    height: 200,
+                                    height: 160,
                                   ),
                                 ],
                               ),

@@ -5,11 +5,12 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sizer/sizer.dart';
-
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'HomePage/home_page.dart';
 import 'provider.dart';
 
-void main() {
+void main() async {
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return Material(
       child: Container(
@@ -36,6 +37,9 @@ void main() {
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   runApp(const ProviderScope(child: MyApp()));
   FlutterNativeSplash.remove();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 }
 
 class MyApp extends ConsumerWidget {

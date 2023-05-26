@@ -130,7 +130,7 @@ class FuserSignUpScreenState extends ConsumerState<FuserSignUpScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 400,
+                  width: 360,
                   child: ListView(
                     children: [
                       Column(
@@ -141,13 +141,13 @@ class FuserSignUpScreenState extends ConsumerState<FuserSignUpScreen> {
                             children: [
                               Image.asset(
                                 "assets/stickers/stic3.png",
-                                height: 200,
+                                height: 160,
                               ),
                               Row(
                                 children: [
                                   Image.asset(
                                     "assets/stickers/stic4.png",
-                                    height: 200,
+                                    height: 160,
                                   ),
                                 ],
                               ),

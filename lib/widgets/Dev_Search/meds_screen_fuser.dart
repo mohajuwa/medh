@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medh/FUSER/screens/edit_medicine.dart';
 import 'package:medh/HomePage/Box_list_widget/listContainer/list_view.dart';
+import 'package:medh/HomePage/Box_list_widget/spacing.dart';
 import 'package:medh/Theme/theme.dart';
 
 class FuserMedsScreen extends StatelessWidget {
@@ -27,24 +28,32 @@ class FuserMedsScreen extends StatelessWidget {
                 child: Stack(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Icon(
-                            Icons.arrow_back_ios_new,
-                            color: Colors.white70,
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Icon(
-                            Icons.more_vert,
-                            color: Colors.white70,
+                        SizedBox(
+                          width: 360,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              InkWell(
+                                onTap: () {
+                                  Navigator.pop(context);
+                                },
+                                child: const Icon(
+                                  Icons.arrow_back_ios_new,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.pop(context);
+                                },
+                                child: const Icon(
+                                  Icons.more_vert,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -69,7 +78,7 @@ class FuserMedsScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 5),
                           Text(
-                            medsFuser.cardSubTitle,
+                            medsFuser.cardCompany,
                             style: const TextStyle(
                                 fontWeight: FontWeight.w500,
                                 color: Colors.white),
@@ -117,7 +126,7 @@ class FuserMedsScreen extends StatelessWidget {
                 children: [
                   Container(
                     height: MediaQuery.of(context).size.height / 1.9,
-                    width: 390,
+                    width: 360,
                     padding: const EdgeInsets.only(
                       top: 20,
                       right: 15,
@@ -138,7 +147,7 @@ class FuserMedsScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 5),
                         Text(
-                          medsFuser.cardSubTitle,
+                          medsFuser.cardCompany,
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         const SizedBox(height: 10),
@@ -176,6 +185,17 @@ class FuserMedsScreen extends StatelessWidget {
                               ),
                             ),
                           ],
+                        ),
+                        const Divider(
+                          thickness: 2,
+                          height: 2,
+                        ),
+                        AppSpaces.verticalSpace10,
+                        const Text(
+                          "أدوية مشابهة",
+                          style: TextStyle(
+                            fontSize: 16,
+                          ),
                         ),
                         SizedBox(
                           height: 130,
@@ -240,14 +260,16 @@ class FuserMedsScreen extends StatelessWidget {
                                           ],
                                         ),
                                       ),
-                                      const SizedBox(height: 5),
-                                      const Padding(
-                                        padding: EdgeInsets.symmetric(
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
                                             horizontal: 10),
                                         child: Text(
                                           maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
-                                          "نشرة أساسية للدواء",
+                                          "ملاحظة الدواء",
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodySmall,
                                         ),
                                       ),
                                     ],
@@ -257,7 +279,10 @@ class FuserMedsScreen extends StatelessWidget {
                             },
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        const Divider(
+                          thickness: 2,
+                          height: 2,
+                        ),
                         const Text(
                           "موقع الصيدلية",
                         ),
@@ -290,8 +315,9 @@ class FuserMedsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 390,
+              width: 360,
               padding: const EdgeInsets.all(15),
+              margin: const EdgeInsets.only(bottom: 10),
               height: 130,
               decoration: BoxDecoration(
                 color: colors(context).color4,
@@ -322,32 +348,51 @@ class FuserMedsScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 15),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: ((context) => FuserEdit2MedcineScreen(
-                              medsFuserEdit:
-                                  medsFuser)), // ID  -- >        2040746
-                        ),
-                      );
-                    },
-                    child: Container(
-                      width: 200,
-                      padding: const EdgeInsets.symmetric(vertical: 10),
-                      decoration: BoxDecoration(
-                        color: colors(context).color1,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          "تعديل",
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w600),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(
+                          Icons.arrow_back,
+                          color: colors(context).color1,
                         ),
                       ),
-                    ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: ((context) => FuserEdit2MedcineScreen(
+                                  medsFuserEdit:
+                                      medsFuser)), // ID  -- >        2040746
+                            ),
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 200,
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              decoration: BoxDecoration(
+                                color: colors(context).color1,
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  "تعديل",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

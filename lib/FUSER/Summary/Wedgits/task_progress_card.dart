@@ -75,7 +75,7 @@ class TaskProgressCard extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                          width: 220,
+                          width: 190,
                           height: 10,
                           decoration: const BoxDecoration(
                               borderRadius:

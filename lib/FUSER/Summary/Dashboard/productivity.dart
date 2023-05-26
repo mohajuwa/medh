@@ -9,9 +9,9 @@ class DashboardProductivity extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Column(
-        children: const [
+        children: [
           DailyGoalCard(), // ID  -- >        2040722
           AppSpaces.verticalSpace20, // ID  -- >        2040704
           ProductivityChart(), // ID  -- >        2040724

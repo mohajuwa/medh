@@ -37,8 +37,9 @@ class FuserDashboardScreenState extends ConsumerState<FuserDashboardScreen> {
       child: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Padding(
                   padding: EdgeInsets.only(left: 200),

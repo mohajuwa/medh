@@ -33,24 +33,32 @@ class FuserEdit2MedcineScreen extends StatelessWidget {
                 child: Stack(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Icon(
-                            Icons.arrow_back_ios_new,
-                            color: Colors.white70,
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Icon(
-                            Icons.more_vert,
-                            color: Colors.white70,
+                        SizedBox(
+                          width: 360,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              InkWell(
+                                onTap: () {
+                                  Navigator.pop(context);
+                                },
+                                child: const Icon(
+                                  Icons.arrow_back_ios_new,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.pop(context);
+                                },
+                                child: const Icon(
+                                  Icons.more_vert,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -81,13 +89,22 @@ class FuserEdit2MedcineScreen extends StatelessWidget {
                                 color: Colors.white),
                           ),
                           const SizedBox(height: 15),
-                          const SizedBox(height: 10),
                           const Divider(
                             thickness: 2.9,
                             height: 2.0,
                           ),
+                          const SizedBox(height: 10),
                           Container(
-                            color: colors(context).color4,
+                            width: 360,
+                            decoration: BoxDecoration(
+                              color: colors(context).color4,
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(10),
+                                topRight: Radius.circular(10),
+                                bottomLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(90),
+                              ),
+                            ),
                             child: Column(
                               children: [
                                 Padding(
@@ -191,45 +208,68 @@ class FuserEdit2MedcineScreen extends StatelessWidget {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(10),
-                                      child: SizedBox(
-                                        width: 200,
-                                        height: 50,
-                                        child: Material(
-                                          color: colors(context).color1,
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          child: InkWell(
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: [
+                                          InkWell(
                                             onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: ((context) =>
-                                                      const FuserEditMedicineDone()), // ID  -- >        2040742
-                                                ),
-                                              );
+                                              Navigator.pop(context);
                                             },
-                                            child: Container(
-                                              width: 200,
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      vertical: 10),
-                                              decoration: BoxDecoration(
-                                                color: colors(context).color1,
-                                                borderRadius:
-                                                    BorderRadius.circular(12),
-                                              ),
-                                              child: const Center(
-                                                child: Text(
-                                                  "تعديل",
-                                                  style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w600),
-                                                ),
-                                              ),
+                                            child: Icon(
+                                              Icons.arrow_back,
+                                              color: colors(context).color1,
                                             ),
                                           ),
-                                        ),
+                                          Row(
+                                            children: [
+                                              SizedBox(
+                                                width: 200,
+                                                height: 50,
+                                                child: Material(
+                                                  color: colors(context).color1,
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  child: InkWell(
+                                                    onTap: () {
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: ((context) =>
+                                                              const FuserEditMedicineDone()), // ID  -- >        2040742
+                                                        ),
+                                                      );
+                                                    },
+                                                    child: Container(
+                                                      width: 200,
+                                                      padding: const EdgeInsets
+                                                              .symmetric(
+                                                          vertical: 10),
+                                                      decoration: BoxDecoration(
+                                                        color: colors(context)
+                                                            .color1,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(12),
+                                                      ),
+                                                      child: const Center(
+                                                        child: Text(
+                                                          "تعديل",
+                                                          style: TextStyle(
+                                                              color:
+                                                                  Colors.white,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ],

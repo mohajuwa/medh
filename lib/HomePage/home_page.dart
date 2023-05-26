@@ -1,4 +1,7 @@
 // ID  -- >    2040680
+// ignore_for_file: avoid_print
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:medh/Theme/theme.dart';
@@ -15,6 +18,23 @@ class HomePage extends ConsumerStatefulWidget {
 }
 
 class HomePageState extends ConsumerState<HomePage> {
+  late UserCredential userCredential;
+  Future<void> _loginAnonymously() async {
+    try {
+      userCredential = await FirebaseAuth.instance.signInAnonymously();
+      User? user = userCredential.user;
+      if (user != null) {
+        // ignore: use_build_context_synchronously
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const NavBarRoots()),
+        );
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     double? scrolledUnderElevation;
@@ -126,12 +146,12 @@ class HomePageState extends ConsumerState<HomePage> {
                             ],
                           ),
                           height: 200,
-                          width: 350,
+                          width: 360,
                           child: Row(children: [
                             // Animation  or Cute Picture
                             SizedBox(
                               height: 150,
-                              width: 150,
+                              width: 100,
                               child: Column(
                                 children: [
                                   ClipRRect(
@@ -222,12 +242,12 @@ class HomePageState extends ConsumerState<HomePage> {
                             ],
                           ),
                           height: 200,
-                          width: 350,
+                          width: 360,
                           child: Row(children: [
                             // Animation  or Cute Picture
                             SizedBox(
                               height: 150,
-                              width: 150,
+                              width: 100,
                               child: Column(
                                 children: [
                                   ClipRRect(
@@ -276,15 +296,7 @@ class HomePageState extends ConsumerState<HomePage> {
                                       borderRadius: BorderRadius.circular(18),
                                     ),
                                     child: InkWell(
-                                      onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                const NavBarRoots(), // ID  -- >    2040681
-                                          ),
-                                        );
-                                      },
+                                      onTap: _loginAnonymously,
                                       child: const Center(
                                         child: Text(
                                           'البدء',
