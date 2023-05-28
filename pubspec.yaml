@@ -63,8 +63,12 @@ dependencies:
   flutter_slidable: ^3.0.0
   table_calendar: ^3.0.8
   carousel_slider: ^4.2.1
-  firebase_core: ^2.13.0
-  firebase_auth: ^4.6.1
+  form_validator: ^2.1.1
+  mysql1: ^0.20.0
+  # firebase_core: ^2.13.0
+  # firebase_auth: ^4.6.1
+  # google_sign_in: ^5.4.4
+  # cloud_firestore: ^4.7.1
 
 flutter_native_splash:
   color: "#eeeeee"

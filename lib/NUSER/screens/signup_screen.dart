@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:form_validator/form_validator.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/provider.dart';
 import 'package:medh/NUSER/Nuser_widgets/navbar_roots.dart';
@@ -20,6 +21,46 @@ class SignUpScreen extends ConsumerStatefulWidget {
 class SignUpScreenState extends ConsumerState<SignUpScreen> {
   double? scrolledUnderElevation;
   bool passTooggle = true;
+  TextEditingController userName = TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+  TextEditingController confirmPassword = TextEditingController();
+  GlobalKey<FormState> signUpFormKey = GlobalKey();
+
+  final emailValidator = ValidationBuilder().email().maxLength(50).build();
+  String userNameValidator(String val) {
+    String valid = "";
+    if (val.trim().isEmpty) {
+      valid = "This Feild Can't Be Empty";
+    }
+    if (val.trim().length > 20) {
+      valid = "This Feild Can't Greater Than 20 Letters";
+    }
+    return valid;
+  }
+
+  String passwordValidator(String val) {
+    String valid = "";
+    if (val.trim().isEmpty) {
+      valid = "This Feild Can't Be Empty";
+    }
+    if (val.trim().length < 4) {
+      valid = "This Feild Can't Less Than 4 Letters";
+    }
+    if (val.trim().length > 20) {
+      valid = "This Feild Can't Greater Than 20 Letters";
+    }
+    return valid;
+  }
+
+  String confirmPasswordValidator(String val) {
+    String valid = "";
+    if (val != password.text) {
+      valid = "The Password Are Not Same";
+    }
+    return valid;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -129,7 +170,7 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 360,
+                  width: 400,
                   child: ListView(
                     children: [
                       Column(
@@ -140,13 +181,13 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
                             children: [
                               Image.asset(
                                 "assets/stickers/stic3.png",
-                                height: 160,
+                                height: 200,
                               ),
                               Row(
                                 children: [
                                   Image.asset(
                                     "assets/stickers/stic4.png",
-                                    height: 160,
+                                    height: 200,
                                   ),
                                 ],
                               ),
@@ -158,88 +199,28 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
                         thickness: 2.9,
                         height: 2.0,
                       ),
-                      const SizedBox(height: 2),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 8, horizontal: 15),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: const OutlineInputBorder(),
-                            label: Text(
-                              "الإسم كامل",
-                              style: TextStyle(
-                                color: colors(context).color3,
-                              ),
-                            ),
-                            prefixIconColor: colors(context).color3,
-                            prefixIcon: const Icon(Icons.person),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 8, horizontal: 15),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: const OutlineInputBorder(),
-                            label: Text(
-                              "البريد",
-                              style: TextStyle(
-                                color: colors(context).color3,
-                              ),
-                            ),
-                            prefixIconColor: colors(context).color3,
-                            prefixIcon: const Icon(Icons.email),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 8, horizontal: 15),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: const OutlineInputBorder(),
-                            label: Text(
-                              " رقم الجوال",
-                              style: TextStyle(
-                                color: colors(context).color3,
-                              ),
-                            ),
-                            prefixIconColor: colors(context).color3,
-                            prefixIcon: const Icon(Icons.phone),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 8, horizontal: 15),
-                        child: TextField(
-                          obscureText: passTooggle ? true : false,
-                          decoration: InputDecoration(
-                            label: Text(
-                              "إدخل كلمة السر ",
-                              style: TextStyle(
-                                color: colors(context).color3,
-                              ),
-                            ),
-                            border: const OutlineInputBorder(),
-                            prefixIconColor: colors(context).color3,
-                            prefixIcon: const Icon(Icons.lock),
-                            suffixIconColor: colors(context).color3,
-                            suffixIcon: InkWell(
-                                onTap: () {
-                                  //
-                                  if (passTooggle == true) {
-                                    passTooggle = false;
-                                  } else {
-                                    passTooggle = true;
-                                  }
-                                  setState(() {});
-                                },
-                                child: passTooggle
-                                    ? const Icon(CupertinoIcons.eye_slash_fill)
-                                    : const Icon(CupertinoIcons.eye_fill)),
-                          ),
+                      Form(
+                        key: signUpFormKey,
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 2),
+                            buildTextFormFeild(context, "اسم المستخدم",
+                                userNameValidator, userName),
+                            buildTextFormFeild(context, "البريد الألكتروني",
+                                emailValidator, email),
+                            buildPasswordTextFormFeild(
+                                context,
+                                "ادخل كلمة المرور",
+                                passwordValidator,
+                                password),
+                            const SizedBox(height: 10),
+                            buildPasswordTextFormFeild(
+                                context,
+                                "ادخل كلمة المرور مرة اخرى",
+                                confirmPasswordValidator,
+                                confirmPassword)
+                          ],
                         ),
                       ),
                       const SizedBox(height: 10),
@@ -306,6 +287,65 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  Padding buildPasswordTextFormFeild(
+      BuildContext context, myLabel, myValidator, myController) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+      child: TextFormField(
+        validator: myValidator,
+        controller: myController,
+        obscureText: passTooggle ? true : false,
+        decoration: InputDecoration(
+          label: Text(
+            myLabel,
+            style: TextStyle(
+              color: colors(context).color3,
+            ),
+          ),
+          border: const OutlineInputBorder(),
+          prefixIconColor: colors(context).color3,
+          prefixIcon: const Icon(Icons.lock),
+          suffixIconColor: colors(context).color3,
+          suffixIcon: InkWell(
+              onTap: () {
+                //
+                if (passTooggle == true) {
+                  passTooggle = false;
+                } else {
+                  passTooggle = true;
+                }
+                setState(() {});
+              },
+              child: passTooggle
+                  ? const Icon(CupertinoIcons.eye_slash_fill)
+                  : const Icon(CupertinoIcons.eye_fill)),
+        ),
+      ),
+    );
+  }
+
+  Padding buildTextFormFeild(
+      BuildContext context, myLabel, myValidator, myController) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+      child: TextFormField(
+        controller: myController,
+        validator: myValidator,
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(),
+          label: Text(
+            myLabel,
+            style: TextStyle(
+              color: colors(context).color3,
+            ),
+          ),
+          prefixIconColor: colors(context).color3,
+          prefixIcon: const Icon(Icons.person),
         ),
       ),
     );

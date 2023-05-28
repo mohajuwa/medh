@@ -14,6 +14,7 @@ import '../screens/medicines_screen.dart';
 import '../screens/fuser_settings_screen.dart';
 
 class FuserNavBarRoots extends ConsumerStatefulWidget {
+  
   const FuserNavBarRoots({super.key});
 
   @override

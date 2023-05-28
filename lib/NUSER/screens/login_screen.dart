@@ -19,6 +19,36 @@ class LoginScreen extends ConsumerStatefulWidget {
 class LoginScreenState extends ConsumerState<LoginScreen> {
   double? scrolledUnderElevation;
   bool passTooggle = true;
+
+  TextEditingController userName = TextEditingController();
+  TextEditingController password = TextEditingController();
+
+  GlobalKey logInFormKey = GlobalKey();
+  String userNameValidator(String val) {
+    String valid = "";
+    if (val.trim().isEmpty) {
+      valid = "This Feild Can't Be Empty";
+    }
+    if (val.trim().length > 20) {
+      valid = "This Feild Can't Greater Than 20 Letters";
+    }
+    return valid;
+  }
+
+  String passwordValidator(String val) {
+    String valid = "";
+    if (val.trim().isEmpty) {
+      valid = "This Feild Can't Be Empty";
+    }
+    if (val.trim().length < 4) {
+      valid = "This Feild Can't Less Than 4 Letters";
+    }
+    if (val.trim().length > 20) {
+      valid = "This Feild Can't Greater Than 20 Letters";
+    }
+    return valid;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -128,7 +158,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 360,
+                  width: 400,
                   child: ListView(
                     children: [
                       Column(
@@ -139,13 +169,13 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                             children: [
                               Image.asset(
                                 "assets/stickers/stic3.png",
-                                height: 160,
+                                height: 200,
                               ),
                               Row(
                                 children: [
                                   Image.asset(
                                     "assets/stickers/stic4.png",
-                                    height: 160,
+                                    height: 200,
                                   ),
                                 ],
                               ),
@@ -153,58 +183,26 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                           ),
                         ],
                       ),
-                      Divider(
-                        thickness: 2.9,
-                        height: 2.0,
-                        color: colors(context).colorWhiteToBlack,
-                      ),
-                      const SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: const OutlineInputBorder(),
-                            label: Text("إدخل إسم المستخدم",
-                                style: TextStyle(
-                                  color: colors(context).color3,
-                                )),
-                            prefixIconColor: colors(context).color3,
-                            prefixIcon: const Icon(
-                              Icons.person,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: TextField(
-                          obscureText: passTooggle ? true : false,
-                          decoration: InputDecoration(
-                              border: const OutlineInputBorder(),
-                              label: Text(
-                                "إدخل كلمة السر ",
-                                style: TextStyle(
-                                  color: colors(context).color3,
-                                ),
+                      Form(
+                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                          key: logInFormKey,
+                          child: Column(
+                            children: [
+                              Divider(
+                                thickness: 2.9,
+                                height: 2.0,
+                                color: colors(context).colorWhiteToBlack,
                               ),
-                              prefixIconColor: colors(context).color3,
-                              prefixIcon: const Icon(Icons.lock),
-                              suffixIconColor: colors(context).color3,
-                              suffixIcon: InkWell(
-                                onTap: () {
-                                  if (passTooggle == true) {
-                                    passTooggle = false;
-                                  } else {
-                                    passTooggle = true;
-                                  }
-                                  setState(() {});
-                                },
-                                child: passTooggle
-                                    ? const Icon(CupertinoIcons.eye_slash_fill)
-                                    : const Icon(CupertinoIcons.eye_fill),
-                              )),
-                        ),
-                      ),
+                              const SizedBox(height: 10),
+                              buildTextFormFeild(context, "ادخل اسم المستخدم",
+                                  userNameValidator, userName),
+                              buildPasswordTextFormFeild(
+                                  context,
+                                  "ادخل كلمة المرور",
+                                  passwordValidator,
+                                  password)
+                            ],
+                          )),
                       AppSpaces.verticalSpace20,
                       Padding(
                         padding: const EdgeInsets.all(20),
@@ -270,6 +268,65 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  Padding buildPasswordTextFormFeild(
+      BuildContext context, myLabel, myValidator, myController) {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: TextFormField(
+        validator: myValidator,
+        controller: myController,
+        obscureText: passTooggle ? true : false,
+        decoration: InputDecoration(
+          label: Text(
+            myLabel,
+            style: TextStyle(
+              color: colors(context).color3,
+            ),
+          ),
+          border: const OutlineInputBorder(),
+          prefixIconColor: colors(context).color3,
+          prefixIcon: const Icon(Icons.lock),
+          suffixIconColor: colors(context).color3,
+          suffixIcon: InkWell(
+              onTap: () {
+                //
+                if (passTooggle == true) {
+                  passTooggle = false;
+                } else {
+                  passTooggle = true;
+                }
+                setState(() {});
+              },
+              child: passTooggle
+                  ? const Icon(CupertinoIcons.eye_slash_fill)
+                  : const Icon(CupertinoIcons.eye_fill)),
+        ),
+      ),
+    );
+  }
+
+  Padding buildTextFormFeild(
+      BuildContext context, myLabel, myValidator, myController) {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: TextFormField(
+        controller: myController,
+        validator: myValidator,
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(),
+          label: Text(
+            myLabel,
+            style: TextStyle(
+              color: colors(context).color3,
+            ),
+          ),
+          prefixIconColor: colors(context).color3,
+          prefixIcon: const Icon(Icons.person),
         ),
       ),
     );

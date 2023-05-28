@@ -19,9 +19,9 @@ class UsersType extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (user.role == 'normal') {
-      return const FuserNavBarRoots(); // ID  -- >        2040712
+      return const NavBarRoots(); // ID  -- >         2040681
     } else if (user.role == 'medicine_provider') {
-      return const NavBarRoots(); // ID  -- >    2040681
+      return const FuserNavBarRoots(); // ID  -- >    2040712
     } else {
       return const HomePage(); // ID  -- >        2040680
     }

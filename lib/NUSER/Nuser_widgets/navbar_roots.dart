@@ -37,12 +37,12 @@ class NavBarRootsState extends ConsumerState<NavBarRoots> {
     return WillPopScope(
       onWillPop: () async {
         if (_selectedIndex == 0) {
-          return false;
+          return true;
         }
         setState(() {
           _selectedIndex = 0;
         });
-        return true;
+        return false;
       },
       child: MaterialApp(
         theme: getAppTheme(context, ref.watch(appThemeProvider)),
