@@ -21,6 +21,35 @@ class FuserLoginScreen extends ConsumerStatefulWidget {
 class FuserLoginScreenState extends ConsumerState<FuserLoginScreen> {
   double? scrolledUnderElevation;
   bool passTooggle = true;
+  TextEditingController userName = TextEditingController();
+  TextEditingController password = TextEditingController();
+
+  GlobalKey logInFormKey = GlobalKey();
+  String userNameValidator(String? val) {
+    String valid = "";
+    if (val!.trim().isEmpty) {
+      valid = "لا يجب ترك الحقل فارغاً";
+    }
+    if (val.trim().length > 20) {
+      valid = "لا يمكن زيادة اكثر من 20 حرف ";
+    }
+    return valid;
+  }
+
+  String passwordValidator(String? val) {
+    String valid = "";
+    if (val!.trim().isEmpty) {
+      valid = "لا يجب ترك الحقل فارغاً";
+    }
+    if (val.trim().length < 4) {
+      valid = "لا يمكن ان تكون كلمة المرور اقل من 4 حروف";
+    }
+    if (val.trim().length > 20) {
+      valid = "لا يمكن زيادة اكثر من 20 حرف ";
+    }
+    return valid;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -46,7 +75,7 @@ class FuserLoginScreenState extends ConsumerState<FuserLoginScreen> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  const FuserNavBarRoots(), // ID  -- >        2040712
+                                  const FuserNavBarRoots(), //ID  -- >    2040712
                             ),
                           );
                         },
@@ -155,63 +184,30 @@ class FuserLoginScreenState extends ConsumerState<FuserLoginScreen> {
                           ),
                         ],
                       ),
-                      Divider(
-                        thickness: 2.9,
-                        height: 2.0,
-                        color: colors(context).colorWhiteToBlack,
-                      ),
-                      const SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: const OutlineInputBorder(),
-                            label: Text("إدخل إسم المستخدم",
-                                style: TextStyle(
-                                  color: colors(context).color3,
-                                )),
-                            prefixIconColor: colors(context).color3,
-                            prefixIcon: const Icon(
-                              Icons.person,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: TextField(
-                          obscureText: passTooggle ? true : false,
-                          decoration: InputDecoration(
-                              border: const OutlineInputBorder(),
-                              label: Text(
-                                "إدخل كلمة السر ",
-                                style: TextStyle(
-                                  color: colors(context).color3,
-                                ),
+                      Form(
+                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                          key: logInFormKey,
+                          child: Column(
+                            children: [
+                              Divider(
+                                thickness: 2.9,
+                                height: 2.0,
+                                color: colors(context).colorWhiteToBlack,
                               ),
-                              prefixIconColor: colors(context).color3,
-                              prefixIcon: const Icon(Icons.lock),
-                              suffixIconColor: colors(context).color3,
-                              suffixIcon: InkWell(
-                                onTap: () {
-                                  if (passTooggle == true) {
-                                    passTooggle = false;
-                                  } else {
-                                    passTooggle = true;
-                                  }
-                                  setState(() {});
-                                },
-                                child: passTooggle
-                                    ? const Icon(CupertinoIcons.eye_slash_fill)
-                                    : const Icon(CupertinoIcons.eye_fill),
-                              )),
-                        ),
-                      ),
+                              const SizedBox(height: 10),
+                              buildTextFormFeild(context, "ادخل اسم المستخدم",
+                                  userNameValidator, userName),
+                              buildPasswordTextFormFeild(
+                                  context,
+                                  "ادخل كلمة المرور",
+                                  passwordValidator,
+                                  password)
+                            ],
+                          )),
                       AppSpaces.verticalSpace20,
                       Padding(
                         padding: const EdgeInsets.all(20),
                         child: SizedBox(
-                          width: double.infinity,
                           child: Material(
                             color: colors(context).color1,
                             borderRadius: BorderRadius.circular(10),
@@ -221,7 +217,7 @@ class FuserLoginScreenState extends ConsumerState<FuserLoginScreen> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) =>
-                                        const FuserNavBarRoots(), // ID  -- >        2040712
+                                        const FuserNavBarRoots(), // ID  -- >    2040712
                                   ),
                                 );
                               },
@@ -256,7 +252,7 @@ class FuserLoginScreenState extends ConsumerState<FuserLoginScreen> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) =>
-                                        const FuserSignUpScreen(), // ID  -- >        2040752
+                                        const FuserSignUpScreen(), //ID  -- >    2040752
                                   ));
                             },
                             child: const Text(
@@ -273,6 +269,65 @@ class FuserLoginScreenState extends ConsumerState<FuserLoginScreen> {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  Padding buildPasswordTextFormFeild(
+      BuildContext context, myLabel, myValidator, myController) {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: TextFormField(
+        validator: myValidator,
+        controller: myController,
+        obscureText: passTooggle ? true : false,
+        decoration: InputDecoration(
+          label: Text(
+            myLabel,
+            style: TextStyle(
+              color: colors(context).color3,
+            ),
+          ),
+          border: const OutlineInputBorder(),
+          prefixIconColor: colors(context).color3,
+          prefixIcon: const Icon(Icons.lock),
+          suffixIconColor: colors(context).color3,
+          suffixIcon: InkWell(
+              onTap: () {
+                //
+                if (passTooggle == true) {
+                  passTooggle = false;
+                } else {
+                  passTooggle = true;
+                }
+                setState(() {});
+              },
+              child: passTooggle
+                  ? const Icon(CupertinoIcons.eye_slash_fill)
+                  : const Icon(CupertinoIcons.eye_fill)),
+        ),
+      ),
+    );
+  }
+
+  Padding buildTextFormFeild(
+      BuildContext context, myLabel, myValidator, myController) {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: TextFormField(
+        controller: myController,
+        validator: myValidator,
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(),
+          label: Text(
+            myLabel,
+            style: TextStyle(
+              color: colors(context).color3,
+            ),
+          ),
+          prefixIconColor: colors(context).color3,
+          prefixIcon: const Icon(Icons.person),
         ),
       ),
     );

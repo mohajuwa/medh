@@ -106,15 +106,15 @@ class _SearchBoxState extends State<SearchBox> {
                         itemIndex: 0,
                         notifier: _settingsButtonTrigger),
                     PrimaryTabButton(
-                        buttonText: "الطلب ",
+                        buttonText: "السبل ",
                         itemIndex: 1,
                         notifier: _settingsButtonTrigger),
                     PrimaryTabButton(
-                        buttonText: "الكمية",
+                        buttonText: "الجوله",
                         itemIndex: 2,
                         notifier: _settingsButtonTrigger),
                     PrimaryTabButton(
-                        buttonText: "الأقل",
+                        buttonText: "الظهار",
                         itemIndex: 3,
                         notifier: _settingsButtonTrigger),
                     Row(

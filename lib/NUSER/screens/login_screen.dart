@@ -24,27 +24,27 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
   TextEditingController password = TextEditingController();
 
   GlobalKey logInFormKey = GlobalKey();
-  String userNameValidator(String val) {
+  String userNameValidator(String? val) {
     String valid = "";
-    if (val.trim().isEmpty) {
-      valid = "This Feild Can't Be Empty";
+    if (val!.trim().isEmpty) {
+      valid = "لا يجب ترك الحقل فارغاً";
     }
     if (val.trim().length > 20) {
-      valid = "This Feild Can't Greater Than 20 Letters";
+      valid = "لا يمكن زيادة اكثر من 20 حرف ";
     }
     return valid;
   }
 
-  String passwordValidator(String val) {
+  String passwordValidator(String? val) {
     String valid = "";
-    if (val.trim().isEmpty) {
-      valid = "This Feild Can't Be Empty";
+    if (val!.trim().isEmpty) {
+      valid = "لا يجب ترك الحقل فارغاً";
     }
     if (val.trim().length < 4) {
-      valid = "This Feild Can't Less Than 4 Letters";
+      valid = "لا يمكن ان تكون كلمة المرور اقل من 4 حروف";
     }
     if (val.trim().length > 20) {
-      valid = "This Feild Can't Greater Than 20 Letters";
+      valid = "لا يمكن زيادة اكثر من 20 حرف ";
     }
     return valid;
   }

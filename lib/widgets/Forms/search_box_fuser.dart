@@ -6,9 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medh/HomePage/Box_list_widget/listContainer/list_view.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/Values/values.dart';
-import 'package:medh/widgets/Buttons/primary_tab_buttons.dart';
 import 'package:medh/widgets/Dev_Search/meds_screen_fuser.dart';
-import 'package:medh/widgets/Shapes/app_settings_icon.dart';
 
 class FuserSearchBox extends StatefulWidget {
   final String placeholder;
@@ -94,49 +92,48 @@ class _SearchBoxState extends State<FuserSearchBox> {
               ),
             ],
           ),
-          AppSpaces.verticalSpace10,
           Center(
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    PrimaryTabButton(
-                        buttonText: "الكل",
-                        itemIndex: 0,
-                        notifier: _settingsButtonTrigger),
-                    PrimaryTabButton(
-                        buttonText: "الطلب ",
-                        itemIndex: 1,
-                        notifier: _settingsButtonTrigger),
-                    PrimaryTabButton(
-                        buttonText: "الكمية",
-                        itemIndex: 2,
-                        notifier: _settingsButtonTrigger),
-                    PrimaryTabButton(
-                        buttonText: "الأقل",
-                        itemIndex: 3,
-                        notifier: _settingsButtonTrigger),
-                    Row(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 10),
-                              child: Container(
-                                alignment: Alignment.centerRight,
-                                child: const AppSettingsIcon(
-                                    // callback: ((),{_showDashboardSettings(context);}),
-                                    ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.start,
+                //   children: [
+                //     PrimaryTabButton(
+                //         buttonText: "الكمية",
+                //         itemIndex: 0,
+                //         notifier: _settingsButtonTrigger),
+                //     PrimaryTabButton(
+                //         buttonText: "مؤخراً",
+                //         itemIndex: 1,
+                //         notifier: _settingsButtonTrigger),
+                //     PrimaryTabButton(
+                //         buttonText: "الطلب",
+                //         itemIndex: 2,
+                //         notifier: _settingsButtonTrigger),
+                //     PrimaryTabButton(
+                //         buttonText: "الأقل",
+                //         itemIndex: 3,
+                //         notifier: _settingsButtonTrigger),
+                //     Row(
+                //       children: [
+                //         Row(
+                //           mainAxisAlignment: MainAxisAlignment.center,
+                //           children: [
+                //             Padding(
+                //               padding: const EdgeInsets.only(right: 10),
+                //               child: Container(
+                //                 alignment: Alignment.centerRight,
+                //                 child: const AppSettingsIcon(
+                //                     // callback: ((),{_showDashboardSettings(context);}),
+                //                     ),
+                //               ),
+                //             ),
+                //           ],
+                //         ),
+                //       ],
+                //     ),
+                //   ],
+                // ),
                 AppSpaces.verticalSpace20,
                 Column(
                   children: <Widget>[

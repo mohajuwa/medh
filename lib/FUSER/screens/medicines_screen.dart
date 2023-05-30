@@ -27,7 +27,7 @@ class FuserMedicineScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: FuserSearchBox(
-                            placeholder: 'إستعلام',
+                            placeholder: 'بحث',
                             controller: _searchController,
                           ),
                         ),

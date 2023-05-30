@@ -138,7 +138,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                             ),
                             const SizedBox(height: 2),
                             const Text(
-                              "تقارير",
+                              "الرئيسية",
                               style: TextStyle(
                                 // color: Colors.black,
                                 fontWeight: FontWeight.w500,
@@ -146,7 +146,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                             ),
                             const SizedBox(height: 1),
                             Text(
-                              "التقارير جيدة عندما تتوفر الطموح",
+                              "لتحديث الصفحة",
                               style: Theme.of(context).textTheme.bodySmall,
                             ),
                           ],
@@ -156,14 +156,14 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.only(left: 100),
-                child: Text(
-                  "فلترة الأدوية حسب ",
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-              ),
+              // const SizedBox(height: 20),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 100),
+              //   child: Text(
+              //     "فلترة الأدوية حسب ",
+              //     style: Theme.of(context).textTheme.titleMedium,
+              //   ),
+              // ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -185,7 +185,7 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
                                   itemIndex: 1,
                                   notifier: _settingsButtonTrigger),
                               PrimaryTabButton(
-                                  buttonText: "النوع",
+                                  buttonText: "الكمية",
                                   itemIndex: 2,
                                   notifier: _settingsButtonTrigger)
                             ],
@@ -204,9 +204,9 @@ class FuserHomeScreenState extends ConsumerState<FuserHomeScreen> {
               ),
               AppSpaces.verticalSpace10,
               Padding(
-                padding: const EdgeInsets.only(left: 100),
+                padding: const EdgeInsets.only(left: 150),
                 child: Text(
-                  "تم طلبها ولكن لم يتم توفيرها",
+                  "أدوية مضافة لديك",
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),

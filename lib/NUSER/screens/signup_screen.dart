@@ -4,7 +4,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:form_validator/form_validator.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/provider.dart';
 import 'package:medh/NUSER/Nuser_widgets/navbar_roots.dart';
@@ -27,36 +26,47 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
   TextEditingController confirmPassword = TextEditingController();
   GlobalKey<FormState> signUpFormKey = GlobalKey();
 
-  final emailValidator = ValidationBuilder().email().maxLength(50).build();
-  String userNameValidator(String val) {
+  // final emailValidator = ValidationBuilder().email().maxLength(50).build();
+  String userNameValidator(String? val) {
     String valid = "";
-    if (val.trim().isEmpty) {
-      valid = "This Feild Can't Be Empty";
+    if (val!.trim().isEmpty) {
+      valid = "لا يجب ترك الحقل فارغاً";
     }
     if (val.trim().length > 20) {
-      valid = "This Feild Can't Greater Than 20 Letters";
+      valid = "لا يمكن زيادة اكثر من 20 حرف ";
     }
     return valid;
   }
 
-  String passwordValidator(String val) {
+  String userEmailValidator(String? val) {
     String valid = "";
-    if (val.trim().isEmpty) {
-      valid = "This Feild Can't Be Empty";
+    if (val!.trim().isEmpty) {
+      valid = "هذا الحقل مطلوب";
+    }
+    if (val.trim().length > 50) {
+      valid = "البريد لا يتكون الا من 50 حرف كأقصى حد";
+    }
+    return valid;
+  }
+
+  String passwordValidator(String? val) {
+    String valid = "";
+    if (val!.trim().isEmpty) {
+      valid = "هذا الحقل مطلوب إجبارياً";
     }
     if (val.trim().length < 4) {
-      valid = "This Feild Can't Less Than 4 Letters";
+      valid = "لا يمكن ان تكون كلمة المرور اقل من 4 حروف";
     }
     if (val.trim().length > 20) {
-      valid = "This Feild Can't Greater Than 20 Letters";
+      valid = "لا يمكن زيادة اكثر من 20 حرف ";
     }
     return valid;
   }
 
-  String confirmPasswordValidator(String val) {
+  String confirmPasswordValidator(String? val) {
     String valid = "";
     if (val != password.text) {
-      valid = "The Password Are Not Same";
+      valid = "كلمات المرور ليست متطابقة";
     }
     return valid;
   }
@@ -208,7 +218,7 @@ class SignUpScreenState extends ConsumerState<SignUpScreen> {
                             buildTextFormFeild(context, "اسم المستخدم",
                                 userNameValidator, userName),
                             buildTextFormFeild(context, "البريد الألكتروني",
-                                emailValidator, email),
+                                userEmailValidator, email),
                             buildPasswordTextFormFeild(
                                 context,
                                 "ادخل كلمة المرور",

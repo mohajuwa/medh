@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:medh/widgets/Dev_Search/widgets/list_meds_container.dart';
 import 'package:medh/widgets/Forms/search_box_nuser.dart';
-import 'package:flutter/foundation.dart';
 
 // ignore: must_be_immutable
 class SearchScreen extends StatelessWidget {
@@ -49,107 +48,107 @@ class SearchScreen extends StatelessWidget {
   }
 }
 
-class CustomSearshDelegate extends SearchDelegate<String> {
-  CustomSearshDelegate()
-      : super(
-          searchFieldLabel: "إستعلام",
-          searchFieldStyle: const TextStyle(
-            locale: Locale("ar", "YE"),
-          ),
-        );
-  List<String> searchTerms = [
-    'Amfinac',
-    'Panadol Extra',
-    'حق المعدة ، هههه',
-    'Blue alephant',
-    'Sleep bells',
-  ];
+// class CustomSearshDelegate extends SearchDelegate<String> {
+//   CustomSearshDelegate()
+//       : super(
+//           searchFieldLabel: "إستعلام",
+//           searchFieldStyle: const TextStyle(
+//             locale: Locale("ar", "YE"),
+//           ),
+//         );
+//   List<String> searchTerms = [
+//     'Amfinac',
+//     'Panadol Extra',
+//     'حق المعدة ، هههه',
+//     'Blue alephant',
+//     'Sleep bells',
+//   ];
 
-  @override
-  List<Widget> buildActions(BuildContext context) {
-    return [
-      IconButton(
-        onPressed: () {
-          query = '';
-        },
-        icon: const Icon(
-          Icons.clear,
-        ),
-      ),
-    ];
-  }
+//   @override
+//   List<Widget> buildActions(BuildContext context) {
+//     return [
+//       IconButton(
+//         onPressed: () {
+//           query = '';
+//         },
+//         icon: const Icon(
+//           Icons.clear,
+//         ),
+//       ),
+//     ];
+//   }
 
-  @override
-  Widget buildLeading(BuildContext context) {
-    return IconButton(
-      icon: const Icon(Icons.arrow_back),
-      onPressed: () => Navigator.of(context).pop(),
-    );
-  }
+//   @override
+//   Widget buildLeading(BuildContext context) {
+//     return IconButton(
+//       icon: const Icon(Icons.arrow_back),
+//       onPressed: () => Navigator.of(context).pop(),
+//     );
+//   }
 
-  @override
-  Widget buildResults(BuildContext context) {
-    List<String> matchQuery = [];
-    for (var meds in searchTerms) {
-      if (meds.toLowerCase().contains(
-            query.toLowerCase(),
-          )) {
-        matchQuery.add(meds);
-      }
-    }
-    return ListView.builder(
-      itemCount: matchQuery.length,
-      itemBuilder: (BuildContext context, index) {
-        var result = matchQuery[index];
-        return ListTile(
-          title: Text(result),
-        );
-      },
-    );
-  }
+//   @override
+//   Widget buildResults(BuildContext context) {
+//     List<String> matchQuery = [];
+//     for (var meds in searchTerms) {
+//       if (meds.toLowerCase().contains(
+//             query.toLowerCase(),
+//           )) {
+//         matchQuery.add(meds);
+//       }
+//     }
+//     return ListView.builder(
+//       itemCount: matchQuery.length,
+//       itemBuilder: (BuildContext context, index) {
+//         var result = matchQuery[index];
+//         return ListTile(
+//           title: Text(result),
+//         );
+//       },
+//     );
+//   }
 
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    List<String> matchQuery = [];
-    for (var meds in searchTerms) {
-      if (meds.toLowerCase().contains(
-            query.toLowerCase(),
-          )) {
-        matchQuery.add(meds);
-      }
-    }
-    return ListView.builder(
-      itemCount: matchQuery.length,
-      itemBuilder: (BuildContext context, index) {
-        var result = matchQuery[index];
-        return ListTile(
-          title: Text(result),
-        );
-      },
-    );
-  }
-}
+//   @override
+//   Widget buildSuggestions(BuildContext context) {
+//     List<String> matchQuery = [];
+//     for (var meds in searchTerms) {
+//       if (meds.toLowerCase().contains(
+//             query.toLowerCase(),
+//           )) {
+//         matchQuery.add(meds);
+//       }
+//     }
+//     return ListView.builder(
+//       itemCount: matchQuery.length,
+//       itemBuilder: (BuildContext context, index) {
+//         var result = matchQuery[index];
+//         return ListTile(
+//           title: Text(result),
+//         );
+//       },
+//     );
+//   }
+// }
 
-class CustomLocalizationDelegate
-    extends LocalizationsDelegate<MaterialLocalizations> {
-  const CustomLocalizationDelegate();
+// class CustomLocalizationDelegate
+//     extends LocalizationsDelegate<MaterialLocalizations> {
+//   const CustomLocalizationDelegate();
 
-  @override
-  bool isSupported(Locale locale) => locale.languageCode == 'ar';
+//   @override
+//   bool isSupported(Locale locale) => locale.languageCode == 'ar';
 
-  @override
-  Future<MaterialLocalizations> load(Locale locale) =>
-      SynchronousFuture<MaterialLocalizations>(const CustomLocalization());
+//   @override
+//   Future<MaterialLocalizations> load(Locale locale) =>
+//       SynchronousFuture<MaterialLocalizations>(const CustomLocalization());
 
-  @override
-  bool shouldReload(CustomLocalizationDelegate old) => false;
+//   @override
+//   bool shouldReload(CustomLocalizationDelegate old) => false;
 
-  @override
-  String toString() => 'CustomLocalization.delegate(ar_YE)';
-}
+//   @override
+//   String toString() => 'CustomLocalization.delegate(ar_YE)';
+// }
 
-class CustomLocalization extends DefaultMaterialLocalizations {
-  const CustomLocalization();
-  @override
-  String get searchFieldLabel => "My hint text";
-}
+// class CustomLocalization extends DefaultMaterialLocalizations {
+//   const CustomLocalization();
+//   @override
+//   String get searchFieldLabel => "My hint text";
+// }
