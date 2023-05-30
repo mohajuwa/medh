@@ -14,7 +14,6 @@ import '../screens/medicines_screen.dart';
 import '../screens/fuser_settings_screen.dart';
 
 class FuserNavBarRoots extends ConsumerStatefulWidget {
-  
   const FuserNavBarRoots({super.key});
 
   @override
@@ -184,8 +183,8 @@ class FuserNavBarRootsState extends ConsumerState<FuserNavBarRoots> {
                     label: "الأدوية",
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.dashboard_customize),
-                    label: "لوحة التحكم",
+                    icon: Icon(Icons.medical_information),
+                    label: "الطلبات",
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.settings),

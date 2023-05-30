@@ -60,7 +60,8 @@ class _SearchBoxState extends State<FuserSearchBox> {
                     ),
                     suffixIcon: InkWell(
                       onTap: () {
-                        widget.controller!.text = "";
+                        widget.controller?.text = '';
+                        return searchMeds('');
                       },
                       child: Icon(
                         FontAwesomeIcons.solidTimesCircle,

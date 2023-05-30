@@ -87,11 +87,11 @@ class NavBarRootsState extends ConsumerState<NavBarRoots> {
                       label: "إستعلام",
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.notification_add_outlined),
-                      label: "لوحة الإشعارت",
+                      icon: Icon(Icons.notifications),
+                      label: "الإشعارت",
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.settings),
+                      icon: Icon(Icons.settings_sharp),
                       label: "إعدادات",
                     ),
                   ],

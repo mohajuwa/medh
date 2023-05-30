@@ -6,8 +6,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:medh/Theme/theme.dart';
 import 'package:medh/Values/values.dart';
 import 'package:medh/provider.dart';
-import 'package:medh/widgets/Buttons/primary_tab_buttons.dart';
-import 'package:medh/widgets/Shapes/app_settings_icon.dart';
 import 'orderscreen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -21,18 +19,18 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
   final _settingsButtonTrigger = ValueNotifier(0);
 
   List imgs = [
-    "lined heart.png",
-    "lined heart.png",
-    "lined heart.png",
-    "lined heart.png",
-    "lined heart.png",
-    "lined heart.png",
-    "lined heart.png",
-    "lined heart.png",
-    "lined heart.png",
-    "lined heart.png",
-    "lined heart.png",
-    "lined heart.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
+    "Logo.png",
   ];
 
   get isDarkTheme => ref.watch(appThemeProvider);
@@ -95,44 +93,44 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                 items: imageSliders,
               ),
               AppSpaces.verticalSpace10,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          //tab indicators
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              PrimaryTabButton(
-                                  buttonText: "الكل",
-                                  itemIndex: 0,
-                                  notifier: _settingsButtonTrigger),
-                              PrimaryTabButton(
-                                  buttonText: "السبل ",
-                                  itemIndex: 1,
-                                  notifier: _settingsButtonTrigger),
-                              PrimaryTabButton(
-                                  buttonText: "الظهار",
-                                  itemIndex: 2,
-                                  notifier: _settingsButtonTrigger)
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 70),
-                            child: Container(
-                                alignment: Alignment.centerRight,
-                                child: const AppSettingsIcon(
-                                    // callback: ((),{_showDashboardSettings(context);}),
-                                    )),
-                          )
-                        ]),
-                  ),
-                ],
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     Padding(
+              //       padding: const EdgeInsets.all(20),
+              //       child: Row(
+              //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //           children: [
+              //             //tab indicators
+              //             Row(
+              //               mainAxisAlignment: MainAxisAlignment.start,
+              //               children: [
+              //                 PrimaryTabButton(
+              //                     buttonText: "الكل",
+              //                     itemIndex: 0,
+              //                     notifier: _settingsButtonTrigger),
+              //                 PrimaryTabButton(
+              //                     buttonText: "السبل ",
+              //                     itemIndex: 1,
+              //                     notifier: _settingsButtonTrigger),
+              //                 PrimaryTabButton(
+              //                     buttonText: "الظهار",
+              //                     itemIndex: 2,
+              //                     notifier: _settingsButtonTrigger)
+              //               ],
+              //             ),
+              //             Padding(
+              //               padding: const EdgeInsets.only(right: 70),
+              //               child: Container(
+              //                   alignment: Alignment.centerRight,
+              //                   child: const AppSettingsIcon(
+              //                       // callback: ((),{_showDashboardSettings(context);}),
+              //                       )),
+              //             )
+              //           ]),
+              //     ),
+              //   ],
+              // ),
               AppSpaces.verticalSpace10,
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -187,7 +185,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: const [
                               BoxShadow(
-                                color: Color(0x3C000000),
+                                color: Color(0x3B000000),
                                 blurRadius: 1.5,
                                 spreadRadius: 1,
                               )
@@ -196,7 +194,6 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              const SizedBox(height: 3),
                               Container(
                                 width: 100,
                                 height: 35,
@@ -207,9 +204,9 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                                   color: colors(context).color4,
                                   boxShadow: const [
                                     BoxShadow(
-                                      color: Color(0x3C000000),
-                                      blurRadius: 1.5,
-                                      spreadRadius: 1,
+                                      color: Color(0x3B000000),
+                                      blurRadius: 1,
+                                      spreadRadius: 0.5,
                                     )
                                   ],
                                 ),
@@ -229,22 +226,22 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                                 "عنوانها",
                                 style: Theme.of(context).textTheme.bodySmall,
                               ),
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.star,
-                                    color: colors(context).color2,
-                                    size: 12,
-                                  ),
-                                  Text(
-                                    "4.5",
-                                    style:
-                                        Theme.of(context).textTheme.bodySmall,
-                                  ),
-                                ],
-                              ),
+                              // Row(
+                              //   mainAxisSize: MainAxisSize.min,
+                              //   mainAxisAlignment: MainAxisAlignment.center,
+                              //   children: [
+                              //     Icon(
+                              //       Icons.star,
+                              //       color: colors(context).color2,
+                              //       size: 12,
+                              //     ),
+                              //     Text(
+                              //       "4.5",
+                              //       style:
+                              //           Theme.of(context).textTheme.bodySmall,
+                              //     ),
+                              //   ],
+                              // ),
                               Container(
                                 width: 80,
                                 decoration: BoxDecoration(

@@ -63,6 +63,7 @@ class _SearchBoxState extends State<SearchBox> {
                     suffixIcon: InkWell(
                       onTap: () {
                         widget.controller!.text = "";
+                        return searchMeds('');
                       },
                       child: Icon(
                         FontAwesomeIcons.solidTimesCircle,

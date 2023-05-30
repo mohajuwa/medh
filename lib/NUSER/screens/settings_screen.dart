@@ -43,9 +43,10 @@ class SettingsScreen extends ConsumerWidget {
                         const ListTile(
                           leading: CircleAvatar(
                             backgroundColor: Colors.transparent,
-                            radius: 30,
-                            backgroundImage:
-                                AssetImage("assets/images/doctor1.jpg"),
+                            radius: 40,
+                            backgroundImage: AssetImage(
+                              "assets/stickers/stic_18-30.png",
+                            ),
                           ),
                           title: Text(
                             "إسم المستخدم",
