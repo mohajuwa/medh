@@ -65,6 +65,7 @@ dependencies:
   carousel_slider: ^4.2.1
   form_validator: ^2.1.1
   mysql1: ^0.20.0
+  mysql_utils: ^2.1.1
   # firebase_core: ^2.13.0
   # firebase_auth: ^4.6.1
   # google_sign_in: ^5.4.4

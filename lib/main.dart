@@ -20,7 +20,7 @@ void main() {
             Text(
               details.exception.toString(),
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 14,
                 fontWeight: FontWeight.w500,
                 color: Colors.white,
               ),
@@ -38,8 +38,6 @@ void main() {
 
   runApp(const ProviderScope(child: MyApp()));
 }
-
-
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
